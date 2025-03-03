@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - BA Courses</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Section Styling */
+        .ba-section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .ba-section h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .ba-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Button Styles */
+        .course-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .course-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .course-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .course-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .course-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .course-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- BA Courses Section -->
+    <section class="ba-section">
+        <h1>Bachelor of Arts (BA) Programs</h1>
+        <p>Explore different BA programs and their career opportunities.</p>
+
+        <h2>Select Your Course</h2><br>
+
+        <div class="course-buttons">
+            <button onclick="showCourse('ba-english')">BA English</button>
+            <button onclick="showCourse('ba-hindi')">BA Hindi</button>
+            <button onclick="showCourse('ba-history')">BA History</button>
+            <button onclick="showCourse('ba-polscience')">BA Political Science</button>
+            <button onclick="showCourse('ba-geography')">BA Geography</button>
+            <button onclick="showCourse('ba-vocational')">BA Vocational</button>
+        </div>
+
+        <!-- Dynamic Course Information -->
+        <div id="ba-english" class="course-content">
+            <h2>CUET (Common University Entrance Test) for English: A Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Common University Entrance Test (CUET), administered by the National Testing Agency (NTA), has emerged as a pivotal gateway for students aspiring to pursue undergraduate and postgraduate programs in English across numerous Indian universities. This standardized exam evaluates candidates' proficiency and aptitude in the English language, serving as a crucial determinant for admission.</p>
+        
+            <h3>Exam Structure and Pattern</h3>
+            <p>The CUET English examination is meticulously structured to assess various facets of language competence. It comprises three core sections:</p>
+            <ul>
+                <li><strong>Reading Comprehension (40 marks):</strong> Assesses candidates' ability to comprehend and interpret written passages, testing their reading skills, vocabulary, and inferential reasoning.</li>
+                <li><strong>Verbal Ability (40 marks):</strong> Evaluates candidates' command over vocabulary, grammar, and language usage, including questions on synonyms, antonyms, analogies, sentence completion, and error detection.</li>
+                <li><strong>Literature (20 marks):</strong> Tests knowledge of English literature, including various literary periods, genres, authors, and their works.</li>
+            </ul>
+            <p>The exam follows a multiple-choice question (MCQ) format, with 100 questions to be completed within a duration of 120 minutes. Each question carries one mark, and there is no negative marking for incorrect answers.</p>
+        
+            <h3>Preparation Strategies</h3>
+            <ul>
+                <li><strong>Reading Extensively:</strong> Cultivate a habit of reading newspapers, magazines, novels, and literary works to enhance reading speed, comprehension, and vocabulary.</li>
+                <li><strong>Practicing Grammar and Vocabulary:</strong> Regularly practice grammar exercises and expand your vocabulary using word lists, flashcards, and contextual learning.</li>
+                <li><strong>Brushing Up on Literature:</strong> Familiarize yourself with key literary periods, genres, authors, and their works. Analyze literary texts, themes, and characters.</li>
+                <li><strong>Solving Mock Tests:</strong> Take mock tests to simulate the exam environment, assess strengths and weaknesses, and improve time management.</li>
+            </ul>
+        
+            <h3>List of Participating Universities and Colleges</h3>
+            <p>CUET scores are recognized by a multitude of universities and colleges across India, including:</p>
+            <ul>
+                <li><strong>Central Universities:</strong> Delhi University, Jawaharlal Nehru University, Banaras Hindu University, Aligarh Muslim University, University of Hyderabad, and others.</li>
+                <li><strong>State Universities:</strong> University of Mumbai, Savitribai Phule Pune University, Madras University, Anna University, and others.</li>
+                <li><strong>Deemed Universities:</strong> Jamia Millia Islamia and others.</li>
+                <li><strong>Private Universities:</strong> Several private universities also accept CUET scores for English programs.</li>
+            </ul>
+        
+            <h3>Detailed List of Colleges and Courses</h3>
+            <p>[Insert an extensive list of colleges and the specific English courses they offer, along with any additional eligibility criteria]</p>
+        
+            <h3>Beyond the Exam: Career Prospects</h3>
+            <p>A strong performance in the CUET English exam opens doors to a plethora of career opportunities, including:</p>
+            <ul>
+                <li><strong>Academia:</strong> Teaching and research in English literature, linguistics, or related fields.</li>
+                <li><strong>Content Writing and Journalism:</strong> Crafting compelling content for websites, blogs, magazines, and newspapers.</li>
+                <li><strong>Publishing and Editing:</strong> Working with publishing houses to edit and refine literary works.</li>
+                <li><strong>Media and Communication:</strong> Pursuing careers in media, advertising, public relations, and corporate communication.</li>
+                <li><strong>Civil Services:</strong> Joining the civil services and contributing to policy formulation and implementation.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>The CUET English exam serves as a crucial stepping stone for students aspiring to delve into the rich and diverse world of English language and literature. By diligently preparing and performing well in this exam, students can unlock a world of opportunities and embark on fulfilling careers in various domains.</p>
+        </div>
+
+        <div id="ba-hindi" class="course-content">
+            <h2>CUET (Common University Entrance Test) for Hindi: A Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>CUET, or the Common University Entrance Test, has emerged as a pivotal gateway for undergraduate admissions in numerous Indian universities. For students aspiring to pursue Hindi-based courses, understanding the intricacies of the CUET Hindi exam is essential. Let's delve into the structure, pattern, marking scheme, and other vital aspects of this examination.</p>
+        
+            <h3>Structure of the CUET Hindi Exam</h3>
+            <p>The CUET Hindi exam is designed to assess a candidate's proficiency in the Hindi language across various dimensions. The exam is divided into four key sections:</p>
+            <ul>
+                <li><strong>Reading Comprehension:</strong> Evaluates a candidate's ability to comprehend and interpret Hindi passages. Questions may focus on identifying the main idea, inferring meaning, understanding vocabulary in context, and analyzing the author's tone and purpose.</li>
+                <li><strong>Grammar and Usage:</strong> Tests a candidate's knowledge of Hindi grammar rules, including sentence structure, verb conjugation, tenses, and word order. It also assesses the ability to identify and correct grammatical errors.</li>
+                <li><strong>Vocabulary:</strong> Gauges a candidate's command over Hindi vocabulary, including synonyms, antonyms, analogies, and contextual word usage.</li>
+                <li><strong>Writing:</strong> Evaluates a candidate's writing skills in Hindi through tasks such as essay writing, letter writing, and précis writing. Candidates are assessed on their ability to express ideas clearly and coherently, use appropriate vocabulary and grammar, and organize their thoughts effectively.</li>
+            </ul>
+        
+            <h3>Paper Pattern and Marking Scheme</h3>
+            <p>The CUET Hindi exam is typically conducted in a pen-and-paper format. The duration of the exam is usually 120 minutes, and it consists of 100 questions. Each question carries one mark.</p>
+            <p><strong>Marking Scheme:</strong></p>
+            <ul>
+                <li><strong>Correct Answer:</strong> 1 mark</li>
+                <li><strong>Incorrect Answer:</strong> 0 marks (No negative marking)</li>
+            </ul>
+        
+            <h3>Preparation Tips for CUET Hindi</h3>
+            <ul>
+                <li><strong>Read Extensively:</strong> Read a variety of Hindi texts, including newspapers, magazines, books, and online articles, to improve your reading comprehension and vocabulary.</li>
+                <li><strong>Practice Grammar:</strong> Solve grammar exercises and practice questions to strengthen your understanding of Hindi grammar rules.</li>
+                <li><strong>Enhance Vocabulary:</strong> Learn new Hindi words regularly and practice using them in context.</li>
+                <li><strong>Write Regularly:</strong> Practice writing essays, letters, and précis in Hindi to improve your writing skills.</li>
+                <li><strong>Take Mock Tests:</strong> Familiarize yourself with the exam pattern and assess your preparation level through mock tests.</li>
+            </ul>
+        
+            <h3>List of Universities Accepting CUET Hindi Scores</h3>
+            <p>A wide range of universities and colleges across India accept CUET Hindi scores for admission to various undergraduate courses in Hindi, Hindi Literature, and other related disciplines. Some of the prominent universities include:</p>
+        
+            <h4>Central Universities:</h4>
+            <ul>
+                <li>University of Delhi</li>
+                <li>Jawaharlal Nehru University</li>
+                <li>Banaras Hindu University</li>
+                <li>Aligarh Muslim University</li>
+                <li>Jamia Millia Islamia</li>
+            </ul>
+        
+            <h4>State Universities:</h4>
+            <ul>
+                <li>University of Mumbai</li>
+                <li>University of Calcutta</li>
+                <li>University of Madras</li>
+                <li>Anna University</li>
+                <li>Osmania University</li>
+                <li>University of Allahabad</li>
+                <li>University of Lucknow</li>
+                <li>University of Patna</li>
+            </ul>
+        
+            <h4>Other Universities and Colleges:</h4>
+            <ul>
+                <li>Central University of Himachal Pradesh</li>
+                <li>Central University of Punjab</li>
+                <li>Central University of Rajasthan</li>
+                <li>Central University of Gujarat</li>
+                <li>Central University of Jharkhand</li>
+                <li>And many more...</li>
+            </ul>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>CUET Official Website:</strong> For the latest updates, information, and announcements regarding the CUET exam, visit the official CUET website.</li>
+                <li><strong>Syllabus:</strong> Refer to the official CUET syllabus for Hindi to understand the topics and concepts covered in the exam.</li>
+                <li><strong>Previous Year Question Papers:</strong> Solve previous year's CUET Hindi question papers to get an idea of the exam pattern and difficulty level.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>Remember, consistent practice, dedication, and a strategic approach are key to success in the CUET Hindi exam. Best of luck with your preparation!</p>
+        </div>
+
+        <div id="ba-history" class="course-content">
+            <h2>CUET (Common University Entrance Test) for History</h2>
+        
+            <h3>Introduction</h3>
+            <p>The CUET (Common University Entrance Test) for History is a national-level entrance exam conducted by the National Testing Agency (NTA) for admission to undergraduate history programs in various central universities and other participating institutions.</p>
+        
+            <h3>Structure of the Exam</h3>
+            <p>The CUET for History consists of a single paper divided into three sections:</p>
+            <ul>
+                <li><strong>Section A: Objective Questions</strong> (20 questions)</li>
+                <li><strong>Section B: Short Answer Questions</strong> (10 questions)</li>
+                <li><strong>Section C: Long Answer Questions</strong> (5 questions)</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            
+            <h4>Section A: Objective Questions</h4>
+            <ul>
+                <li>20 multiple-choice questions</li>
+                <li>Each question carries 1 mark</li>
+                <li>No negative marking</li>
+            </ul>
+        
+            <h4>Section B: Short Answer Questions</h4>
+            <ul>
+                <li>10 short answer questions</li>
+                <li>Each question carries 2 marks</li>
+                <li>No negative marking</li>
+            </ul>
+        
+            <h4>Section C: Long Answer Questions</h4>
+            <ul>
+                <li>5 long answer questions</li>
+                <li>Each question carries 4 marks</li>
+                <li>No negative marking</li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+        
+            <h4>Section A: Objective Questions</h4>
+            <ul>
+                <li>Each correct answer: +1 mark</li>
+                <li>Each incorrect answer: 0 marks</li>
+            </ul>
+        
+            <h4>Section B: Short Answer Questions</h4>
+            <ul>
+                <li>Each correct answer: +2 marks</li>
+                <li>Each incorrect answer: 0 marks</li>
+            </ul>
+        
+            <h4>Section C: Long Answer Questions</h4>
+            <ul>
+                <li>Each correct answer: +4 marks</li>
+                <li>Each incorrect answer: 0 marks</li>
+            </ul>
+        
+            <h3>List of Colleges that Accept CUET for Admission in History Courses</h3>
+            <p>The following colleges and universities accept CUET scores for admission to their history programs:</p>
+            <ul>
+                <li>Delhi University</li>
+                <li>Jawaharlal Nehru University</li>
+                <li>University of Hyderabad</li>
+                <li>Banaras Hindu University</li>
+                <li>University of Mumbai</li>
+                <li>University of Calcutta</li>
+                <li>Madras University</li>
+                <li>University of Mysore</li>
+                <li>Osmania University</li>
+                <li>Aligarh Muslim University</li>
+            </ul>
+        
+            <h3>Detailed Information</h3>
+            <p>For more detailed information about the CUET for History, including the syllabus, sample papers, and registration process, please visit the <a href="https://www.nta.ac.in" target="_blank">official NTA website</a>.</p>
+        </div>
+
+        <div id="ba-polscience" class="course-content">
+            <h2>CUET (Common University Entrance Test) for Political Science</h2>
+        
+            <h3>Introduction</h3>
+            <p>The CUET (Common University Entrance Test) is a national-level entrance exam conducted by the National Testing Agency (NTA) for admission to undergraduate and postgraduate courses in central universities and other participating institutions.</p>
+        
+            <h3>Structure of the Exam</h3>
+            <p>The CUET for Political Science is divided into three sections:</p>
+            <ul>
+                <li><strong>Section A:</strong> Language Test (English or Hindi)</li>
+                <li><strong>Section B:</strong> Domain-Specific Knowledge (Political Science)</li>
+                <li><strong>Section C:</strong> General Knowledge and Aptitude</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+        
+            <h4>Section A: Language Test</h4>
+            <ul>
+                <li>100 questions</li>
+                <li>Each question carries 4 marks</li>
+                <li>Total marks: 400</li>
+            </ul>
+        
+            <h4>Section B: Political Science</h4>
+            <ul>
+                <li>50 questions</li>
+                <li>Each question carries 4 marks</li>
+                <li>Total marks: 200</li>
+            </ul>
+        
+            <h4>Section C: General Knowledge and Aptitude</h4>
+            <ul>
+                <li>25 questions</li>
+                <li>Each question carries 4 marks</li>
+                <li>Total marks: 100</li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <ul>
+                <li>For each correct answer, 4 marks will be awarded.</li>
+                <li>There is no negative marking for incorrect answers.</li>
+            </ul>
+        
+            <h3>Colleges that Accept CUET for Admission in Political Science</h3>
+            <p>The following is a list of colleges that accept CUET scores for admission to their Political Science courses:</p>
+            <ul>
+                <li>Delhi University</li>
+                <li>Jawaharlal Nehru University</li>
+                <li>Banaras Hindu University</li>
+                <li>Aligarh Muslim University</li>
+                <li>University of Hyderabad</li>
+                <li>University of Mumbai</li>
+                <li>Savitribai Phule Pune University</li>
+                <li>Madras University</li>
+                <li>Calcutta University</li>
+                <li>Annamalai University</li>
+                <li>Mahatma Gandhi University</li>
+                <li>Osmania University</li>
+                <li>Punjab University</li>
+            </ul>
+        </div>
+
+        <div id="ba-geography" class="course-content">
+            <h2>CUET (Common University Entrance Test) for Geography</h2>
+        
+            <h3>Structure of the Exam</h3>
+            <p>The CUET for Geography is divided into three sections:</p>
+            <ul>
+                <li><strong>Section A:</strong> Objective Type Questions (MCQs)</li>
+                <li><strong>Section B:</strong> Descriptive Type Questions (Short Answer Questions)</li>
+                <li><strong>Section C:</strong> Essay Type Questions (Long Answer Questions)</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+        
+            <h4>Section A: Objective Type Questions (MCQs)</h4>
+            <ul>
+                <li>50 questions</li>
+                <li>Each question carries 4 marks</li>
+                <li>Total marks: 200</li>
+            </ul>
+        
+            <h4>Section B: Descriptive Type Questions (Short Answer Questions)</h4>
+            <ul>
+                <li>10 questions</li>
+                <li>Each question carries 6 marks</li>
+                <li>Total marks: 60</li>
+            </ul>
+        
+            <h4>Section C: Essay Type Questions (Long Answer Questions)</h4>
+            <ul>
+                <li>2 questions</li>
+                <li>Each question carries 10 marks</li>
+                <li>Total marks: 20</li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <ul>
+                <li><strong>Section A:</strong> Each correct answer will be awarded 4 marks. There is no negative marking for incorrect answers.</li>
+                <li><strong>Section B:</strong> Each correct answer will be awarded 6 marks. There is no negative marking for incorrect answers.</li>
+                <li><strong>Section C:</strong> Each correct answer will be awarded 10 marks. There is no negative marking for incorrect answers.</li>
+            </ul>
+        
+            <h3>Colleges that Accept CUET for Geography</h3>
+            <p>The following colleges accept CUET scores for admission to their Geography courses:</p>
+            <ul>
+                <li>University of Delhi</li>
+                <li>Jawaharlal Nehru University</li>
+                <li>Banaras Hindu University</li>
+                <li>Aligarh Muslim University</li>
+                <li>University of Mumbai</li>
+                <li>University of Calcutta</li>
+                <li>University of Madras</li>
+                <li>University of Hyderabad</li>
+                <li>University of Pune</li>
+                <li>Savitribai Phule Pune University</li>
+                <li>University of Mysore</li>
+                <li>University of Kerala</li>
+                <li>University of Lucknow</li>
+                <li>University of Allahabad</li>
+                <li>Osmania University</li>
+                <li>Sri Venkateswara University</li>
+                <li>Mahatma Gandhi University</li>
+                <li>University of Rajasthan</li>
+                <li>University of Patna</li>
+                <li>University of Roorkee</li>
+                <li>Punjab University</li>
+                <li>Kurukshetra University</li>
+                <li>Himachal Pradesh University</li>
+                <li>Jammu University</li>
+                <li>Kashmir University</li>
+                <li>North-Eastern Hill University</li>
+                <li>Manipur University</li>
+                <li>Mizoram University</li>
+                <li>Nagaland University</li>
+                <li>Sikkim University</li>
+                <li>Tripura University</li>
+                <li>Arunachal University</li>
+            </ul>
+        </div>
+
+        <div id="ba-vocational" class="course-content">
+            <h2>CUET (Common University Entrance Test) for Vocational: A Detailed Guide</h2>
+        
+            <h3>Structure of the Exam</h3>
+            <p>The CUET for Vocational is divided into three sections:</p>
+            <ul>
+                <li><strong>Section 1:</strong> Reading Comprehension</li>
+                <li><strong>Section 2:</strong> Quantitative Reasoning</li>
+                <li><strong>Section 3:</strong> Domain-Specific Knowledge</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            <ul>
+                <li>Each section consists of 50 multiple-choice questions (MCQs).</li>
+                <li>The total duration of the exam is 2 hours.</li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <ul>
+                <li>Each question carries 4 marks.</li>
+                <li>There is no negative marking for incorrect answers.</li>
+            </ul>
+        
+            <h3>Colleges that Accept CUET for Vocational</h3>
+            <p>The following colleges accept CUET for Vocational scores for admission to their courses:</p>
+            <ul>
+                <li>Delhi University</li>
+                <li>Banaras Hindu University</li>
+                <li>Aligarh Muslim University</li>
+                <li>Jamia Millia Islamia</li>
+                <li>University of Hyderabad</li>
+                <li>University of Mumbai</li>
+                <li>University of Madras</li>
+                <li>University of Calcutta</li>
+            </ul>
+        
+            <h3>Detailed List of Colleges and Courses</h3>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <tr>
+                    <th>College</th>
+                    <th>Course</th>
+                    <th>Eligibility Criteria</th>
+                </tr>
+                <tr>
+                    <td>Delhi University</td>
+                    <td>B.Voc in Fashion Technology</td>
+                    <td>Class 12th with a minimum of 50% marks in aggregate</td>
+                </tr>
+                <tr>
+                    <td>Banaras Hindu University</td>
+                    <td>B.Voc in Agriculture</td>
+                    <td>Class 12th with a minimum of 50% marks in aggregate</td>
+                </tr>
+                <tr>
+                    <td>Aligarh Muslim University</td>
+                    <td>B.Voc in Computer Applications</td>
+                    <td>Class 12th with a minimum of 50% marks in aggregate</td>
+                </tr>
+                <tr>
+                    <td>Jamia Millia Islamia</td>
+                    <td>B.Voc in Hospitality and Tourism Management</td>
+                    <td>Class 12th with a minimum of 50% marks in aggregate</td>
+                </tr>
+                <tr>
+                    <td>University of Hyderabad</td>
+                    <td>B.Voc in Data Science</td>
+                    <td>Class 12th with a minimum of 50% marks in aggregate</td>
+                </tr>
+                <tr>
+                    <td>University of Mumbai</td>
+                    <td>B.Voc in Medical Laboratory Technology</td>
+                    <td>Class 12th with a minimum of 50% marks in aggregate</td>
+                </tr>
+                <tr>
+                    <td>University of Madras</td>
+                    <td>B.Voc in Automobile Engineering</td>
+                    <td>Class 12th with a minimum of 50% marks in aggregate</td>
+                </tr>
+                <tr>
+                    <td>University of Calcutta</td>
+                    <td>B.Voc in Electronics and Communication Engineering</td>
+                    <td>Class 12th with a minimum of 50% marks in aggregate</td>
+                </tr>
+            </table>
+        
+            <h3>Other Information</h3>
+            <ul>
+                <li>The CUET for Vocational is held once a year, usually in the month of May.</li>
+                <li>The application process for the CUET for Vocational typically begins in the month of January.</li>
+                <li>The results of the CUET for Vocational are usually declared in the month of July.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>The CUET for Vocational is an important exam for students who wish to pursue vocational courses at the undergraduate level. By understanding the structure, paper pattern, marking scheme, and colleges that accept CUET scores, students can prepare effectively for the exam and increase their chances of success.</p>
+        </div>
+        
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+    </footer>
+
+    <script>
+        function showCourse(courseId) {
+            document.querySelectorAll('.course-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(courseId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

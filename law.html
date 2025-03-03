@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Law Entrance Exams</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Law Entrance Section */
+        .law {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .law h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .law p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Law Entrance Exams Section -->
+    <section class="law">
+        <h1>Law Entrance Exams</h1>
+        <p>Explore career opportunities in the field of Law. Learn about various entrance exams required for admission into top law colleges.</p>
+
+        <h2>Select your Entrance Exam</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('clat')">CLAT (Common Law Admission Test)</button>
+            <button onclick="showExam('ailet')">AILET (NLU Delhi)</button>
+            <button onclick="showExam('lsat')">LSAT India (Tentative in May)</button>
+            <button onclick="showExam('slat')">SLAT (Symbiosis Law Admission Test)</button>
+        </div>
+
+        <!-- Dynamic Exam Information Section -->
+        <div id="clat" class="exam-content">
+            <h2>CLAT (Common Law Admission Test) for BBA LL.B. (Hons.)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Common Law Admission Test (CLAT) is a national-level entrance exam conducted by the Consortium of National Law Universities (NLUs) for admission to undergraduate and postgraduate law programs in India. CLAT is a two-hour online test that assesses the candidate's knowledge of legal aptitude, logical reasoning, English language, current affairs, and general knowledge.</p>
+        
+            <h3>Structure of the Exam</h3>
+            <p>CLAT is divided into five sections:</p>
+            <ul>
+                <li><strong>English Language:</strong> 40 questions</li>
+                <li><strong>Current Affairs, Including General Knowledge:</strong> 50 questions</li>
+                <li><strong>Legal Reasoning:</strong> 50 questions</li>
+                <li><strong>Logical Reasoning:</strong> 40 questions</li>
+                <li><strong>Quantitative Techniques:</strong> 20 questions</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            <ul>
+                <li>The CLAT question paper consists of 150 multiple-choice questions.</li>
+                <li>Each question carries one mark.</li>
+                <li>There is no negative marking for incorrect answers.</li>
+                <li>The medium of the exam is English.</li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <ul>
+                <li>Each correct answer is awarded one mark.</li>
+                <li>There is no negative marking for incorrect answers.</li>
+                <li>The total marks for the CLAT exam are 150.</li>
+            </ul>
+        
+            <h3>Colleges Accepting CLAT for BBA LL.B. (Hons.)</h3>
+            <ul>
+                <li>National Law University, Delhi (NLU Delhi)</li>
+                <li>National Law University, Bengaluru (NLU Bengaluru)</li>
+                <li>National Law University, Jodhpur (NLU Jodhpur)</li>
+                <li>National Law University, Mumbai (NLU Mumbai)</li>
+                <li>National Law University, Kolkata (NLU Kolkata)</li>
+                <li>National Law University, Hyderabad (NLU Hyderabad)</li>
+                <li>National Law University, Gujarat (NLU Gujarat)</li>
+                <li>National Law University, Orissa (NLU Orissa)</li>
+                <li>National Law University, Punjab (NLU Punjab)</li>
+                <li>National Law University, Tamil Nadu (NLU Tamil Nadu)</li>
+                <li>Hidayatullah National Law University, Raipur (HNLU Raipur)</li>
+                <li>Rajiv Gandhi National University of Law, Patiala (RGNUL Patiala)</li>
+                <li>Chanakya National Law University, Patna (CNLU Patna)</li>
+                <li>Maharashtra National Law University, Mumbai (MNLU Mumbai)</li>
+                <li>Damodaram Sanjivayya National Law University, Visakhapatnam (DSNLU Visakhapatnam)</li>
+                <li>Gujarat National Law University, Gandhinagar (GNLU Gandhinagar)</li>
+                <li>Dr. Ram Manohar Lohia National Law University, Lucknow (RMLNLU Lucknow)</li>
+                <li>National University of Advanced Legal Studies, Kochi (NUALS Kochi)</li>
+                <li>West Bengal National University of Juridical Sciences, Kolkata (WBNUJS Kolkata)</li>
+                <li>Tamil Nadu National Law University, Tiruchirappalli (TNNLU Tiruchirappalli)</li>
+                <li>National Law Institute University, Bhopal (NLIU Bhopal)</li>
+                <li>Dr. B.R. Ambedkar National Law University, Sonipat (BRANU Sonipat)</li>
+                <li>Maharashtra National Law University, Aurangabad (MNLU Aurangabad)</li>
+                <li>National Law University and Judicial Academy, Assam (NLUJAA Assam)</li>
+                <li>National University of Study and Research in Law, Ranchi (NUSRL Ranchi)</li>
+                <li>Gujarat National Law University, Gandhinagar (GNLU Gandhinagar)</li>
+                <li>RGNUL, Punjab (RGNUL Punjab)</li>
+                <li>South Asian University, New Delhi (SAU New Delhi)</li>
+            </ul>
+        </div>
+
+        <div id="ailet" class="exam-content">
+            <h2>AILET for B.Com LL.B. (Hons.)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The All India Law Entrance Test (AILET) is a national-level entrance examination conducted by the National Law University, Delhi (NLU Delhi) for admission to its undergraduate law programs, including the B.Com LL.B. (Hons.) program.</p>
+        
+            <h3>Structure of the Exam</h3>
+            <p>The AILET for B.Com LL.B. (Hons.) consists of two parts:</p>
+            <ul>
+                <li><strong>Part I:</strong> Objective-type questions from:
+                    <ul>
+                        <li>English Language</li>
+                        <li>Current Affairs and General Knowledge</li>
+                        <li>Legal Aptitude</li>
+                        <li>Logical Reasoning</li>
+                    </ul>
+                </li>
+                <li><strong>Part II:</strong> Subjective-type questions from:
+                    <ul>
+                        <li>Elementary Mathematics</li>
+                        <li>Economics</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            <h4>Part I:</h4>
+            <ul>
+                <li>Number of questions: 150</li>
+                <li>Time duration: 90 minutes</li>
+                <li>Marking scheme: +1 mark for each correct answer; -0.25 marks for each incorrect answer</li>
+            </ul>
+        
+            <h4>Part II:</h4>
+            <ul>
+                <li>Number of questions: 5</li>
+                <li>Time duration: 60 minutes</li>
+                <li>Marking scheme: 20 marks for each question</li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <h4>Part I:</h4>
+            <ul>
+                <li>Correct answer: +1 mark</li>
+                <li>Incorrect answer: -0.25 marks</li>
+                <li>Unanswered question: 0 marks</li>
+            </ul>
+        
+            <h4>Part II:</h4>
+            <ul>
+                <li>Each question carries 20 marks</li>
+            </ul>
+        
+            <h3>Colleges Accepting AILET for B.Com LL.B. (Hons.)</h3>
+            <ul>
+                <li>National Law University, Delhi</li>
+                <li>National Law Institute University, Bhopal</li>
+                <li>Rajiv Gandhi National University of Law, Punjab</li>
+                <li>Gujarat National Law University</li>
+                <li>Hidayatullah National Law University, Raipur</li>
+                <li>Maharashtra National Law University, Mumbai</li>
+                <li>Tamil Nadu National Law University, Tiruchirappalli</li>
+                <li>Dr. Ram Manohar Lohia National Law University, Lucknow</li>
+                <li>Banaras Hindu University, Varanasi</li>
+                <li>Aligarh Muslim University, Aligarh</li>
+            </ul>
+        </div>
+
+        <div id="lsat" class="exam-content">
+            <h2>LSAT India for BA LL.B. (Hons.)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Law School Admission Test (LSAT) India is a standardized test administered by Pearson VUE for admissions to undergraduate law programs in India.</p>
+        
+            <h3>Structure of the Exam</h3>
+            <p>The LSAT—India is a two-hour, multiple-choice test divided into four 35-minute sections:</p>
+            <ul>
+                <li><strong>Analytical Reasoning:</strong> 24 questions</li>
+                <li><strong>Logical Reasoning:</strong> 26 questions</li>
+                <li><strong>Reading Comprehension:</strong> 28 questions</li>
+                <li><strong>Verbal Reasoning:</strong> 20 questions</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            <ul>
+                <li>The test is conducted in English.</li>
+                <li>All questions are multiple-choice, with four answer options.</li>
+                <li>There is no penalty for guessing.</li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <ul>
+                <li>Each question is worth one point.</li>
+                <li>There is no negative marking.</li>
+                <li>The total score ranges from 44 to 180.</li>
+            </ul>
+        
+            <h3>Colleges Accepting LSAT India for BA LL.B. (Hons.)</h3>
+            <ul>
+                <li>National Law University, Delhi (NLU Delhi)</li>
+                <li>National Law University, Jodhpur (NLU Jodhpur)</li>
+                <li>NALSAR University of Law, Hyderabad</li>
+                <li>West Bengal National University of Juridical Sciences (NUJS)</li>
+                <li>Gujarat National Law University (GNLU)</li>
+                <li>Rajiv Gandhi National University of Law, Patiala (RGNUL)</li>
+                <li>Hidayatullah National Law University, Raipur (HNLU)</li>
+                <li>Maharashtra National Law University, Mumbai (MNLU Mumbai)</li>
+                <li>Tamil Nadu National Law University, Tiruchirappalli (TNNLU)</li>
+                <li>Dr. Ram Manohar Lohia National Law University, Lucknow (RMLNLU)</li>
+                <li>Damodaram Sanjivayya National Law University, Visakhapatnam (DSNLU)</li>
+                <li>Chanakya National Law University, Patna (CNLU)</li>
+                <li>Kerala Law Academy Law College, Thiruvananthapuram</li>
+                <li>Symbiosis Law School, Pune</li>
+                <li>Amity Law School, Delhi</li>
+                <li>Jindal Global Law School, Sonipat</li>
+                <li>Bennett University, Greater Noida</li>
+                <li>Shiv Nadar University, Delhi-NCR</li>
+                <li>Ashoka University, Sonipat</li>
+            </ul>
+        </div>
+
+        <div id="slat" class="exam-content">
+            <h2>SLAT (Symbiosis Law Admission Test) for BA LL.B. (Hons.)</h2>
+        
+            <h3>Exam Structure</h3>
+            <p>SLAT is a three-hour, objective-type entrance exam conducted by Symbiosis International (Deemed University) for admission to its five-year BA LL.B. (Hons.) program across its campuses.</p>
+        
+            <h3>Exam Sections</h3>
+            <ul>
+                <li><strong>Logical Reasoning</strong></li>
+                <li><strong>Legal Reasoning</strong></li>
+                <li><strong>Analytical Reasoning</strong></li>
+                <li><strong>Reading Comprehension</strong></li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            <ul>
+                <li><strong>Total number of questions:</strong> 150</li>
+                <li><strong>Total marks:</strong> 150</li>
+                <li><strong>Duration of the exam:</strong> 3 hours</li>
+                <li><strong>Marking scheme:</strong> +1 mark for each correct answer, no negative marking</li>
+            </ul>
+        
+            <h3>Colleges Accepting SLAT for BA LL.B. (Hons.)</h3>
+            <ul>
+                <li>Symbiosis Law School, Pune</li>
+                <li>Symbiosis Law School, Hyderabad</li>
+                <li>Symbiosis Law School, Noida</li>
+                <li>Symbiosis Law School, Nagpur</li>
+                <li>Symbiosis Law School, Bengaluru</li>
+                <li>Symbiosis Law School, Mumbai</li>
+                <li>Symbiosis Law School, Chennai</li>
+            </ul>
+        
+            <h3>Other Information</h3>
+            <ul>
+                <li>SLAT is conducted once a year, usually in May.</li>
+                <li>The application process for SLAT typically begins in December.</li>
+                <li>Candidates must have a bachelor's degree or equivalent qualification in any discipline from a recognized university to be eligible for SLAT.</li>
+                <li>The selection process for SLAT includes the written exam, followed by a personal interview and group discussion for shortlisted candidates.</li>
+                <li>SLAT is a highly competitive exam, and admission to Symbiosis Law School is based on merit.</li>
+            </ul>
+        </div>
+        
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+    </footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

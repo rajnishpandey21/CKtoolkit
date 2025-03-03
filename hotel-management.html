@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Different Career Paths</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Main Section */
+        .career-section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .career-section h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .career-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Career Section -->
+    <section class="career-section">
+        <h1>Explore Various Career Opportunities</h1>
+        <p>Learn about entrance exams that can open doors to different career paths.</p>
+
+        <h2>Select your Entrance Exam</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('nchmct')">NCHMCT-JEE</button>
+        </div>
+
+        <!-- Dynamic Exam Information Section -->
+        <div id="nchmct" class="exam-content">
+            <h2>NCHMCT-JEE: Your Gateway to Hospitality Management</h2>
+
+            <h3>Introduction</h3>
+            <p>The National Council for Hotel Management and Catering Technology Joint Entrance Examination (NCHMCT-JEE) is a national-level entrance exam for admission to hospitality and hotel management programs in India.</p>
+
+            <h3>Exam Structure</h3>
+            <ul>
+                <li><strong>Duration:</strong> 3 hours</li>
+                <li><strong>Mode:</strong> Computer-based test (CBT)</li>
+                <li><strong>Sections:</strong> 
+                    <ul>
+                        <li>Numerical Ability & Analytical Aptitude</li>
+                        <li>Reasoning & Logical Deduction</li>
+                        <li>General Knowledge & Current Affairs</li>
+                        <li>English Language</li>
+                        <li>Aptitude for Service Sector</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Qualification:</strong> 10+2 or equivalent</li>
+                <li><strong>Age Limit:</strong> Maximum 25 years (General/OBC), 28 years (SC/ST)</li>
+            </ul>
+
+            <h3>Top Colleges Accepting NCHMCT-JEE</h3>
+            <ul>
+                <li>Institute of Hotel Management (IHM), Delhi</li>
+                <li>IHM Mumbai</li>
+                <li>IHM Bangalore</li>
+                <li>IHM Kolkata</li>
+                <li>IHM Hyderabad</li>
+                <li>Other affiliated hospitality institutes</li>
+            </ul>
+
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li>Focus on English and Service Sector Aptitude</li>
+                <li>Practice numerical ability and logical reasoning questions</li>
+                <li>Stay updated with current affairs</li>
+                <li>Take mock tests to improve speed and accuracy</li>
+            </ul>
+
+            <h3>Career Prospects</h3>
+            <p>A degree in hospitality management opens doors to careers in hotels, airlines, event management, cruise lines, and more.</p>
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+    </footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

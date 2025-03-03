@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Design</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .auth-buttons .login {
+            color: #333;
+        }
+
+        .auth-buttons .signup {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Design Section */
+        .design {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .design h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .design p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .logos span {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="login">Log in</a>
+            <a href="#" class="signup">Sign up</a>
+        </div>
+    </nav>
+
+    <!-- Design Entrance Exams Section -->
+    <section class="design">
+        <h1>Design Entrance Exams</h1>
+        <p>Explore career opportunities in Design. Learn about various entrance exams that help you secure admission in top design colleges.</p>
+
+        <h2>Select your Entrance</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('nift')">NIFT</button>
+            <button onclick="showExam('nid')">NID DAT</button>
+            <button onclick="showExam('uceed')">UCEED</button>
+        </div>
+
+        <!-- Dynamic Exam Information Section -->
+<!-- NIFT Exam Content -->
+<div id="nift" class="exam-content">
+    <h2>NIFT Exam for B. Design: The Definitive Guide</h2>
+
+    <h3>Introduction</h3>
+    <p>The National Institute of Fashion Technology (NIFT) entrance exam is a crucial gateway for aspiring designers seeking admission to Bachelor of Design (B. Des) programs across NIFT campuses in India. This highly competitive exam assesses candidates' aptitude and potential for a successful design career.</p>
+
+    <h3>Exam Structure: A Two-Stage Evaluation</h3>
+
+    <h4>Stage 1: Written Test - The Foundation of Assessment</h4>
+    <p>The written test consists of three key sections:</p>
+    <ul>
+        <li><strong>General Ability Test (GAT):</strong> Assesses general knowledge, current affairs, quantitative ability, and logical reasoning, along with creative thinking and problem-solving skills.</li>
+        <li><strong>Communication Ability Test (CAT):</strong> Evaluates the ability to communicate ideas effectively in written and visual forms through essays, comprehension passages, and visual communication exercises.</li>
+        <li><strong>Design Aptitude Test (DAT):</strong> Measures visual perception, spatial awareness, and creative problem-solving through sketching, drawing, and design-based tasks.</li>
+    </ul>
+
+    <h4>Stage 2: Situation Test - The Real-World Challenge</h4>
+    <p>Shortlisted candidates from the written test participate in the Situation Test, where they are given a real-world design scenario and materials to create a 3D model or solution within a time limit. This assesses material handling skills, time management, and creative problem-solving.</p>
+
+    <h3>Maximum Marks: A Structured Evaluation</h3>
+    <ul>
+        <li><strong>Written Test (Total 300 marks):</strong>
+            <ul>
+                <li>GAT - 100 marks</li>
+                <li>CAT - 100 marks</li>
+                <li>DAT - 100 marks</li>
+            </ul>
+        </li>
+        <li><strong>Situation Test:</strong> 100 marks</li>
+    </ul>
+
+    <h3>Eligibility: The Gateway to Opportunity</h3>
+    <ul>
+        <li><strong>Educational Qualification:</strong> Candidates must have completed Class 12 or its equivalent from a recognized board with a minimum aggregate of 50% marks (45% for SC/ST/PH candidates).</li>
+        <li><strong>Age Limit:</strong> No upper age limit for the NIFT entrance exam.</li>
+    </ul>
+
+    <h3>Other Information: Navigating the Exam Process</h3>
+    <ul>
+        <li><strong>Exam Dates:</strong> Conducted in January or February each year. Candidates should check the official NIFT website for updates.</li>
+        <li><strong>Exam Centers:</strong> Available in multiple cities across India.</li>
+        <li><strong>Application Process:</strong> Online application through the official NIFT website. Candidates must adhere to deadlines and instructions.</li>
+        <li><strong>Application Fee:</strong> Varies by category. Refer to the official NIFT website for the latest fee structure.</li>
+    </ul>
+
+    <h3>Colleges Accepting NIFT Scores</h3>
+    <p>The following NIFT campuses accept NIFT entrance exam scores for B. Des programs:</p>
+    <ul>
+        <li>NIFT Delhi</li>
+        <li>NIFT Mumbai</li>
+        <li>NIFT Bangalore</li>
+        <li>NIFT Kolkata</li>
+        <li>NIFT Chennai</li>
+        <li>NIFT Hyderabad</li>
+        <li>NIFT Gandhinagar</li>
+        <li>NIFT Patna</li>
+        <li>NIFT Raebareli</li>
+        <li>NIFT Kannur</li>
+        <li>NIFT Srinagar</li>
+        <li>NIFT Bhopal</li>
+        <li>NIFT Shillong</li>
+        <li>NIFT Bhubaneswar</li>
+        <li>NIFT Jodhpur</li>
+    </ul>
+
+    <h3>Additional Design Institutes Accepting NIFT Scores</h3>
+    <ul>
+        <li>Pearl Academy</li>
+        <li>UID (Unitedworld Institute of Design)</li>
+        <li>Amity School of Design</li>
+        <li>WUD (World University of Design)</li>
+    </ul>
+
+    <h3>Preparation Tips: Paving the Path to Success</h3>
+    <ul>
+        <li><strong>Understand the Exam Pattern:</strong> Study the structure, syllabus, and marking scheme to plan your preparation.</li>
+        <li><strong>Practice Previous Year Papers:</strong> Solving past papers helps understand question types, difficulty level, and time constraints.</li>
+        <li><strong>Develop Design Skills:</strong> Regular sketching, drawing, and creative problem-solving practice enhances skills.</li>
+        <li><strong>Stay Updated:</strong> Follow current affairs, design trends, and emerging technologies to strengthen knowledge.</li>
+        <li><strong>Time Management:</strong> Practice completing tasks within the time limit to avoid last-minute rush.</li>
+        <li><strong>Seek Guidance:</strong> Coaching classes or mentors can provide structured learning and feedback.</li>
+        <li><strong>Stay Calm and Confident:</strong> A positive mindset and confidence are crucial for exam success.</li>
+    </ul>
+
+    <h3>Conclusion: Embarking on a Design Journey</h3>
+    <p>The NIFT entrance exam is a challenging yet rewarding opportunity for aspiring designers. With thorough preparation, strategic planning, and a passion for design, candidates can increase their chances of success and secure a place at NIFT to kickstart their creative careers.</p>
+</div>
+
+<!-- NID DAT Exam Content -->
+<div id="nid" class="exam-content">
+    <h2>NID DAT Exam: Your Gateway to a Design Career</h2>
+
+    <h3>Introduction</h3>
+    <p>The National Institute of Design Design Aptitude Test (NID DAT) is a crucial entrance exam for aspiring designers seeking admission to prestigious undergraduate and postgraduate design programs across India. Conducted by the National Institute of Design (NID) in Ahmedabad, this exam assesses a candidate's aptitude, creativity, and problem-solving skills in the field of design.</p>
+
+    <h3>Decoding the Exam Structure</h3>
+    <p>The NID DAT exam consists of a two-stage assessment:</p>
+
+    <h4>Part A (Prelims) - Objective-Type Written Test</h4>
+    <p>The Prelims stage is conducted at multiple test centers across India and includes:</p>
+    <ul>
+        <li><strong>General Ability Test (GAT):</strong> Evaluates comprehension, analytical skills, and reasoning abilities. It includes questions on English, Quantitative Aptitude, Logical Reasoning, and General Knowledge.</li>
+        <li><strong>Design Aptitude Test (DAT):</strong> Assesses design sensitivity, visualization skills, and creative problem-solving. Tasks may involve sketching, image analysis, and spatial reasoning.</li>
+    </ul>
+
+    <h4>Part B (Mains) - Advanced Evaluation</h4>
+    <p>Only candidates who clear the Prelims qualify for the Mains, which is held at the NID campus in Ahmedabad. This stage consists of:</p>
+    <ul>
+        <li><strong>Studio Test:</strong> Hands-on assessment of the candidate’s ability to apply design principles, work with materials, and express creativity.</li>
+        <li><strong>Interview:</strong> Evaluates motivation, interests, and suitability for a design career.</li>
+        <li><strong>Portfolio Review:</strong> Candidates present a portfolio showcasing their creative projects and design work.</li>
+    </ul>
+
+    <h3>Scoring and Eligibility</h3>
+    <ul>
+        <li><strong>Total Marks:</strong> 400</li>
+        <li><strong>Part A (Prelims):</strong> 100 marks</li>
+        <li><strong>Part B (Mains):</strong> 300 marks</li>
+    </ul>
+    <p><strong>Eligibility:</strong> Candidates must have completed or be appearing for their Class 12 (or equivalent) from a recognized board.</p>
+
+    <h3>Expanding Horizons: Colleges Accepting NID DAT Scores</h3>
+    <p>While NID Ahmedabad is the most sought-after institution, several other esteemed design colleges accept NID DAT scores, including:</p>
+    <ul>
+        <li>National Institute of Fashion Technology (NIFT) – multiple campuses</li>
+        <li>Srishti Manipal Institute of Art, Design and Technology, Bangalore</li>
+        <li>Symbiosis Institute of Design (SID), Pune</li>
+        <li>Unitedworld Institute of Design (UID), Gandhinagar</li>
+        <li>Pearl Academy – Delhi, Mumbai, and Jaipur</li>
+        <li>Amity School of Fine Arts and Design (ASFAD), Noida</li>
+        <li>Apeejay Stya University, Gurgaon</li>
+        <li>JD Institute of Fashion Technology, Mumbai</li>
+        <li>ARCH College of Design and Business, Jaipur</li>
+        <li>Indian Institute of Art and Design (IIAD), Delhi</li>
+        <li>MIT Institute of Design, Pune</li>
+        <li>ISDI Parsons, Mumbai</li>
+        <li>Vogue Institute of Art and Design, Bangalore</li>
+        <li>World University of Design, Sonepat</li>
+        <li>Anant National University, Ahmedabad</li>
+        <li>UPES School of Design, Dehradun</li>
+    </ul>
+
+    <h3>Preparation and Beyond</h3>
+    <p>Preparing for the NID DAT requires a multi-faceted approach. Candidates should:</p>
+    <ul>
+        <li>Enhance their sketching, drawing, and visualization skills through regular practice.</li>
+        <li>Familiarize themselves with past question papers, mock tests, and sample questions to understand the exam pattern.</li>
+        <li>Stay updated on design trends, general knowledge, and current affairs to develop a well-rounded perspective.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>The NID DAT is not just an entrance test; it is the first step towards a fulfilling career in design. With dedication, practice, and a passion for creativity, candidates can secure admission to top design institutes and unlock endless opportunities in the world of design.</p>
+</div>
+
+<!-- UCEED Exam Content -->
+<div id="uceed" class="exam-content">
+    <h2>UCEED: Your Gateway to Design Excellence</h2>
+
+    <h3>Understanding UCEED</h3>
+    <p>The Undergraduate Common Entrance Examination for Design (UCEED) is a national-level exam administered by IIT Bombay. It assesses design aptitude and serves as a gateway to prestigious undergraduate design programs across India.</p>
+
+    <h3>Exam Structure: A Two-Part Challenge</h3>
+    <p>UCEED is divided into two sections, each evaluating different aspects of a candidate’s design ability:</p>
+
+    <h4>Part A: Written Test (Objective)</h4>
+    <ul>
+        <li><strong>Duration:</strong> 2 hours 30 minutes</li>
+        <li><strong>Number of Questions:</strong> 135</li>
+        <li><strong>Maximum Marks:</strong> 300</li>
+        <li><strong>Key Topics:</strong>
+            <ul>
+                <li>Visualization and Spatial Reasoning</li>
+                <li>Observation and Design Sensitivity</li>
+                <li>Environmental and Social Awareness</li>
+                <li>Analytical and Logical Reasoning</li>
+                <li>Language and Creativity</li>
+                <li>Design Thinking and Problem-Solving</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>Part B: Drawing Test (Subjective)</h4>
+    <ul>
+        <li><strong>Duration:</strong> 3 hours</li>
+        <li><strong>Number of Questions:</strong> 3</li>
+        <li><strong>Maximum Marks:</strong> 200</li>
+        <li><strong>Key Skills Assessed:</strong> Drawing skills, creativity, and visual communication abilities.</li>
+    </ul>
+
+    <h3>Eligibility: Keeping It Simple</h3>
+    <ul>
+        <li>Candidates must have passed Class 12 or an equivalent examination with a minimum aggregate of 50% marks.</li>
+        <li>Students appearing for their Class 12 board exams in the current year are also eligible.</li>
+        <li>There is no age limit for appearing in UCEED.</li>
+    </ul>
+
+    <h3>Important Dates: Mark Your Calendar</h3>
+    <ul>
+        <li><strong>Application Form Release:</strong> November</li>
+        <li><strong>Last Date to Apply:</strong> January</li>
+        <li><strong>Admit Card Release:</strong> February</li>
+        <li><strong>Exam Date:</strong> March</li>
+        <li><strong>Result Declaration:</strong> April</li>
+    </ul>
+
+    <h3>Colleges Accepting UCEED Scores</h3>
+    <p>Several prestigious design institutions accept UCEED scores for admission:</p>
+    <ul>
+        <li>IIT Bombay, IIT Delhi, IIT Guwahati, IIT Hyderabad, IIT Kanpur, IIT Roorkee</li>
+        <li>IIITDM Jabalpur, IIITDM Kancheepuram, IIITDM Kurnool, IIITDM Nagpur, IIITDM Sri City</li>
+        <li>IISc Bangalore</li>
+        <li>IDC IIT Bombay</li>
+        <li>MIT Institute of Design, Pune</li>
+        <li>Srishti Institute of Art, Design and Technology, Bangalore</li>
+        <li>Symbiosis Institute of Design, Pune</li>
+        <li>World University of Design, Sonipat</li>
+        <li>Pearl Academy</li>
+        <li>ISDI Parsons</li>
+    </ul>
+
+    <h3>Preparing for UCEED: Your Path to Success</h3>
+    <p>Success in UCEED requires a well-structured preparation strategy:</p>
+    <ul>
+        <li><strong>Early Start and Consistency:</strong> Begin preparation early and maintain a consistent study schedule.</li>
+        <li><strong>Understand the Syllabus:</strong> Familiarize yourself with the UCEED syllabus and exam pattern.</li>
+        <li><strong>Practice Papers and Mock Tests:</strong> Solve previous years' question papers and take mock tests regularly.</li>
+        <li><strong>Improve Drawing and Sketching:</strong> Regular practice enhances your visual communication and creativity.</li>
+        <li><strong>Boost Creativity and Problem-Solving:</strong> Engage in activities that challenge your creative thinking and problem-solving skills.</li>
+        <li><strong>Stay Updated:</strong> Follow design trends, technological advancements, and current affairs.</li>
+        <li><strong>Use Reference Books and Online Resources:</strong> Leverage the best study materials and online tutorials.</li>
+        <li><strong>Consider Coaching Classes:</strong> Joining coaching classes can provide structured guidance and expert feedback.</li>
+    </ul>
+
+    <h3>Beyond UCEED: A World of Design Careers</h3>
+    <p>Clearing UCEED opens doors to diverse design career paths, including:</p>
+    <ul>
+        <li>Product Designer</li>
+        <li>Graphic Designer</li>
+        <li>Interior Designer</li>
+        <li>Fashion Designer</li>
+        <li>Animation and Game Designer</li>
+        <li>User Experience (UX) Designer</li>
+    </ul>
+
+    <h3>Key Takeaways</h3>
+    <ul>
+        <li>UCEED is a challenging but rewarding exam that can pave the way for a successful design career.</li>
+        <li>Thorough preparation, consistency, and creativity are essential for success.</li>
+        <li>A UCEED score is accepted by many prestigious design institutions across India.</li>
+        <li>The field of design offers vast career opportunities with immense creative potential.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>UCEED is more than just an entrance exam; it is an opportunity to showcase your creativity, problem-solving skills, and passion for design. Embrace the challenge, prepare diligently, and unlock your potential in the dynamic world of design.</p>
+</div>
+
+
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+        <div class="logos">
+            <span>A Physics Wallah Product</span>
+        </div>
+    </footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

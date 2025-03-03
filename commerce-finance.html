@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Commerce & Finance</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .auth-buttons .login {
+            color: #333;
+        }
+
+        .auth-buttons .signup {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Commerce & Finance Section */
+        .commerce-finance {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .commerce-finance h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .commerce-finance p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .logos span {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="login">Log in</a>
+            <a href="#" class="signup">Sign up</a>
+        </div>
+    </nav>
+
+    <!-- Commerce & Finance Section -->
+    <section class="commerce-finance">
+        <h1>Commerce & Finance</h1>
+        <p>Explore career opportunities in Commerce and Finance. Learn about various entrance exams that help you secure admission to top colleges.</p>
+
+        <h2>Select your Entrance</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('cuet')">CUET (Common University Entrance Test)</button>
+            <button onclick="showExam('ipucet')">IPU CET (Indraprastha University)</button>
+            <button onclick="showExam('npat')">NPAT (NMIMS)</button>
+            <button onclick="showExam('ugat')">UGAT (Under Graduate Aptitude Test)</button>
+            <button onclick="showExam('christ')">Christ University Entrance Test</button>
+            <button onclick="showExam('xavier')">St. Xavier’s College Entrance Test</button>
+            <button onclick="showExam('set')">Symbiosis Entrance Test (SET)</button>
+            <button onclick="showExam('jet')">Jain Entrance Test (JET)</button>
+            <button onclick="showExam('glaet')">GLA University Entrance Test (GLAET)</button>
+            <button onclick="showExam('lpunest')">LPU NEST</button>
+        </div>
+
+        <!-- Dynamic Exam Information Section -->
+        <div id="cuet" class="exam-content">
+            <h2>CUET (Common University Entrance Test) for B.Com: A Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Common University Entrance Test (CUET), administered by the National Testing Agency (NTA), has transformed the undergraduate admissions landscape in India. CUET scores serve as a gateway for students aspiring to pursue a Bachelor of Commerce (B.Com) in prestigious universities and institutions.</p>
+        
+            <h3>Exam Structure</h3>
+            <p>The CUET B.Com exam assesses a candidate's proficiency in language, domain-specific knowledge, and general aptitude. It comprises three sections:</p>
+        
+            <h4>Section I: Language</h4>
+            <ul>
+                <li>Candidates choose one language from 13 options: English, Hindi, Assamese, Bengali, Gujarati, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu, and Urdu.</li>
+                <li>Tests reading comprehension, grammar, and vocabulary.</li>
+            </ul>
+        
+            <h4>Section II: Domain-Specific Subjects</h4>
+            <ul>
+                <li>Assesses knowledge in subjects relevant to B.Com, such as Accountancy, Business Studies, Economics, Mathematics/Applied Mathematics, and Statistics.</li>
+                <li>Candidates select one domain subject based on their B.Com specialization (e.g., Accountancy for B.Com in Accounting & Finance).</li>
+            </ul>
+        
+            <h4>Section III: General Test</h4>
+            <ul>
+                <li>Tests General Knowledge, Current Affairs, Quantitative Reasoning, Logical Reasoning, and Analytical Ability.</li>
+                <li>Measures a candidate's overall aptitude and awareness.</li>
+            </ul>
+        
+            <h3>Paper Pattern & Marking Scheme</h3>
+            <ul>
+                <li>Each section consists of 50 Multiple Choice Questions (MCQs).</li>
+                <li>Each question carries 4 marks.</li>
+                <li>No negative marking for incorrect answers.</li>
+                <li>Total exam duration: 3 hours.</li>
+            </ul>
+        
+            <h3>B.Com Specializations and CUET Domain Subjects</h3>
+            <ul>
+                <li><strong>B.Com (General):</strong> Business Studies</li>
+                <li><strong>B.Com (Honours):</strong> Business Studies or Economics</li>
+                <li><strong>B.Com (Accounting & Finance):</strong> Accountancy</li>
+                <li><strong>B.Com (Banking & Insurance):</strong> Business Studies or Economics</li>
+                <li><strong>B.Com (Marketing):</strong> Business Studies</li>
+                <li><strong>B.Com (Taxation):</strong> Accountancy or Business Studies</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Understand the Syllabus:</strong> Familiarize yourself with the syllabus for each section and the chosen domain subject.</li>
+                <li><strong>Practice Previous Year Papers:</strong> Solve past CUET papers to understand the exam pattern and difficulty level.</li>
+                <li><strong>Mock Tests:</strong> Take regular mock tests to assess your preparation and improve time management.</li>
+                <li><strong>Stay Updated:</strong> Keep abreast of current affairs and general knowledge.</li>
+                <li><strong>Conceptual Clarity:</strong> Focus on building a strong foundation in the core concepts of your chosen domain subject.</li>
+            </ul>
+        
+            <h3>List of Colleges Accepting CUET for B.Com</h3>
+            <p>Many universities and colleges accept CUET scores for B.Com admissions, including:</p>
+        
+            <h4>Central Universities</h4>
+            <ul>
+                <li>Delhi University</li>
+                <li>Jawaharlal Nehru University</li>
+                <li>Banaras Hindu University</li>
+                <li>Aligarh Muslim University</li>
+                <li>University of Hyderabad</li>
+                <li>Jamia Millia Islamia</li>
+            </ul>
+        
+            <h4>State Universities</h4>
+            <ul>
+                <li>Mumbai University</li>
+                <li>Calcutta University</li>
+                <li>Punjab University</li>
+                <li>Madras University</li>
+                <li>Lucknow University</li>
+            </ul>
+        
+            <h4>Deemed Universities</h4>
+            <ul>
+                <li>Indian Institute of Science</li>
+                <li>Tata Institute of Social Sciences</li>
+                <li>Symbiosis International University</li>
+            </ul>
+        
+            <h4>Private Universities</h4>
+            <ul>
+                <li>Amity University</li>
+                <li>Manipal University</li>
+                <li>Sharda University</li>
+                <li>Lovely Professional University</li>
+            </ul>
+        
+            <h4>Autonomous Colleges</h4>
+            <ul>
+                <li>St. Stephen's College</li>
+                <li>Hindu College</li>
+                <li>Miranda House</li>
+                <li>Loyola College</li>
+                <li>Christ University</li>
+            </ul>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li>The CUET exam is conducted in an online mode.</li>
+                <li>Candidates can choose to appear for the exam in either English or Hindi.</li>
+                <li>The NTA releases admit cards a few weeks before the exam date.</li>
+                <li>Candidates must carry their admit card and a valid photo ID to the exam center.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>The CUET has streamlined the B.Com admission process, providing a level playing field for aspirants across India. By understanding the exam structure, preparing diligently, and selecting the appropriate domain subject, candidates can maximize their chances of securing admission to their desired B.Com program.</p>
+        </div>
+
+        <!-- IPU CET (Indraprastha University) -->
+<div id="ipucet" class="exam-content">
+    <h2>IPU CET for B.Com: Your Gateway to a Commerce Degree</h2>
+
+    <h3>Introduction</h3>
+    <p>The Indraprastha University Common Entrance Test (IPU CET) stands as a pivotal gateway for students aspiring to pursue a Bachelor of Commerce (B.Com) degree in Delhi. Administered by Guru Gobind Singh Indraprastha University (GGSIPU), this university-level entrance exam determines admissions into various B.Com programs offered by the university and its affiliated colleges.</p>
+
+    <h3>Exam Structure: Navigating the IPU CET</h3>
+    <p>The IPU CET for B.Com is designed as a computer-based test (CBT), conducted entirely online. It comprises two main sections:</p>
+    <ul>
+        <li><strong>Section A: Verbal Ability and Logical Reasoning</strong> – Evaluates English comprehension, grammar, vocabulary, and logical reasoning skills (60 MCQs).</li>
+        <li><strong>Section B: Quantitative Aptitude and Business Aptitude</strong> – Tests mathematical abilities, data interpretation, and fundamental business concepts (60 MCQs).</li>
+    </ul>
+    <p>The total exam duration is 120 minutes, with 60 minutes allocated to each section.</p>
+
+    <h3>Paper Pattern and Marking Scheme: Understanding the Scoring</h3>
+    <p>The exam follows a consistent pattern, with each section containing 60 MCQs. Each correct answer is awarded 1 mark, and there is no negative marking for incorrect answers, encouraging students to attempt all questions.</p>
+
+    <h3>B.Com Specializations: Choosing Your Path</h3>
+    <p>IPU CET scores are accepted for various B.Com specializations:</p>
+    <ul>
+        <li><strong>B.Com (General):</strong> Covers core commerce subjects like accounting, economics, finance, and management.</li>
+        <li><strong>B.Com (Honours):</strong> Offers in-depth specialization in areas like accounting, finance, or economics.</li>
+        <li><strong>B.Com (Accounting & Finance):</strong> Focuses on accounting principles, financial management, and investment analysis.</li>
+        <li><strong>B.Com (Banking & Insurance):</strong> Covers banking operations, insurance products, and risk management.</li>
+        <li><strong>B.Com (Marketing):</strong> Explores marketing strategies, consumer behavior, and brand management.</li>
+        <li><strong>B.Com (Taxation):</strong> Provides expertise in tax laws, tax planning, and compliance.</li>
+    </ul>
+
+    <h3>Colleges Accepting IPU CET Scores: Finding Your Fit</h3>
+    <p>Several prestigious colleges in Delhi accept IPU CET scores for B.Com admissions:</p>
+    <ul>
+        <li>Maharaja Agrasen Institute of Technology (MAIT), New Delhi</li>
+        <li>Maharaja Surajmal Institute of Technology (MSIT), New Delhi</li>
+        <li>Bhagwan Parshuram Institute of Technology (BPIT), New Delhi</li>
+        <li>Bharati Vidyapeeth's College of Engineering (BVCOE), New Delhi</li>
+        <li>Guru Tegh Bahadur Institute of Technology (GTBIT), New Delhi</li>
+        <li>Dr. Akhilesh Das Gupta Institute of Technology & Management (ADGITM), New Delhi</li>
+        <li>Ambedkar Institute of Technology (AIT), New Delhi</li>
+        <li>HMR Institute of Technology & Management (HMRITM), New Delhi</li>
+        <li>Vivekananda Institute of Professional Studies (VIPS), New Delhi</li>
+        <li>JIMS Engineering Management Technical Campus (JEMTEC), Greater Noida</li>
+    </ul>
+
+    <h3>Eligibility and Application Process: Taking the First Step</h3>
+    <p>Candidates must have passed Class 12 or its equivalent from a recognized board. The application process typically opens in April, and the exam is conducted in May. Applications can be submitted online through the official IPU CET website.</p>
+
+    <h3>Preparation Tips: Gearing Up for Success</h3>
+    <ul>
+        <li>Understand the syllabus and exam pattern thoroughly.</li>
+        <li>Create a structured study plan and stick to it.</li>
+        <li>Practice with mock tests and previous years' question papers.</li>
+        <li>Strengthen conceptual understanding of key subjects.</li>
+        <li>Time management is crucial during the exam.</li>
+    </ul>
+
+    <h3>Key Takeaways</h3>
+    <p>The IPU CET serves as a crucial stepping stone for students aiming to pursue a B.Com degree in Delhi. By understanding the exam structure, paper pattern, and marking scheme, and preparing diligently, students can enhance their chances of securing admission into their desired B.Com program.</p>
+</div>
+
+    <!-- NPAT (NMIMS) -->
+<div id="npat" class="exam-content">
+    <h2>NPAT (NMIMS) - Your Gateway to Undergraduate Commerce Programs</h2>
+
+    <h3>Introduction</h3>
+    <p>The NPAT (NMIMS Programs Aptitude Test), conducted by the prestigious Narsee Monjee Institute of Management Studies (NMIMS), serves as the entrance exam for a multitude of undergraduate and postgraduate programs. For those aspiring to pursue a Bachelor of Commerce (B.Com) degree, NPAT is a crucial step.</p>
+
+    <h3>Exam Structure and Pattern</h3>
+    <p>NPAT is a computer-based test, presenting candidates with multiple-choice questions. It is designed to evaluate proficiency in four core areas:</p>
+    <ul>
+        <li><strong>Quantitative Ability:</strong> Assesses mathematical skills and problem-solving aptitude, covering arithmetic, algebra, geometry, and data interpretation.</li>
+        <li><strong>Verbal Ability:</strong> Tests English language skills, including vocabulary, grammar, reading comprehension, and verbal reasoning.</li>
+        <li><strong>Analytical Ability:</strong> Evaluates logical reasoning and critical thinking through puzzles, data sufficiency, and analytical reasoning questions.</li>
+        <li><strong>General Awareness:</strong> Examines knowledge of current affairs, business, economics, and general knowledge.</li>
+    </ul>
+    <p>The exam is divided into three sections, each containing 30 questions with a 30-minute time limit:</p>
+    <ul>
+        <li><strong>Section I:</strong> Quantitative Ability</li>
+        <li><strong>Section II:</strong> Verbal Ability</li>
+        <li><strong>Section III:</strong> Analytical Ability and General Awareness</li>
+    </ul>
+
+    <h3>Marking Scheme and Preparation</h3>
+    <p>Each correct answer earns 1 mark, and there is no negative marking for incorrect answers. This encourages intelligent guessing when unsure. To prepare effectively:</p>
+    <ul>
+        <li>Strengthen your foundational knowledge in the four tested areas.</li>
+        <li>Practice with mock tests and previous years' question papers.</li>
+        <li>Improve time management to complete sections within the allotted time.</li>
+    </ul>
+
+    <h3>B.Com Programs and Colleges Accepting NPAT</h3>
+    <p>NPAT scores open doors to various B.Com specializations at NMIMS and its affiliated colleges:</p>
+    <ul>
+        <li><strong>B.Com (General):</strong> Provides a broad understanding of commerce principles and practices.</li>
+        <li><strong>B.Com (Hons):</strong> Offers in-depth knowledge in a specific area of commerce, such as accounting, finance, or economics.</li>
+        <li><strong>B.Com (Accounting & Finance):</strong> Focuses on financial accounting, management accounting, and financial management.</li>
+        <li><strong>B.Com (Banking & Insurance):</strong> Specializes in banking operations, insurance principles, and risk management.</li>
+        <li><strong>B.Com (Marketing):</strong> Delves into marketing strategies, consumer behavior, and brand management.</li>
+        <li><strong>B.Com (Taxation):</strong> Concentrates on direct and indirect taxation laws and procedures.</li>
+    </ul>
+
+    <h3>NMIMS Campuses and Affiliated Colleges Accepting NPAT</h3>
+    <ul>
+        <li>NMIMS School of Business Management (SBM), Mumbai</li>
+        <li>NMIMS SBM, Bengaluru</li>
+        <li>NMIMS SBM, Hyderabad</li>
+        <li>NMIMS SBM, Navi Mumbai</li>
+        <li>NMIMS School of Commerce, Mumbai</li>
+        <li>NMIMS MPSTME, Mumbai & Shirpur</li>
+        <li>NMIMS School of Branding & Advertising, Mumbai</li>
+        <li>Anil Surendra Modi School of Commerce, Mumbai</li>
+        <li>Mukesh Patel School of Technology Management & Engineering, Mumbai & Shirpur</li>
+    </ul>
+
+    <h3>Additional Information</h3>
+    <p>Apart from academic performance in NPAT, admission decisions may also consider factors such as:</p>
+    <ul>
+        <li>Class 12 board exam scores.</li>
+        <li>Performance in a personal interview (if conducted).</li>
+        <li>Other university-specific eligibility criteria.</li>
+    </ul>
+    <p>It is essential to stay updated on the official NMIMS website for the latest information on eligibility, application procedures, and important dates.</p>
+
+    <h3>Key Takeaways</h3>
+    <p>Thorough preparation and a strategic approach will maximize your chances of success in NPAT and securing admission to your desired B.Com program at NMIMS.</p>
+</div>
+
+<!-- UGAT (Under Graduate Aptitude Test) -->
+<div id="ugat" class="exam-content">
+    <h2>UGAT (Undergraduate Aptitude Test) for B.Com: A Comprehensive Guide</h2>
+
+    <h3>Introduction</h3>
+    <p>The Undergraduate Aptitude Test (UGAT) is a national-level entrance examination administered by the All India Management Association (AIMA). It serves as a gateway for students seeking admission to various undergraduate management programs, notably Bachelor of Commerce (B.Com) and its specialized branches such as General, Honours, Accounting & Finance, Banking & Insurance, Marketing, and Taxation.</p>
+
+    <h3>Exam Structure and Pattern</h3>
+    <p>The UGAT exam assesses a candidate's aptitude in four key areas:</p>
+    <ul>
+        <li><strong>Quantitative Aptitude:</strong> Evaluates mathematical proficiency, covering topics like algebra, geometry, trigonometry, and data interpretation.</li>
+        <li><strong>Verbal Ability:</strong> Tests English language skills, including reading comprehension, vocabulary, grammar, and verbal reasoning.</li>
+        <li><strong>Logical Reasoning:</strong> Measures analytical and logical thinking abilities, including data sufficiency, syllogisms, and coding-decoding.</li>
+        <li><strong>General Knowledge:</strong> Assesses awareness of current affairs, history, geography, science, and general knowledge.</li>
+    </ul>
+    <p>The UGAT exam consists of 100 multiple-choice questions, with 25 questions allocated to each section. The total duration is 120 minutes, and the exam is conducted online.</p>
+
+    <h3>Marking Scheme and Syllabus</h3>
+    <ul>
+        <li>Each correct answer is awarded 1 mark.</li>
+        <li>There is no negative marking for incorrect answers.</li>
+        <li>Total marks: 100.</li>
+        <li>The syllabus is based on the 10+2 curriculum, and candidates are advised to refer to school textbooks and relevant study materials.</li>
+    </ul>
+
+    <h3>Advantages of UGAT</h3>
+    <ul>
+        <li><strong>Wide Acceptance:</strong> UGAT scores are accepted by numerous colleges and universities across India for B.Com admissions.</li>
+        <li><strong>Single Exam for Multiple Programs:</strong> Candidates can apply for multiple B.Com programs with a single UGAT score.</li>
+        <li><strong>Objective Assessment:</strong> The exam ensures fairness and transparency in evaluation.</li>
+        <li><strong>National-Level Recognition:</strong> UGAT is a well-recognized entrance exam, enhancing a candidate’s academic profile.</li>
+    </ul>
+
+    <h3>Preparation Tips</h3>
+    <ul>
+        <li><strong>Understand the Syllabus:</strong> Identify key topics and focus on strengthening weak areas.</li>
+        <li><strong>Practice Regularly:</strong> Solve mock tests and previous years' question papers to get familiar with the pattern.</li>
+        <li><strong>Focus on Fundamentals:</strong> Build a strong conceptual understanding of each section.</li>
+        <li><strong>Stay Updated:</strong> Read newspapers and stay aware of current affairs and general knowledge.</li>
+        <li><strong>Time Management:</strong> Develop strategies to manage time effectively during the exam.</li>
+    </ul>
+
+    <h3>List of Colleges Accepting UGAT Scores</h3>
+    <p>UGAT scores are accepted by several prestigious colleges across India:</p>
+
+    <h4>1. Andhra Pradesh</h4>
+    <ul>
+        <li>GITAM Institute of Management, Visakhapatnam</li>
+    </ul>
+
+    <h4>2. Assam</h4>
+    <ul>
+        <li>NERIM Group of Institutions, Guwahati</li>
+    </ul>
+
+    <h4>3. Chhattisgarh</h4>
+    <ul>
+        <li>Kalinga University, Raipur</li>
+        <li>ITM University, Raipur</li>
+    </ul>
+
+    <h4>4. Delhi</h4>
+    <ul>
+        <li>Jagannath Institute of Management Sciences, New Delhi</li>
+        <li>New Delhi Institute of Management, New Delhi</li>
+    </ul>
+
+    <h4>5. Goa</h4>
+    <ul>
+        <li>VM Salgaocar Institute of International Hospitality Education, Salcete</li>
+    </ul>
+
+    <h4>6. Gujarat</h4>
+    <ul>
+        <li>Ahmedabad University - Amrut Mody School of Management</li>
+        <li>School of Management, GLS University, Ahmedabad</li>
+    </ul>
+
+    <h4>7. Haryana</h4>
+    <ul>
+        <li>BML Munjal University, Gurugram</li>
+        <li>K.R. Mangalam University, Gurugram</li>
+    </ul>
+
+    <h4>8. Karnataka</h4>
+    <ul>
+        <li>Alliance University, Bengaluru</li>
+        <li>International School of Management Excellence, Bengaluru</li>
+        <li>ISBR College, Bengaluru</li>
+        <li>IFIM College (Autonomous), Bengaluru</li>
+    </ul>
+
+    <h4>9. Maharashtra</h4>
+    <ul>
+        <li>Vijaybhoomi University, Mumbai</li>
+    </ul>
+
+    <h4>10. Odisha</h4>
+    <ul>
+        <li>Birla Global University, Bhubaneswar</li>
+        <li>KIIT School of Management, Kalinga Deemed to be University, Bhubaneswar</li>
+    </ul>
+
+    <h4>11. Uttar Pradesh</h4>
+    <ul>
+        <li>Sharda University, Greater Noida</li>
+        <li>Institute of Management Studies (IMS), Noida</li>
+    </ul>
+    <p>Several other institutions across India also accept UGAT scores.</p>
+
+    <h3>Additional Information</h3>
+    <ul>
+        <li><strong>Eligibility:</strong> Candidates must have passed 10+2 or an equivalent examination with at least 50% marks.</li>
+        <li><strong>Application Process:</strong> UGAT applications are submitted online through the AIMA website.</li>
+        <li><strong>Exam Dates:</strong> UGAT is conducted multiple times a year. Check the AIMA website for updated schedules.</li>
+        <li><strong>Admit Card:</strong> Candidates receive an admit card upon successful application, which they must carry to the exam center.</li>
+        <li><strong>Result Declaration:</strong> UGAT results are published online on the AIMA website.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>The UGAT exam is a crucial step for students aspiring to pursue a B.Com degree. By understanding the exam pattern, syllabus, and marking scheme, and following the preparation tips, candidates can enhance their chances of success in the exam and secure admission to their desired B.Com program.</p>
+</div>
+
+<!-- Christ University Entrance Test (CUET) -->
+<div id="christ" class="exam-content">
+    <h2>Christ University Entrance Test (CUET) for B.Com</h2>
+
+    <h3>Structure of the Exam</h3>
+    <p>The CUET for B.Com consists of 100 objective-type questions, divided into four sections:</p>
+    <ul>
+        <li><strong>English Language and Comprehension:</strong> 25 questions</li>
+        <li><strong>Quantitative Aptitude:</strong> 25 questions</li>
+        <li><strong>Data Interpretation and Logical Reasoning:</strong> 25 questions</li>
+        <li><strong>General Knowledge and Current Affairs:</strong> 25 questions</li>
+    </ul>
+
+    <h3>Paper Pattern</h3>
+    <ul>
+        <li>Each question carries 1 mark.</li>
+        <li>There is no negative marking.</li>
+        <li>The total duration of the exam is 120 minutes.</li>
+    </ul>
+
+    <h3>Marking Scheme</h3>
+    <ul>
+        <li>Each correct answer is awarded 1 mark.</li>
+        <li>No deduction for incorrect answers.</li>
+    </ul>
+
+    <h3>Colleges that Accept CUET Scores for B.Com Admission</h3>
+    <ul>
+        <li>Bangalore Central Campus</li>
+        <li>Bangalore Bannerghatta Road Campus</li>
+        <li>Bangalore Kengeri Campus</li>
+        <li>Bangalore Yeshwanthpur Campus</li>
+        <li>Delhi NCR Campus</li>
+        <li>Pune Lavasa Campus</li>
+    </ul>
+
+    <h3>Preparation Tips</h3>
+    <ul>
+        <li>Start preparing early.</li>
+        <li>Cover the entire syllabus thoroughly.</li>
+        <li>Practice solving mock tests and sample papers.</li>
+        <li>Focus on your weak areas.</li>
+        <li>Improve your time management skills.</li>
+        <li>Stay calm and confident on the day of the exam.</li>
+    </ul>
+
+    <h3>Additional Information</h3>
+    <ul>
+        <li>The CUET for B.Com is conducted once a year, usually in April or May.</li>
+        <li>The application fee for the exam is Rs. 1,000.</li>
+        <li>The exam is conducted in online mode.</li>
+        <li>The results of the exam are usually declared within 15 days of the exam date.</li>
+    </ul>
+</div>
+
+<!-- St. Xavier's College Entrance Test (SXCET) -->
+<div id="xavier" class="exam-content">
+    <h2>St. Xavier's College Entrance Test (SXCET) for B.Com: A Comprehensive Guide</h2>
+
+    <h3>Introduction</h3>
+    <p>The St. Xavier's College Entrance Test (SXCET) is a gateway for students aspiring to pursue a Bachelor of Commerce (B.Com) degree at various prestigious St. Xavier's Colleges across India. This highly competitive exam evaluates candidates' aptitude and knowledge in key areas relevant to the B.Com curriculum.</p>
+
+    <h3>Exam Structure and Pattern</h3>
+    <p>The SXCET is a computer-based test with a duration of two hours. It comprises 100 objective-type questions divided into four sections:</p>
+    <ul>
+        <li><strong>English Language and Comprehension:</strong> Assesses proficiency in English grammar, vocabulary, reading comprehension, and verbal reasoning.</li>
+        <li><strong>Quantitative Aptitude:</strong> Tests numerical ability, mathematical skills, and problem-solving aptitude, covering arithmetic, algebra, geometry, and data analysis.</li>
+        <li><strong>Reasoning and Data Interpretation:</strong> Evaluates logical reasoning, analytical skills, and the ability to interpret data presented in tables, charts, and graphs.</li>
+        <li><strong>General Knowledge and Current Affairs:</strong> Gauges awareness of current events, national and international affairs, and general knowledge.</li>
+    </ul>
+
+    <h3>Marking Scheme and Syllabus</h3>
+    <ul>
+        <li>Each question carries one mark.</li>
+        <li>No negative marking for incorrect answers.</li>
+        <li>The syllabus is based on the higher secondary (10+2) curriculum.</li>
+    </ul>
+
+    <h3>Detailed Syllabus</h3>
+    <h4>English Language and Comprehension:</h4>
+    <ul>
+        <li><strong>Grammar:</strong> Tenses, Articles, Prepositions, Conjunctions, Subject-Verb Agreement</li>
+        <li><strong>Vocabulary:</strong> Synonyms, Antonyms, Idioms, Phrases</li>
+        <li><strong>Reading Comprehension:</strong> Passages followed by questions</li>
+        <li><strong>Verbal Reasoning:</strong> Analogy, Odd One Out, Syllogism</li>
+    </ul>
+
+    <h4>Quantitative Aptitude:</h4>
+    <ul>
+        <li><strong>Arithmetic:</strong> Number System, Percentage, Profit and Loss, Ratio and Proportion, Simple and Compound Interest</li>
+        <li><strong>Algebra:</strong> Linear Equations, Quadratic Equations, Simplification</li>
+        <li><strong>Geometry:</strong> Lines, Angles, Triangles, Circles, Mensuration</li>
+        <li><strong>Data Analysis:</strong> Mean, Median, Mode, Standard Deviation</li>
+    </ul>
+
+    <h4>Reasoning and Data Interpretation:</h4>
+    <ul>
+        <li><strong>Logical Reasoning:</strong> Coding-Decoding, Blood Relations, Direction Sense, Seating Arrangement</li>
+        <li><strong>Data Interpretation:</strong> Tables, Bar Graphs, Pie Charts, Line Graphs</li>
+    </ul>
+
+    <h4>General Knowledge and Current Affairs:</h4>
+    <ul>
+        <li><strong>Current Events:</strong> National and International News, Sports, Awards, Summits</li>
+        <li><strong>Static GK:</strong> History, Geography, Polity, Economy, Science</li>
+    </ul>
+
+    <h3>Preparation Tips</h3>
+    <ul>
+        <li><strong>Thorough Syllabus Coverage:</strong> Familiarize yourself with the syllabus and cover all topics comprehensively.</li>
+        <li><strong>Practice and Mock Tests:</strong> Solve sample papers and mock tests to improve speed, accuracy, and time management.</li>
+        <li><strong>Time Management:</strong> Allocate time effectively to each section during the exam.</li>
+        <li><strong>Stay Updated:</strong> Keep abreast of current affairs by reading newspapers, magazines, and online resources.</li>
+    </ul>
+
+    <h3>List of Colleges Accepting SXCET Scores</h3>
+    <p>The SXCET scores are accepted by several esteemed St. Xavier's Colleges across India, including:</p>
+    <ul>
+        <li>St. Xavier's College, Kolkata</li>
+        <li>St. Xavier's College, Mumbai</li>
+        <li>St. Xavier's College, Ahmedabad</li>
+        <li>St. Xavier's College, Jaipur</li>
+        <li>St. Xavier's College, Ranchi</li>
+        <li>St. Xavier's College, Patna</li>
+        <li>St. Xavier's College, Bhubaneswar</li>
+        <li>St. Xavier's College, Raipur</li>
+        <li>St. Xavier's College, Siliguri</li>
+        <li>St. Xavier's College, Durgapur</li>
+    </ul>
+
+    <h3>Additional Information</h3>
+    <ul>
+        <li>The SXCET is typically conducted in May or June each year.</li>
+        <li>The application process is online, and candidates can apply through the respective college's website.</li>
+        <li>The registration fee varies depending on the college.</li>
+        <li>Results are generally declared within a month of the exam.</li>
+        <li>Shortlisted candidates are called for counseling and admission based on their SXCET scores and other eligibility criteria.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>The SXCET is a crucial step toward securing admission to a B.Com program at a renowned St. Xavier's College. With dedicated preparation, a focused approach, and a strong understanding of the exam pattern, you can increase your chances of success.</p>
+</div>
+
+<!-- Symbiosis Entrance Test (SET) -->
+<div id="set" class="exam-content">
+    <h2>Symbiosis Entrance Test (SET) for B.Com: A Comprehensive Guide</h2>
+
+    <h3>Introduction</h3>
+    <p>The Symbiosis Entrance Test (SET) is a gateway for aspiring B.Com students to secure admission into prestigious Symbiosis colleges. This national-level entrance exam, conducted by Symbiosis International (Deemed University), Pune, is a computer-based test that evaluates candidates' aptitude and knowledge across various domains.</p>
+
+    <h3>Exam Structure and Pattern</h3>
+    <p>The SET for B.Com is meticulously designed to assess a candidate's overall potential. It comprises four sections:</p>
+    <ul>
+        <li><strong>English Language:</strong> Tests proficiency in English grammar, vocabulary, reading comprehension, and verbal ability, including error spotting, sentence completion, synonyms, antonyms, and comprehension passages.</li>
+        <li><strong>Quantitative Aptitude:</strong> Gauges mathematical skills and numerical ability, covering topics like arithmetic, algebra, geometry, mensuration, data interpretation, and basic statistics.</li>
+        <li><strong>Logical Reasoning:</strong> Evaluates logical and analytical thinking skills with questions on coding-decoding, blood relations, seating arrangement, syllogisms, and data sufficiency.</li>
+        <li><strong>General Awareness:</strong> Tests knowledge of current affairs, general knowledge, and static GK, including history, geography, economics, politics, science, and technology.</li>
+    </ul>
+    <p>Each section consists of 25 questions, except for General Awareness, which has 50 questions. The total duration of the exam is 150 minutes.</p>
+
+    <h3>Marking Scheme and Eligibility</h3>
+    <ul>
+        <li>Each correct answer is awarded 1 mark.</li>
+        <li>No negative marking for incorrect or unanswered questions.</li>
+    </ul>
+    <p>To be eligible for the SET, candidates must have passed the 10+2 examination or its equivalent from a recognized board.</p>
+
+    <h3>Symbiosis Colleges Accepting SET Scores</h3>
+    <p>Several Symbiosis colleges accept SET scores for admission to their B.Com programs, including:</p>
+    <ul>
+        <li>Symbiosis College of Arts and Commerce, Pune</li>
+        <li>Symbiosis Institute of Business Management, Pune</li>
+        <li>Symbiosis Institute of Computer Studies and Research, Pune</li>
+        <li>Symbiosis Institute of International Business, Pune</li>
+        <li>Symbiosis Institute of Management Studies, Pune</li>
+        <li>Symbiosis Centre for Management and Human Resource Development, Pune</li>
+        <li>Symbiosis School of Economics, Pune</li>
+    </ul>
+
+    <h3>Additional Information and Preparation Tips</h3>
+    <ul>
+        <li>The SET is typically conducted twice a year, in January and May.</li>
+        <li>The application process is online, and candidates can find detailed information on the official Symbiosis website.</li>
+        <li><strong>Preparation Tips:</strong></li>
+        <ul>
+            <li>Focus on building a strong foundation in core subjects.</li>
+            <li>Practice with mock tests and previous years' question papers.</li>
+            <li>Stay updated on current affairs and general knowledge.</li>
+            <li>Time management and accuracy are crucial for success.</li>
+        </ul>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>The Symbiosis Entrance Test (SET) for B.Com is a competitive exam that opens doors to a world of opportunities in commerce and business. With thorough preparation, a strategic approach, and a calm and focused mindset, candidates can ace this exam and secure their place in a top Symbiosis college.</p>
+</div>
+
+<!-- Jain Entrance Test (JET) -->
+<div id="jet" class="exam-content">
+    <h2>Jain Entrance Test (JET) for B.Com</h2>
+
+    <h3>Introduction</h3>
+    <p>The Jain Entrance Test (JET) is a national-level entrance exam conducted by Jain University, Bangalore for admission to various undergraduate programs in Commerce. The programs include:</p>
+    <ul>
+        <li>B.Com (General)</li>
+        <li>B.Com (Honours)</li>
+        <li>B.Com (Accounting & Finance)</li>
+        <li>B.Com (Banking & Insurance)</li>
+        <li>B.Com (Marketing)</li>
+        <li>B.Com (Taxation)</li>
+    </ul>
+
+    <h3>Structure of the Exam</h3>
+    <p>The JET is a computer-based test (CBT) conducted in two sessions:</p>
+    <ul>
+        <li><strong>Session 1:</strong> Quantitative Aptitude, Logical Reasoning, and Verbal Ability</li>
+        <li><strong>Session 2:</strong> Commerce and General Knowledge</li>
+    </ul>
+
+    <h3>Paper Pattern</h3>
+    <ul>
+        <li><strong>Total number of questions:</strong> 120</li>
+        <li><strong>Total marks:</strong> 120</li>
+        <li><strong>Duration:</strong> 120 minutes</li>
+        <li><strong>Question types:</strong> Multiple-choice questions (MCQs)</li>
+        <li><strong>Negative marking:</strong> 0.25 marks deducted for each incorrect answer</li>
+    </ul>
+
+    <h3>Marking Scheme</h3>
+    <ul>
+        <li><strong>Correct answer:</strong> 1 mark</li>
+        <li><strong>Incorrect answer:</strong> -0.25 marks</li>
+        <li><strong>Unanswered question:</strong> 0 marks</li>
+    </ul>
+
+    <h3>Colleges Accepting JET Scores</h3>
+    <p>The following colleges accept JET scores for admission to their B.Com programs:</p>
+    <ul>
+        <li>Jain University, Bangalore</li>
+        <li>Jain College, Hubli</li>
+        <li>Jain College, Mysore</li>
+        <li>Jain College, Mangalore</li>
+        <li>Jain College, Belgaum</li>
+        <li>Jain College, Udupi</li>
+        <li>Jain College, Shimoga</li>
+        <li>Jain College, Tumkur</li>
+        <li>Jain College, Davangere</li>
+        <li>Jain College, Kolar</li>
+        <li>Jain College, Chikmagalur</li>
+        <li>Jain College, Hassan</li>
+        <li>Jain College, Bijapur</li>
+        <li>Jain College, Gulbarga</li>
+        <li>Jain College, Raichur</li>
+        <li>Jain College, Bellary</li>
+        <li>Jain College, Chitradurga</li>
+        <li>Jain College, Haveri</li>
+        <li>Jain College, Koppal</li>
+        <li>Jain College, Gadag</li>
+        <li>Jain College, Bagalkot</li>
+        <li>Jain College, Yadgir</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>The Jain Entrance Test (JET) serves as a vital gateway for students aspiring to pursue B.Com at Jain University and its affiliated colleges. Understanding the exam structure, paper pattern, and negative marking scheme is essential for effective preparation and maximizing success in securing admission.</p>
+</div>
+
+<!-- GLA University Entrance Test (GLAET) -->
+<div id="glaet" class="exam-content">
+    <h2>GLA University Entrance Test (GLAET) for B.Com</h2>
+
+    <h3>Introduction</h3>
+    <p>The GLA University Entrance Test (GLAET) is a national-level entrance exam conducted by GLA University, Mathura, for admission to its undergraduate programs, including:</p>
+    <ul>
+        <li>B.Com (General)</li>
+        <li>B.Com (Honours)</li>
+        <li>B.Com (Accounting & Finance)</li>
+        <li>B.Com (Banking & Insurance)</li>
+        <li>B.Com (Marketing)</li>
+        <li>B.Com (Taxation)</li>
+    </ul>
+
+    <h3>Structure of the Exam</h3>
+    <p>The GLAET for B.Com is a computer-based test (CBT) conducted in online mode. The exam consists of four sections:</p>
+    <ul>
+        <li><strong>Quantitative Aptitude</strong></li>
+        <li><strong>Logical Reasoning</strong></li>
+        <li><strong>Verbal Ability</strong></li>
+        <li><strong>General Awareness</strong></li>
+    </ul>
+
+    <h3>Paper Pattern</h3>
+    <ul>
+        <li><strong>Duration of the exam:</strong> 120 minutes</li>
+        <li><strong>Number of questions:</strong> 100</li>
+        <li><strong>Total marks:</strong> 100</li>
+        <li><strong>Marking scheme:</strong> +1 mark for each correct answer, -0.25 marks for each incorrect answer</li>
+    </ul>
+
+    <h3>Colleges Accepting GLAET Scores for B.Com</h3>
+    <p>The following colleges accept GLAET scores for admission to their B.Com programs:</p>
+    <ul>
+        <li>GLA University, Mathura</li>
+        <li>GLA Institute of Engineering & Technology, Mathura</li>
+        <li>GLA Institute of Business Management, Mathura</li>
+        <li>GLA Institute of Science & Technology, Mathura</li>
+        <li>GLA Institute of Pharmaceutical Sciences, Mathura</li>
+        <li>GLA Institute of Law, Mathura</li>
+        <li>GLA Institute of Education, Mathura</li>
+        <li>GLA Institute of Hotel Management & Catering Technology, Mathura</li>
+        <li>GLA Institute of Polytechnic, Mathura</li>
+        <li>GLA Institute of Nursing, Mathura</li>
+    </ul>
+
+    <h3>Other Information</h3>
+    <ul>
+        <li>The GLAET is conducted twice a year, usually in May and December.</li>
+        <li>The application fee for the GLAET is Rs. 1,000.</li>
+        <li>The exam is open to all candidates who have passed Class 12 or equivalent from a recognized board.</li>
+        <li>Candidates can apply for the GLAET online at the official website of GLA University.</li>
+        <li>GLAET results are usually declared within 15 days of the exam date.</li>
+        <li>Qualified candidates are called for counselling and seat allotment.</li>
+    </ul>
+</div>
+
+<!-- LPU NEST (Lovely Professional University) -->
+<div id="lpunest" class="exam-content">
+    <h2>LPU NEST for B.Com (General, Honours, Accounting & Finance, Banking & Insurance, Marketing, Taxation)</h2>
+
+    <h3>Structure of the Exam</h3>
+    <p>The LPU NEST for B.Com is a two-hour online entrance exam conducted by Lovely Professional University (LPU) for admission to its B.Com programs. The exam consists of four sections:</p>
+    <ul>
+        <li><strong>English Language and Comprehension</strong></li>
+        <li><strong>Quantitative Aptitude</strong></li>
+        <li><strong>Reasoning</strong></li>
+        <li><strong>General Awareness</strong></li>
+    </ul>
+
+    <h3>Paper Pattern</h3>
+    <ul>
+        <li><strong>English Language and Comprehension:</strong> 30 questions</li>
+        <li><strong>Quantitative Aptitude:</strong> 30 questions</li>
+        <li><strong>Reasoning:</strong> 30 questions</li>
+        <li><strong>General Awareness:</strong> 10 questions</li>
+    </ul>
+
+    <h3>Marking Scheme</h3>
+    <ul>
+        <li>Each question carries 1 mark</li>
+        <li>No negative marking</li>
+    </ul>
+
+    <h3>Colleges that Accept LPU NEST for B.Com Admission</h3>
+    <p>The following institutions accept LPU NEST scores for B.Com admissions:</p>
+    <ul>
+        <li>Lovely Professional University, Phagwara</li>
+        <li>LPU School of Business, Jalandhar</li>
+        <li>LPU School of Business, Chandigarh</li>
+        <li>LPU School of Business, Delhi NCR</li>
+        <li>LPU School of Business, Mumbai</li>
+        <li>LPU School of Business, Hyderabad</li>
+        <li>LPU School of Business, Bengaluru</li>
+        <li>LPU School of Business, Chennai</li>
+        <li>LPU School of Business, Kolkata</li>
+    </ul>
+
+    <h3>Other Information</h3>
+    <ul>
+        <li>The LPU NEST for B.Com is conducted twice a year, in January and May.</li>
+        <li>The application fee for the exam is Rs. 1000.</li>
+        <li>Candidates who have passed class 12th from a recognized board are eligible to apply for the exam.</li>
+        <li>Selection for admission to B.Com programs at LPU is based on performance in the LPU NEST, academic record, and overall profile.</li>
+    </ul>
+</div>
+
+
+    </section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+    <div class="logos">
+        <span>A Physics Wallah Product</span>
+    </div>
+</footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

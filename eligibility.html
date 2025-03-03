@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Home Page</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .auth-buttons .login {
+            color: #333;
+        }
+
+        .auth-buttons .signup {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Main Content Box */
+        .container {
+            margin-top: 50px;
+        }
+
+        .box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: center;
+        }
+
+        .box h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .box p {
+            margin: 10px 0 20px;
+            color: #555;
+        }
+
+        /* Button Styling */
+        .button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #0056b3;
+        }
+
+        /* Career Eligibility Checker */
+        .eligibility-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            display: inline-block;
+            text-align: left;
+            width: 400px;
+        }
+
+        .eligibility-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .eligibility-box label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .eligibility-box select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .eligibility-box button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            background: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .eligibility-box button:hover {
+            background: #e64a19;
+        }
+    </style>
+    <script>// Career Eligibility Data from JSON
+        const careerEligibility = {
+            "Doctor": ["PCB"],
+            "Chartered Accountant": ["Commerce", "PCM", "PCB"],
+            "Journalist": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Investment Banker": ["Commerce", "PCM", "PCB"],
+            "Civil Servant": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Lawyer": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Architect": ["PCM"],
+            "Psychologist": ["Commerce", "Humanities", "PCB", "PCM"],
+            "Data Scientist": ["PCM"],
+            "Software Engineer": ["PCM"],
+            "Civil Engineer": ["PCM"],
+            "Mechanical Engineer": ["PCM"],
+            "Electrical Engineer": ["PCM"],
+            "Aerospace Engineer": ["PCM"],
+            "Biomedical Engineer": ["PCB", "PCM"],
+            "Pharmacist": ["PCB"],
+            "Economist": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Actuary": ["Commerce", "PCM", "PCB"],
+            "Bank Manager": ["Commerce", "PCM", "PCB"],
+            "Judge": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Fashion Designer": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Artist (Music/Painting)": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Hotel Manager": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Chef": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Sports Coach": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Pilot": ["PCM"],
+            "Entrepreneur": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Cybersecurity Analyst": ["PCM"],
+            "AI/ML Engineer": ["PCM"],
+            "Robotics Engineer": ["PCM"],
+            "Blockchain Developer": ["PCM", "Commerce"],
+            "Space Scientist (ISRO/NASA)": ["PCM"],
+            "Ethical Hacker": ["PCM"],
+            "Meteorologist": ["PCM"],
+            "Geologist": ["PCB", "PCM"],
+            "Forensic Scientist": ["PCB", "PCM"],
+            "Geneticist": ["PCB"],
+            "Marine Biologist": ["PCB"],
+            "Veterinarian": ["PCB"],
+            "Radiologist": ["PCB"],
+            "Dietitian/Nutritionist": ["PCB"],
+            "Pharmaceutical Scientist": ["PCB", "PCM"],
+            "Stock Market Analyst": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Real estate Developer": ["Commerce", "Humanities", "PCM", "PCB"],
+            "E-commerce Manager": ["Commerce", "Humanities", "PCM", "PCB"],
+            "UX/UI Designer": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Interior Designer": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Game Developer": ["PCM"],
+            "Film Director": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Music Producer": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Digital Marketer": ["Commerce", "Humanities", "PCM", "PCB"],
+            "YouTuber/Influencer": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Event Manager": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Ethnographer (Social Researcher)": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Defense Officer (Army/Navy/Air Force)": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Foreign Language Expert": ["Commerce", "Humanities", "PCM", "PCB"],
+            "Archaeologist": ["Humanities", "PCM", "PCB"],
+            "Political Analyst": ["Commerce", "Humanities", "PCM", "PCB"],
+            "AI Research Scientist": ["PCM"],
+            "Quantum Computing Scientist": ["PCM"],
+            "Augmented Reality (AR) Developer": ["PCM"],
+            "Virtual Reality (VR) Developer": ["PCM"],
+            "Metaverse Architect": ["PCM"],
+            "Blockchain Engineer": ["PCM"],
+            "Genetic Engineer": ["PCB"],
+            "Agricultural Scientist": ["PCB", "PCM"],
+    "Biostatistician": ["PCB", "PCM"],
+    "Bioinformatics Scientist": ["PCB", "PCM"],
+    "Nanotechnology Engineer": ["PCM"],
+    "Space Engineer (ISRO/NASA)": ["PCM"],
+    "Ethical Hacker (Cyber Security)": ["PCM"],
+    "Drone Engineer": ["PCM"],
+    "Solar Energy Engineer": ["PCM"],
+    "Sustainability Manager": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Climate Change Analyst": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Digital Forensic Analyst": ["PCM"],
+    "Astrobiologist": ["PCB", "PCM"],
+    "Hydrologist": ["PCB", "PCM"],
+    "Robotics Surgeon": ["PCB", "PCM"],
+    "Luxury Brand Manager": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Product Manager (Tech Industry)": ["PCM"],
+    "Digital Transformation Consultant": ["Commerce", "Humanities", "PCM", "PCB"],
+    "EdTech Entrepreneur": ["Commerce", "Humanities", "PCM", "PCB"],
+    "IAS Officer (UPSC)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "IPS Officer (UPSC)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "IFS Officer (Foreign Services)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "IRS Officer (Tax & Revenue)": ["PCM"],
+    "Indian Engineering Services (IES)": ["PCM", "Humanities"],
+    "Defense Officer (Army/Navy/Air Force)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Railway Officer (Indian Railways)": ["Commerce", "PCM"],
+    "Judicial Magistrate (Law Officer)": ["Commerce", "PCM", "PCB"],
+    "Public Sector Bank Officer (SBI/IBPS)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Indian Statistical Service (ISS)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "IAS (Indian Administrative Service)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "IPS (Indian Police Service)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "IFS (Indian Foreign Service)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "IRS (Indian Revenue Service)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "State Administrative Service (SDM, DSP, Tehsildar)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Indian Railway Traffic Service (IRTS)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Indian Railway Accounts Service (IRAS)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Railway Engineer (IRSE)": ["PCM"],
+    "Bank PO (SBI, IBPS PO)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "RBI Grade B Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "NABARD Officer (Agriculture Finance)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Judge (Judicial Magistrate/ Civil Judge)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Public Prosecutor": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Legal Advisor (Govt.)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Indian Army Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Indian Navy Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Indian Air Force Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Coast Guard Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Assistant Professor (Govt. Colleges/Universities)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Scientist (ISRO/DRDO/BARC)": ["PCM"],
+    "School Teacher (Govt.)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Indian Forest Service (IFS - Environment & Forestry)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Intelligence Bureau (IB) Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "CBI Officer (Central Bureau of Investigation)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Customs Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Public Sector Undertaking (PSU) Engineer": ["PCM"],
+    "Postal Service Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Defense Scientist (DRDO, BARC)": ["PCM"],
+    "Agriculture Research Scientist (ARS)": ["PCB", "PCM"],
+    "Municipal Corporation Officer (Urban Planning, Public Works)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Indian Coast Guard Technical Officer": ["PCM"],
+    "Fire Service Officer": ["PCM"],
+    "Indian Coast Guard Officer (General Duty & Technical Branch)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "National Disaster Response Force (NDRF) Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Public Health Officer (PHO)": ["PCM"],
+    "Indian Space Research Organisation (ISRO) Scientist": ["PCM"],
+    "Defense Research & Development Organisation (DRDO) Scientist": ["PCM"],
+    "Indian Meteorological Department (IMD) Scientist": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Indian Economic Service (IES) Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Census Officer (Registrar General of India)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Border Roads Organisation (BRO) Engineer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Archaeologist (ASI - Archaeological Survey of India)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Food Safety Officer (FSO)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Indian Postal Service (IPS) Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Employment Officer (Labour Department)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Assistant Provident Fund Commissioner (EPFO)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Indian Information Service (IIS) Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Transport Officer (RTO - Road Transport Officer)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Geologist (Geological Survey of India - GSI)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Mining Officer (Ministry of Mines, Govt. of India)": ["PCM"],
+    "Wildlife Conservation Officer (Forest Department)": ["PCM"],
+    "Customs & Excise Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Shipping Corporation of India (SCI) Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Trade & Commerce Officer (Ministry of Commerce & Industry)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "State Electricity Board Engineer (Power Corporation)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Cyber Security Officer (Government & Intelligence Agencies)": ["PCM"],
+    "Social Welfare Officer (Women & Child Development Dept.)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Tourism Officer (Ministry of Tourism, Govt. of India)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Handloom & Textiles Officer (Ministry of Textiles)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Scientific Officer (Forensic Science Laboratory - FSL)": ["PCM"],
+    "Judicial Translator (High Court/Supreme Court)": ["PCM", "Humanities"],
+    "Press Information Bureau (PIB) Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Aviation Safety Officer (DGCA - Directorate General of Civil Aviation)": ["Commerce", "Humanities", "PCM", "PCB"],
+    "Oil & Natural Gas Corporation (ONGC) Officer": ["Commerce", "Humanities", "PCM", "PCB"],
+    "State Disaster Management Authority (SDMA) Officer": ["Commerce", "Humanities", "PCM", "PCB"]
+        };
+        
+        function checkEligibility() {
+            let selectedStream = document.getElementById("stream").value;
+            let selectedCareer = document.getElementById("career").value;
+            let resultText = document.getElementById("result");
+        
+            if (careerEligibility[selectedCareer].includes(selectedStream)) {
+                resultText.innerHTML = `<span style="color: green; font-weight: bold;">You are eligible for ${selectedCareer}.</span>`;
+            } else {
+                resultText.innerHTML = `<span style="color: red; font-weight: bold;">You are NOT eligible for ${selectedCareer}.</span>`;
+            }
+        }
+        </script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="logo">Career Kaptain</div>
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="directory.html">Career Directory</a></li>
+        <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="auth-buttons">
+        <a href="#" class="login">Log in</a>
+        <a href="#" class="signup">Sign up</a>
+    </div>
+</nav>
+
+    <!-- Main Content -->
+   <!-- Career Eligibility Checker -->
+    <div class="container">
+        <div class="eligibility-box">
+            <h2>Find Your Career Eligibility</h2>
+
+            <label for="stream">Select Your Stream:</label>
+            <select id="stream">
+                <option value="PCM">PCM</option>
+                <option value="PCB">PCB</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Humanities">Humanities</option>
+            </select>
+
+            <label for="career">Select Your Career:</label>
+            <select id="career">
+                <option value="Doctor">Doctor</option>
+<option value="Chartered Accountant">Chartered Accountant</option>
+<option value="Journalist">Journalist</option>
+<option value="Investment Banker">Investment Banker</option>
+<option value="Civil Servant">Civil Servant</option>
+<option value="Lawyer">Lawyer</option>
+<option value="Architect">Architect</option>
+<option value="Psychologist">Psychologist</option>
+<option value="Data Scientist">Data Scientist</option>
+<option value="Software Engineer">Software Engineer</option>
+<option value="Civil Engineer">Civil Engineer</option>
+<option value="Mechanical Engineer">Mechanical Engineer</option>
+<option value="Electrical Engineer">Electrical Engineer</option>
+<option value="Aerospace Engineer">Aerospace Engineer</option>
+<option value="Biomedical Engineer">Biomedical Engineer</option>
+<option value="Pharmacist">Pharmacist</option>
+<option value="Economist">Economist</option>
+<option value="Actuary">Actuary</option>
+<option value="Bank Manager">Bank Manager</option>
+<option value="Judge">Judge</option>
+<option value="Fashion Designer">Fashion Designer</option>
+<option value="Artist (Music/Painting)">Artist (Music/Painting)</option>
+<option value="Hotel Manager">Hotel Manager</option>
+<option value="Chef">Chef</option>
+<option value="Sports Coach">Sports Coach</option>
+<option value="Pilot">Pilot</option>
+<option value="Entrepreneur">Entrepreneur</option>
+<option value="Cybersecurity Analyst">Cybersecurity Analyst</option>
+<option value="AI/ML Engineer">AI/ML Engineer</option>
+<option value="Robotics Engineer">Robotics Engineer</option>
+<option value="Blockchain Developer">Blockchain Developer</option>
+<option value="Space Scientist (ISRO/NASA)">Space Scientist (ISRO/NASA)</option>
+<option value="Ethical Hacker">Ethical Hacker</option>
+<option value="Meteorologist">Meteorologist</option>
+<option value="Geologist">Geologist</option>
+<option value="Forensic Scientist">Forensic Scientist</option>
+<option value="Geneticist">Geneticist</option>
+<option value="Marine Biologist">Marine Biologist</option>
+<option value="Veterinarian">Veterinarian</option>
+<option value="Radiologist">Radiologist</option>
+<option value="Dietitian/Nutritionist">Dietitian/Nutritionist</option>
+<option value="Pharmaceutical Scientist">Pharmaceutical Scientist</option>
+<option value="Stock Market Analyst">Stock Market Analyst</option>
+<option value="Real Estate Developer">Real Estate Developer</option>
+<option value="E-commerce Manager">E-commerce Manager</option>
+<option value="UX/UI Designer">UX/UI Designer</option>
+<option value="Interior Designer">Interior Designer</option>
+<option value="Game Developer">Game Developer</option>
+<option value="Film Director">Film Director</option>
+<option value="Music Producer">Music Producer</option>
+<option value="Digital Marketer">Digital Marketer</option>
+<option value="YouTuber/Influencer">YouTuber/Influencer</option>
+<option value="Event Manager">Event Manager</option>
+<option value="Ethnographer (Social Researcher)">Ethnographer (Social Researcher)</option>
+<option value="Defense Officer (Army/Navy/Air Force)">Defense Officer (Army/Navy/Air Force)</option>
+<option value="Foreign Language Expert">Foreign Language Expert</option>
+<option value="Archaeologist">Archaeologist</option>
+<option value="Political Analyst">Political Analyst</option>
+<option value="AI Research Scientist">AI Research Scientist</option>
+<option value="Quantum Computing Scientist">Quantum Computing Scientist</option>
+<option value="Augmented Reality (AR) Developer">Augmented Reality (AR) Developer</option>
+<option value="Virtual Reality (VR) Developer">Virtual Reality (VR) Developer</option>
+<option value="Metaverse Architect">Metaverse Architect</option>
+<option value="Blockchain Engineer">Blockchain Engineer</option>
+<option value="Genetic Engineer">Genetic Engineer</option>
+<option value="Agricultural Scientist">Agricultural Scientist</option>
+<option value="Biostatistician">Biostatistician</option>
+<option value="Bioinformatics Scientist">Bioinformatics Scientist</option>
+<option value="Nanotechnology Engineer">Nanotechnology Engineer</option>
+<option value="Space Engineer (ISRO/NASA)">Space Engineer (ISRO/NASA)</option>
+<option value="Ethical Hacker (Cyber Security)">Ethical Hacker (Cyber Security)</option>
+<option value="Drone Engineer">Drone Engineer</option>
+<option value="Solar Energy Engineer">Solar Energy Engineer</option>
+<option value="Sustainability Manager">Sustainability Manager</option>
+<option value="Climate Change Analyst">Climate Change Analyst</option>
+<option value="Digital Forensic Analyst">Digital Forensic Analyst</option>
+<option value="Astrobiologist">Astrobiologist</option>
+<option value="Hydrologist">Hydrologist</option>
+<option value="Robotics Surgeon">Robotics Surgeon</option>
+<option value="Luxury Brand Manager">Luxury Brand Manager</option>
+<option value="Product Manager (Tech Industry)">Product Manager (Tech Industry)</option>
+<option value="Digital Transformation Consultant">Digital Transformation Consultant</option>
+<option value="EdTech Entrepreneur">EdTech Entrepreneur</option>
+<option value="IAS Officer (UPSC)">IAS Officer (UPSC)</option>
+<option value="IPS Officer (UPSC)">IPS Officer (UPSC)</option>
+<option value="IFS Officer (Foreign Services)">IFS Officer (Foreign Services)</option>
+<option value="IRS Officer (Tax & Revenue)">IRS Officer (Tax & Revenue)</option>
+<option value="Indian Engineering Services (IES)">Indian Engineering Services (IES)</option>
+<option value="Defense Officer (Army/Navy/Air Force)">Defense Officer (Army/Navy/Air Force)</option>
+<option value="Railway Officer (Indian Railways)">Railway Officer (Indian Railways)</option>
+<option value="Judicial Magistrate (Law Officer)">Judicial Magistrate (Law Officer)</option>
+<option value="Public Sector Bank Officer (SBI/IBPS)">Public Sector Bank Officer (SBI/IBPS)</option>
+<option value="Indian Statistical Service (ISS)">Indian Statistical Service (ISS)</option>
+<option value="IAS (Indian Administrative Service)">IAS (Indian Administrative Service)</option>
+<option value="IPS (Indian Police Service)">IPS (Indian Police Service)</option>
+<option value="IFS (Indian Foreign Service)">IFS (Indian Foreign Service)</option>
+<option value="IRS (Indian Revenue Service)">IRS (Indian Revenue Service)</option>
+<option value="State Administrative Service (SDM, DSP, Tehsildar)">State Administrative Service (SDM, DSP, Tehsildar)</option>
+<option value="Indian Statistical Service (ISS)">Indian Statistical Service (ISS)</option>
+<option value="Indian Railway Traffic Service (IRTS)">Indian Railway Traffic Service (IRTS)</option>
+<option value="Indian Railway Accounts Service (IRAS)">Indian Railway Accounts Service (IRAS)</option>
+<option value="Railway Engineer (IRSE)">Railway Engineer (IRSE)</option>
+<option value="Bank PO (SBI, IBPS PO)">Bank PO (SBI, IBPS PO)</option>
+<option value="RBI Grade B Officer">RBI Grade B Officer</option>
+<option value="NABARD Officer (Agriculture Finance)">NABARD Officer (Agriculture Finance)</option>
+<option value="Judge (Judicial Magistrate/ Civil Judge)">Judge (Judicial Magistrate/ Civil Judge)</option>
+<option value="Public Prosecutor">Public Prosecutor</option>
+<option value="Legal Advisor (Govt.)">Legal Advisor (Govt.)</option>
+<option value="Indian Army Officer">Indian Army Officer</option>
+<option value="Indian Navy Officer">Indian Navy Officer</option>
+<option value="Indian Air Force Officer">Indian Air Force Officer</option>
+<option value="Coast Guard Officer">Coast Guard Officer</option>
+<option value="Assistant Professor (Govt. Colleges/Universities)">Assistant Professor (Govt. Colleges/Universities)</option>
+<option value="Scientist (ISRO/DRDO/BARC)">Scientist (ISRO/DRDO/BARC)</option>
+<option value="School Teacher (Govt.)">School Teacher (Govt.)</option>
+<option value="Indian Forest Service (IFS - Environment & Forestry)">Indian Forest Service (IFS - Environment & Forestry)</option>
+<option value="Intelligence Bureau (IB) Officer">Intelligence Bureau (IB) Officer</option>
+<option value="CBI Officer (Central Bureau of Investigation)">CBI Officer (Central Bureau of Investigation)</option>
+<option value="Customs Officer">Customs Officer</option>
+<option value="Public Sector Undertaking (PSU) Engineer">Public Sector Undertaking (PSU) Engineer</option>
+<option value="Postal Service Officer">Postal Service Officer</option>
+<option value="Defense Scientist (DRDO, BARC)">Defense Scientist (DRDO, BARC)</option>
+<option value="Agriculture Research Scientist (ARS)">Agriculture Research Scientist (ARS)</option>
+<option value="Municipal Corporation Officer (Urban Planning, Public Works)">Municipal Corporation Officer (Urban Planning, Public Works)</option>
+<option value="Indian Coast Guard Technical Officer">Indian Coast Guard Technical Officer</option>
+<option value="Fire Service Officer">Fire Service Officer</option>
+<option value="Indian Coast Guard Officer (General Duty & Technical Branch)">Indian Coast Guard Officer (General Duty & Technical Branch)</option>
+<option value="National Disaster Response Force (NDRF) Officer">National Disaster Response Force (NDRF) Officer</option>
+<option value="Public Health Officer (PHO)">Public Health Officer (PHO)</option>
+<option value="Indian Space Research Organisation (ISRO) Scientist">Indian Space Research Organisation (ISRO) Scientist</option>
+<option value="Defense Research & Development Organisation (DRDO) Scientist">Defense Research & Development Organisation (DRDO) Scientist</option>
+<option value="Indian Meteorological Department (IMD) Scientist">Indian Meteorological Department (IMD) Scientist</option>
+<option value="Indian Economic Service (IES) Officer">Indian Economic Service (IES) Officer</option>
+<option value="Census Officer (Registrar General of India)">Census Officer (Registrar General of India)</option>
+<option value="Border Roads Organisation (BRO) Engineer">Border Roads Organisation (BRO) Engineer</option>
+<option value="Archaeologist (ASI - Archaeological Survey of India)">Archaeologist (ASI - Archaeological Survey of India)</option>
+<option value="Food Safety Officer (FSO)">Food Safety Officer (FSO)</option>
+<option value="Indian Postal Service (IPS) Officer">Indian Postal Service (IPS) Officer</option>
+<option value="Employment Officer (Labour Department)">Employment Officer (Labour Department)</option>
+<option value="Assistant Provident Fund Commissioner (EPFO)">Assistant Provident Fund Commissioner (EPFO)</option>
+<option value="Indian Information Service (IIS) Officer">Indian Information Service (IIS) Officer</option>
+<option value="Transport Officer (RTO - Road Transport Officer)">Transport Officer (RTO - Road Transport Officer)</option>
+<option value="Geologist (Geological Survey of India - GSI)">Geologist (Geological Survey of India - GSI)</option>
+<option value="Mining Officer (Ministry of Mines, Govt. of India)">Mining Officer (Ministry of Mines, Govt. of India)</option>
+<option value="Wildlife Conservation Officer (Forest Department)">Wildlife Conservation Officer (Forest Department)</option>
+<option value="Customs & Excise Officer">Customs & Excise Officer</option>
+<option value="Shipping Corporation of India (SCI) Officer">Shipping Corporation of India (SCI) Officer</option>
+<option value="Trade & Commerce Officer (Ministry of Commerce & Industry)">Trade & Commerce Officer (Ministry of Commerce & Industry)</option>
+<option value="State Electricity Board Engineer (Power Corporation)">State Electricity Board Engineer (Power Corporation)</option>
+<option value="Cyber Security Officer (Government & Intelligence Agencies)">Cyber Security Officer (Government & Intelligence Agencies)</option>
+<option value="Social Welfare Officer (Women & Child Development Dept.)">Social Welfare Officer (Women & Child Development Dept.)</option>
+<option value="Tourism Officer (Ministry of Tourism, Govt. of India)">Tourism Officer (Ministry of Tourism, Govt. of India)</option>
+<option value="Handloom & Textiles Officer (Ministry of Textiles)">Handloom & Textiles Officer (Ministry of Textiles)</option>
+<option value="Scientific Officer (Forensic Science Laboratory - FSL)">Scientific Officer (Forensic Science Laboratory - FSL)</option>
+<option value="Judicial Translator (High Court/Supreme Court)">Judicial Translator (High Court/Supreme Court)</option>
+<option value="Press Information Bureau (PIB) Officer">Press Information Bureau (PIB) Officer</option>
+<option value="Aviation Safety Officer (DGCA - Directorate General of Civil Aviation)">Aviation Safety Officer (DGCA - Directorate General of Civil Aviation)</option>
+<option value="Oil & Natural Gas Corporation (ONGC) Officer">Oil & Natural Gas Corporation (ONGC) Officer</option>
+<option value="State Disaster Management Authority (SDMA) Officer">State Disaster Management Authority (SDMA) Officer</option>
+
+            </select>
+
+            <button onclick="checkEligibility()">Check Eligibility</button>
+            <h3 id="result"></h3>
+            
+        </div>
+    </div>
+<br>
+    <!-- Footer -->
+    <div class="footer">
+        Designed by Rajnish Pandey with 🧡 for Career Kaptain
+    </div>
+
+</body>
+</html>

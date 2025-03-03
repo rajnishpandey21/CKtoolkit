@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For 10th Students | Career Kaptain</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .auth-buttons .login {
+            color: #333;
+        }
+
+        .auth-buttons .signup {
+            background: #007bff;
+            color: white;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .auth-buttons .login {
+            color: #333;
+        }
+
+        .auth-buttons .signup {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Content Section */
+        .content-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 50px auto;
+            padding: 50px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-text {
+            max-width: 50%;
+        }
+
+        .content-text h1 {
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ff8902;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .logos span {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        /* Quiz Section */
+        .quiz-container {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz-container h2 {
+            color: #ff8902;
+        }
+
+        .quiz-container label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .quiz-container select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .quiz-container button {
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+
+        .quiz-container button:hover {
+            background: #0056b3;
+        }
+
+        .result-box {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #222;
+        }
+        /* Modal Styling */
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s;
+}
+
+/* Modal Content */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-30px);
+    animation: slideUp 0.5s forwards;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="logo">Career Kaptain</div>
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">Career Directory</a></li>
+        <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="auth-buttons">
+        <a href="#" class="login">Log in</a>
+        <a href="#" class="signup">Sign up</a>
+    </div>
+</nav>
+    <!-- Content Section -->
+    <section class="content-container">
+        <div class="content-text">
+            <h1>Guidance for 10th Grade Students</h1>
+            <p>🌟 Empowering Future Leaders Through Guidance</p>
+
+        </p>Every student is a dreamer, a thinker, and a future leader in their own unique way. As counselors, you are the guiding force that illuminates their path and helps them discover their true potential.</p>
+                
+    </p> Your support inspires confidence, your advice shapes futures, and your encouragement fuels ambition. Whether a student is uncertain about their career choices or navigating new opportunities, your mentorship gives them clarity and direction.</p>
+                <br>
+                💡 Remember:
+                <br>
+                A kind word today can ignite a student's passion for tomorrow.<br>
+                🌍 Keep inspiring. Keep guiding. Keep making a difference. 💙</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.indianexpress.com/2021/09/nagaland7591.jpg?w=640" alt="Sundar Photo">
+        </div>
+    </section>
+
+    <!-- Stream Selection Questionnaire -->
+    <section class="quiz-container">
+        <h2>Find Your Ideal Career Path</h2>
+        <form id="careerQuizForm">
+            <div id="quiz-questions"></div>
+            <button type="button" onclick="calculateCareerPath()">Submit</button>
+        </form>
+        <div id="result" class="result-box"></div>
+    </section>
+
+    <!-- JavaScript Logic -->
+    <script>
+        const scoreMapping = { "love": 5, "manage": 3, "dislike": 1 };
+    
+        function loadQuestions() {
+            let quizContainer = document.getElementById("quiz-questions");
+            questionsData.forEach((q, index) => {
+                quizContainer.innerHTML += `
+                    <label for="q${index}">${index + 1}. ${q.question}</label>
+                    <select id="q${index}">
+                        <option value="">-- Select --</option>
+                        <option value="love">Yes, I Love it</option>
+                        <option value="manage">I can Manage</option>
+                        <option value="dislike">No, I don't like it</option>
+                    </select>
+                `;
+            });
+        }
+    
+        function calculateCareerPath() {
+    let scores = { science: 0, commerce: 0, arts: 0 };
+    let allAnswered = true; // Flag to check if all questions are answered
+
+    questionsData.forEach((q, index) => {
+        let response = document.getElementById(`q${index}`).value;
+
+        if (response === "") {
+            allAnswered = false; // If any question is empty, set flag to false
+        }
+
+        let score = scoreMapping[response] || 0;
+        scores.science += score * q.science;
+        scores.commerce += score * q.commerce;
+        scores.arts += score * q.arts;
+    });
+
+    if (!allAnswered) {
+        alert("⚠️ Please answer all questions before submitting!"); // Show alert if any question is empty
+        return;
+    }
+
+    let sortedScores = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+
+    let resultHTML = "";
+    sortedScores.forEach(([stream, score], index) => {
+        resultHTML += `<p><strong>${index + 1}. ${stream.toUpperCase()} - Score: ${score}</strong></p>`;
+    });
+
+    document.getElementById("modalResultContent").innerHTML = resultHTML;
+    openModal(); // Show results in modal
+}
+
+    
+        function openModal() {
+            document.getElementById("resultModal").style.display = "flex";
+        }
+    
+        function closeModal() {
+            document.getElementById("resultModal").style.display = "none";
+        }
+    
+        loadQuestions();
+    </script>    
+<script>
+    // List of all 45 questions with weights for Science, Commerce, and Arts
+    const questionsData = [
+    { question: "Do you enjoy solving complex puzzles and logical reasoning tests?", science: 5, commerce: 3, arts: 3 },
+        { question: "Are you comfortable with numbers and calculations?", science: 5, commerce: 5, arts: 1 },
+        { question: "Do you like creating artwork, writing, or designing?", science: 3, commerce: 3, arts: 5 },
+        { question: "Do you prefer learning theoretical concepts over practical applications?", science: 3, commerce: 3, arts: 5 },
+        { question: "Do you enjoy doing experiments and hands-on projects?", science: 5, commerce: 3, arts: 3 },
+        { question: "Are you interested in how businesses and finance work?", science: 1, commerce: 5, arts: 1 },
+        { question: "Do you love working with technology, programming, or engineering concepts?", science: 5, commerce: 1, arts: 1 },
+        { question: "Are you curious about how societies function and social issues?", science: 1, commerce: 3, arts: 3 },
+        { question: "Do you enjoy learning about human behavior and psychology?", science: 3, commerce: 1, arts: 3 },
+        { question: "Do you like debating legal or political topics?", science: 1, commerce: 3, arts: 5 },
+        { question: "Are you confident in public speaking and expressing yourself?", science: 5, commerce: 5, arts: 5 },
+        { question: "Are you good at solving analytical problems and finding solutions?", science: 5, commerce: 5, arts: 3 },
+        { question: "Are you good at memorizing information quickly?", science: 5, commerce: 3, arts: 5 },
+        { question: "Do you enjoy conducting research and exploring new topics?", science: 5, commerce: 3, arts: 3 },
+        { question: "Do you see yourself starting a business or managing one in the future?", science: 5, commerce: 5, arts: 3 },
+        { question: "Do you enjoy reading literature, philosophy, and deep thinking?", science: 1, commerce: 1, arts: 5 },
+        { question: "Do you like taking charge and leading a team?", science: 3, commerce: 5, arts: 5 },
+        { question: "Do you enjoy learning about economics and financial markets?", science: 3, commerce: 5, arts: 3 },
+        { question: "Do you enjoy writing articles, blogs, or stories?", science: 1, commerce: 5, arts: 5 },
+        { question: "Do you follow trends in media, films, and entertainment?", science: 1, commerce: 3, arts: 5 },
+        { question: "Are you interested in medicine, healthcare, or biology?", science: 5, commerce: 3, arts: 3 },
+        { question: "Are you concerned about the environment and sustainability?", science: 5, commerce: 3, arts: 5 },
+        { question: "Do you enjoy coding, data analysis, or computer programming?", science: 5, commerce: 5, arts: 3 },
+        { question: "Are you fascinated by history, culture, and heritage?", science: 1, commerce: 3, arts: 5 },
+        { question: "Are you interested in the stock market and investment strategies?", science: 1, commerce: 5, arts: 1 },
+        { question: "Do you enjoy public speaking, debates, or giving speeches?", science: 3, commerce: 5, arts: 5 },
+        { question: "Do you see yourself as a teacher, professor, or educator?", science: 5, commerce: 5, arts: 5 },
+        { question: "Do you have an eye for architectural designs and creativity?", science: 5, commerce: 3, arts: 1 },
+        { question: "How well do you handle a heavy academic workload?", science: 5, commerce: 5, arts: 3 },
+        { question: "Do you prefer memorizing facts over understanding concepts?", science: 5, commerce: 3, arts: 5 },
+        { question: "Do you enjoy working outdoors, exploring new places?", science: 1, commerce: 3, arts: 5 },
+        { question: "Do you want a career with multiple options and flexibility?", science: 5, commerce: 3, arts: 1 },
+        { question: "Are you good at mental math and logical calculations?", science: 5, commerce: 3, arts: 1 },
+        { question: "Are you fascinated by astronomy, space, and the universe?", science: 5, commerce: 1, arts: 1 },
+        { question: "Do you like sports science, fitness, or physiotherapy?", science: 3, commerce: 3, arts: 5 },
+        { question: "Are you interested in Robotics and Artificial Intelligence?", science: 5, commerce: 1, arts: 1 },
+        { question: "Do you find cybersecurity and ethical hacking exciting?", science: 5, commerce: 3, arts: 1 },
+        { question: "Do you enjoy working with statistics and analyzing data?", science: 5, commerce: 5, arts: 3 },
+        { question: "Do you follow global politics, international relations, and diplomacy?", science: 1, commerce: 3, arts: 5 },
+        { question: "Do you enjoy creating advertisements, marketing campaigns, or branding?", science: 3, commerce: 5, arts: 5 },
+        { question: "Are you interested in human rights, activism, and social justice?", science: 1, commerce: 3, arts: 5 },
+        { question: "Do you enjoy organizing and managing large events?", science: 5, commerce: 1, arts: 3 },
+        { question: "Are you interested in video game development and animation?", science: 1, commerce: 3, arts: 5 },
+        { question: "Can you handle high academic pressure and competition?", science: 1, commerce: 5, arts: 3 },
+        { question: "Are you interested in joining the military, defense, or armed forces?", science: 5, commerce: 3, arts: 5 }
+    ];
+
+    // Function to load questions dynamically
+    function loadQuestions() {
+        let quizContainer = document.getElementById("quiz-questions");
+        questionsData.forEach((q, index) => {
+            quizContainer.innerHTML += `
+                <label for="q${index}">${index + 1}. ${q.question}</label>
+                <select id="q${index}">
+                    <option value="">-- Select --</option>
+                    <option value="love">Yes, I Love it</option>
+                    <option value="manage">I can Manage</option>
+                    <option value="dislike">No, I don't like it</option>
+                </select>
+            `;
+        });
+    }
+
+    loadQuestions(); // Call function to display questions
+</script>
+<!-- Modal for displaying results -->
+<div id="resultModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Your Career Stream Recommendations:</h3>
+        <div id="modalResultContent"></div>
+    </div>
+</div>
+
+</body>
+</html>

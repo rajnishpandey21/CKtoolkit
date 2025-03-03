@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Management Section */
+        .management {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .management h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .management p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Management Section -->
+    <section class="management">
+        <h1>Management Entrance Exams</h1>
+        <p>Explore career opportunities in the Management field. Learn about various entrance exams required for admission into top management institutes.</p>
+
+        <h2>Select Your Entrance Exam</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('cuet-bba')">CUET For BBA</button>
+            <button onclick="showExam('cuet-bbm')">CUET For BBM</button>
+            <button onclick="showExam('cuet-bms')">CUET For BMS</button>
+            <button onclick="showExam('cuet-bfia')">CUET For BFIA</button>
+            <button onclick="showExam('ipmat')">IPMAT</button>
+        </div>
+
+        <!-- Dynamic Exam Information Section -->
+        <div id="cuet-bba" class="exam-content">
+            <h2>CUET for BBA: A Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Common University Entrance Test (CUET) is a national-level entrance exam conducted by the National Testing Agency (NTA) for admission to undergraduate programs offered by central universities, state universities, and other participating institutions.</p>
+        
+            <h3>Structure of the Exam</h3>
+            <p>The CUET for BBA is divided into three sections:</p>
+            <ul>
+                <li><strong>Section I:</strong> Language Test</li>
+                <li><strong>Section II:</strong> Domain-Specific Subjects</li>
+                <li><strong>Section III:</strong> General Test</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            <ul>
+                <li><strong>Section I (Language Test):</strong> Consists of 13 languages. Candidates have to choose one language. There will be 50 questions, each carrying 4 marks.</li>
+                <li><strong>Section II (Domain-Specific Subjects):</strong> Covers 27 subjects, with candidates allowed to choose a maximum of 6 subjects. Each subject has 50 questions, each carrying 4 marks.</li>
+                <li><strong>Section III (General Test):</strong> Covers General Knowledge, Current Affairs, Numerical Ability, Quantitative Reasoning, Logical Reasoning, and Analytical Skills. This section contains 75 questions, each carrying 4 marks.</li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <ul>
+                <li>Each question carries 4 marks.</li>
+                <li>There is no negative marking.</li>
+            </ul>
+        
+            <h3>Colleges Accepting CUET for BBA</h3>
+            <p>The following colleges accept CUET scores for admission to their BBA programs:</p>
+            <ul>
+                <li>Delhi University</li>
+                <li>University of Mumbai</li>
+                <li>Christ University, Bangalore</li>
+                <li>Amity University</li>
+                <li>SRM University</li>
+                <li>Symbiosis International University</li>
+                <li>NMIMS University</li>
+                <li>Bennett University</li>
+                <li>Ashoka University</li>
+                <li>Manipal University</li>
+            </ul>
+        
+            <h3>Tips for Preparing for CUET BBA</h3>
+            <ul>
+                <li>Start your preparation early.</li>
+                <li>Understand the exam pattern and syllabus thoroughly.</li>
+                <li>Choose your subjects wisely.</li>
+                <li>Make a study plan and stick to it.</li>
+                <li>Practice regularly with mock tests and previous year's papers.</li>
+                <li>Stay updated with current affairs.</li>
+                <li>Get enough sleep and eat a healthy diet.</li>
+            </ul>
+        </div>
+
+        <div id="cuet-bbm" class="exam-content">
+            <h2>CUET (Common University Entrance Test) for BBM (Bachelor of Business Management)</h2>
+        
+            <h3>Structure of the Exam</h3>
+            <p>The CUET for BBM is a three-hour online exam conducted by the National Testing Agency (NTA). The exam is divided into four sections:</p>
+            <ul>
+                <li><strong>Section 1:</strong> Language (English or Hindi)</li>
+                <li><strong>Section 2:</strong> Domain-Specific Knowledge (Mathematics and Business Studies)</li>
+                <li><strong>Section 3:</strong> General Test (Comprehension, Quantitative Ability, Logical Reasoning, and General Awareness)</li>
+                <li><strong>Section 4:</strong> Optional Language (Candidates can choose from 13 languages)</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            <ul>
+                <li>Each section will have a total of 50 questions.</li>
+                <li>Each question carries four marks.</li>
+                <li>There will be no negative marking.</li>
+                <li>Candidates can choose the medium of the question paper from English or Hindi.</li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <ul>
+                <li>For each correct answer, candidates will be awarded four marks.</li>
+                <li>There is no negative marking for incorrect answers.</li>
+                <li>The total marks for the exam will be 200.</li>
+            </ul>
+        
+            <h3>Colleges that Accept CUET for BBM Admission</h3>
+            <p>The following colleges accept CUET scores for admission to their BBM programs:</p>
+            <ul>
+                <li>Delhi University</li>
+                <li>Jamia Millia Islamia</li>
+                <li>Aligarh Muslim University</li>
+                <li>Banaras Hindu University</li>
+                <li>University of Hyderabad</li>
+                <li>University of Mumbai</li>
+                <li>University of Madras</li>
+                <li>Christ University</li>
+                <li>Symbiosis International University</li>
+                <li>Amity University</li>
+                <li>SRM University</li>
+                <li>Manipal University</li>
+                <li>VIT University</li>
+                <li>Sharda University</li>
+                <li>LPU University</li>
+                <li>Galgotias University</li>
+                <li>KIIT University</li>
+                <li>Chandigarh University</li>
+            </ul>
+        
+            <h3>Other Information</h3>
+            <ul>
+                <li>Candidates who have passed the 12th class examination with a minimum of 50% marks in aggregate are eligible to apply for CUET.</li>
+                <li>The application process for CUET is usually conducted in April and May.</li>
+                <li>The exam is usually held in June.</li>
+                <li>The results of the exam are usually declared in July.</li>
+                <li>Candidates who qualify for CUET will be eligible to participate in the counseling process conducted by the participating universities.</li>
+            </ul>
+        </div>
+
+        <div id="cuet-bms" class="exam-content">
+            <h2>CUET (Common University Entrance Test) for BMS (Bachelor of Management Studies): A Comprehensive Guide</h2>
+        
+            <h3>Exam Structure and Pattern</h3>
+            <p>The CUET for BMS is a computer-based test (CBT) conducted online, spanning three hours. It is divided into four sections:</p>
+            <ul>
+                <li><strong>Section I: English Language</strong> - Evaluates a candidate's proficiency in English, including reading comprehension, grammar, vocabulary, and verbal ability.</li>
+                <li><strong>Section II: Numerical Ability</strong> - Assesses quantitative aptitude, covering arithmetic, algebra, geometry, data interpretation, and mensuration.</li>
+                <li><strong>Section III: General Awareness</strong> - Tests knowledge of current affairs, static GK, and general knowledge across various domains.</li>
+                <li><strong>Section IV: Business Aptitude</strong> - Gauges understanding of fundamental business concepts, including economics, finance, management, and entrepreneurship.</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            <p>Each section comprises 50 multiple-choice questions (MCQs), further divided into two parts:</p>
+            <ul>
+                <li><strong>Part A:</strong> 25 questions of moderate difficulty</li>
+                <li><strong>Part B:</strong> 25 questions of higher difficulty</li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <ul>
+                <li>Each correct answer earns 4 marks.</li>
+                <li>There is no negative marking for incorrect answers, encouraging students to attempt all questions without fear of losing marks.</li>
+            </ul>
+        
+            <h3>List of Colleges Accepting CUET for BMS</h3>
+            <p>The CUET score is accepted by a growing number of universities and colleges for BMS admissions. Some prominent institutions include:</p>
+            
+            <h4>Central Universities:</h4>
+            <ul>
+                <li>Delhi University</li>
+                <li>Banaras Hindu University (BHU)</li>
+                <li>Aligarh Muslim University (AMU)</li>
+                <li>Jamia Millia Islamia (JMI)</li>
+                <li>University of Hyderabad</li>
+            </ul>
+        
+            <h4>State Universities:</h4>
+            <ul>
+                <li>University of Mumbai</li>
+                <li>Savitribai Phule Pune University</li>
+                <li>University of Calcutta</li>
+                <li>University of Madras</li>
+                <li>University of Allahabad</li>
+            </ul>
+        
+            <h4>Private Universities and Colleges:</h4>
+            <p>Several private universities and colleges across India are also adopting CUET for BMS admissions.</p>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Conducting Body:</strong> The CUET is conducted by the National Testing Agency (NTA).</li>
+                <li><strong>Exam Frequency:</strong> The exam is typically held once a year, usually in May or June.</li>
+                <li><strong>Application Process:</strong> Generally commences in December or January and is conducted online on the NTA website.</li>
+                <li><strong>Admit Card:</strong> Released approximately two weeks before the exam date and can be downloaded from the NTA website.</li>
+                <li><strong>Results:</strong> CUET results are usually declared within a month of the exam date.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Understand the Syllabus:</strong> Familiarize yourself with the syllabus for each section and focus on your strengths and weaknesses.</li>
+                <li><strong>Practice Regularly:</strong> Solve previous year's question papers and mock tests to get accustomed to the exam pattern and time management.</li>
+                <li><strong>Stay Updated:</strong> Keep abreast of current affairs and general knowledge by reading newspapers, magazines, and online resources.</li>
+                <li><strong>Time Management:</strong> During the exam, allocate time wisely to each section and avoid spending too much time on any one question.</li>
+                <li><strong>Stay Calm and Confident:</strong> Maintain a positive attitude and believe in your abilities.</li>
+            </ul>
+        
+            <h3>Key Benefits of CUET for BMS</h3>
+            <ul>
+                <li><strong>Standardized Admission Process:</strong> CUET provides a uniform platform for BMS admissions across multiple universities, ensuring fairness and transparency.</li>
+                <li><strong>Reduced Exam Burden:</strong> Students no longer need to appear for multiple entrance exams for different universities, saving time and effort.</li>
+                <li><strong>Increased Access to Opportunities:</strong> CUET opens doors to a wider range of universities and colleges for BMS aspirants.</li>
+            </ul>
+        
+            <p><strong>Remember:</strong> With dedicated preparation and a focused approach, you can crack the CUET for BMS and secure admission to your desired institution.</p>
+        </div>
+
+        <div id="cuet-bfia" class="exam-content">
+            <h2>CUET (Common University Entrance Test) for BFIA (Bachelor of Fine Arts) Course: A Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>The CUET (Common University Entrance Test) has emerged as a pivotal gateway for students aspiring to pursue undergraduate courses, including the Bachelor of Fine Arts (BFIA), across a wide array of Indian universities. Administered by the National Testing Agency (NTA), this national-level entrance exam streamlines the admission process and offers a level playing field for students from diverse backgrounds.</p>
+        
+            <h3>Structure and Content of the CUET</h3>
+            <p>The CUET for BFIA is strategically structured to evaluate a candidate's proficiency in three core areas:</p>
+        
+            <h4>1. Section I: Language Test</h4>
+            <p>This section gauges a candidate's linguistic abilities in one of 13 available languages. The test comprises 50 questions, each carrying 4 marks, resulting in a total of 200 marks.</p>
+            <p><strong>Languages Offered:</strong></p>
+            <ul>
+                <li>Assamese</li>
+                <li>Bengali</li>
+                <li>English</li>
+                <li>Gujarati</li>
+                <li>Hindi</li>
+                <li>Kannada</li>
+                <li>Malayalam</li>
+                <li>Marathi</li>
+                <li>Odia</li>
+                <li>Punjabi</li>
+                <li>Tamil</li>
+                <li>Telugu</li>
+                <li>Urdu</li>
+            </ul>
+        
+            <h4>2. Section II: Domain-Specific Subjects</h4>
+            <p>This section delves into the candidate's knowledge and aptitude in a specific domain. For BFIA aspirants, the relevant domain is Visual Arts. This section also consists of 50 questions, each carrying 4 marks, culminating in a total of 200 marks.</p>
+            <p><strong>Topics Covered in Visual Arts:</strong></p>
+            <ul>
+                <li>Art History</li>
+                <li>Art Appreciation</li>
+                <li>Drawing</li>
+                <li>Painting</li>
+                <li>Sculpture</li>
+                <li>Design</li>
+                <li>Applied Arts</li>
+            </ul>
+        
+            <h4>3. Section III: General Test</h4>
+            <p>This section is mandatory for all CUET candidates and assesses their general awareness, reasoning, and analytical skills. It comprises 75 questions, each carrying 4 marks, leading to a total of 300 marks.</p>
+            <p><strong>Topics Covered:</strong></p>
+            <ul>
+                <li>Current Affairs</li>
+                <li>General Knowledge</li>
+                <li>Quantitative Aptitude</li>
+                <li>Logical Reasoning</li>
+                <li>English Comprehension</li>
+            </ul>
+        
+            <h3>Marking Scheme and Exam Pattern</h3>
+            <ul>
+                <li>Each correct answer is rewarded with 4 marks.</li>
+                <li>There is no negative marking for incorrect answers, encouraging students to attempt all questions.</li>
+                <li>The exam is typically conducted in a computer-based mode, with a duration of 3 hours.</li>
+            </ul>
+        
+            <h3>BFIA Colleges Accepting CUET Scores</h3>
+            <p>A multitude of prestigious colleges and universities across India accept CUET scores for admission to their BFIA programs. Some of the prominent institutions include:</p>
+        
+            <h4>Central Universities:</h4>
+            <ul>
+                <li>Delhi University</li>
+                <li>Banaras Hindu University</li>
+                <li>Aligarh Muslim University</li>
+                <li>Jamia Millia Islamia</li>
+            </ul>
+        
+            <h4>State Universities:</h4>
+            <ul>
+                <li>University of Mumbai</li>
+                <li>University of Madras</li>
+                <li>University of Calcutta</li>
+                <li>Anna University</li>
+                <li>Jadavpur University</li>
+            </ul>
+        
+            <h4>Deemed Universities:</h4>
+            <ul>
+                <li>Visva-Bharati University</li>
+                <li>Christ University</li>
+                <li>Symbiosis International University</li>
+            </ul>
+        
+            <h4>Private Universities:</h4>
+            <ul>
+                <li>Amity University</li>
+                <li>Sharda University</li>
+                <li>Lovely Professional University</li>
+            </ul>
+        
+            <h3>Additional Information and Preparation Tips</h3>
+            <ul>
+                <li>The CUET is generally conducted twice a year, offering flexibility to students.</li>
+                <li>The application process is online, and the admit card is released a few days before the exam.</li>
+                <li>It is advisable to reach the exam center well in advance to avoid any last-minute hassles.</li>
+                <li>Candidates are permitted to carry essential stationery and a water bottle inside the exam hall.</li>
+                <li>Electronic devices are strictly prohibited.</li>
+                <li>Thorough preparation, including practicing with mock tests and previous years' question papers, is crucial for success in the CUET.</li>
+                <li>Staying updated on current affairs and general knowledge is also vital.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>The CUET has simplified the admission process for BFIA aspirants, providing them with a standardized platform to showcase their potential. With dedicated preparation and a strategic approach, students can confidently navigate this exam and secure their place in their desired BFIA program.</p>
+        </div>
+
+        <div id="ipmat" class="exam-content">
+            <h2>IPMAT: A Comprehensive Guide</h2>
+        
+            <h3>Structure of the Exam</h3>
+            <p>The IPMAT exam consists of three sections:</p>
+            <ul>
+                <li><strong>Verbal Ability:</strong> Tests candidates' reading comprehension, vocabulary, and critical reasoning skills.</li>
+                <li><strong>Quantitative Ability:</strong> Assesses mathematical ability, including algebra, geometry, and statistics.</li>
+                <li><strong>Analytical Ability:</strong> Evaluates logical reasoning and problem-solving skills.</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            <ul>
+                <li>The IPMAT exam is a computer-based test (CBT) consisting of 120 multiple-choice questions.</li>
+                <li>Each section contains 40 questions.</li>
+                <li>Candidates have a total of 120 minutes to complete the exam.</li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <ul>
+                <li>Each question in the IPMAT exam is worth one mark.</li>
+                <li>There is no negative marking for incorrect answers.</li>
+            </ul>
+        
+            <h3>Colleges Accepting IPMAT</h3>
+            <p>The following colleges accept IPMAT scores for admission to their undergraduate business programs:</p>
+            <ul>
+                <li>Indian Institute of Management Indore (IIM Indore)</li>
+                <li>Indian Institute of Management Rohtak (IIM Rohtak)</li>
+                <li>Indian Institute of Management Ranchi (IIM Ranchi)</li>
+                <li>Indian Institute of Management Bodh Gaya (IIM Bodh Gaya)</li>
+                <li>Indian Institute of Management Jammu (IIM Jammu)</li>
+            </ul>
+        
+            <h3>Other Information</h3>
+            <ul>
+                <li>The IPMAT exam is conducted twice a year, once in December and once in February.</li>
+                <li>Candidates who have completed their Class 12 or equivalent examination are eligible to appear for the IPMAT exam.</li>
+                <li>The application process for the IPMAT exam typically opens in October.</li>
+                <li>Candidates are shortlisted based on their performance in the IPMAT entrance exam and their academic record.</li>
+                <li>Shortlisted candidates are called for a personal interview and a Written Ability Test (WAT).</li>
+                <li>The final selection is based on performance in the IPMAT entrance exam, WAT, and personal interview.</li>
+            </ul>
+        </div>
+        
+        
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+    </footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

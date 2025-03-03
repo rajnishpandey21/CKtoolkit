@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Economics</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Economics Section */
+        .economics {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .economics h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .economics p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Course Buttons */
+        .course-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .course-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .course-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .course-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .course-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Economics Section -->
+    <section class="economics">
+        <h1>Economics Degrees</h1>
+        <p>Explore career opportunities in the Economics field. Select a program to learn more about its details and admission process.</p>
+
+        <h2>Select Your Course</h2><br>
+
+        <div class="course-buttons">
+            <button onclick="showCourse('ba-hons')">B.A. (Hons.) in Economics</button>
+            <button onclick="showCourse('bsc-hons')">B.Sc. (Hons.) in Economics (in some universities)</button>
+            <button onclick="showCourse('ba-business')">B.A. in Business Economics</button>
+        </div>
+
+        <!-- Dynamic Course Information Section -->
+        <div id="cuet-ba-hons" class="course-content">
+            <h2>CUET (Common University Entrance Test) for B.A. (Hons.) in Economics</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Common University Entrance Test (CUET) is a national-level entrance exam conducted by the National Testing Agency (NTA) for admission to undergraduate and postgraduate courses in central universities, state universities, and deemed universities.</p>
+        
+            <h3>Exam Structure</h3>
+            <p>The CUET for B.A. (Hons.) in Economics consists of three sections:</p>
+            <ul>
+                <li><strong>Section I: Language Test</strong> (13 languages to choose from)</li>
+                <li><strong>Section II: Domain-Specific Subject</strong> (Economics)</li>
+                <li><strong>Section III: General Test</strong> (Comprehension, Quantitative Reasoning, Logical and Analytical Reasoning)</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            <ul>
+                <li><strong>Section I - Language Test:</strong>
+                    <ul>
+                        <li>40 questions</li>
+                        <li>4 marks each</li>
+                        <li><strong>Total Marks:</strong> 160</li>
+                    </ul>
+                </li>
+                <li><strong>Section II - Domain-Specific Subject (Economics):</strong>
+                    <ul>
+                        <li>50 questions</li>
+                        <li>4 marks each</li>
+                        <li><strong>Total Marks:</strong> 200</li>
+                    </ul>
+                </li>
+                <li><strong>Section III - General Test:</strong>
+                    <ul>
+                        <li>75 questions</li>
+                        <li>4 marks each</li>
+                        <li><strong>Total Marks:</strong> 300</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <ul>
+                <li>Each correct answer carries <strong>4 marks</strong>.</li>
+                <li><strong>No negative marking</strong> for incorrect answers.</li>
+            </ul>
+        
+            <h3>List of Colleges Accepting CUET for B.A. (Hons.) in Economics</h3>
+            <ul>
+                <li>Delhi University</li>
+                <li>Jawaharlal Nehru University</li>
+                <li>University of Mumbai</li>
+                <li>Banaras Hindu University</li>
+                <li>University of Calcutta</li>
+                <li>University of Madras</li>
+                <li>University of Hyderabad</li>
+                <li>University of Allahabad</li>
+                <li>Aligarh Muslim University</li>
+                <li>Jamia Millia Islamia</li>
+                <li>Central University of Rajasthan</li>
+                <li>Central University of Punjab</li>
+                <li>Central University of Gujarat</li>
+                <li>Central University of Haryana</li>
+                <li>Central University of Jammu</li>
+                <li>Central University of Karnataka</li>
+                <li>Central University of Kerala</li>
+                <li>Central University of Kashmir</li>
+                <li>Central University of Tamil Nadu</li>
+                <li>Central University of Jharkhand</li>
+            </ul>
+        
+            <h3>Other Information</h3>
+            <ul>
+                <li>The CUET is conducted in a <strong>computer-based test (CBT) mode</strong>.</li>
+                <li>The duration of the exam is <strong>3 hours</strong>.</li>
+                <li>Candidates can choose to appear for the exam in <strong>English or Hindi</strong>.</li>
+                <li><strong>Application Fee:</strong> Rs. 650 for General & OBC candidates, Rs. 550 for SC, ST, and PwD candidates.</li>
+                <li>For more details, visit the <strong>official CUET website</strong>.</li>
+            </ul>
+        </div>
+
+        <div id="cuet-bsc-hons" class="course-content">
+            <h2>CUET (Common University Entrance Test) for B.Sc. (Hons.) in Economics</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Common University Entrance Test (CUET) is a national-level entrance exam conducted by the National Testing Agency (NTA) for admission to undergraduate courses in central universities and other participating institutions across India.</p>
+            <p>CUET is mandatory for admission to B.Sc. (Hons.) in Economics in several universities, including:</p>
+            <ul>
+                <li>University of Delhi</li>
+                <li>Banaras Hindu University</li>
+                <li>University of Mumbai</li>
+                <li>Calcutta University</li>
+                <li>University of Hyderabad</li>
+                <li>University of Madras</li>
+                <li>Aligarh Muslim University</li>
+            </ul>
+        
+            <h3>Structure of the Exam</h3>
+            <p>The CUET for B.Sc. (Hons.) in Economics consists of three sections:</p>
+            <ul>
+                <li><strong>Section I:</strong> Language Test (English, Hindi, or any other language)</li>
+                <li><strong>Section II:</strong> Domain-Specific Subject (Economics)</li>
+                <li><strong>Section III:</strong> General Test (GK, Current Affairs, Quantitative Aptitude, Logical Reasoning)</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            <ul>
+                <li><strong>Section I - Language Test:</strong> 40 Multiple Choice Questions (MCQs)</li>
+                <li><strong>Section II - Economics:</strong> 50 MCQs</li>
+                <li><strong>Section III - General Test:</strong> 75 MCQs</li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <ul>
+                <li>Each question carries <strong>4 marks</strong>.</li>
+                <li><strong>No negative marking</strong> for incorrect answers.</li>
+            </ul>
+        
+            <h3>Detailed List of Colleges Accepting CUET for B.Sc. (Hons.) in Economics</h3>
+            
+            <h4>University of Delhi</h4>
+            <ul>
+                <li>Delhi School of Economics</li>
+                <li>Ramjas College</li>
+                <li>Shri Ram College of Commerce</li>
+                <li>Lady Shri Ram College for Women</li>
+                <li>Hindu College</li>
+            </ul>
+        
+            <h4>Banaras Hindu University</h4>
+            <ul>
+                <li>Faculty of Social Sciences</li>
+            </ul>
+        
+            <h4>University of Mumbai</h4>
+            <ul>
+                <li>Department of Economics</li>
+                <li>Mithibai College of Arts, Chauhan Institute of Science & Amrutben Jivanlal College of Commerce and Economics</li>
+                <li>K.J. Somaiya College of Arts and Commerce</li>
+            </ul>
+        
+            <h4>Calcutta University</h4>
+            <ul>
+                <li>Department of Economics</li>
+            </ul>
+        
+            <h4>University of Hyderabad</h4>
+            <ul>
+                <li>School of Economics</li>
+            </ul>
+        
+            <h4>University of Madras</h4>
+            <ul>
+                <li>Department of Economics</li>
+            </ul>
+        
+            <h4>Aligarh Muslim University</h4>
+            <ul>
+                <li>Department of Economics</li>
+            </ul>
+        
+            <h3>Other Information</h3>
+            <ul>
+                <li>The duration of the exam is <strong>3 hours</strong>.</li>
+                <li>The exam is conducted in <strong>online mode</strong>.</li>
+                <li>Candidates can choose to appear for the exam in <strong>English, Hindi, or any other language</strong>.</li>
+                <li>The syllabus for the Economics section is based on the <strong>NCERT textbooks for Class 11 and 12</strong>.</li>
+                <li>For more information, candidates should refer to the <strong>official CUET website</strong>.</li>
+            </ul>
+        </div>
+
+        <div id="cuet-ba-business" class="course-content">
+            <h2>CUET (Common University Entrance Test) for B.A. in Business Economics</h2>
+        
+            <h3>Exam Structure</h3>
+            <p>The CUET for B.A. in Business Economics consists of three sections:</p>
+            <ul>
+                <li><strong>Section 1:</strong> Language Test (English or Hindi)</li>
+                <li><strong>Section 2:</strong> Domain-Specific Subject (Business Economics)</li>
+                <li><strong>Section 3:</strong> General Test (Quantitative Aptitude, Logical Reasoning, and General Awareness)</li>
+            </ul>
+        
+            <h3>Paper Pattern</h3>
+            <ul>
+                <li><strong>Section 1 - Language Test (English or Hindi):</strong>
+                    <ul>
+                        <li>50 questions</li>
+                        <li>45 minutes</li>
+                        <li>Multiple-choice questions</li>
+                    </ul>
+                </li>
+                <li><strong>Section 2 - Business Economics:</strong>
+                    <ul>
+                        <li>50 questions</li>
+                        <li>45 minutes</li>
+                        <li>Multiple-choice questions</li>
+                    </ul>
+                </li>
+                <li><strong>Section 3 - General Test (Quantitative Aptitude, Logical Reasoning, and General Awareness):</strong>
+                    <ul>
+                        <li>75 questions</li>
+                        <li>60 minutes</li>
+                        <li>Multiple-choice questions</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h3>Marking Scheme</h3>
+            <ul>
+                <li>Each question carries <strong>4 marks</strong>.</li>
+                <li><strong>No negative marking</strong> for incorrect answers.</li>
+            </ul>
+        
+            <h3>List of Colleges Accepting CUET for B.A. in Business Economics</h3>
+            <ul>
+                <li>Delhi University</li>
+                <li>Jawaharlal Nehru University</li>
+                <li>University of Mumbai</li>
+                <li>University of Calcutta</li>
+                <li>University of Madras</li>
+                <li>Banaras Hindu University</li>
+                <li>Aligarh Muslim University</li>
+                <li>Jamia Millia Islamia</li>
+                <li>Central University of Hyderabad</li>
+                <li>Tata Institute of Social Sciences</li>
+            </ul>
+        </div>
+        
+
+
+
+
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+    </footer>
+
+    <script>
+        function showCourse(courseId) {
+            document.querySelectorAll('.course-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(courseId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

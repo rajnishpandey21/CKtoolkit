@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Different Career Paths</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Career Section */
+        .career {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .career h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .career p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Career Section -->
+    <section class="career">
+        <h1>Different Career Paths</h1>
+        <p>Explore different career opportunities and learn about various entrance exams required for admission into top programs.</p>
+
+        <h2>Select your Entrance Exam</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('acet')">ACET (Actuarial Common Entrance Test)</button>
+         </div>
+
+        <!-- Dynamic Exam Information Section -->
+        <!-- ACET (Actuarial Common Entrance Test) Section -->
+<div id="acet" class="exam-content">
+    <h2>ACET (Actuarial Common Entrance Test) for B.Sc. (Actuarial Science)</h2>
+
+    <h3>Introduction</h3>
+    <p>The Actuarial Common Entrance Test (ACET) is a national-level entrance examination conducted by the Institute of Actuaries of India (IAI) for admission to the B.Sc. (Actuarial Science) program offered by various universities and colleges in India.</p>
+
+    <h3>Structure of the Exam</h3>
+    <p>The ACET consists of two papers:</p>
+    <ul>
+        <li><strong>Paper 1:</strong> Mathematics and Statistics (100 marks)</li>
+        <li><strong>Paper 2:</strong> English Language and Logical Reasoning (100 marks)</li>
+    </ul>
+    <p>Each paper is of <strong>2 hours</strong> duration.</p>
+
+    <h3>Paper Pattern</h3>
+
+    <h4>Paper 1: Mathematics and Statistics</h4>
+    <ul>
+        <li><strong>Section A: Mathematics (60 marks)</strong></li>
+        <ul>
+            <li>Algebra</li>
+            <li>Calculus</li>
+            <li>Coordinate Geometry</li>
+            <li>Trigonometry</li>
+        </ul>
+        <li><strong>Section B: Statistics (40 marks)</strong></li>
+        <ul>
+            <li>Descriptive Statistics</li>
+            <li>Inferential Statistics</li>
+            <li>Probability</li>
+        </ul>
+    </ul>
+
+    <h4>Paper 2: English Language and Logical Reasoning</h4>
+    <ul>
+        <li><strong>Section A: English Language (60 marks)</strong></li>
+        <ul>
+            <li>Reading Comprehension</li>
+            <li>Vocabulary</li>
+            <li>Grammar</li>
+        </ul>
+        <li><strong>Section B: Logical Reasoning (40 marks)</strong></li>
+        <ul>
+            <li>Verbal Reasoning</li>
+            <li>Analytical Reasoning</li>
+            <li>Critical Thinking</li>
+        </ul>
+    </ul>
+
+    <h3>Marking Scheme</h3>
+    <ul>
+        <li>Each question carries <strong>1 mark</strong>.</li>
+        <li><strong>No negative marking</strong>.</li>
+    </ul>
+
+    <h3>Colleges that Accept ACET Scores</h3>
+    <p>The following colleges and universities accept ACET scores for admission to their B.Sc. (Actuarial Science) programs:</p>
+    <ul>
+        <li>University of Delhi, Delhi</li>
+        <li>Savitribai Phule Pune University, Pune</li>
+        <li>University of Mumbai, Mumbai</li>
+        <li>Madras University, Chennai</li>
+        <li>Banaras Hindu University, Varanasi</li>
+        <li>Christ University, Bangalore</li>
+        <li>Symbiosis International University, Pune</li>
+        <li>Amity University, Noida</li>
+        <li>SRM University, Chennai</li>
+        <li>Jain University, Bangalore</li>
+        <li>NMIMS University, Mumbai</li>
+        <li>Alliance University, Bangalore</li>
+        <li>GITAM University, Visakhapatnam</li>
+        <li>Manipal Academy of Higher Education, Manipal</li>
+        <li>ICFAI University, Hyderabad</li>
+        <li>Bharati Vidyapeeth University, Pune</li>
+    </ul>
+</div>
+
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+    </footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

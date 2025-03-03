@@ -1,0 +1,4105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Options for 12th Students</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .auth-buttons .login {
+            color: black;
+        }
+
+        .auth-buttons .signup {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+
+        /* Selection Buttons */
+        .stream-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stream-btn {
+            background: white;
+            border: 2px solid #007bff;
+            color: #007bff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .stream-btn:hover, .stream-btn.active {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Career Tables */
+        .career-table {
+    width: 100%; /* Adjust width to fit the available space */
+    max-width: 1200px; /* Optional: Limit max width */
+    margin: 0 auto;
+    border-collapse: collapse;
+    display: none;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+        .career-table caption {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 15px;
+            background: #007bff;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #f4f4f4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="login">Log in</a>
+            <a href="#" class="signup">Sign up</a>
+        </div>
+    </nav>
+
+    <!-- Selection Section -->
+    <h1>Select Your Stream</h1>
+
+    <div class="stream-buttons">
+        <button class="stream-btn" onclick="showTable('pcmTable')">PCM</button>
+        <button class="stream-btn" onclick="showTable('pcbTable')">PCB</button>
+        <button class="stream-btn" onclick="showTable('commerceTable')">Commerce</button>
+        <button class="stream-btn" onclick="showTable('humanitiesTable')">Humanities</button>
+    </div>
+    <div style="text-align: center; margin-top: 10px;">
+        <input type="text" id="careerSearch" onkeyup="filterCareers()" placeholder="Search Career Options..." 
+               style="width: 60%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc;">
+    </div>
+    
+
+    <!-- PCM Table -->
+    <table id="pcmTable" class="career-table">
+        <caption>Career Options in PCM</caption>
+        <tr>
+            <th>Career Options</th>
+            <th>UG Degree Preferred</th>
+            <th>PG Degree (For Career Advancement)</th>
+            <th>Designations in Job</th>
+            <th>Salary Range</th>
+            <th>Growth Prospectus</th>
+            <th>Know More</th>
+        </tr>
+    </table>
+
+    <table id="pcbTable" class="career-table">
+        <caption>Career Options in PCB</caption>
+        <thead>
+            <tr>
+                <th>Career Options</th>
+                <th>UG Degree Preferred</th>
+                <th>PG Degree (For Career Advancement)</th>
+                <th>Designations in Job</th>
+                <th>Salary Range</th>
+                <th>Growth Prospectus</th>
+                <th>Know More</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+    
+
+    <!-- Commerce Table -->
+    <table id="commerceTable" class="career-table">
+        <caption>Career Options in Commerce</caption>
+        <tr>
+            <th>Career Options</th>
+            <th>UG Degree Preferred</th>
+            <th>PG Degree (For Career Advancement)</th>
+            <th>Designations in Job</th>
+            <th>Salary Range</th>
+            <th>Growth Prospectus</th>
+            <th>Know More</th>
+        </tr>
+    </table>
+
+    <!-- Humanities Table -->
+    <table id="humanitiesTable" class="career-table">
+        <caption>Career Options in Humanities</caption>
+        <thead>
+            <tr>
+                <th>Career Options</th>
+                <th>UG Degree Preferred</th>
+                <th>PG Degree (For Career Advancement)</th>
+                <th>Designations in Job</th>
+                <th>Salary Range</th>
+                <th>Growth Prospectus</th>
+                <th>Know More</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here dynamically -->
+        </tbody>
+    </table>
+    
+
+    <script>
+        function loadPCMData() {
+            const pcmData = [
+                {
+                    "Career Option": "Actuary",
+                    "UG Degree Preferred": "B.Sc. Actuarial Science, B.Com",
+                    "PG Degree (For Career Advancement)": "Actuarial Exams (SOA, IFoA)",
+                    "Designations in Job": "Risk Analyst, Actuary",
+                    "Salary Range": "₹10-30 LPA",
+                    "Growth Prospectus": "Analyst → Investment Director"
+                },
+                {
+                    "Career Option": "Aerospace Engineer",
+                    "UG Degree Preferred": "B.Tech Aerospace, B.E. Aero",
+                    "PG Degree (For Career Advancement)": "M.Tech Avionics, PhD Aerospace",
+                    "Designations in Job": "Aircraft Designer, R&D Engineer",
+                    "Salary Range": "₹7-20 LPA",
+                    "Growth Prospectus": "Engineer → Aviation Director"
+                },
+                {
+        "Career Option": "Agricultural Scientist",
+        "UG Degree Preferred": "B.Sc. Agriculture, Horticulture",
+        "PG Degree (For Career Advancement)": "M.Sc. AgriTech, PhD",
+        "Designations in Job": "Crop Scientist, AgriTech Innovator",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Researcher → Biotech Director"
+    },
+    {
+        "Career Option": "Agriculture Research Scientist (ARS)",
+        "UG Degree Preferred": "B.Sc. Agriculture, Horticulture",
+        "PG Degree (For Career Advancement)": "M.Sc. AgriTech, PhD",
+        "Designations in Job": "Crop Scientist, AgriTech Innovator",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Researcher → Biotech Director"
+    },
+    {
+        "Career Option": "AI Research Scientist",
+        "UG Degree Preferred": "B.Tech CS, B.Sc. AI/ML",
+        "PG Degree (For Career Advancement)": "M.Tech AI/ML, Deep Learning Certs",
+        "Designations in Job": "AI Engineer, Research Scientist",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Judge"
+    },
+    {
+        "Career Option": "AI/ML Engineer",
+        "UG Degree Preferred": "B.Tech CS, B.Sc. AI/ML",
+        "PG Degree (For Career Advancement)": "M.Tech AI/ML, Deep Learning Certs",
+        "Designations in Job": "AI Engineer, Research Scientist",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Archaeologist",
+        "UG Degree Preferred": "B.A. Archaeology, History",
+        "PG Degree (For Career Advancement)": "M.A. Archaeology, PhD",
+        "Designations in Job": "Excavation Specialist, Museum Curator",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Archaeologist (ASI - Archaeological Survey of India)",
+        "UG Degree Preferred": "B.A. Archaeology, History",
+        "PG Degree (For Career Advancement)": "M.A. Archaeology, PhD",
+        "Designations in Job": "Excavation Specialist, Museum Curator",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Architect",
+        "UG Degree Preferred": "B.Arch",
+        "PG Degree (For Career Advancement)": "M.Arch",
+        "Designations in Job": "Urban Planner, Interior Designer",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Architect → Urban Planner"
+    },
+    {
+        "Career Option": "Artist (Music/Painting)",
+        "UG Degree Preferred": "BFA, Diploma in Fine Arts",
+        "PG Degree (For Career Advancement)": "MFA, Music/Dance Certs",
+        "Designations in Job": "Musician, Performer",
+        "Salary Range": "₹3-20 LPA",
+        "Growth Prospectus": "Artist → National Recognition"
+    },
+    {
+        "Career Option": "Assistant Professor (Govt. Colleges/Universities)",
+        "UG Degree Preferred": "Master’s Degree",
+        "PG Degree (For Career Advancement)": "UGC NET/ PhD",
+        "Designations in Job": "Teaching & Research",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Assistant Provident Fund Commissioner (EPFO)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Astrobiologist",
+        "UG Degree Preferred": "B.Sc. Astrobiology, Space Sciences",
+        "PG Degree (For Career Advancement)": "M.Sc., PhD in Astrobiology",
+        "Designations in Job": "Researcher, Space Scientist",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Augmented Reality (AR) Developer",
+        "UG Degree Preferred": "B.Tech CS, B.Sc. Game Dev",
+        "PG Degree (For Career Advancement)": "AR/VR Development Certifications",
+        "Designations in Job": "AR Developer, XR Specialist",
+        "Salary Range": "₹6-25 LPA",
+        "Growth Prospectus": "Developer → Gaming Studio Head"
+    },
+    {
+        "Career Option": "Aviation Safety Officer (DGCA - Directorate General of Civil Aviation)",
+        "UG Degree Preferred": "B.Tech Aeronautical, Aviation Management",
+        "PG Degree (For Career Advancement)": "DGCA Certification",
+        "Designations in Job": "Flight Safety, Aviation Regulations",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Bank Manager",
+        "UG Degree Preferred": "B.Com, BBA Finance",
+        "PG Degree (For Career Advancement)": "MBA Finance, CFA",
+        "Designations in Job": "Analyst, Associate, VP",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Bank PO (SBI, IBPS PO)",
+        "UG Degree Preferred": "B.Com, BBA, BA",
+        "PG Degree (For Career Advancement)": "Banking Exams (SBI PO, IBPS)",
+        "Designations in Job": "Bank PO, Branch Manager",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Bioinformatics Scientist",
+        "UG Degree Preferred": "B.Sc. Bioinformatics, Biotech",
+        "PG Degree (For Career Advancement)": "M.Sc., PhD in Bioinformatics",
+        "Designations in Job": "Researcher, Genomics Specialist",
+        "Salary Range": "₹7-20 LPA",
+        "Growth Prospectus": "Engineer → Aviation Director"
+    },
+    {
+        "Career Option": "Biomedical Engineer",
+        "UG Degree Preferred": "B.Tech Biomedical, B.Sc. Biotech",
+        "PG Degree (For Career Advancement)": "M.Tech Bioengineering",
+        "Designations in Job": "Research Scientist, Clinical Engineer",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "Biostatistician",
+        "UG Degree Preferred": "B.Sc. Biostatistics, Mathematics",
+        "PG Degree (For Career Advancement)": "M.Sc., PhD in Biostatistics",
+        "Designations in Job": "Research Scientist, Clinical Data Analyst",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Blockchain Developer",
+        "UG Degree Preferred": "B.Tech CS, B.Sc. Blockchain",
+        "PG Degree (For Career Advancement)": "Blockchain Certifications (IBM, Ethereum)",
+        "Designations in Job": "Smart Contract Developer, Crypto Analyst",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Blockchain Engineer",
+        "UG Degree Preferred": "B.Tech CS, B.Sc. Blockchain",
+        "PG Degree (For Career Advancement)": "Blockchain Certifications (IBM, Ethereum)",
+        "Designations in Job": "Smart Contract Developer, Crypto Analyst",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Border Roads Organisation (BRO) Engineer",
+        "UG Degree Preferred": "B.Tech Civil, Mechanical",
+        "PG Degree (For Career Advancement)": "GATE, BRO Exam",
+        "Designations in Job": "Infrastructure Development, Road Construction",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "CBI Officer (Central Bureau of Investigation)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Census Officer (Registrar General of India)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Chartered Accountant",
+        "UG Degree Preferred": "B.Com + CA",
+        "PG Degree (For Career Advancement)": "CFA, CPA",
+        "Designations in Job": "Auditor, CFO, Finance Manager",
+        "Salary Range": "₹7-15 LPA",
+        "Growth Prospectus": "Analyst → CFO"
+    },
+    {
+        "Career Option": "Chef",
+        "UG Degree Preferred": "Diploma in Culinary Arts, B.Sc. Hospitality",
+        "PG Degree (For Career Advancement)": "Culinary Certifications",
+        "Designations in Job": "Sous Chef, Executive Chef",
+        "Salary Range": "₹4-15 LPA",
+        "Growth Prospectus": "Chef → Master Chef"
+    },
+    {
+        "Career Option": "Civil Engineer",
+        "UG Degree Preferred": "B.Tech Civil, B.E. Civil",
+        "PG Degree (For Career Advancement)": "M.Tech Structural Engg.",
+        "Designations in Job": "Site Engineer, Project Manager",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "Civil Servant",
+        "UG Degree Preferred": "BA Political Science, Public Admin",
+        "PG Degree (For Career Advancement)": "UPSC, State PSC",
+        "Designations in Job": "IAS, IPS, IFS",
+        "Salary Range": "₹8-15 LPA",
+        "Growth Prospectus": "IAS → Secretary"
+    },
+    {
+        "Career Option": "Climate Change Analyst",
+        "UG Degree Preferred": "B.Sc. Climate Science",
+        "PG Degree (For Career Advancement)": "M.Sc., PhD in Climate Studies",
+        "Designations in Job": "Policy Analyst, Environmental Researcher",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Coast Guard Officer",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Border Security, Commanding Troops",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Customs & Excise Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Customs Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Cyber Security Officer (Government & Intelligence Agencies)",
+        "UG Degree Preferred": "B.Tech Cybersecurity, Computer Science",
+        "PG Degree (For Career Advancement)": "Cyber Security Certifications",
+        "Designations in Job": "Cyber Defense, Ethical Hacking",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Cybersecurity Analyst",
+        "UG Degree Preferred": "B.Tech CS/IT, B.Sc. Cybersecurity",
+        "PG Degree (For Career Advancement)": "Ethical Hacking, CISSP, CISA Certs",
+        "Designations in Job": "Security Analyst, Ethical Hacker",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Data Scientist",
+        "UG Degree Preferred": "B.Tech CS, B.Sc. Data Science",
+        "PG Degree (For Career Advancement)": "M.Tech AI, Data Science Certs",
+        "Designations in Job": "AI Engineer, Data Analyst",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Data Analyst → Chief Data Scientist"
+    },
+    {
+        "Career Option": "Defense Officer (Army/Navy/Air Force)",
+        "UG Degree Preferred": "NDA Exam, B.Sc. Defense Studies",
+        "PG Degree (For Career Advancement)": "Military Training, CDS Exam",
+        "Designations in Job": "Officer, Pilot, Naval Engineer",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Defense Research & Development Organisation (DRDO) Scientist",
+        "UG Degree Preferred": "B.Tech, M.Tech, PhD",
+        "PG Degree (For Career Advancement)": "ISRO/DRDO/BARC Exam",
+        "Designations in Job": "Space & Defense Research",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Defense Scientist (DRDO, BARC)",
+        "UG Degree Preferred": "B.Tech, M.Tech, PhD",
+        "PG Degree (For Career Advancement)": "ISRO/DRDO/BARC Exam",
+        "Designations in Job": "Space & Defense Research",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Digital Forensic Analyst",
+        "UG Degree Preferred": "B.Tech Cybersecurity, B.Sc. Digital Forensics",
+        "PG Degree (For Career Advancement)": "Cybersecurity Certifications",
+        "Designations in Job": "Cybercrime Investigator, Forensic Expert",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Digital Marketer",
+        "UG Degree Preferred": "BBA, Digital Marketing Diploma",
+        "PG Degree (For Career Advancement)": "Google, Facebook Ads Certifications",
+        "Designations in Job": "SEO Specialist, Social Media Manager",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Digital Transformation Consultant",
+        "UG Degree Preferred": "B.Tech, BBA, MBA",
+        "PG Degree (For Career Advancement)": "Certifications in AI, Blockchain, Cloud",
+        "Designations in Job": "Strategy Consultant, Business Analyst",
+        "Salary Range": "₹12-35 LPA",
+        "Growth Prospectus": "Surgeon → AI in Healthcare Director"
+    },
+    {
+        "Career Option": "Drone Engineer",
+        "UG Degree Preferred": "B.Tech Aerospace, Robotics",
+        "PG Degree (For Career Advancement)": "Drone Tech Certifications",
+        "Designations in Job": "UAV Engineer, Drone Pilot",
+        "Salary Range": "₹8-20 LPA",
+        "Growth Prospectus": "Physician → Hospital Director"
+    },
+    {
+        "Career Option": "E-commerce Manager",
+        "UG Degree Preferred": "BBA, B.Com, Digital Marketing",
+        "PG Degree (For Career Advancement)": "MBA E-commerce, Google Certs",
+        "Designations in Job": "E-commerce Specialist, Product Manager",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Researcher → Biotech Director"
+    },
+    {
+        "Career Option": "Economist",
+        "UG Degree Preferred": "B.A./B.Sc. Economics",
+        "PG Degree (For Career Advancement)": "M.A. Economics, PhD",
+        "Designations in Job": "Policy Analyst, Economist",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "EdTech Entrepreneur",
+        "UG Degree Preferred": "B.Ed, BBA, B.Tech EdTech",
+        "PG Degree (For Career Advancement)": "MBA, EdTech Leadership Training",
+        "Designations in Job": "Startup Founder, Education Innovator",
+        "Salary Range": "Varies",
+        "Growth Prospectus": "Founder → CEO"
+    },
+    {
+        "Career Option": "Electrical Engineer",
+        "UG Degree Preferred": "B.Tech Electrical, B.E. Elec",
+        "PG Degree (For Career Advancement)": "M.Tech Power Systems",
+        "Designations in Job": "Electrical Design Engineer, Consultant",
+        "Salary Range": "₹6-14 LPA",
+        "Growth Prospectus": "Engineer → Energy Manager"
+    },
+    {
+        "Career Option": "Employment Officer (Labour Department)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Entrepreneur",
+        "UG Degree Preferred": "BBA, Any UG Course",
+        "PG Degree (For Career Advancement)": "MBA, Startup Bootcamps",
+        "Designations in Job": "Startup Founder, Business Owner",
+        "Salary Range": "Varies",
+        "Growth Prospectus": "Founder → CEO"
+    },
+    {
+        "Career Option": "Ethical Hacker",
+        "UG Degree Preferred": "B.Tech CS, B.Sc. Cybersecurity",
+        "PG Degree (For Career Advancement)": "CEH, OSCP, CISSP Certs",
+        "Designations in Job": "Penetration Tester, Security Consultant",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Ethical Hacker (Cyber Security)",
+        "UG Degree Preferred": "B.Tech CS, B.Sc. Cybersecurity",
+        "PG Degree (For Career Advancement)": "CEH, OSCP, CISSP Certs",
+        "Designations in Job": "Penetration Tester, Security Consultant",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Ethnographer (Social Researcher)",
+        "UG Degree Preferred": "BA Anthropology, Sociology",
+        "PG Degree (For Career Advancement)": "MA, PhD in Social Research",
+        "Designations in Job": "Cultural Analyst, Research Consultant",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "Event Manager",
+        "UG Degree Preferred": "BBA Event Management, Mass Comm.",
+        "PG Degree (For Career Advancement)": "MBA Event Management",
+        "Designations in Job": "Event Coordinator, Wedding Planner",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Fashion Designer",
+        "UG Degree Preferred": "B.Des, B.Sc. Fashion Design",
+        "PG Degree (For Career Advancement)": "M.Des, Fashion Tech Certs",
+        "Designations in Job": "Apparel Designer, Stylist",
+        "Salary Range": "₹5-20 LPA",
+        "Growth Prospectus": "Lawyer → Senior Counsel"
+    },
+    {
+        "Career Option": "Film Director",
+        "UG Degree Preferred": "BA Film Studies, Diploma in Filmmaking",
+        "PG Degree (For Career Advancement)": "PG Diploma in Film Direction",
+        "Designations in Job": "Director, Screenwriter",
+        "Salary Range": "₹6-50 LPA",
+        "Growth Prospectus": "Director → International Filmmaker"
+    },
+    {
+        "Career Option": "Fire Service Officer",
+        "UG Degree Preferred": "B.Sc. Fire & Safety, Engineering Degree",
+        "PG Degree (For Career Advancement)": "Fire Service Exam",
+        "Designations in Job": "Firefighting, Disaster Management",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Food Safety Officer (FSO)",
+        "UG Degree Preferred": "B.Sc. Food Technology, Agriculture",
+        "PG Degree (For Career Advancement)": "Food Safety Exam",
+        "Designations in Job": "Food Quality Inspection, Policy Regulation",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Foreign Language Expert",
+        "UG Degree Preferred": "BA Foreign Language (French, Spanish, etc.)",
+        "PG Degree (For Career Advancement)": "MA Translation, Interpreter Certs",
+        "Designations in Job": "Translator, Diplomat",
+        "Salary Range": "₹5-20 LPA",
+        "Growth Prospectus": "Lawyer → Senior Counsel"
+    },
+    {
+        "Career Option": "Forensic Scientist",
+        "UG Degree Preferred": "B.Sc. Forensic Science",
+        "PG Degree (For Career Advancement)": "M.Sc. Forensic Science, PhD",
+        "Designations in Job": "Crime Scene Investigator, DNA Analyst",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Game Developer",
+        "UG Degree Preferred": "B.Tech CS, B.Sc. Game Design",
+        "PG Degree (For Career Advancement)": "Game Development Certs, Unity/Unreal Engine",
+        "Designations in Job": "Game Programmer, Designer",
+        "Salary Range": "₹6-25 LPA",
+        "Growth Prospectus": "Developer → Gaming Studio Head"
+    },
+    {
+        "Career Option": "Geologist",
+        "UG Degree Preferred": "B.Sc. Geology, Earth Sciences",
+        "PG Degree (For Career Advancement)": "M.Sc. Geophysics, PhD",
+        "Designations in Job": "Geological Surveyor, Environmental Consultant",
+        "Salary Range": "₹6-14 LPA",
+        "Growth Prospectus": "Engineer → Energy Manager"
+    },
+    {
+        "Career Option": "Geologist (Geological Survey of India - GSI)",
+        "UG Degree Preferred": "B.Sc. Geology, Earth Sciences",
+        "PG Degree (For Career Advancement)": "M.Sc. Geophysics, PhD",
+        "Designations in Job": "Geological Surveyor, Environmental Consultant",
+        "Salary Range": "₹6-14 LPA",
+        "Growth Prospectus": "Engineer → Energy Manager"
+    },
+    {
+        "Career Option": "Handloom & Textiles Officer (Ministry of Textiles)",
+        "UG Degree Preferred": "B.Des, BBA",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "State-level Administration, Law & Order",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Hotel Manager",
+        "UG Degree Preferred": "BHM, BBA Hospitality",
+        "PG Degree (For Career Advancement)": "MBA Hospitality, Industry Certs",
+        "Designations in Job": "Hotel Manager, F&B Director",
+        "Salary Range": "₹6-18 LPA",
+        "Growth Prospectus": "Manager → General Manager"
+    },
+    {
+        "Career Option": "Hydrologist",
+        "UG Degree Preferred": "B.Sc. Hydrology, Environmental Science",
+        "PG Degree (For Career Advancement)": "M.Sc., PhD in Hydrology",
+        "Designations in Job": "Water Resource Scientist, Policy Maker",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "IAS (Indian Administrative Service)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "IAS Officer (UPSC)",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "District Collector, Secretary",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "IFS (Indian Foreign Service)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "IFS Officer (Foreign Services)",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "District Collector, Secretary",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Indian Air Force Officer",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Border Security, Commanding Troops",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Indian Army Officer",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Border Security, Commanding Troops",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Indian Coast Guard Officer (General Duty & Technical Branch)",
+        "UG Degree Preferred": "B.Tech in Mechanical, Electrical, Electronics",
+        "PG Degree (For Career Advancement)": "Coast Guard Technical Exam",
+        "Designations in Job": "Maritime Security, Naval Operations",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Indian Coast Guard Technical Officer",
+        "UG Degree Preferred": "B.Tech in Mechanical, Electrical, Electronics",
+        "PG Degree (For Career Advancement)": "Coast Guard Technical Exam",
+        "Designations in Job": "Maritime Security, Naval Operations",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Indian Economic Service (IES) Officer",
+        "UG Degree Preferred": "B.A./B.Sc. Economics",
+        "PG Degree (For Career Advancement)": "M.A. Economics, PhD",
+        "Designations in Job": "Policy Analyst, Economist",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Indian Engineering Services (IES)",
+        "UG Degree Preferred": "B.Tech Civil/Mech/Electrical",
+        "PG Degree (For Career Advancement)": "IES Exam",
+        "Designations in Job": "Senior Engineer, Technical Director",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Indian Forest Service (IFS - Environment & Forestry)",
+        "UG Degree Preferred": "B.Sc. Forestry, Agriculture",
+        "PG Degree (For Career Advancement)": "UPSC IFS Exam",
+        "Designations in Job": "Wildlife Conservation",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "IRS → Finance Secretary"
+    },
+    {
+        "Career Option": "Indian Information Service (IIS) Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Indian Meteorological Department (IMD) Scientist",
+        "UG Degree Preferred": "B.Sc. Meteorology, Atmospheric Science",
+        "PG Degree (For Career Advancement)": "M.Sc. Meteorology, PhD",
+        "Designations in Job": "Weather Analyst, Climatologist",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "Indian Navy Officer",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Border Security, Commanding Troops",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Indian Postal Service (IPS) Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Indian Railway Accounts Service (IRAS)",
+        "UG Degree Preferred": "B.Com, MBA Finance",
+        "PG Degree (For Career Advancement)": "UPSC ESE Exam",
+        "Designations in Job": "Railway Operations, Scheduling",
+        "Salary Range": "₹8-20 LPA",
+        "Growth Prospectus": "Physician → Hospital Director"
+    },
+    {
+        "Career Option": "Indian Railway Traffic Service (IRTS)",
+        "UG Degree Preferred": "B.Tech, BBA",
+        "PG Degree (For Career Advancement)": "UPSC ESE Exam",
+        "Designations in Job": "Railway Operations, Scheduling",
+        "Salary Range": "₹8-20 LPA",
+        "Growth Prospectus": "Physician → Hospital Director"
+    },
+    {
+        "Career Option": "Indian Space Research Organisation (ISRO) Scientist",
+        "UG Degree Preferred": "B.Tech Aerospace, B.Sc. Astrophysics",
+        "PG Degree (For Career Advancement)": "M.Tech, PhD in Space Science",
+        "Designations in Job": "Satellite Engineer, Astronomer",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Indian Statistical Service (ISS)",
+        "UG Degree Preferred": "B.Sc. Statistics, Mathematics",
+        "PG Degree (For Career Advancement)": "ISS Exam",
+        "Designations in Job": "Economic Analyst, Research Officer",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "IRS → Finance Secretary"
+    },
+    {
+        "Career Option": "Intelligence Bureau (IB) Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Interior Designer",
+        "UG Degree Preferred": "B.Des, B.Sc. Interior Design",
+        "PG Degree (For Career Advancement)": "M.Des, Interior Styling Courses",
+        "Designations in Job": "Interior Designer, Space Planner",
+        "Salary Range": "₹5-20 LPA",
+        "Growth Prospectus": "Lawyer → Senior Counsel"
+    },
+    {
+        "Career Option": "Investment Banker",
+        "UG Degree Preferred": "B.Com, BBA Finance",
+        "PG Degree (For Career Advancement)": "MBA Finance, CFA",
+        "Designations in Job": "Analyst, Associate, VP",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "IPS (Indian Police Service)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "IPS Officer (UPSC)",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "District Collector, Secretary",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "IRS (Indian Revenue Service)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "IRS Officer (Tax & Revenue)",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "District Collector, Secretary",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Journalist",
+        "UG Degree Preferred": "BA Journalism, Mass Comm.",
+        "PG Degree (For Career Advancement)": "PG Journalism, Media Studies",
+        "Designations in Job": "Reporter, News Editor",
+        "Salary Range": "₹4-10 LPA",
+        "Growth Prospectus": "Reporter → Media Director"
+    },
+    {
+        "Career Option": "Judge",
+        "UG Degree Preferred": "BA LLB, BBA LLB",
+        "PG Degree (For Career Advancement)": "LLM, Judicial Services Exam",
+        "Designations in Job": "Judge, Magistrate",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Judge (Judicial Magistrate/ Civil Judge)",
+        "UG Degree Preferred": "LLB",
+        "PG Degree (For Career Advancement)": "LLM",
+        "Designations in Job": "Legal Advisor, Senior Counsel",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Junior Advocate → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Judicial Magistrate (Law Officer)",
+        "UG Degree Preferred": "LLB, LLM",
+        "PG Degree (For Career Advancement)": "Judicial Services Exam",
+        "Designations in Job": "Magistrate, Judge",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Judicial Translator (High Court/Supreme Court)",
+        "UG Degree Preferred": "BA Foreign Language, Translation",
+        "PG Degree (For Career Advancement)": "Govt. Translator Exam",
+        "Designations in Job": "Legal Document Translation, Court Interpretation",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Lawyer",
+        "UG Degree Preferred": "LLB",
+        "PG Degree (For Career Advancement)": "LLM",
+        "Designations in Job": "Legal Advisor, Senior Counsel",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Junior Advocate → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Legal Advisor (Govt.)",
+        "UG Degree Preferred": "LLB, LLM",
+        "PG Degree (For Career Advancement)": "Judicial Services Exam",
+        "Designations in Job": "Magistrate, Judge",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Luxury Brand Manager",
+        "UG Degree Preferred": "BBA, MBA Luxury Brand Management",
+        "PG Degree (For Career Advancement)": "Fashion Management Certifications",
+        "Designations in Job": "Luxury Marketing Executive",
+        "Salary Range": "₹8-30 LPA",
+        "Growth Prospectus": "Analyst → Portfolio Manager"
+    },
+    {
+        "Career Option": "Mechanical Engineer",
+        "UG Degree Preferred": "B.Tech Mechanical, B.E. Mech",
+        "PG Degree (For Career Advancement)": "M.Tech, Robotics Certs",
+        "Designations in Job": "Design Engineer, Production Manager",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Metaverse Architect",
+        "UG Degree Preferred": "B.Tech CS, B.Sc. Game Design",
+        "PG Degree (For Career Advancement)": "Game Development Certs, Unity/Unreal Engine",
+        "Designations in Job": "Game Programmer, Designer",
+        "Salary Range": "₹6-25 LPA",
+        "Growth Prospectus": "Developer → Gaming Studio Head"
+    },
+    {
+        "Career Option": "Meteorologist",
+        "UG Degree Preferred": "B.Sc. Meteorology, Atmospheric Science",
+        "PG Degree (For Career Advancement)": "M.Sc. Meteorology, PhD",
+        "Designations in Job": "Weather Analyst, Climatologist",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "Mining Officer (Ministry of Mines, Govt. of India)",
+        "UG Degree Preferred": "B.Tech Mining Engineering",
+        "PG Degree (For Career Advancement)": "GATE, UPSC Exam",
+        "Designations in Job": "Mine Safety, Resource Management",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Municipal Corporation Officer (Urban Planning, Public Works)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Music Producer",
+        "UG Degree Preferred": "BFA Music, Sound Engineering",
+        "PG Degree (For Career Advancement)": "Music Tech Certifications",
+        "Designations in Job": "Producer, Sound Engineer",
+        "Salary Range": "₹4-20 LPA",
+        "Growth Prospectus": "Producer → Record Label Head"
+    },
+    {
+        "Career Option": "NABARD Officer (Agriculture Finance)",
+        "UG Degree Preferred": "B.Sc. Agriculture, B.Com",
+        "PG Degree (For Career Advancement)": "NABARD Exam",
+        "Designations in Job": "Rural Development, Farm Loans",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "IRS → Finance Secretary"
+    },
+    {
+        "Career Option": "Nanotechnology Engineer",
+        "UG Degree Preferred": "B.Tech Nanotechnology, B.Sc. Nano Science",
+        "PG Degree (For Career Advancement)": "M.Tech Nanotech, PhD",
+        "Designations in Job": "R&D Scientist, Materials Engineer",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "National Disaster Response Force (NDRF) Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Oil & Natural Gas Corporation (ONGC) Officer",
+        "UG Degree Preferred": "B.Tech Petroleum, Mechanical, Chemical",
+        "PG Degree (For Career Advancement)": "GATE Exam, PSU Recruitment",
+        "Designations in Job": "Energy Resource Management, Oil Extraction",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "IRS → Finance Secretary"
+    },
+    {
+        "Career Option": "Pharmaceutical Scientist",
+        "UG Degree Preferred": "B.Pharm, B.Sc. Pharma Sciences",
+        "PG Degree (For Career Advancement)": "M.Pharm, Drug Research Certs",
+        "Designations in Job": "Clinical Pharmacist, R&D Scientist",
+        "Salary Range": "₹4-10 LPA",
+        "Growth Prospectus": "Pharmacist → Pharma Director"
+    },
+    {
+        "Career Option": "Pilot",
+        "UG Degree Preferred": "B.Sc. Aviation, CPL License",
+        "PG Degree (For Career Advancement)": "Type Rating, Airline Certifications",
+        "Designations in Job": "Commercial Pilot, Airline Captain",
+        "Salary Range": "₹12-40 LPA",
+        "Growth Prospectus": "Pilot → Chief Pilot"
+    },
+    {
+        "Career Option": "Political Analyst",
+        "UG Degree Preferred": "B.A. Political Science",
+        "PG Degree (For Career Advancement)": "M.A. Political Science, PhD",
+        "Designations in Job": "Government Consultant, Public Policy Expert",
+        "Salary Range": "₹6-18 LPA",
+        "Growth Prospectus": "Manager → General Manager"
+    },
+    {
+        "Career Option": "Postal Service Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Press Information Bureau (PIB) Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Product Manager (Tech Industry)",
+        "UG Degree Preferred": "B.Tech, BBA, B.Sc. IT",
+        "PG Degree (For Career Advancement)": "MBA, Product Management Certifications",
+        "Designations in Job": "Product Analyst, Lead Product Manager",
+        "Salary Range": "₹12-40 LPA",
+        "Growth Prospectus": "Pilot → Chief Pilot"
+    },
+    {
+        "Career Option": "Psychologist",
+        "UG Degree Preferred": "BA Psychology, B.Sc. Psychology",
+        "PG Degree (For Career Advancement)": "M.Sc. Psychology, PhD",
+        "Designations in Job": "Clinical Psychologist, Therapist",
+        "Salary Range": "₹4-12 LPA",
+        "Growth Prospectus": "Psychologist → Researcher"
+    },
+    {
+        "Career Option": "Public Health Officer (PHO)",
+        "UG Degree Preferred": "MBBS, B.Sc. Public Health",
+        "PG Degree (For Career Advancement)": "UPSC CMS, State Health Dept Exam",
+        "Designations in Job": "Healthcare Planning, Epidemiology",
+        "Salary Range": "₹7-20 LPA",
+        "Growth Prospectus": "Engineer → Aviation Director"
+    },
+    {
+        "Career Option": "Public Prosecutor",
+        "UG Degree Preferred": "LLB",
+        "PG Degree (For Career Advancement)": "LLM",
+        "Designations in Job": "Legal Advisor, Senior Counsel",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Junior Advocate → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Public Sector Bank Officer (SBI/IBPS)",
+        "UG Degree Preferred": "B.Com, BBA, BA",
+        "PG Degree (For Career Advancement)": "Banking Exams (SBI PO, IBPS)",
+        "Designations in Job": "Bank PO, Branch Manager",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Public Sector Undertaking (PSU) Engineer",
+        "UG Degree Preferred": "B.Tech, M.Tech",
+        "PG Degree (For Career Advancement)": "GATE Exam",
+        "Designations in Job": "Engineers in ONGC, BHEL, NTPC, IOCL",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "IRS → Finance Secretary"
+    },
+    {
+        "Career Option": "Quantum Computing Scientist",
+        "UG Degree Preferred": "B.Sc. Physics, B.Tech CS",
+        "PG Degree (For Career Advancement)": "PhD Quantum Computing",
+        "Designations in Job": "Quantum Engineer, Researcher",
+        "Salary Range": "₹15-50 LPA",
+        "Growth Prospectus": "Researcher → Quantum Tech Leader"
+    },
+    {
+        "Career Option": "Railway Engineer (IRSE)",
+        "UG Degree Preferred": "B.Tech Civil/Mech",
+        "PG Degree (For Career Advancement)": "UPSC ESE / RRB JE Exam",
+        "Designations in Job": "Infrastructure & Rail Planning",
+        "Salary Range": "₹7-22 LPA",
+        "Growth Prospectus": "Engineer → Chief Engineer"
+    },
+    {
+        "Career Option": "Railway Officer (Indian Railways)",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "District Collector, Secretary",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "RBI Grade B Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Real Estate Developer",
+        "UG Degree Preferred": "BBA Real Estate, B.Com",
+        "PG Degree (For Career Advancement)": "MBA Real Estate, RERA Certification",
+        "Designations in Job": "Property Developer, Realtor",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Robotics Engineer",
+        "UG Degree Preferred": "B.Tech Robotics, B.E. Mechatronics",
+        "PG Degree (For Career Advancement)": "M.Tech Robotics, Automation Certs",
+        "Designations in Job": "Robotics Developer, AI Specialist",
+        "Salary Range": "₹8-20 LPA",
+        "Growth Prospectus": "Physician → Hospital Director"
+    },
+    {
+        "Career Option": "Robotics Surgeon",
+        "UG Degree Preferred": "MBBS + Specialization in Robotic Surgery",
+        "PG Degree (For Career Advancement)": "MD Surgery, AI in Healthcare",
+        "Designations in Job": "Surgeon, AI-assisted Surgery Specialist",
+        "Salary Range": "₹12-35 LPA",
+        "Growth Prospectus": "Surgeon → AI in Healthcare Director"
+    },
+    {
+        "Career Option": "School Teacher (Govt.)",
+        "UG Degree Preferred": "B.Ed, BA/B.Sc.",
+        "PG Degree (For Career Advancement)": "CTET/TET Exam",
+        "Designations in Job": "Teaching, Curriculum Development",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "Scientific Officer (Forensic Science Laboratory - FSL)",
+        "UG Degree Preferred": "B.Sc. Forensic Science, Chemistry",
+        "PG Degree (For Career Advancement)": "M.Sc. Forensic Science, PhD",
+        "Designations in Job": "Crime Scene Investigator, DNA Analyst",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Scientist (ISRO/DRDO/BARC)",
+        "UG Degree Preferred": "B.Tech, M.Tech, PhD",
+        "PG Degree (For Career Advancement)": "ISRO/DRDO/BARC Exam",
+        "Designations in Job": "Space & Defense Research",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Shipping Corporation of India (SCI) Officer",
+        "UG Degree Preferred": "B.Tech Marine Engineering, B.Sc. Nautical Science",
+        "PG Degree (For Career Advancement)": "Merchant Navy Exam",
+        "Designations in Job": "Shipping Logistics, Marine Transport",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Researcher → Biotech Director"
+    },
+    {
+        "Career Option": "Social Welfare Officer (Women & Child Development Dept.)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Software Engineer",
+        "UG Degree Preferred": "B.Tech CS/IT, B.Sc. CS",
+        "PG Degree (For Career Advancement)": "M.Tech, AI/ML Certs",
+        "Designations in Job": "Software Developer, Data Scientist",
+        "Salary Range": "₹6-12 LPA",
+        "Growth Prospectus": "Junior Developer → CTO"
+    },
+    {
+        "Career Option": "Solar Energy Engineer",
+        "UG Degree Preferred": "B.Tech Renewable Energy, Electrical",
+        "PG Degree (For Career Advancement)": "M.Tech Solar Energy, PhD",
+        "Designations in Job": "Solar Engineer, Energy Consultant",
+        "Salary Range": "₹6-18 LPA",
+        "Growth Prospectus": "Manager → General Manager"
+    },
+    {
+        "Career Option": "Space Engineer (ISRO/NASA)",
+        "UG Degree Preferred": "B.Tech Aerospace, B.Sc. Astrophysics",
+        "PG Degree (For Career Advancement)": "M.Tech, PhD in Space Science",
+        "Designations in Job": "Satellite Engineer, Astronomer",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Space Scientist (ISRO/NASA)",
+        "UG Degree Preferred": "B.Tech Aerospace, B.Sc. Astrophysics",
+        "PG Degree (For Career Advancement)": "M.Tech, PhD in Space Science",
+        "Designations in Job": "Satellite Engineer, Astronomer",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Sports Coach",
+        "UG Degree Preferred": "B.P.Ed, Diploma in Sports Science",
+        "PG Degree (For Career Advancement)": "M.P.Ed, Coaching Certs",
+        "Designations in Job": "Coach, Trainer",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "State Administrative Service (SDM, DSP, Tehsildar)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "State Disaster Management Authority (SDMA) Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "State Electricity Board Engineer (Power Corporation)",
+        "UG Degree Preferred": "B.Tech Electrical, Mechanical",
+        "PG Degree (For Career Advancement)": "GATE, State Electricity Board Exam",
+        "Designations in Job": "Power Distribution, Energy Management",
+        "Salary Range": "₹6-18 LPA",
+        "Growth Prospectus": "Manager → General Manager"
+    },
+    {
+        "Career Option": "Stock Market Analyst",
+        "UG Degree Preferred": "B.Com, BBA Finance",
+        "PG Degree (For Career Advancement)": "MBA Finance, CFA",
+        "Designations in Job": "Analyst, Associate, VP",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Sustainability Manager",
+        "UG Degree Preferred": "B.Sc. Environmental Science",
+        "PG Degree (For Career Advancement)": "MBA Sustainability, ESG Certifications",
+        "Designations in Job": "Sustainability Analyst, Consultant",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Tourism Officer (Ministry of Tourism, Govt. of India)",
+        "UG Degree Preferred": "BBA, B.Sc. Tourism Management",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "State-level Administration, Law & Order",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Trade & Commerce Officer (Ministry of Commerce & Industry)",
+        "UG Degree Preferred": "B.Com, BBA",
+        "PG Degree (For Career Advancement)": "UPSC IES, State PSC",
+        "Designations in Job": "International Trade, Commerce Regulation",
+        "Salary Range": "₹7-20 LPA",
+        "Growth Prospectus": "Engineer → Aviation Director"
+    },
+    {
+        "Career Option": "Transport Officer (RTO - Road Transport Officer)",
+        "UG Degree Preferred": "B.Tech Automobile, Mechanical Engineering",
+        "PG Degree (For Career Advancement)": "RTO Exam (State PSC)",
+        "Designations in Job": "Vehicle Registration, Road Safety",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "UX/UI Designer",
+        "UG Degree Preferred": "B.Des, B.Sc. UX/UI",
+        "PG Degree (For Career Advancement)": "UX/UI Certifications, Google UX Cert",
+        "Designations in Job": "UX Designer, Product Designer",
+        "Salary Range": "₹5-18 LPA",
+        "Growth Prospectus": "Designer → UX Director"
+    },
+    {
+        "Career Option": "Virtual Reality (VR) Developer",
+        "UG Degree Preferred": "B.Sc. VR, Game Design",
+        "PG Degree (For Career Advancement)": "VR Certifications (Unity/Unreal)",
+        "Designations in Job": "VR Designer, Developer",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Researcher → Biotech Director"
+    },
+    {
+        "Career Option": "Wildlife Conservation Officer (Forest Department)",
+        "UG Degree Preferred": "B.Sc. Wildlife Biology, Forestry",
+        "PG Degree (For Career Advancement)": "IFS, State Forest Services Exam",
+        "Designations in Job": "Wildlife Protection, National Park Management",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "YouTuber/Influencer",
+        "UG Degree Preferred": "No Formal Degree Required",
+        "PG Degree (For Career Advancement)": "Content Creation & Branding",
+        "Designations in Job": "Vlogger, Content Creator",
+        "Salary Range": "Varies",
+        "Growth Prospectus": "Founder → CEO"
+    }
+            ];
+    
+            const tableBody = document.getElementById("pcmTable");
+    
+            // Clear previous data if any
+            tableBody.innerHTML = `
+                <caption>Career Options in PCM</caption>
+                <tr>
+                    <th>Career Options</th>
+                    <th>UG Degree Preferred</th>
+                    <th>PG Degree (For Career Advancement)</th>
+                    <th>Designations in Job</th>
+                    <th>Salary Range</th>
+                    <th>Growth Prospectus</th>
+                    <th>Know More</th>
+                </tr>
+            `;
+    
+            pcmData.forEach(row => {
+                const tr = document.createElement("tr");
+    
+                Object.values(row).forEach(cellData => {
+                    const td = document.createElement("td");
+                    td.textContent = cellData;
+                    tr.appendChild(td);
+                });
+    
+                const knowMoreTd = document.createElement("td");
+                knowMoreTd.textContent = "Coming Soon"; // Placeholder for Know More section
+                tr.appendChild(knowMoreTd);
+    
+                tableBody.appendChild(tr);
+            });
+        }
+    
+        function showTable(tableId) {
+            document.querySelectorAll(".career-table").forEach(table => {
+                table.style.display = "none";
+            });
+    
+            document.getElementById(tableId).style.display = "table";
+    
+            document.querySelectorAll(".stream-btn").forEach(btn => {
+                btn.classList.remove("active");
+            });
+    
+            event.target.classList.add("active");
+    
+            // Load PCM data when PCM is selected
+            if (tableId === "pcmTable") {
+                loadPCMData();
+            }
+        }
+    </script>
+    <script>
+        function filterCareers() {
+            let input, filter, visibleTable, rows, careerColumn, txtValue;
+            
+            input = document.getElementById("careerSearch");
+            filter = input.value.toUpperCase();
+            
+            // Get the currently visible table
+            let tables = document.querySelectorAll(".career-table");
+            visibleTable = null;
+        
+            tables.forEach(table => {
+                if (table.style.display === "table") {
+                    visibleTable = table;
+                }
+            });
+        
+            if (!visibleTable) return; // Exit if no table is visible
+        
+            rows = visibleTable.getElementsByTagName("tr");
+        
+            // Loop through all table rows, skipping the first row (headers)
+            for (let i = 1; i < rows.length; i++) {
+                careerColumn = rows[i].getElementsByTagName("td")[0]; // First column (Career Options)
+                if (careerColumn) {
+                    txtValue = careerColumn.textContent || careerColumn.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        rows[i].style.display = "";  // Show row if it matches
+                    } else {
+                        rows[i].style.display = "none";  // Hide row if no match
+                    }
+                }
+            }
+        }
+        </script>
+       <script>
+        // JSON Data for PCB Careers
+        const pcbData = [
+            {
+                "Career Option": "Doctor",
+                "UG Degree Preferred": "MBBS, BDS, BAMS",
+                "PG Degree (For Career Advancement)": "MD, MS",
+                "Designations in Job": "General Physician, Surgeon",
+                "Salary Range": "₹8-20 LPA",
+                "Growth Prospectus": "Physician → Hospital Director"
+            },
+            {
+                "Career Option": "Chartered Accountant",
+                "UG Degree Preferred": "B.Com + CA",
+                "PG Degree (For Career Advancement)": "CFA, CPA",
+                "Designations in Job": "Auditor, CFO, Finance Manager",
+                "Salary Range": "₹7-15 LPA",
+                "Growth Prospectus": "Analyst → CFO"
+            },
+            {
+                "Career Option": "Journalist",
+                "UG Degree Preferred": "BA Journalism, Mass Comm.",
+                "PG Degree (For Career Advancement)": "PG Journalism, Media Studies",
+                "Designations in Job": "Reporter, News Editor",
+                "Salary Range": "₹4-10 LPA",
+                "Growth Prospectus": "Reporter → Media Director"
+            },
+            {
+                "Career Option": "Investment Banker",
+                "UG Degree Preferred": "B.Com, BBA Finance",
+                "PG Degree (For Career Advancement)": "MBA Finance, CFA",
+                "Designations in Job": "Analyst, Associate, VP",
+                "Salary Range": "₹10-30 LPA",
+                "Growth Prospectus": "Analyst → Investment Director"
+            },
+            {
+                "Career Option": "Civil Servant",
+                "UG Degree Preferred": "BA Political Science, Public Admin",
+                "PG Degree (For Career Advancement)": "UPSC, State PSC",
+                "Designations in Job": "IAS, IPS, IFS",
+                "Salary Range": "₹8-15 LPA",
+                "Growth Prospectus": "IAS → Secretary"
+            },
+            {
+        "Career Option": "Lawyer",
+        "UG Degree Preferred": "LLB",
+        "PG Degree (For Career Advancement)": "LLM",
+        "Designations in Job": "Legal Advisor, Senior Counsel",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Junior Advocate → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Psychologist",
+        "UG Degree Preferred": "BA Psychology, B.Sc. Psychology",
+        "PG Degree (For Career Advancement)": "M.Sc. Psychology, PhD",
+        "Designations in Job": "Clinical Psychologist, Therapist",
+        "Salary Range": "₹4-12 LPA",
+        "Growth Prospectus": "Psychologist → Researcher"
+    },
+    {
+        "Career Option": "Doctor",
+        "UG Degree Preferred": "MBBS, BDS, BAMS",
+        "PG Degree (For Career Advancement)": "MD, MS",
+        "Designations in Job": "General Physician, Surgeon",
+        "Salary Range": "₹8-20 LPA",
+        "Growth Prospectus": "Physician → Hospital Director"
+    },
+    {
+        "Career Option": "Biomedical Engineer",
+        "UG Degree Preferred": "B.Tech Biomedical, B.Sc. Biotech",
+        "PG Degree (For Career Advancement)": "M.Tech Bioengineering",
+        "Designations in Job": "Research Scientist, Clinical Engineer",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "Pharmacist",
+        "UG Degree Preferred": "B.Pharm",
+        "PG Degree (For Career Advancement)": "M.Pharm, Drug Research Certs",
+        "Designations in Job": "Clinical Pharmacist, R&D Scientist",
+        "Salary Range": "₹4-10 LPA",
+        "Growth Prospectus": "Pharmacist → Pharma Director"
+    },
+    {
+        "Career Option": "Chartered Accountant",
+        "UG Degree Preferred": "B.Com + CA",
+        "PG Degree (For Career Advancement)": "CFA, CPA",
+        "Designations in Job": "Auditor, CFO, Finance Manager",
+        "Salary Range": "₹7-15 LPA",
+        "Growth Prospectus": "Analyst → CFO"
+    },
+    {
+        "Career Option": "Investment Banker",
+        "UG Degree Preferred": "B.Com, BBA Finance",
+        "PG Degree (For Career Advancement)": "MBA Finance, CFA",
+        "Designations in Job": "Analyst, Associate, VP",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Economist",
+        "UG Degree Preferred": "B.A./B.Sc. Economics",
+        "PG Degree (For Career Advancement)": "M.A. Economics, PhD",
+        "Designations in Job": "Policy Analyst, Economist",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Actuary",
+        "UG Degree Preferred": "B.Sc. Actuarial Science, B.Com",
+        "PG Degree (For Career Advancement)": "Actuarial Exams (SOA, IFoA)",
+        "Designations in Job": "Risk Analyst, Actuary",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Bank Manager",
+        "UG Degree Preferred": "B.Com, BBA Finance",
+        "PG Degree (For Career Advancement)": "MBA Finance, CFA",
+        "Designations in Job": "Analyst, Associate, VP",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Judge",
+        "UG Degree Preferred": "BA LLB, BBA LLB",
+        "PG Degree (For Career Advancement)": "LLM, Judicial Services Exam",
+        "Designations in Job": "Judge, Magistrate",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Journalist",
+        "UG Degree Preferred": "BA Journalism, Mass Comm.",
+        "PG Degree (For Career Advancement)": "PG Journalism, Media Studies",
+        "Designations in Job": "Reporter, News Editor",
+        "Salary Range": "₹4-10 LPA",
+        "Growth Prospectus": "Reporter → Media Director"
+    },
+    {
+        "Career Option": "Fashion Designer",
+        "UG Degree Preferred": "B.Des, B.Sc. Fashion Design",
+        "PG Degree (For Career Advancement)": "M.Des, Fashion Tech Certs",
+        "Designations in Job": "Apparel Designer, Stylist",
+        "Salary Range": "₹5-20 LPA",
+        "Growth Prospectus": "Lawyer → Senior Counsel"
+    },
+    {
+        "Career Option": "Artist (Music/Painting)",
+        "UG Degree Preferred": "BFA, Diploma in Fine Arts",
+        "PG Degree (For Career Advancement)": "MFA, Music/Dance Certs",
+        "Designations in Job": "Musician, Performer",
+        "Salary Range": "₹3-20 LPA",
+        "Growth Prospectus": "Artist → National Recognition"
+    },
+    {
+        "Career Option": "Hotel Manager",
+        "UG Degree Preferred": "BHM, BBA Hospitality",
+        "PG Degree (For Career Advancement)": "MBA Hospitality, Industry Certs",
+        "Designations in Job": "Hotel Manager, F&B Director",
+        "Salary Range": "₹6-18 LPA",
+        "Growth Prospectus": "Manager → General Manager"
+    },
+    {
+        "Career Option": "Chef",
+        "UG Degree Preferred": "Diploma in Culinary Arts, B.Sc. Hospitality",
+        "PG Degree (For Career Advancement)": "Culinary Certifications",
+        "Designations in Job": "Sous Chef, Executive Chef",
+        "Salary Range": "₹4-15 LPA",
+        "Growth Prospectus": "Chef → Master Chef"
+    },
+    {
+        "Career Option": "Sports Coach",
+        "UG Degree Preferred": "B.P.Ed, Diploma in Sports Science",
+        "PG Degree (For Career Advancement)": "M.P.Ed, Coaching Certs",
+        "Designations in Job": "Coach, Trainer",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "Entrepreneur",
+        "UG Degree Preferred": "BBA, Any UG Course",
+        "PG Degree (For Career Advancement)": "MBA, Startup Bootcamps",
+        "Designations in Job": "Startup Founder, Business Owner",
+        "Salary Range": "Varies",
+        "Growth Prospectus": "Founder → CEO"
+    },
+    {
+        "Career Option": "Geologist",
+        "UG Degree Preferred": "B.Sc. Geology, Earth Sciences",
+        "PG Degree (For Career Advancement)": "M.Sc. Geophysics, PhD",
+        "Designations in Job": "Geological Surveyor, Environmental Consultant",
+        "Salary Range": "₹6-14 LPA",
+        "Growth Prospectus": "Engineer → Energy Manager"
+    },
+    {
+        "Career Option": "Forensic Scientist",
+        "UG Degree Preferred": "B.Sc. Forensic Science",
+        "PG Degree (For Career Advancement)": "M.Sc. Forensic Science, PhD",
+        "Designations in Job": "Crime Scene Investigator, DNA Analyst",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Geneticist",
+        "UG Degree Preferred": "B.Sc. Genetics, Biotechnology",
+        "PG Degree (For Career Advancement)": "M.Sc. Genetics, PhD",
+        "Designations in Job": "Genetic Researcher, Clinical Geneticist",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Researcher → Biotech Director"
+    },
+    {
+        "Career Option": "Marine Biologist",
+        "UG Degree Preferred": "B.Sc. Marine Biology, Oceanography",
+        "PG Degree (For Career Advancement)": "M.Sc., PhD in Marine Biology",
+        "Designations in Job": "Oceanographer, Marine Researcher",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Veterinarian",
+        "UG Degree Preferred": "BVSc (Veterinary Science)",
+        "PG Degree (For Career Advancement)": "MVSc, Specialization in Animal Surgery",
+        "Designations in Job": "Veterinary Doctor, Animal Researcher",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "Radiologist",
+        "UG Degree Preferred": "MBBS, B.Sc. Radiology",
+        "PG Degree (For Career Advancement)": "MD Radiology, Imaging Certs",
+        "Designations in Job": "Radiology Technician, Imaging Specialist",
+        "Salary Range": "₹8-20 LPA",
+        "Growth Prospectus": "Physician → Hospital Director"
+    },
+    {
+        "Career Option": "Dietitian/Nutritionist",
+        "UG Degree Preferred": "B.Sc. Nutrition & Dietetics",
+        "PG Degree (For Career Advancement)": "M.Sc. Clinical Nutrition",
+        "Designations in Job": "Dietitian, Sports Nutritionist",
+        "Salary Range": "₹4-10 LPA",
+        "Growth Prospectus": "Pharmacist → Pharma Director"
+    },
+    {
+        "Career Option": "Pharmaceutical Scientist",
+        "UG Degree Preferred": "B.Pharm, B.Sc. Pharma Sciences",
+        "PG Degree (For Career Advancement)": "M.Pharm, Drug Research Certs",
+        "Designations in Job": "Clinical Pharmacist, R&D Scientist",
+        "Salary Range": "₹4-10 LPA",
+        "Growth Prospectus": "Pharmacist → Pharma Director"
+    },
+    {
+        "Career Option": "Stock Market Analyst",
+        "UG Degree Preferred": "B.Com, BBA Finance",
+        "PG Degree (For Career Advancement)": "MBA Finance, CFA",
+        "Designations in Job": "Analyst, Associate, VP",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Real Estate Developer",
+        "UG Degree Preferred": "BBA Real Estate, B.Com",
+        "PG Degree (For Career Advancement)": "MBA Real Estate, RERA Certification",
+        "Designations in Job": "Property Developer, Realtor",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "E-commerce Manager",
+        "UG Degree Preferred": "BBA, B.Com, Digital Marketing",
+        "PG Degree (For Career Advancement)": "MBA E-commerce, Google Certs",
+        "Designations in Job": "E-commerce Specialist, Product Manager",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Researcher → Biotech Director"
+    },
+    {
+        "Career Option": "UX/UI Designer",
+        "UG Degree Preferred": "B.Des, B.Sc. UX/UI",
+        "PG Degree (For Career Advancement)": "UX/UI Certifications, Google UX Cert",
+        "Designations in Job": "UX Designer, Product Designer",
+        "Salary Range": "₹5-18 LPA",
+        "Growth Prospectus": "Designer → UX Director"
+    },
+    {
+        "Career Option": "Interior Designer",
+        "UG Degree Preferred": "B.Des, B.Sc. Interior Design",
+        "PG Degree (For Career Advancement)": "M.Des, Interior Styling Courses",
+        "Designations in Job": "Interior Designer, Space Planner",
+        "Salary Range": "₹5-20 LPA",
+        "Growth Prospectus": "Lawyer → Senior Counsel"
+    },
+    {
+        "Career Option": "Film Director",
+        "UG Degree Preferred": "BA Film Studies, Diploma in Filmmaking",
+        "PG Degree (For Career Advancement)": "PG Diploma in Film Direction",
+        "Designations in Job": "Director, Screenwriter",
+        "Salary Range": "₹6-50 LPA",
+        "Growth Prospectus": "Director → International Filmmaker"
+    },
+    {
+        "Career Option": "Music Producer",
+        "UG Degree Preferred": "BFA Music, Sound Engineering",
+        "PG Degree (For Career Advancement)": "Music Tech Certifications",
+        "Designations in Job": "Producer, Sound Engineer",
+        "Salary Range": "₹4-20 LPA",
+        "Growth Prospectus": "Producer → Record Label Head"
+    },
+    {
+        "Career Option": "Digital Marketer",
+        "UG Degree Preferred": "BBA, Digital Marketing Diploma",
+        "PG Degree (For Career Advancement)": "Google, Facebook Ads Certifications",
+        "Designations in Job": "SEO Specialist, Social Media Manager",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "YouTuber/Influencer",
+        "UG Degree Preferred": "No Formal Degree Required",
+        "PG Degree (For Career Advancement)": "Content Creation & Branding",
+        "Designations in Job": "Vlogger, Content Creator",
+        "Salary Range": "Varies",
+        "Growth Prospectus": "Founder → CEO"
+    },
+    {
+        "Career Option": "Event Manager",
+        "UG Degree Preferred": "BBA Event Management, Mass Comm.",
+        "PG Degree (For Career Advancement)": "MBA Event Management",
+        "Designations in Job": "Event Coordinator, Wedding Planner",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Ethnographer (Social Researcher)",
+        "UG Degree Preferred": "BA Anthropology, Sociology",
+        "PG Degree (For Career Advancement)": "MA, PhD in Social Research",
+        "Designations in Job": "Cultural Analyst, Research Consultant",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "Defense Officer (Army/Navy/Air Force)",
+        "UG Degree Preferred": "NDA Exam, B.Sc. Defense Studies",
+        "PG Degree (For Career Advancement)": "Military Training, CDS Exam",
+        "Designations in Job": "Officer, Pilot, Naval Engineer",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Foreign Language Expert",
+        "UG Degree Preferred": "BA Foreign Language (French, Spanish, etc.)",
+        "PG Degree (For Career Advancement)": "MA Translation, Interpreter Certs",
+        "Designations in Job": "Translator, Diplomat",
+        "Salary Range": "₹5-20 LPA",
+        "Growth Prospectus": "Lawyer → Senior Counsel"
+    },
+    {
+        "Career Option": "Archaeologist",
+        "UG Degree Preferred": "B.A. Archaeology, History",
+        "PG Degree (For Career Advancement)": "M.A. Archaeology, PhD",
+        "Designations in Job": "Excavation Specialist, Museum Curator",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Political Analyst",
+        "UG Degree Preferred": "B.A. Political Science",
+        "PG Degree (For Career Advancement)": "M.A. Political Science, PhD",
+        "Designations in Job": "Government Consultant, Public Policy Expert",
+        "Salary Range": "₹6-18 LPA",
+        "Growth Prospectus": "Manager → General Manager"
+    },
+    {
+        "Career Option": "Genetic Engineer",
+        "UG Degree Preferred": "B.Sc. Genetics, Biotechnology",
+        "PG Degree (For Career Advancement)": "M.Sc. Genetics, PhD",
+        "Designations in Job": "Genetic Researcher, Clinical Geneticist",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Researcher → Biotech Director"
+    },
+    {
+        "Career Option": "Agricultural Scientist",
+        "UG Degree Preferred": "B.Sc. Agriculture, Horticulture",
+        "PG Degree (For Career Advancement)": "M.Sc. AgriTech, PhD",
+        "Designations in Job": "Crop Scientist, AgriTech Innovator",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Researcher → Biotech Director"
+    },
+    {
+        "Career Option": "Biostatistician",
+        "UG Degree Preferred": "B.Sc. Biostatistics, Mathematics",
+        "PG Degree (For Career Advancement)": "M.Sc., PhD in Biostatistics",
+        "Designations in Job": "Research Scientist, Clinical Data Analyst",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Bioinformatics Scientist",
+        "UG Degree Preferred": "B.Sc. Bioinformatics, Biotech",
+        "PG Degree (For Career Advancement)": "M.Sc., PhD in Bioinformatics",
+        "Designations in Job": "Researcher, Genomics Specialist",
+        "Salary Range": "₹7-20 LPA",
+        "Growth Prospectus": "Engineer → Aviation Director"
+    },
+    {
+        "Career Option": "Sustainability Manager",
+        "UG Degree Preferred": "B.Sc. Environmental Science",
+        "PG Degree (For Career Advancement)": "MBA Sustainability, ESG Certifications",
+        "Designations in Job": "Sustainability Analyst, Consultant",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Climate Change Analyst",
+        "UG Degree Preferred": "B.Sc. Climate Science",
+        "PG Degree (For Career Advancement)": "M.Sc., PhD in Climate Studies",
+        "Designations in Job": "Policy Analyst, Environmental Researcher",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Astrobiologist",
+        "UG Degree Preferred": "B.Sc. Astrobiology, Space Sciences",
+        "PG Degree (For Career Advancement)": "M.Sc., PhD in Astrobiology",
+        "Designations in Job": "Researcher, Space Scientist",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Hydrologist",
+        "UG Degree Preferred": "B.Sc. Hydrology, Environmental Science",
+        "PG Degree (For Career Advancement)": "M.Sc., PhD in Hydrology",
+        "Designations in Job": "Water Resource Scientist, Policy Maker",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Robotics Surgeon",
+        "UG Degree Preferred": "MBBS + Specialization in Robotic Surgery",
+        "PG Degree (For Career Advancement)": "MD Surgery, AI in Healthcare",
+        "Designations in Job": "Surgeon, AI-assisted Surgery Specialist",
+        "Salary Range": "₹12-35 LPA",
+        "Growth Prospectus": "Surgeon → AI in Healthcare Director"
+    },
+    {
+        "Career Option": "Luxury Brand Manager",
+        "UG Degree Preferred": "BBA, MBA Luxury Brand Management",
+        "PG Degree (For Career Advancement)": "Fashion Management Certifications",
+        "Designations in Job": "Luxury Marketing Executive",
+        "Salary Range": "₹8-30 LPA",
+        "Growth Prospectus": "Analyst → Portfolio Manager"
+    },
+    {
+        "Career Option": "Digital Transformation Consultant",
+        "UG Degree Preferred": "B.Tech, BBA, MBA",
+        "PG Degree (For Career Advancement)": "Certifications in AI, Blockchain, Cloud",
+        "Designations in Job": "Strategy Consultant, Business Analyst",
+        "Salary Range": "₹12-35 LPA",
+        "Growth Prospectus": "Surgeon → AI in Healthcare Director"
+    },
+    {
+        "Career Option": "EdTech Entrepreneur",
+        "UG Degree Preferred": "B.Ed, BBA, B.Tech EdTech",
+        "PG Degree (For Career Advancement)": "MBA, EdTech Leadership Training",
+        "Designations in Job": "Startup Founder, Education Innovator",
+        "Salary Range": "Varies",
+        "Growth Prospectus": "Founder → CEO"
+    },
+    {
+        "Career Option": "IAS Officer (UPSC)",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "District Collector, Secretary",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Judicial Magistrate (Law Officer)",
+        "UG Degree Preferred": "LLB, LLM",
+        "PG Degree (For Career Advancement)": "Judicial Services Exam",
+        "Designations in Job": "Magistrate, Judge",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Public Sector Bank Officer (SBI/IBPS)",
+        "UG Degree Preferred": "B.Com, BBA, BA",
+        "PG Degree (For Career Advancement)": "Banking Exams (SBI PO, IBPS)",
+        "Designations in Job": "Bank PO, Branch Manager",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Indian Statistical Service (ISS)",
+        "UG Degree Preferred": "B.Sc. Statistics, Mathematics",
+        "PG Degree (For Career Advancement)": "ISS Exam",
+        "Designations in Job": "Economic Analyst, Research Officer",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "IRS → Finance Secretary"
+    },
+    {
+        "Career Option": "IAS (Indian Administrative Service)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "IPS (Indian Police Service)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "IFS (Indian Foreign Service)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "IRS (Indian Revenue Service)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "State Administrative Service (SDM, DSP, Tehsildar)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Indian Statistical Service (ISS)",
+        "UG Degree Preferred": "B.Sc. Statistics, Mathematics",
+        "PG Degree (For Career Advancement)": "ISS Exam",
+        "Designations in Job": "Economic Analyst, Research Officer",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "IRS → Finance Secretary"
+    },
+    {
+        "Career Option": "Indian Railway Traffic Service (IRTS)",
+        "UG Degree Preferred": "B.Tech, BBA",
+        "PG Degree (For Career Advancement)": "UPSC ESE Exam",
+        "Designations in Job": "Railway Operations, Scheduling",
+        "Salary Range": "₹8-20 LPA",
+        "Growth Prospectus": "Physician → Hospital Director"
+    },
+    {
+        "Career Option": "Indian Railway Accounts Service (IRAS)",
+        "UG Degree Preferred": "B.Com, MBA Finance",
+        "PG Degree (For Career Advancement)": "UPSC ESE Exam",
+        "Designations in Job": "Railway Operations, Scheduling",
+        "Salary Range": "₹8-20 LPA",
+        "Growth Prospectus": "Physician → Hospital Director"
+    },
+    {
+        "Career Option": "Bank PO (SBI, IBPS PO)",
+        "UG Degree Preferred": "B.Com, BBA, BA",
+        "PG Degree (For Career Advancement)": "Banking Exams (SBI PO, IBPS)",
+        "Designations in Job": "Bank PO, Branch Manager",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "RBI Grade B Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "NABARD Officer (Agriculture Finance)",
+        "UG Degree Preferred": "B.Sc. Agriculture, B.Com",
+        "PG Degree (For Career Advancement)": "NABARD Exam",
+        "Designations in Job": "Rural Development, Farm Loans",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "IRS → Finance Secretary"
+    },
+    {
+        "Career Option": "Judge (Judicial Magistrate/ Civil Judge)",
+        "UG Degree Preferred": "LLB",
+        "PG Degree (For Career Advancement)": "LLM",
+        "Designations in Job": "Legal Advisor, Senior Counsel",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Junior Advocate → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Public Prosecutor",
+        "UG Degree Preferred": "LLB",
+        "PG Degree (For Career Advancement)": "LLM",
+        "Designations in Job": "Legal Advisor, Senior Counsel",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Junior Advocate → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Legal Advisor (Govt.)",
+        "UG Degree Preferred": "LLB, LLM",
+        "PG Degree (For Career Advancement)": "Judicial Services Exam",
+        "Designations in Job": "Magistrate, Judge",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Indian Army Officer",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Border Security, Commanding Troops",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Indian Navy Officer",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Border Security, Commanding Troops",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Indian Air Force Officer",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Border Security, Commanding Troops",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Coast Guard Officer",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Border Security, Commanding Troops",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Assistant Professor (Govt. Colleges/Universities)",
+        "UG Degree Preferred": "Master’s Degree",
+        "PG Degree (For Career Advancement)": "UGC NET/ PhD",
+        "Designations in Job": "Teaching & Research",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "School Teacher (Govt.)",
+        "UG Degree Preferred": "B.Ed, BA/B.Sc.",
+        "PG Degree (For Career Advancement)": "CTET/TET Exam",
+        "Designations in Job": "Teaching, Curriculum Development",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "Indian Forest Service (IFS - Environment & Forestry)",
+        "UG Degree Preferred": "B.Sc. Forestry, Agriculture",
+        "PG Degree (For Career Advancement)": "UPSC IFS Exam",
+        "Designations in Job": "Wildlife Conservation",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "IRS → Finance Secretary"
+    },
+    {
+        "Career Option": "Intelligence Bureau (IB) Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "CBI Officer (Central Bureau of Investigation)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Customs Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Postal Service Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Agriculture Research Scientist (ARS)",
+        "UG Degree Preferred": "B.Sc. Agriculture, Horticulture",
+        "PG Degree (For Career Advancement)": "M.Sc. AgriTech, PhD",
+        "Designations in Job": "Crop Scientist, AgriTech Innovator",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Researcher → Biotech Director"
+    },
+    {
+        "Career Option": "Municipal Corporation Officer (Urban Planning, Public Works)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Indian Coast Guard Officer (General Duty & Technical Branch)",
+        "UG Degree Preferred": "B.Tech in Mechanical, Electrical, Electronics",
+        "PG Degree (For Career Advancement)": "Coast Guard Technical Exam",
+        "Designations in Job": "Maritime Security, Naval Operations",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "National Disaster Response Force (NDRF) Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Indian Meteorological Department (IMD) Scientist",
+        "UG Degree Preferred": "B.Sc. Meteorology, Atmospheric Science",
+        "PG Degree (For Career Advancement)": "M.Sc. Meteorology, PhD",
+        "Designations in Job": "Weather Analyst, Climatologist",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Engineer → Infrastructure Head"
+    },
+    {
+        "Career Option": "Indian Economic Service (IES) Officer",
+        "UG Degree Preferred": "B.A./B.Sc. Economics",
+        "PG Degree (For Career Advancement)": "M.A. Economics, PhD",
+        "Designations in Job": "Policy Analyst, Economist",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Census Officer (Registrar General of India)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Border Roads Organisation (BRO) Engineer",
+        "UG Degree Preferred": "B.Tech Civil, Mechanical",
+        "PG Degree (For Career Advancement)": "GATE, BRO Exam",
+        "Designations in Job": "Infrastructure Development, Road Construction",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Archaeologist (ASI - Archaeological Survey of India)",
+        "UG Degree Preferred": "B.A. Archaeology, History",
+        "PG Degree (For Career Advancement)": "M.A. Archaeology, PhD",
+        "Designations in Job": "Excavation Specialist, Museum Curator",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Investigator → Forensic Director"
+    },
+    {
+        "Career Option": "Food Safety Officer (FSO)",
+        "UG Degree Preferred": "B.Sc. Food Technology, Agriculture",
+        "PG Degree (For Career Advancement)": "Food Safety Exam",
+        "Designations in Job": "Food Quality Inspection, Policy Regulation",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Indian Postal Service (IPS) Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Employment Officer (Labour Department)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Assistant Provident Fund Commissioner (EPFO)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Indian Information Service (IIS) Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Transport Officer (RTO - Road Transport Officer)",
+        "UG Degree Preferred": "B.Tech Automobile, Mechanical Engineering",
+        "PG Degree (For Career Advancement)": "RTO Exam (State PSC)",
+        "Designations in Job": "Vehicle Registration, Road Safety",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Engineer → Plant Director"
+    },
+    {
+        "Career Option": "Geologist (Geological Survey of India - GSI)",
+        "UG Degree Preferred": "B.Sc. Geology, Earth Sciences",
+        "PG Degree (For Career Advancement)": "M.Sc. Geophysics, PhD",
+        "Designations in Job": "Geological Surveyor, Environmental Consultant",
+        "Salary Range": "₹6-14 LPA",
+        "Growth Prospectus": "Engineer → Energy Manager"
+    },
+    {
+        "Career Option": "Customs & Excise Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Shipping Corporation of India (SCI) Officer",
+        "UG Degree Preferred": "B.Tech Marine Engineering, B.Sc. Nautical Science",
+        "PG Degree (For Career Advancement)": "Merchant Navy Exam",
+        "Designations in Job": "Shipping Logistics, Marine Transport",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Researcher → Biotech Director"
+    },
+    {
+        "Career Option": "Trade & Commerce Officer (Ministry of Commerce & Industry)",
+        "UG Degree Preferred": "B.Com, BBA",
+        "PG Degree (For Career Advancement)": "UPSC IES, State PSC",
+        "Designations in Job": "International Trade, Commerce Regulation",
+        "Salary Range": "₹7-20 LPA",
+        "Growth Prospectus": "Engineer → Aviation Director"
+    },
+    {
+        "Career Option": "State Electricity Board Engineer (Power Corporation)",
+        "UG Degree Preferred": "B.Tech Electrical, Mechanical",
+        "PG Degree (For Career Advancement)": "GATE, State Electricity Board Exam",
+        "Designations in Job": "Power Distribution, Energy Management",
+        "Salary Range": "₹6-18 LPA",
+        "Growth Prospectus": "Manager → General Manager"
+    },
+    {
+        "Career Option": "Social Welfare Officer (Women & Child Development Dept.)",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Tourism Officer (Ministry of Tourism, Govt. of India)",
+        "UG Degree Preferred": "BBA, B.Sc. Tourism Management",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "State-level Administration, Law & Order",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Handloom & Textiles Officer (Ministry of Textiles)",
+        "UG Degree Preferred": "B.Des, BBA",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "State-level Administration, Law & Order",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Press Information Bureau (PIB) Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Aviation Safety Officer (DGCA - Directorate General of Civil Aviation)",
+        "UG Degree Preferred": "B.Tech Aeronautical, Aviation Management",
+        "PG Degree (For Career Advancement)": "DGCA Certification",
+        "Designations in Job": "Flight Safety, Aviation Regulations",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Analyst → CISO"
+    },
+    {
+        "Career Option": "Oil & Natural Gas Corporation (ONGC) Officer",
+        "UG Degree Preferred": "B.Tech Petroleum, Mechanical, Chemical",
+        "PG Degree (For Career Advancement)": "GATE Exam, PSU Recruitment",
+        "Designations in Job": "Energy Resource Management, Oil Extraction",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "IRS → Finance Secretary"
+    },
+    {
+        "Career Option": "State Disaster Management Authority (SDMA) Officer",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    }
+        ];
+        
+        // Function to Populate PCB Table
+        function loadPCBData() {
+            let tableBody = document.querySelector("#pcbTable tbody");
+            tableBody.innerHTML = ""; // Clear existing rows before adding new data
+        
+            pcbData.forEach((career) => {
+                let row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${career["Career Option"]}</td>
+                    <td>${career["UG Degree Preferred"]}</td>
+                    <td>${career["PG Degree (For Career Advancement)"]}</td>
+                    <td>${career["Designations in Job"]}</td>
+                    <td>${career["Salary Range"]}</td>
+                    <td>${career["Growth Prospectus"]}</td>
+                    <td>Coming Soon</td> <!-- Placeholder for "Know More" -->
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+        
+        // Function to Show PCB Table on Click
+        function showTable(tableId) {
+    document.querySelectorAll(".career-table").forEach(table => {
+        table.style.display = "none";
+    });
+
+    document.getElementById(tableId).style.display = "table";
+
+    document.querySelectorAll(".stream-btn").forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    event.target.classList.add("active");
+
+    // Load the appropriate data
+    if (tableId === "pcmTable") {
+        loadPCMData();
+    } else if (tableId === "pcbTable") {
+        loadPCBData();  // ✅ Add this line to load PCB data
+    }
+}
+        </script>
+         
+         <script>
+            // JSON Data for Commerce Careers
+            const commerceData = [
+                {
+                    "Career Option": "Chartered Accountant",
+                    "UG Degree Preferred": "B.Com + CA",
+                    "PG Degree (For Career Advancement)": "CFA, CPA",
+                    "Designations in Job": "Auditor, CFO, Finance Manager",
+                    "Salary Range": "₹7-15 LPA",
+                    "Growth Prospectus": "Analyst → CFO"
+                },
+                {
+                    "Career Option": "Journalist",
+                    "UG Degree Preferred": "BA Journalism, Mass Comm.",
+                    "PG Degree (For Career Advancement)": "PG Journalism, Media Studies",
+                    "Designations in Job": "Reporter, News Editor",
+                    "Salary Range": "₹4-10 LPA",
+                    "Growth Prospectus": "Reporter → Media Director"
+                },
+                {
+        "Career Option": "Investment Banker",
+        "Streams": "Commerce, PCM, PCB",
+        "UG Degree Preferred": "B.Com, BBA Finance",
+        "PG Degree (For Career Advancement)": "MBA Finance, CFA",
+        "Designations in Job": "Analyst, Associate, VP",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Civil Servant",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BA Political Science, Public Admin",
+        "PG Degree (For Career Advancement)": "UPSC, State PSC",
+        "Designations in Job": "IAS, IPS, IFS",
+        "Salary Range": "₹8-15 LPA",
+        "Growth Prospectus": "IAS → Secretary"
+    },
+    {
+        "Career Option": "Lawyer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "LLB",
+        "PG Degree (For Career Advancement)": "LLM",
+        "Designations in Job": "Legal Advisor, Senior Counsel",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Junior Advocate → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Psychologist",
+        "Streams": "Commerce, Humanities, PCB, PCM",
+        "UG Degree Preferred": "BA Psychology, B.Sc. Psychology",
+        "PG Degree (For Career Advancement)": "M.Sc. Psychology, PhD",
+        "Designations in Job": "Clinical Psychologist, Therapist",
+        "Salary Range": "₹4-12 LPA",
+        "Growth Prospectus": "Psychologist → Researcher"
+    },
+    {
+        "Career Option": "Chartered Accountant",
+        "Streams": "Commerce, PCM, PCB",
+        "UG Degree Preferred": "B.Com + CA",
+        "PG Degree (For Career Advancement)": "CFA, CPA",
+        "Designations in Job": "Auditor, CFO, Finance Manager",
+        "Salary Range": "₹7-15 LPA",
+        "Growth Prospectus": "Analyst → CFO"
+    },
+    {
+        "Career Option": "Economist",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.A./B.Sc. Economics",
+        "PG Degree (For Career Advancement)": "M.A. Economics, PhD",
+        "Designations in Job": "Policy Analyst, Economist",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Economist → Policy Director"
+    },
+    {
+        "Career Option": "Actuary",
+        "Streams": "Commerce, PCM, PCB",
+        "UG Degree Preferred": "B.Sc. Actuarial Science, B.Com",
+        "PG Degree (For Career Advancement)": "Actuarial Exams (SOA, IFoA)",
+        "Designations in Job": "Risk Analyst, Actuary",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Bank Manager",
+        "Streams": "Commerce, PCM, PCB",
+        "UG Degree Preferred": "B.Com, BBA Finance",
+        "PG Degree (For Career Advancement)": "MBA Finance, CFA",
+        "Designations in Job": "Analyst, Associate, VP",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Judge",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BA LLB, BBA LLB",
+        "PG Degree (For Career Advancement)": "LLM, Judicial Services Exam",
+        "Designations in Job": "Judge, Magistrate",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Journalist",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BA Journalism, Mass Comm.",
+        "PG Degree (For Career Advancement)": "PG Journalism, Media Studies",
+        "Designations in Job": "Reporter, News Editor",
+        "Salary Range": "₹4-10 LPA",
+        "Growth Prospectus": "Reporter → Media Director"
+    },
+    {
+        "Career Option": "Fashion Designer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Des, B.Sc. Fashion Design",
+        "PG Degree (For Career Advancement)": "M.Des, Fashion Tech Certs",
+        "Designations in Job": "Apparel Designer, Stylist",
+        "Salary Range": "₹5-20 LPA",
+        "Growth Prospectus": "Designer → Creative Director"
+    },
+    {
+        "Career Option": "Artist (Music/Painting)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BFA, Diploma in Fine Arts",
+        "PG Degree (For Career Advancement)": "MFA, Music/Dance Certs",
+        "Designations in Job": "Musician, Performer",
+        "Salary Range": "₹3-20 LPA",
+        "Growth Prospectus": "Artist → National Recognition"
+    },
+    {
+        "Career Option": "Hotel Manager",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BHM, BBA Hospitality",
+        "PG Degree (For Career Advancement)": "MBA Hospitality, Industry Certs",
+        "Designations in Job": "Hotel Manager, F&B Director",
+        "Salary Range": "₹6-18 LPA",
+        "Growth Prospectus": "Manager → General Manager"
+    },
+    {
+        "Career Option": "Chef",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Diploma in Culinary Arts, B.Sc. Hospitality",
+        "PG Degree (For Career Advancement)": "Culinary Certifications",
+        "Designations in Job": "Sous Chef, Executive Chef",
+        "Salary Range": "₹4-15 LPA",
+        "Growth Prospectus": "Chef → Master Chef"
+    },
+    {
+        "Career Option": "Sports Coach",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.P.Ed, Diploma in Sports Science",
+        "PG Degree (For Career Advancement)": "M.P.Ed, Coaching Certs",
+        "Designations in Job": "Coach, Trainer",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Coach → National Team Head"
+    },
+    {
+        "Career Option": "Entrepreneur",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA, Any UG Course",
+        "PG Degree (For Career Advancement)": "MBA, Startup Bootcamps",
+        "Designations in Job": "Startup Founder, Business Owner",
+        "Salary Range": "Varies",
+        "Growth Prospectus": "Founder → CEO"
+    },
+    {
+        "Career Option": "Blockchain Developer",
+        "Streams": "PCM, Commerce",
+        "UG Degree Preferred": "B.Tech CS, B.Sc. Blockchain",
+        "PG Degree (For Career Advancement)": "Blockchain Certifications (IBM, Ethereum)",
+        "Designations in Job": "Smart Contract Developer, Crypto Analyst",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "Stock Market Analyst",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Com, BBA Finance",
+        "PG Degree (For Career Advancement)": "MBA Finance, CFA",
+        "Designations in Job": "Analyst, Associate, VP",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Investment Banker",
+        "Streams": "Commerce, PCM, PCB",
+        "UG Degree Preferred": "B.Com, BBA Finance",
+        "PG Degree (For Career Advancement)": "MBA Finance, CFA",
+        "Designations in Job": "Analyst, Associate, VP",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Investment Director"
+    },
+    {
+        "Career Option": "Civil Servant",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BA Political Science, Public Admin",
+        "PG Degree (For Career Advancement)": "UPSC, State PSC",
+        "Designations in Job": "IAS, IPS, IFS",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IAS → Secretary"
+    },
+    {
+        "Career Option": "Lawyer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "LLB",
+        "PG Degree (For Career Advancement)": "LLM",
+        "Designations in Job": "Legal Advisor, Senior Counsel",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Junior Advocate → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Psychologist",
+        "Streams": "Commerce, Humanities, PCB, PCM",
+        "UG Degree Preferred": "BA Psychology, B.Sc. Psychology",
+        "PG Degree (For Career Advancement)": "M.Sc. Psychology, PhD",
+        "Designations in Job": "Clinical Psychologist, Therapist",
+        "Salary Range": "₹4-12 LPA",
+        "Growth Prospectus": "Psychologist → Researcher"
+    },
+    {
+        "Career Option": "Real Estate Developer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA Real Estate, B.Com",
+        "PG Degree (For Career Advancement)": "MBA Real Estate, RERA Certification",
+        "Designations in Job": "Property Developer, Realtor",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Blockchain Architect"
+    },
+    {
+        "Career Option": "E-commerce Manager",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA, B.Com, Digital Marketing",
+        "PG Degree (For Career Advancement)": "MBA E-commerce, Google Certs",
+        "Designations in Job": "E-commerce Specialist, Product Manager",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Researcher → Biotech Director"
+    },
+    {
+        "Career Option": "UX/UI Designer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Des, B.Sc. UX/UI",
+        "PG Degree (For Career Advancement)": "UX/UI Certifications, Google UX Cert",
+        "Designations in Job": "UX Designer, Product Designer",
+        "Salary Range": "₹5-18 LPA",
+        "Growth Prospectus": "Designer → UX Director"
+    },
+    {
+        "Career Option": "Interior Designer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Des, B.Sc. Interior Design",
+        "PG Degree (For Career Advancement)": "M.Des, Interior Styling Courses",
+        "Designations in Job": "Interior Designer, Space Planner",
+        "Salary Range": "₹5-20 LPA",
+        "Growth Prospectus": "Designer → Senior Counsel"
+    },
+    {
+        "Career Option": "Film Director",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BA Film Studies, Diploma in Filmmaking",
+        "PG Degree (For Career Advancement)": "PG Diploma in Film Direction",
+        "Designations in Job": "Director, Screenwriter",
+        "Salary Range": "₹6-50 LPA",
+        "Growth Prospectus": "Director → International Filmmaker"
+    },
+    {
+        "Career Option": "Music Producer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BFA Music, Sound Engineering",
+        "PG Degree (For Career Advancement)": "Music Tech Certifications",
+        "Designations in Job": "Producer, Sound Engineer",
+        "Salary Range": "₹4-20 LPA",
+        "Growth Prospectus": "Producer → Record Label Head"
+    },
+    {
+        "Career Option": "Digital Marketer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA, Digital Marketing Diploma",
+        "PG Degree (For Career Advancement)": "Google, Facebook Ads Certifications",
+        "Designations in Job": "SEO Specialist, Social Media Manager",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "SEO Specialist → Forensic Director"
+    },
+    {
+        "Career Option": "YouTuber/Influencer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "No Formal Degree Required",
+        "PG Degree (For Career Advancement)": "Content Creation & Branding",
+        "Designations in Job": "Vlogger, Content Creator",
+        "Salary Range": "Varies",
+        "Growth Prospectus": "Founder → CEO"
+    },
+    {
+        "Career Option": "Luxury Brand Manager",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA, MBA Luxury Brand Management",
+        "PG Degree (For Career Advancement)": "Fashion Management Certifications",
+        "Designations in Job": "Luxury Marketing Executive",
+        "Salary Range": "₹8-30 LPA",
+        "Growth Prospectus": "Analyst → Portfolio Manager"
+    },
+    {
+        "Career Option": "IAS Officer (UPSC)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "District Collector, Secretary",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IAS → Secretary"
+    },
+    {
+        "Career Option": "IPS Officer (UPSC)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "District Collector, Secretary",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IPS → Director General of Police"
+    },
+    {
+        "Career Option": "IFS Officer (Foreign Services)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "Diplomat, Foreign Policy Advisor",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IFS → Ambassador"
+    },
+    {
+        "Career Option": "Defense Officer (Army/Navy/Air Force)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "NDA Exam, B.Sc. Defense Studies",
+        "PG Degree (For Career Advancement)": "Military Training, CDS Exam",
+        "Designations in Job": "Officer, Pilot, Naval Engineer",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → General"
+    },
+    {
+        "Career Option": "Railway Officer (Indian Railways)",
+        "Streams": "Commerce, PCM",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "District Collector, Secretary",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Railway Officer → Railway Board Member"
+    },
+    {
+        "Career Option": "Judicial Magistrate (Law Officer)",
+        "Streams": "Commerce, PCM, PCB",
+        "UG Degree Preferred": "LLB, LLM",
+        "PG Degree (For Career Advancement)": "Judicial Services Exam",
+        "Designations in Job": "Magistrate, Judge",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Judge"
+    },
+    {
+        "Career Option": "Public Sector Bank Officer (SBI/IBPS)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Com, BBA, BA",
+        "PG Degree (For Career Advancement)": "Banking Exams (SBI PO, IBPS)",
+        "Designations in Job": "Bank PO, Branch Manager",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Branch Manager → Bank Director"
+    },
+    {
+        "Career Option": "Indian Statistical Service (ISS)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Sc. Statistics, Mathematics",
+        "PG Degree (For Career Advancement)": "ISS Exam",
+        "Designations in Job": "Economic Analyst, Research Officer",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "IRS → Finance Secretary"
+    },
+    {
+        "Career Option": "IAS (Indian Administrative Service)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "District Collector, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IAS → Cabinet Secretary"
+    },
+    {
+        "Career Option": "IPS (Indian Police Service)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "SP, DGP",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IPS → Director General of Police"
+    },
+    {
+        "Career Option": "IFS (Indian Foreign Service)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Diplomat, Foreign Policy Advisor",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IFS → Ambassador"
+    },
+    {
+        "Career Option": "IRS (Indian Revenue Service)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Tax Commissioner, Revenue Officer",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IRS → Finance Secretary"
+    },
+    {
+        "Career Option": "State Administrative Service (SDM, DSP, Tehsildar)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "SDM, DSP, Tehsildar",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "SDM → Chief Secretary"
+    },
+    {
+        "Career Option": "Indian Railway Traffic Service (IRTS)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech, BBA",
+        "PG Degree (For Career Advancement)": "UPSC ESE Exam",
+        "Designations in Job": "Railway Operations, Scheduling",
+        "Salary Range": "₹8-20 LPA",
+        "Growth Prospectus": "IRTS → Railway Board Member"
+    },
+    {
+        "Career Option": "Indian Railway Accounts Service (IRAS)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Com, MBA Finance",
+        "PG Degree (For Career Advancement)": "UPSC ESE Exam",
+        "Designations in Job": "Financial Controller, Railway Auditor",
+        "Salary Range": "₹8-20 LPA",
+        "Growth Prospectus": "IRAS → Railway Board Finance Head"
+    },
+    {
+        "Career Option": "Bank PO (SBI, IBPS PO)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Com, BBA, BA",
+        "PG Degree (For Career Advancement)": "Banking Exams (SBI PO, IBPS)",
+        "Designations in Job": "Bank PO, Branch Manager",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Branch Manager → Bank Director"
+    },
+    {
+        "Career Option": "RBI Grade B Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Policy Maker, Banking Regulator",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "RBI → Finance Secretary"
+    },
+    {
+        "Career Option": "Indian Army Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Border Security, Commanding Troops",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Colonel → Army Chief"
+    },
+    {
+        "Career Option": "Indian Navy Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Naval Engineer, Captain",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Captain → Navy Chief"
+    },
+    {
+        "Career Option": "Indian Air Force Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Pilot, Air Defense Officer",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → Air Chief Marshal"
+    },
+    {
+        "Career Option": "Coast Guard Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Naval Security, Marine Safety Officer",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → Coast Guard Commandant"
+    },
+    {
+        "Career Option": "Assistant Professor (Govt. Colleges/Universities)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Master’s Degree",
+        "PG Degree (For Career Advancement)": "UGC NET/ PhD",
+        "Designations in Job": "Teaching & Research",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Professor → Vice-Chancellor"
+    },
+    {
+        "Career Option": "School Teacher (Govt.)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Ed, BA/B.Sc.",
+        "PG Degree (For Career Advancement)": "CTET/TET Exam",
+        "Designations in Job": "Teaching, Curriculum Development",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Teacher → Principal"
+    },
+    {
+        "Career Option": "Indian Forest Service (IFS - Environment & Forestry)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Sc. Forestry, Agriculture",
+        "PG Degree (For Career Advancement)": "UPSC IFS Exam",
+        "Designations in Job": "Wildlife Conservation Officer",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "IFS → Environment Secretary"
+    },
+    {
+        "Career Option": "Intelligence Bureau (IB) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Security Analyst, Intelligence Officer",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IB → National Security Advisor"
+    },
+    {
+        "Career Option": "CBI Officer (Central Bureau of Investigation)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Crime Investigator, Law Enforcement",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "CBI → Director of CBI"
+    },
+    {
+        "Career Option": "Customs Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Tax & Import Control",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Customs → Revenue Secretary"
+    },
+    {
+        "Career Option": "Indian Economic Service (IES) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.A./B.Sc. Economics",
+        "PG Degree (For Career Advancement)": "M.A. Economics, PhD",
+        "Designations in Job": "Policy Analyst, Economist",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "IES → Finance Secretary"
+    },
+    {
+        "Career Option": "Census Officer (Registrar General of India)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Population Analyst, Data Manager",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Census → Director General of Census"
+    },
+    {
+        "Career Option": "Border Roads Organisation (BRO) Engineer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech Civil, Mechanical",
+        "PG Degree (For Career Advancement)": "GATE, BRO Exam",
+        "Designations in Job": "Infrastructure Development, Road Construction",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "BRO → Chief Engineer"
+    },
+    {
+        "Career Option": "Food Safety Officer (FSO)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Sc. Food Technology, Agriculture",
+        "PG Degree (For Career Advancement)": "Food Safety Exam",
+        "Designations in Job": "Food Quality Inspection, Policy Regulation",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "FSO → Food Safety Commissioner"
+    },
+    {
+        "Career Option": "Indian Postal Service (IPS) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Postal Administration, Logistics",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IPS → Postmaster General"
+    },
+    {
+        "Career Option": "Employment Officer (Labour Department)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Labour Market Analyst, Job Placement Coordinator",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Employment Officer → Labour Secretary"
+    },
+    {
+        "Career Option": "Assistant Provident Fund Commissioner (EPFO)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Retirement Fund Management, Policy Implementation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "APFC → EPFO Commissioner"
+    },
+    {
+        "Career Option": "Indian Information Service (IIS) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Government Media Officer, Policy Analyst",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IIS → Director General of Media"
+    },
+    {
+        "Career Option": "Transport Officer (RTO - Road Transport Officer)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech Automobile, Mechanical Engineering",
+        "PG Degree (For Career Advancement)": "RTO Exam (State PSC)",
+        "Designations in Job": "Vehicle Registration, Road Safety Officer",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "RTO → Transport Commissioner"
+    },
+    {
+        "Career Option": "Geologist (Geological Survey of India - GSI)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Sc. Geology, Earth Sciences",
+        "PG Degree (For Career Advancement)": "M.Sc. Geophysics, PhD",
+        "Designations in Job": "Geological Surveyor, Environmental Consultant",
+        "Salary Range": "₹6-14 LPA",
+        "Growth Prospectus": "Geologist → Energy Manager"
+    },
+    {
+        "Career Option": "Customs & Excise Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Import/Export Taxation, Border Security",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Customs → Revenue Secretary"
+    },
+    {
+        "Career Option": "Shipping Corporation of India (SCI) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech Marine Engineering, B.Sc. Nautical Science",
+        "PG Degree (For Career Advancement)": "Merchant Navy Exam",
+        "Designations in Job": "Shipping Logistics, Marine Transport Management",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "SCI → Director of Marine Operations"
+    },
+    {
+        "Career Option": "Trade & Commerce Officer (Ministry of Commerce & Industry)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Com, BBA",
+        "PG Degree (For Career Advancement)": "UPSC IES, State PSC",
+        "Designations in Job": "International Trade, Commerce Regulation",
+        "Salary Range": "₹7-20 LPA",
+        "Growth Prospectus": "Trade Officer → Secretary of Commerce"
+    },
+    {
+        "Career Option": "State Electricity Board Engineer (Power Corporation)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech Electrical, Mechanical",
+        "PG Degree (For Career Advancement)": "GATE, State Electricity Board Exam",
+        "Designations in Job": "Power Distribution, Energy Management",
+        "Salary Range": "₹6-18 LPA",
+        "Growth Prospectus": "Power Engineer → Chief Electrical Engineer"
+    },
+    {
+        "Career Option": "Social Welfare Officer (Women & Child Development Dept.)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Policy Implementation, Social Development",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Social Welfare → Secretary of Women & Child Development"
+    },
+    {
+        "Career Option": "Tourism Officer (Ministry of Tourism, Govt. of India)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA, B.Sc. Tourism Management",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "State-level Tourism Development",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Tourism Officer → Director of Tourism"
+    },
+    {
+        "Career Option": "Handloom & Textiles Officer (Ministry of Textiles)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Des, BBA",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "State-level Administration, Law & Order",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Textile Officer → Director of Handloom & Textiles"
+    },
+    {
+        "Career Option": "Press Information Bureau (PIB) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Government Spokesperson, Public Relations",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "PIB Officer → Director General of PIB"
+    },
+    {
+        "Career Option": "Aviation Safety Officer (DGCA - Directorate General of Civil Aviation)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech Aeronautical, Aviation Management",
+        "PG Degree (For Career Advancement)": "DGCA Certification",
+        "Designations in Job": "Flight Safety, Aviation Regulations",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Aviation Safety Officer → Director General of Civil Aviation"
+    },
+    {
+        "Career Option": "Oil & Natural Gas Corporation (ONGC) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech Petroleum, Mechanical, Chemical",
+        "PG Degree (For Career Advancement)": "GATE Exam, PSU Recruitment",
+        "Designations in Job": "Energy Resource Management, Oil Extraction",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "ONGC Officer → Director of ONGC"
+    },
+    {
+        "Career Option": "State Disaster Management Authority (SDMA) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Disaster Preparedness, Relief Management",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "SDMA Officer → National Disaster Director"
+    }
+            ];
+        
+            // Function to Populate Commerce Table
+            function loadCommerceData() {
+    let table = document.getElementById("commerceTable");
+    let tableBody = table.querySelector("tbody");
+
+    // Ensure caption is visible
+    table.innerHTML = `
+        <caption style="font-size: 24px; font-weight: bold; padding: 15px; background: #007bff; color: white; border-radius: 8px 8px 0 0;">
+            Career Options in Commerce
+        </caption>
+        <thead>
+            <tr>
+                <th>Career Options</th>
+                <th>UG Degree Preferred</th>
+                <th>PG Degree (For Career Advancement)</th>
+                <th>Designations in Job</th>
+                <th>Salary Range</th>
+                <th>Growth Prospectus</th>
+                <th>Know More</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    `;
+
+    tableBody = table.querySelector("tbody"); // Re-select tbody after resetting innerHTML
+
+    commerceData.forEach((career) => {
+        let row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${career["Career Option"]}</td>
+            <td>${career["UG Degree Preferred"]}</td>
+            <td>${career["PG Degree (For Career Advancement)"]}</td>
+            <td>${career["Designations in Job"]}</td>
+            <td>${career["Salary Range"]}</td>
+            <td>${career["Growth Prospectus"]}</td>
+            <td>Coming Soon</td> <!-- Placeholder for "Know More" -->
+        `;
+        tableBody.appendChild(row);
+    });
+}
+
+        
+            // Function to Show Tables and Load Data
+            function showTable(tableId) {
+                document.querySelectorAll(".career-table").forEach(table => {
+                    table.style.display = "none";
+                });
+        
+                document.getElementById(tableId).style.display = "table";
+        
+                document.querySelectorAll(".stream-btn").forEach(btn => {
+                    btn.classList.remove("active");
+                });
+        
+                event.target.classList.add("active");
+        
+                // Load the appropriate data
+                if (tableId === "pcmTable") {
+                    loadPCMData();
+                } else if (tableId === "pcbTable") {
+                    loadPCBData();
+                } else if (tableId === "commerceTable") {
+                    loadCommerceData();  // ✅ Load Commerce Data
+                }
+            }
+        </script>
+       <script>
+function loadHumanitiesData() {
+    let tableBody = document.querySelector("#humanitiesTable tbody");
+    tableBody.innerHTML = ""; // Clear existing rows before adding new data
+
+    const humanitiesData = [
+                {
+                    "Career Option": "Journalist",
+                    "UG Degree Preferred": "BA Journalism, Mass Comm.",
+                    "PG Degree (For Career Advancement)": "PG Journalism, Media Studies",
+                    "Designations in Job": "Reporter, News Editor",
+                    "Salary Range": "₹4-10 LPA",
+                    "Growth Prospectus": "Reporter → Media Director",
+                    "Know More": "Coming Soon"
+
+                },
+                {
+                    "Career Option": "Civil Servant",
+                    "UG Degree Preferred": "BA Political Science, Public Admin.",
+                    "PG Degree (For Career Advancement)": "UPSC, State PSC",
+                    "Designations in Job": "IAS, IPS, IFS",
+                    "Salary Range": "₹8-15 LPA",
+                    "Growth Prospectus": "IAS → Secretary"
+                    ,
+"Know More": "Coming Soon"
+},
+               
+                {
+        "Career Option": "Lawyer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "LLB",
+        "PG Degree (For Career Advancement)": "LLM",
+        "Designations in Job": "Legal Advisor, Senior Counsel",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Junior Advocate → Supreme Court Judge"
+        ,
+"Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Psychologist",
+        "Streams": "Commerce, Humanities, PCB, PCM",
+        "UG Degree Preferred": "BA Psychology, B.Sc. Psychology",
+        "PG Degree (For Career Advancement)": "M.Sc. Psychology, PhD",
+        "Designations in Job": "Clinical Psychologist, Therapist",
+        "Salary Range": "₹4-12 LPA",
+        "Growth Prospectus": "Psychologist → Researcher",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Economist",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.A./B.Sc. Economics",
+        "PG Degree (For Career Advancement)": "M.A. Economics, PhD",
+        "Designations in Job": "Policy Analyst, Economist",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Economist → Chief Economic Advisor",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Judge",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BA LLB, BBA LLB",
+        "PG Degree (For Career Advancement)": "LLM, Judicial Services Exam",
+        "Designations in Job": "Judge, Magistrate",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Judge",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Journalist",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BA Journalism, Mass Comm.",
+        "PG Degree (For Career Advancement)": "PG Journalism, Media Studies",
+        "Designations in Job": "Reporter, News Editor",
+        "Salary Range": "₹4-10 LPA",
+        "Growth Prospectus": "Reporter → Media Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Fashion Designer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Des, B.Sc. Fashion Design",
+        "PG Degree (For Career Advancement)": "M.Des, Fashion Tech Certs",
+        "Designations in Job": "Apparel Designer, Stylist",
+        "Salary Range": "₹5-20 LPA",
+        "Growth Prospectus": "Designer → Creative Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Artist (Music/Painting)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BFA, Diploma in Fine Arts",
+        "PG Degree (For Career Advancement)": "MFA, Music/Dance Certs",
+        "Designations in Job": "Musician, Performer",
+        "Salary Range": "₹3-20 LPA",
+        "Growth Prospectus": "Artist → National Recognition",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Hotel Manager",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BHM, BBA Hospitality",
+        "PG Degree (For Career Advancement)": "MBA Hospitality, Industry Certs",
+        "Designations in Job": "Hotel Manager, F&B Director",
+        "Salary Range": "₹6-18 LPA",
+        "Growth Prospectus": "Manager → General Manager",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Chef",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Diploma in Culinary Arts, B.Sc. Hospitality",
+        "PG Degree (For Career Advancement)": "Culinary Certifications",
+        "Designations in Job": "Sous Chef, Executive Chef",
+        "Salary Range": "₹4-15 LPA",
+        "Growth Prospectus": "Chef → Master Chef",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Sports Coach",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.P.Ed, Diploma in Sports Science",
+        "PG Degree (For Career Advancement)": "M.P.Ed, Coaching Certs",
+        "Designations in Job": "Coach, Trainer",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Coach → National Team Coach",
+        "Know More": "Coming Soon"
+
+    },
+    {
+        "Career Option": "Entrepreneur",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA, Any UG Course",
+        "PG Degree (For Career Advancement)": "MBA, Startup Bootcamps",
+        "Designations in Job": "Startup Founder, Business Owner",
+        "Salary Range": "Varies",
+        "Growth Prospectus": "Founder → CEO",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Stock Market Analyst",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Com, BBA Finance",
+        "PG Degree (For Career Advancement)": "CFA, FRM, Investment Certifications",
+        "Designations in Job": "Investment Analyst, Trader",
+        "Salary Range": "₹10-30 LPA",
+        "Growth Prospectus": "Analyst → Portfolio Manager",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Real Estate Developer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA Real Estate, B.Com",
+        "PG Degree (For Career Advancement)": "MBA Real Estate, RERA Certification",
+        "Designations in Job": "Property Developer, Realtor",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Developer → Real Estate CEO",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "E-commerce Manager",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA, B.Com, Digital Marketing",
+        "PG Degree (For Career Advancement)": "MBA E-commerce, Google Certs",
+        "Designations in Job": "E-commerce Specialist, Product Manager",
+        "Salary Range": "₹6-20 LPA",
+        "Growth Prospectus": "Manager → E-commerce Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "UX/UI Designer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Des, B.Sc. UX/UI",
+        "PG Degree (For Career Advancement)": "UX/UI Certifications, Google UX Cert",
+        "Designations in Job": "UX Designer, Product Designer",
+        "Salary Range": "₹5-18 LPA",
+        "Growth Prospectus": "Designer → UX Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Interior Designer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Des, B.Sc. Interior Design",
+        "PG Degree (For Career Advancement)": "M.Des, Interior Styling Courses",
+        "Designations in Job": "Interior Designer, Space Planner",
+        "Salary Range": "₹5-20 LPA",
+        "Growth Prospectus": "Designer → Creative Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Film Director",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BA Film Studies, Diploma in Filmmaking",
+        "PG Degree (For Career Advancement)": "PG Diploma in Film Direction",
+        "Designations in Job": "Director, Screenwriter",
+        "Salary Range": "₹6-50 LPA",
+        "Growth Prospectus": "Director → International Filmmaker",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Music Producer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BFA Music, Sound Engineering",
+        "PG Degree (For Career Advancement)": "Music Tech Certifications",
+        "Designations in Job": "Producer, Sound Engineer",
+        "Salary Range": "₹4-20 LPA",
+        "Growth Prospectus": "Producer → Record Label Head",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Digital Marketer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA, Digital Marketing Diploma",
+        "PG Degree (For Career Advancement)": "Google, Facebook Ads Certifications",
+        "Designations in Job": "SEO Specialist, Social Media Manager",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Marketer → Digital Marketing Head",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "YouTuber/Influencer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "No Formal Degree Required",
+        "PG Degree (For Career Advancement)": "Content Creation & Branding",
+        "Designations in Job": "Vlogger, Content Creator",
+        "Salary Range": "Varies",
+        "Growth Prospectus": "Creator → Brand Entrepreneur",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Event Manager",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA Event Management, Mass Comm.",
+        "PG Degree (For Career Advancement)": "MBA Event Management",
+        "Designations in Job": "Event Coordinator, Wedding Planner",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Manager → Event Company Owner",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Ethnographer (Social Researcher)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BA Anthropology, Sociology",
+        "PG Degree (For Career Advancement)": "MA, PhD in Social Research",
+        "Designations in Job": "Cultural Analyst, Research Consultant",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Researcher → Global Policy Advisor"
+        ,"Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Defense Officer (Army/Navy/Air Force)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "NDA Exam, B.Sc. Defense Studies",
+        "PG Degree (For Career Advancement)": "Military Training, CDS Exam",
+        "Designations in Job": "Officer, Pilot, Naval Engineer",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → Chief of Defense",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Foreign Language Expert",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BA Foreign Language (French, Spanish, etc.)",
+        "PG Degree (For Career Advancement)": "MA Translation, Interpreter Certs",
+        "Designations in Job": "Translator, Diplomat",
+        "Salary Range": "₹5-20 LPA",
+        "Growth Prospectus": "Expert → UN Language Consultant",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Archaeologist",
+        "Streams": "Humanities, PCM, PCB",
+        "UG Degree Preferred": "BA Archaeology, History",
+        "PG Degree (For Career Advancement)": "MA Archaeology, PhD",
+        "Designations in Job": "Excavation Specialist, Museum Curator",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Researcher → Heritage Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Political Analyst",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BA Political Science",
+        "PG Degree (For Career Advancement)": "MA Political Science, PhD",
+        "Designations in Job": "Government Consultant, Public Policy Expert",
+        "Salary Range": "₹6-18 LPA",
+        "Growth Prospectus": "Analyst → Political Advisor",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Sustainability Manager",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Sc. Environmental Science",
+        "PG Degree (For Career Advancement)": "MBA Sustainability, ESG Certifications",
+        "Designations in Job": "Sustainability Analyst, Consultant",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Consultant → Sustainability Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Luxury Brand Manager",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA, MBA Luxury Brand Management",
+        "PG Degree (For Career Advancement)": "Fashion Management Certifications",
+        "Designations in Job": "Luxury Marketing Executive",
+        "Salary Range": "₹8-30 LPA",
+        "Growth Prospectus": "Manager → Luxury Brand CEO",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Digital Transformation Consultant",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech, BBA, MBA",
+        "PG Degree (For Career Advancement)": "Certifications in AI, Blockchain, Cloud",
+        "Designations in Job": "Strategy Consultant, Business Analyst",
+        "Salary Range": "₹12-35 LPA",
+        "Growth Prospectus": "Consultant → Tech Strategy Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "EdTech Entrepreneur",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Ed, BBA, B.Tech EdTech",
+        "PG Degree (For Career Advancement)": "MBA, EdTech Leadership Training",
+        "Designations in Job": "Startup Founder, Education Innovator",
+        "Salary Range": "Varies",
+        "Growth Prospectus": "Founder → EdTech CEO",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "IAS Officer (UPSC)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "District Collector, Secretary",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IAS → Cabinet Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "IPS Officer (UPSC)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "Police Commissioner, Intelligence Officer",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IPS → National Security Advisor",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "IFS Officer (Foreign Services)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Course",
+        "PG Degree (For Career Advancement)": "UPSC Exam",
+        "Designations in Job": "Diplomat, Ambassador",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IFS → Cabinet Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Indian Engineering Services (IES)",
+        "Streams": "PCM, Humanities",
+        "UG Degree Preferred": "B.Tech Civil/Mech/Electrical",
+        "PG Degree (For Career Advancement)": "IES Exam",
+        "Designations in Job": "Senior Engineer, Technical Director",
+        "Salary Range": "₹10-25 LPA",
+        "Growth Prospectus": "Engineer → Government Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "IFS (Indian Foreign Service)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Diplomacy, International Relations",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IAS → Cabinet Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "IRS (Indian Revenue Service)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Taxation, Revenue Collection",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IAS → Cabinet Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "State Administrative Service (SDM, DSP, Tehsildar)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "State-level Administration, Law & Order",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "SDM → Chief Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Indian Statistical Service (ISS)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Sc. Statistics, Mathematics",
+        "PG Degree (For Career Advancement)": "ISS Exam",
+        "Designations in Job": "Economic Analyst, Research Officer",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "Analyst → National Statistical Head",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Indian Railway Traffic Service (IRTS)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech, BBA",
+        "PG Degree (For Career Advancement)": "UPSC ESE Exam",
+        "Designations in Job": "Railway Operations, Scheduling",
+        "Salary Range": "₹8-20 LPA",
+        "Growth Prospectus": "IRTS → Railway Board Member",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Indian Railway Accounts Service (IRAS)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Com, MBA Finance",
+        "PG Degree (For Career Advancement)": "UPSC ESE Exam",
+        "Designations in Job": "Railway Finance Management",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "IRTS → Railway Board Member",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Bank PO (SBI, IBPS PO)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Com, BBA, BA",
+        "PG Degree (For Career Advancement)": "SBI PO, IBPS PO Exam",
+        "Designations in Job": "Loan Processing, Customer Management",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "PO → Regional Bank Manager",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "RBI Grade B Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "RBI Grade B Exam",
+        "Designations in Job": "Monetary Policy, Banking Regulations",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → RBI Governor",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "NABARD Officer (Agriculture Finance)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Sc. Agriculture, B.Com",
+        "PG Degree (For Career Advancement)": "NABARD Exam",
+        "Designations in Job": "Rural Development, Farm Loans",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "Manager → NABARD Chairman",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Judge (Judicial Magistrate/ Civil Judge)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "LLB",
+        "PG Degree (For Career Advancement)": "Judicial Services Exam",
+        "Designations in Job": "Judiciary, Court Cases",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Judge → Supreme Court Justice",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Public Prosecutor",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "LLB",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "Representing Govt. in Courts",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "SDM → Chief Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Indian Army Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS Exam",
+        "Designations in Job": "Border Security, Commanding Troops",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → Chief of Army Staff",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Indian Navy Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS/INET Exam",
+        "Designations in Job": "Naval Operations, Defense Strategy",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → Admiral",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Indian Air Force Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "NDA/CDS/AFCAT Exam",
+        "Designations in Job": "Air Defense, Fighter Pilot, Logistics",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → Air Chief Marshal",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Coast Guard Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "12th (PCM) / Graduation",
+        "PG Degree (For Career Advancement)": "Coast Guard Exam",
+        "Designations in Job": "Maritime Security, Coastal Defense",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → Coast Guard Chief",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "CBI Officer (Central Bureau of Investigation)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "SSC CGL, UPSC",
+        "Designations in Job": "Criminal Investigation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → CBI Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Customs Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services, SSC CGL",
+        "Designations in Job": "Border Security, Trade Regulation",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → Customs Commissioner",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Postal Service Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "India Post Exam",
+        "Designations in Job": "Postal Operations, Logistics",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → Postmaster General",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Municipal Corporation Officer (Urban Planning, Public Works)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "State PSC, MPSC, UPSC",
+        "Designations in Job": "City Development, Public Works",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → Municipal Commissioner",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Indian Coast Guard Officer (General Duty & Technical Branch)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech in Mechanical, Electrical, Electronics",
+        "PG Degree (For Career Advancement)": "Indian Coast Guard Exam",
+        "Designations in Job": "Naval Operations, Maritime Security",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Officer → Commanding Officer",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "National Disaster Response Force (NDRF) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC, State PSC",
+        "Designations in Job": "Disaster Management, Emergency Response",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IAS → Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Indian Meteorological Department (IMD) Scientist",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Sc. Meteorology, Atmospheric Science",
+        "PG Degree (For Career Advancement)": "M.Sc. Meteorology, PhD",
+        "Designations in Job": "Weather Analysis, Climate Research",
+        "Salary Range": "₹5-12 LPA",
+        "Growth Prospectus": "Analyst → Head Meteorologist",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Indian Economic Service (IES) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.A./B.Sc. Economics",
+        "PG Degree (For Career Advancement)": "UPSC IES Exam",
+        "Designations in Job": "Economic Policy, Financial Planning",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Officer → Chief Economic Advisor",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Census Officer (Registrar General of India)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC, State PSC",
+        "Designations in Job": "Population Census, Socioeconomic Research",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IAS → Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Food Safety Officer (FSO)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Sc. Food Technology, Agriculture",
+        "PG Degree (For Career Advancement)": "Food Safety Exam",
+        "Designations in Job": "Food Quality Inspection, Policy Regulation",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Officer → FSSAI Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Indian Postal Service (IPS) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Postal Operations, Logistics Management",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IAS → Cabinet Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Employment Officer (Labour Department)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC, State PSC",
+        "Designations in Job": "Workforce Management, Employment Policies",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IAS → Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Assistant Provident Fund Commissioner (EPFO)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC EPFO Exam",
+        "Designations in Job": "Social Security, Pension Fund Management",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "Officer → EPFO Chairman",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Transport Officer (RTO - Road Transport Officer)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech Automobile, Mechanical Engineering",
+        "PG Degree (For Career Advancement)": "RTO Exam (State PSC)",
+        "Designations in Job": "Vehicle Registration, Road Safety",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "Officer → Transport Commissioner",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Geologist (Geological Survey of India - GSI)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Sc. Geology, Earth Sciences",
+        "PG Degree (For Career Advancement)": "M.Sc. Geophysics, PhD",
+        "Designations in Job": "Geological Survey, Environmental Research",
+        "Salary Range": "₹6-14 LPA",
+        "Growth Prospectus": "Geologist → Natural Resource Manager",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Trade & Commerce Officer (Ministry of Commerce & Industry)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Com, BBA",
+        "PG Degree (For Career Advancement)": "UPSC IES, State PSC",
+        "Designations in Job": "International Trade, Commerce Regulation",
+        "Salary Range": "₹7-20 LPA",
+        "Growth Prospectus": "Officer → Commerce Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "State Electricity Board Engineer (Power Corporation)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech Electrical, Mechanical",
+        "PG Degree (For Career Advancement)": "GATE, State Electricity Board Exam",
+        "Designations in Job": "Power Distribution, Energy Management",
+        "Salary Range": "₹6-18 LPA",
+        "Growth Prospectus": "Engineer → Power Grid Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Social Welfare Officer (Women & Child Development Dept.)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "Social Services, Child Welfare Schemes",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "SDM → Chief Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Tourism Officer (Ministry of Tourism, Govt. of India)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "BBA, B.Sc. Tourism Management",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "Tourism Promotion, Policy Planning",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "SDM → Chief Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Handloom & Textiles Officer (Ministry of Textiles)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Des, BBA",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "Textile Industry Regulation, Handicrafts Promotion",
+        "Salary Range": "₹6-15 LPA",
+        "Growth Prospectus": "SDM → Chief Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Judicial Translator (High Court/Supreme Court)",
+        "Streams": "PCM, Humanities",
+        "UG Degree Preferred": "BA Foreign Language, Translation",
+        "PG Degree (For Career Advancement)": "Govt. Translator Exam",
+        "Designations in Job": "Legal Document Translation, Court Interpretation",
+        "Salary Range": "₹5-15 LPA",
+        "Growth Prospectus": "Translator → Supreme Court Translator",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Press Information Bureau (PIB) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "UPSC Civil Services Exam",
+        "Designations in Job": "Government Communication, Media Relations",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "IAS → Cabinet Secretary",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Aviation Safety Officer (DGCA - Directorate General of Civil Aviation)",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech Aeronautical, Aviation Management",
+        "PG Degree (For Career Advancement)": "DGCA Certification",
+        "Designations in Job": "Flight Safety, Aviation Regulations",
+        "Salary Range": "₹7-18 LPA",
+        "Growth Prospectus": "Officer → DGCA Chief",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "Oil & Natural Gas Corporation (ONGC) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "B.Tech Petroleum, Mechanical, Chemical",
+        "PG Degree (For Career Advancement)": "GATE Exam, PSU Recruitment",
+        "Designations in Job": "Energy Resource Management, Oil Extraction",
+        "Salary Range": "₹8-22 LPA",
+        "Growth Prospectus": "Engineer → ONGC Director",
+        "Know More": "Coming Soon"
+    },
+    {
+        "Career Option": "State Disaster Management Authority (SDMA) Officer",
+        "Streams": "Commerce, Humanities, PCM, PCB",
+        "UG Degree Preferred": "Any UG Degree",
+        "PG Degree (For Career Advancement)": "State PSC Exam",
+        "Designations in Job": "Disaster Preparedness, Relief Operations",
+        "Salary Range": "₹8-25 LPA",
+        "Growth Prospectus": "SDM → Chief Secretary",
+        "Know More": "Coming Soon"
+    }
+            ];
+    
+            humanitiesData.forEach((career) => {
+        let row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${career["Career Option"]}</td>
+            <td>${career["UG Degree Preferred"]}</td>
+            <td>${career["PG Degree (For Career Advancement)"]}</td>
+            <td>${career["Designations in Job"]}</td>
+            <td>${career["Salary Range"]}</td>
+            <td>${career["Growth Prospectus"]}</td>
+            <td>Coming Soon</td>  <!-- Placeholder for "Know More" -->
+        `;
+        tableBody.appendChild(row);
+    });
+}
+
+function showTable(tableId) {
+    document.querySelectorAll(".career-table").forEach(table => {
+        table.style.display = "none";
+    });
+
+    document.getElementById(tableId).style.display = "table";
+
+    document.querySelectorAll(".stream-btn").forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    event.target.classList.add("active");
+
+    if (tableId === "pcmTable") {
+        loadPCMData();
+    } else if (tableId === "pcbTable") {
+        loadPCBData();
+    } else if (tableId === "commerceTable") {
+        loadCommerceData();
+    } else if (tableId === "humanitiesTable") {  // ✅ Added this condition
+        loadHumanitiesData();  // ✅ Now Humanities data will be loaded
+    }
+}
+
+</script>
+
+</body>
+</html>

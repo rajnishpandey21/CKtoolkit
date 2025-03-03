@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Architecture</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .auth-buttons .login {
+            color: #333;
+        }
+
+        .auth-buttons .signup {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Architecture Section */
+        .architecture {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .architecture h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .architecture p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .logos span {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="login">Log in</a>
+            <a href="#" class="signup">Sign up</a>
+        </div>
+    </nav>
+
+    <!-- Architecture Section -->
+    <section class="architecture">
+        <h1>Architecture</h1>
+        <p>Explore career opportunities in Architecture. Learn about various entrance exams that help you secure admission in top architecture colleges.</p>
+
+        <h2>Select your Entrance</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('nata')">NATA</button>
+            <button onclick="showExam('jeeAAT')">JEE Advanced AAT</button>
+            <button onclick="showExam('jeeBArch')">JEE Main Paper 2</button>
+            <button onclick="showExam('tancet')">TANCET B.Arch</button>
+            <button onclick="showExam('kcet')">KCET B.Arch</button>
+            <button onclick="showExam('wbjee')">WBJEE B.Arch</button>
+            <button onclick="showExam('keam')">KEAM B.Arch</button>
+            <button onclick="showExam('eamcet')">AP & TS EAMCET</button>
+            <button onclick="showExam('ipuCET')">IPU CET B.Arch</button>
+            <button onclick="showExam('srmBArch')">SRM B.Arch</button>
+            <button onclick="showExam('manipalBArch')">Manipal B.Arch</button>
+        </div>
+
+        <!-- Dynamic Exam Information Section -->
+        <div id="nata" class="exam-content">
+            <h2>NATA Exam: An In-Depth Guide for Aspiring Architects</h2>
+        
+            <h3>Introduction</h3>
+            <p>The National Aptitude Test in Architecture (NATA) stands as a crucial gateway for students aspiring to pursue a career in architecture in India. Administered by the Council of Architecture (CoA), this national-level entrance exam evaluates a candidate's aptitude for the field through a comprehensive assessment of their drawing skills, creative thinking, and problem-solving abilities.</p>
+        
+            <h3>Exam Structure and Format</h3>
+            <p>NATA has undergone a significant transformation in its structure and format. It now comprises two parts:</p>
+        
+            <h4>Part A: Drawing Test (120 minutes)</h4>
+            <p>This section gauges a candidate's drawing skills and their ability to visualize and represent three-dimensional objects in two dimensions. It may include questions that assess:</p>
+            <ul>
+                <li>Understanding of scale and proportion</li>
+                <li>Sense of perspective</li>
+                <li>Ability to create 2D and 3D compositions</li>
+                <li>Visualization and representation of objects from different viewpoints</li>
+                <li>Memory drawing</li>
+                <li>Drawing geometric and abstract patterns</li>
+            </ul>
+        
+            <h4>Part B: Aptitude Test (180 minutes)</h4>
+            <p>This section evaluates a candidate's aptitude in various areas relevant to architecture:</p>
+            <ul>
+                <li><strong>General aptitude:</strong> Verbal, numerical, and logical reasoning</li>
+                <li><strong>Mathematical reasoning:</strong> Algebra, geometry, and mensuration</li>
+                <li><strong>Spatial aptitude:</strong> Understanding of spatial relationships and 2D and 3D forms</li>
+                <li><strong>Architectural awareness:</strong> Knowledge of famous architects, architectural styles, and building materials</li>
+            </ul>
+        
+            <h3>Marking Scheme and Eligibility</h3>
+            <ul>
+                <li><strong>Maximum Marks:</strong> 200</li>
+                <li><strong>Eligibility Criteria:</strong></li>
+                <ul>
+                    <li>Candidates must have passed the 10+2 or equivalent examination with Physics, Chemistry, and Mathematics as compulsory subjects from a recognized board.</li>
+                    <li>They must have secured a minimum of 50% aggregate marks (45% for reserved categories).</li>
+                </ul>
+            </ul>
+        
+            <h3>List of Accepting Colleges</h3>
+            <p>NATA scores are accepted by numerous prestigious architecture colleges across India, including:</p>
+            <ul>
+                <li>Indian Institutes of Technology (IITs) offering Architecture programs</li>
+                <li>National Institutes of Technology (NITs) with Architecture departments</li>
+                <li>Schools of Planning and Architecture (SPAs)</li>
+                <li>Centre for Environmental Planning and Technology (CEPT) University</li>
+                <li>Other renowned architecture colleges and universities</li>
+            </ul>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Exam Frequency:</strong> NATA is usually conducted multiple times a year, providing flexibility to candidates.</li>
+                <li><strong>Application Process:</strong> The application process is conducted online through the CoA's official website.</li>
+                <li><strong>Exam Fee:</strong> The fee is determined by the CoA and is subject to change.</li>
+                <li><strong>Preparation Resources:</strong> Candidates can utilize various resources for preparation, including NATA study materials, previous years' question papers, and mock tests.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Early Start:</strong> Begin your preparation well in advance to cover all the topics comprehensively.</li>
+                <li><strong>Drawing Practice:</strong> Regular practice is crucial to hone your drawing skills and improve your speed and accuracy.</li>
+                <li><strong>Aptitude Enhancement:</strong> Solve a variety of aptitude questions to develop your problem-solving and critical thinking abilities.</li>
+                <li><strong>Mock Tests:</strong> Take mock tests regularly to simulate the exam environment and assess your progress.</li>
+                <li><strong>Time Management:</strong> Learn to manage your time effectively during the exam to attempt all the questions.</li>
+                <li><strong>Stay Calm and Focused:</strong> Maintain a calm and composed mindset during the exam and avoid getting stressed.</li>
+            </ul>
+        
+            <h3>Key Points to Remember</h3>
+            <ul>
+                <li>NATA is a computer-based test (CBT) and requires proficiency in using a computer mouse.</li>
+                <li>The syllabus for NATA is vast, and it is essential to have a thorough understanding of all the topics.</li>
+                <li>NATA is a highly competitive exam, and consistent effort and dedication are key to success.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>The NATA exam serves as a pivotal stepping stone for individuals passionate about architecture. By understanding the exam format, eligibility criteria, and preparation strategies, aspiring architects can equip themselves to excel in this examination and pave the way for a fulfilling career in the field of architecture.</p>
+        </div>
+        
+
+        <div id="jeeAAT" class="exam-content">
+            <h2>JEE Advanced AAT (Architecture Aptitude Test): A Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>The JEE Advanced Architecture Aptitude Test (AAT) stands as a gateway for aspiring architects to secure admission into the prestigious undergraduate architecture programs offered by the Indian Institutes of Technology (IITs) and a select group of other esteemed institutions. This national-level entrance examination, conducted by the IITs, serves as a crucial assessment of a candidate's aptitude and potential in the field of architecture.</p>
+        
+            <h3>Exam Structure and Content</h3>
+            <p>The JEE Advanced AAT is meticulously designed to evaluate a candidate's holistic understanding and skills relevant to the architectural domain. It comprises two distinct papers:</p>
+        
+            <h4>Paper 1: Multiple-Choice Questions (MCQs)</h4>
+            <ul>
+                <li><strong>Duration:</strong> 3 hours</li>
+                <li><strong>Number of Questions:</strong> 100</li>
+                <li><strong>Total Marks:</strong> 360</li>
+                <li><strong>Subjects Covered:</strong></li>
+                <ul>
+                    <li>Mathematics</li>
+                    <li>Physics</li>
+                    <li>Chemistry</li>
+                    <li>General Aptitude (Spatial Reasoning, Logical Reasoning, Visual Perception)</li>
+                </ul>
+            </ul>
+        
+            <h4>Paper 2: Drawing Test</h4>
+            <ul>
+                <li><strong>Duration:</strong> 4 hours</li>
+                <li><strong>Total Marks:</strong> 40</li>
+                <li><strong>Skills Assessed:</strong></li>
+                <ul>
+                    <li>Freehand Sketching</li>
+                    <li>Geometrical Drawing</li>
+                    <li>Perspective Drawing</li>
+                    <li>3D Visualization</li>
+                    <li>Understanding of Scale and Proportion</li>
+                    <li>Sense of Composition</li>
+                    <li>Creativity and Imagination</li>
+                </ul>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Academic Qualification:</strong> Successful completion of the Class 12th examination or its equivalent with Physics, Chemistry, and Mathematics as compulsory subjects.</li>
+                <li><strong>Minimum Percentage:</strong> Attainment of at least 50% marks in aggregate in the Class 12th examination (45% for SC/ST/PWD candidates).</li>
+                <li><strong>JEE Advanced Main Qualification:</strong> Mandatory appearance in the JEE Advanced Main examination.</li>
+            </ul>
+        
+            <h3>List of Participating Colleges</h3>
+            <p>The JEE Advanced AAT scores are recognized and accepted by the following prestigious institutions for admission into their undergraduate architecture programs:</p>
+        
+            <h4>Indian Institutes of Technology (IITs)</h4>
+            <ul>
+                <li>IIT Kharagpur</li>
+                <li>IIT Roorkee</li>
+                <li>IIT Guwahati</li>
+                <li>IIT Bombay</li>
+                <li>IIT Delhi</li>
+                <li>IIT Kanpur</li>
+                <li>IIT BHU Varanasi</li>
+                <li>IIT Madras</li>
+                <li>IIT Hyderabad</li>
+            </ul>
+        
+            <h4>National Institutes of Technology (NITs)</h4>
+            <ul>
+                <li>NIT Tiruchirappalli</li>
+                <li>NIT Calicut</li>
+            </ul>
+        
+            <h4>School of Planning and Architecture (SPAs)</h4>
+            <ul>
+                <li>SPA Delhi</li>
+                <li>SPA Bhopal</li>
+            </ul>
+        
+            <h4>Other Reputed Institutions</h4>
+            <ul>
+                <li>CEPT University, Ahmedabad</li>
+                <li>Sir JJ College of Architecture, Mumbai</li>
+                <li>Kamla Raheja Vidyanidhi Institute for Architecture and Environmental Studies, Mumbai</li>
+                <li>Chandigarh College of Architecture, Chandigarh</li>
+                <li>Birla Institute of Technology, Mesra</li>
+                <li>Vellore Institute of Technology, Vellore</li>
+            </ul>
+        
+            <h3>Preparation Strategies</h3>
+            <p>Success in the JEE Advanced AAT necessitates a well-structured and comprehensive preparation approach. Here are some key strategies:</p>
+            <ul>
+                <li><strong>Thorough Conceptual Understanding:</strong> Develop a strong foundation in Mathematics, Physics, and Chemistry by mastering the fundamental concepts and principles.</li>
+                <li><strong>Practice and Problem-Solving:</strong> Regularly practice solving problems and previous years' question papers to enhance speed, accuracy, and familiarity with the exam pattern.</li>
+                <li><strong>Drawing and Sketching Practice:</strong> Dedicate ample time to honing your drawing and sketching skills through consistent practice and experimentation with different techniques and perspectives.</li>
+                <li><strong>Spatial Reasoning and Visualization:</strong> Cultivate your spatial reasoning and visualization abilities through puzzles, 3D models, and architectural drawings.</li>
+                <li><strong>Time Management:</strong> Learn to effectively manage your time during the exam to ensure that you can attempt all questions within the stipulated duration.</li>
+            </ul>
+        
+            <h3>Additional Tips</h3>
+            <ul>
+                <li><strong>Stay Updated:</strong> Keep yourself informed about the latest exam notifications, syllabus, and pattern.</li>
+                <li><strong>Seek Guidance:</strong> Consider joining coaching classes or online courses for expert guidance and support.</li>
+                <li><strong>Mock Tests:</strong> Take regular mock tests to assess your preparation level and identify areas for improvement.</li>
+                <li><strong>Stay Calm and Confident:</strong> Maintain a positive attitude and believe in your abilities.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>Remember, the JEE Advanced AAT is not merely an examination but a stepping stone towards a fulfilling and impactful career in architecture. With dedicated effort, strategic planning, and unwavering determination, you can unlock the doors to a world of creative expression and architectural innovation.</p>
+        </div>
+
+        <div id="jeeBArch" class="exam-content">
+            <h2>JEE Main Paper 2 (B.Arch): A Comprehensive Guide for Aspiring Architects</h2>
+        
+            <h3>Introduction</h3>
+            <p>The JEE Main Paper 2 (B.Arch) stands as a pivotal gateway for individuals aspiring to carve a niche in the architectural realm. Administered by the National Testing Agency (NTA), this national-level entrance examination acts as a stepping stone towards undergraduate architecture programs offered by esteemed institutions across India.</p>
+        
+            <h3>Exam Structure and Content: A Deep Dive</h3>
+            <ul>
+                <li><strong>Duration:</strong> The exam lasts 3 hours, requiring not only a profound understanding of the subjects but also adept time management and problem-solving skills.</li>
+                <li><strong>Total Marks:</strong> The exam is scored out of 400, assessing candidates across a range of essential architectural skills and competencies.</li>
+            </ul>
+        
+            <h4>Sections of the Exam</h4>
+            <ul>
+                <li><strong>Mathematics (100 marks):</strong> Covers algebra, calculus, coordinate geometry, trigonometry, and other concepts crucial for architectural design and analysis.</li>
+                <li><strong>Aptitude Test (100 marks):</strong> Assesses general awareness, logical reasoning, and spatial visualization abilities, crucial for architectural perception.</li>
+                <li><strong>Drawing (100 marks):</strong> Evaluates artistic flair, creativity, and proficiency in sketching, perspective drawing, and rendering techniques.</li>
+                <li><strong>Planning (100 marks):</strong> Tests knowledge of architectural concepts, urban planning, architectural history, building materials, and sustainable practices.</li>
+            </ul>
+        
+            <h3>Eligibility Criteria: Paving the Path</h3>
+            <ul>
+                <li><strong>Educational Qualification:</strong> Candidates must have completed their 10+2 or an equivalent examination with Mathematics as a compulsory subject.</li>
+                <li><strong>Minimum Marks:</strong> A minimum aggregate score of 50% (45% for reserved categories) is required.</li>
+                <li><strong>Age Limit:</strong> There is no age restriction, ensuring an inclusive environment where passion and potential take precedence.</li>
+            </ul>
+        
+            <h3>Colleges Accepting JEE Main Paper 2 (B.Arch) Scores</h3>
+            <p>The JEE Main Paper 2 (B.Arch) scores are recognized by a multitude of esteemed institutions renowned for their architectural programs.</p>
+        
+            <h4>Indian Institutes of Technology (IITs)</h4>
+            <ul>
+                <li>IIT Kharagpur</li>
+                <li>IIT Roorkee</li>
+                <li>IIT Guwahati</li>
+                <li>IIT Delhi</li>
+                <li>IIT Bombay</li>
+            </ul>
+        
+            <h4>Schools of Planning and Architecture (SPAs)</h4>
+            <ul>
+                <li>SPA New Delhi</li>
+                <li>SPA Bhopal</li>
+                <li>SPA Vijayawada</li>
+            </ul>
+        
+            <h4>National Institutes of Technology (NITs)</h4>
+            <ul>
+                <li>VNIT Nagpur</li>
+                <li>MANIT Bhopal</li>
+            </ul>
+        
+            <h4>Other Renowned Institutions</h4>
+            <ul>
+                <li>CEPT University</li>
+                <li>Sir J.J. College of Architecture</li>
+                <li>KRVIA (Kamla Raheja Vidyanidhi Institute for Architecture and Environmental Studies)</li>
+                <li>Chandigarh College of Architecture (CCA)</li>
+            </ul>
+            <p><strong>Note:</strong> This list is not exhaustive. Candidates are encouraged to check individual institutions' websites for specific admission requirements.</p>
+        
+            <h3>Preparation Tips: Forging the Path to Success</h3>
+            <ul>
+                <li><strong>Thorough Understanding of Syllabus:</strong> Analyze the syllabus, identify key topics, and allocate adequate time for each section.</li>
+                <li><strong>Practice Previous Years' Papers:</strong> Solving past papers helps understand question trends, marking schemes, and time management strategies.</li>
+                <li><strong>Time Management:</strong> Develop a strategic approach to allocate sufficient time to each section.</li>
+                <li><strong>Enhance Drawing and Visualization Skills:</strong> Regular practice in sketching, perspective drawing, and rendering techniques fosters artistic abilities.</li>
+                <li><strong>Stay Updated on Architectural Trends:</strong> Keeping abreast of the latest architectural trends, sustainable practices, and technological advancements demonstrates dedication to the field.</li>
+            </ul>
+        
+            <h3>Additional Information: Navigating the Process</h3>
+            <ul>
+                <li><strong>Admit Card:</strong> Candidates must carry the admit card to the exam center. It contains essential details such as name, roll number, exam center, and exam date.</li>
+                <li><strong>Result Declaration:</strong> Results are usually announced online a few weeks after the exam on the official NTA website.</li>
+            </ul>
+        
+            <h3>Conclusion: Embarking on an Architectural Odyssey</h3>
+            <p>The JEE Main Paper 2 (B.Arch) exam serves as a launchpad for a fulfilling and impactful career in architecture. Through diligent preparation, unwavering dedication, and a fervent passion for architecture, aspirants can secure admission into their desired program and embark on a transformative journey to shape the built environment. Remember, consistent practice, a thirst for knowledge, and an unwavering commitment to excellence are the cornerstones of success in this competitive exam.</p>
+        </div>
+
+        
+        <div id="tancet" class="exam-content">
+            <h2>TANCET B.Arch Exam: Your Gateway to Architectural Studies in Tamil Nadu</h2>
+        
+            <h3>Exam Structure and Content</h3>
+            <p>The TANCET B.Arch examination is a comprehensive assessment designed to gauge a candidate's potential for architectural studies. It comprises two main sections:</p>
+        
+            <h4>Part A: Aptitude Test (100 Marks)</h4>
+            <p>This section evaluates the candidate's inherent aptitude and spatial reasoning skills, focusing on areas crucial for architectural design. It typically includes questions on:</p>
+            <ul>
+                <li><strong>Mathematical Reasoning:</strong> Covers arithmetic, algebra, geometry, and trigonometry, assessing the candidate's ability to apply mathematical concepts to architectural problems.</li>
+                <li><strong>Logical Reasoning:</strong> Tests deductive and inductive reasoning, data interpretation, and analytical skills.</li>
+                <li><strong>Visual Reasoning:</strong> Assesses the candidate's ability to visualize and manipulate 2D and 3D objects, identify patterns, and understand spatial relationships.</li>
+                <li><strong>Spatial Ability:</strong> Evaluates mental rotation, spatial visualization, and spatial orientation skills.</li>
+            </ul>
+        
+            <h4>Part B: Architectural Awareness (200 Marks)</h4>
+            <p>This section delves into the candidate's comprehension of architectural concepts, history, and design principles. It may include questions on:</p>
+            <ul>
+                <li><strong>Architectural Vocabulary:</strong> Tests knowledge of architectural terms, elements, and components.</li>
+                <li><strong>Building Materials and Construction:</strong> Evaluates understanding of different building materials, their properties, and construction techniques.</li>
+                <li><strong>Architectural History and Styles:</strong> Covers various architectural styles, historical periods, and significant architectural movements.</li>
+                <li><strong>Basic Design Principles:</strong> Assesses understanding of balance, proportion, rhythm, and scale.</li>
+                <li><strong>Drawing and Sketching Skills:</strong> Some questions may require candidates to demonstrate drawing and sketching abilities.</li>
+            </ul>
+        
+            <h3>Maximum Marks and Duration</h3>
+            <ul>
+                <li><strong>Total Marks:</strong> 300</li>
+                <li><strong>Duration:</strong> 3 hours</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Educational Qualification:</strong> Candidates must have passed the 10+2 examination (or equivalent) with Mathematics, Physics, and Chemistry as compulsory subjects.</li>
+                <li><strong>Minimum Marks:</strong> Candidates must have secured a minimum aggregate of 50% marks in the qualifying examination (lower for reserved categories as per government regulations).</li>
+                <li><strong>Nationality:</strong> Candidates must be Indian citizens.</li>
+            </ul>
+        
+            <h3>Exam Conducting Body and Frequency</h3>
+            <p>The TANCET B.Arch exam is conducted annually by Anna University, Chennai, on behalf of the Government of Tamil Nadu. It is usually held in May. The <strong>official website of Anna University</strong> provides the latest updates on exam dates, applications, and results.</p>
+        
+            <h3>Medium of Examination</h3>
+            <p>The TANCET B.Arch exam is conducted in <strong>English</strong>.</p>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Understand the Syllabus:</strong> Familiarize yourself with the syllabus and exam pattern to focus your preparation accordingly.</li>
+                <li><strong>Practice Previous Year Papers:</strong> Solving past papers helps understand question types, difficulty levels, and time management.</li>
+                <li><strong>Brush Up on Fundamentals:</strong> Revise the fundamental concepts of Mathematics, Physics, and Chemistry.</li>
+                <li><strong>Enhance Spatial Reasoning:</strong> Practice visual aptitude questions to improve your ability to manipulate objects in space.</li>
+                <li><strong>Develop Architectural Awareness:</strong> Read books and articles on architecture, explore different styles and historical periods, and visit architectural landmarks.</li>
+                <li><strong>Practice Drawing and Sketching:</strong> Enhance your ability to represent architectural ideas through sketching.</li>
+                <li><strong>Time Management:</strong> Learn to manage your time efficiently during the exam.</li>
+                <li><strong>Stay Updated:</strong> Follow architectural blogs, websites, and social media channels to keep up with industry trends.</li>
+            </ul>
+        
+            <h3>List of Colleges Accepting TANCET B.Arch Scores</h3>
+            <ul>
+                <li>Anna University, Chennai</li>
+                <li>PSG College of Technology, Coimbatore</li>
+                <li>Government College of Engineering, Salem</li>
+                <li>Thiagarajar College of Engineering, Madurai</li>
+                <li>SRM Institute of Science and Technology, Chennai</li>
+                <li>VIT University, Vellore</li>
+                <li>Sathyabama Institute of Science and Technology, Chennai</li>
+                <li>Hindustan Institute of Technology and Science, Chennai</li>
+                <li>Mepco Schlenk Engineering College, Sivakasi</li>
+                <li>Panimalar Engineering College, Chennai</li>
+                <li>Saveetha Institute of Medical and Technical Sciences, Chennai</li>
+                <li>Velammal Engineering College, Chennai</li>
+                <li>Bannari Amman Institute of Technology, Sathyamangalam</li>
+                <li>Kongu Engineering College, Perundurai</li>
+                <li>Sri Shakthi Institute of Engineering and Technology, Coimbatore</li>
+                <li>Karpagam College of Engineering, Coimbatore</li>
+                <li>Noorul Islam Centre for Higher Education, Kumaracoil</li>
+                <li>RVS College of Engineering and Technology, Coimbatore</li>
+                <li>Meenakshi Sundararajan Engineering College, Madurai</li>
+                <li>Sri Ramakrishna Engineering College, Coimbatore</li>
+                <li>KCG College of Technology, Chennai</li>
+                <li>Aalim Muhammed Salegh College of Engineering, Madurai</li>
+                <li>M.A.M. College of Engineering, Virudhunagar</li>
+            </ul>
+            <p><strong>Disclaimer:</strong> This list is indicative and may not be exhaustive. It is advisable to check with the respective colleges for the most up-to-date information regarding admission requirements and acceptance of TANCET B.Arch scores.</p>
+        
+            <h3>Additional Points to Remember</h3>
+            <ul>
+                <li>The TANCET B.Arch exam is a crucial step towards pursuing a Bachelor of Architecture (B.Arch) degree in Tamil Nadu.</li>
+                <li>A good score in the TANCET B.Arch exam can open doors to numerous career opportunities in architecture, including architectural design, urban planning, interior design, landscape architecture, and heritage conservation.</li>
+                <li>Consistent effort, dedication, and a genuine passion for architecture are key to success in the TANCET B.Arch exam.</li>
+                <li>Regularly check the official website of Anna University for the latest notifications and updates regarding the exam.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>The TANCET B.Arch exam serves as a significant stepping stone for students aspiring to pursue a career in architecture in Tamil Nadu. With a well-planned preparation strategy, strong foundational knowledge, and a keen interest in architecture, candidates can excel in this examination and secure admission into top architectural institutions.</p>
+        </div>
+
+        <div id="kcet" class="exam-content">
+            <h2>KCET B.Arch (Karnataka) Exam: A Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Karnataka Common Entrance Test (KCET) B.Arch is a gateway for aspiring architects to secure admission in prestigious architecture colleges across Karnataka. Conducted by the Karnataka Examinations Authority (KEA), this state-level entrance exam assesses candidates' aptitude in Mathematics and Drawing.</p>
+        
+            <h3>Exam Structure and Syllabus</h3>
+            <p>The KCET B.Arch exam is divided into two papers:</p>
+        
+            <h4>Paper 1: Mathematics (60 Marks)</h4>
+            <p>This paper evaluates the candidate's knowledge in Mathematics as per the 10+2 syllabus. Key topics include:</p>
+            <ul>
+                <li>Algebra</li>
+                <li>Trigonometry</li>
+                <li>Coordinate Geometry</li>
+                <li>Calculus</li>
+                <li>Vectors</li>
+            </ul>
+        
+            <h4>Paper 2: Drawing Aptitude Test (120 Marks)</h4>
+            <p>This paper tests the candidate's drawing skills, sense of proportion, perspective, and imagination. It may include questions on:</p>
+            <ul>
+                <li>2D and 3D composition</li>
+                <li>Geometric shapes</li>
+                <li>Object drawing</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Educational Qualification:</strong> Candidates must have passed 10+2 or an equivalent examination with Physics, Chemistry, and Mathematics as compulsory subjects.</li>
+                <li><strong>Minimum Marks:</strong> A minimum of 50% aggregate marks in the qualifying examination.</li>
+                <li><strong>Domicile Requirement:</strong> Candidates must be residents of Karnataka as per the regulations of KEA.</li>
+            </ul>
+        
+            <h3>Exam Pattern and Marking Scheme</h3>
+            <ul>
+                <li><strong>Mode of Exam:</strong> Offline (Pen and Paper-based)</li>
+                <li><strong>Duration:</strong> 3 hours</li>
+                <li><strong>Language:</strong> English and Kannada</li>
+                <li><strong>Maximum Marks:</strong> 180</li>
+                <li><strong>Negative Marking:</strong> No negative marking for incorrect answers.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <h4>Mathematics:</h4>
+            <ul>
+                <li>Thoroughly revise the 10+2 Mathematics syllabus.</li>
+                <li>Practice solving problems from previous years' question papers and mock tests.</li>
+                <li>Focus on understanding concepts and formulas.</li>
+            </ul>
+        
+            <h4>Drawing Aptitude:</h4>
+            <ul>
+                <li>Practice drawing various objects, shapes, and compositions.</li>
+                <li>Work on improving your sense of proportion, perspective, and shading.</li>
+                <li>Enhance your creativity and imagination.</li>
+            </ul>
+        
+            <h3>List of Colleges Accepting KCET B.Arch Scores</h3>
+            <ul>
+                <li>University Visvesvaraya College of Engineering (UVCE), Bangalore</li>
+                <li>R.V. College of Engineering (RVCE), Bangalore</li>
+                <li>BMS College of Engineering (BMSCE), Bangalore</li>
+                <li>PES University, Bangalore</li>
+                <li>Dayananda Sagar College of Engineering (DSCE), Bangalore</li>
+                <li>M.S. Ramaiah Institute of Technology (MSRIT), Bangalore</li>
+                <li>New Horizon College of Engineering (NHCE), Bangalore</li>
+                <li>Jain University, Bangalore</li>
+                <li>KLE Technological University, Hubli</li>
+                <li>SDM College of Engineering and Technology, Dharwad</li>
+                <li>B.V. Bhoomaraddi College of Engineering and Technology, Hubli</li>
+                <li>Gogte Institute of Technology, Belgaum</li>
+                <li>KLE Society's College of Architecture, Belgaum</li>
+                <li>R.L. Jalappa Institute of Technology, Doddaballapur</li>
+                <li>JSS Academy of Technical Education, Bangalore</li>
+                <li>Kristu Jayanti College of Architecture, Bangalore</li>
+                <li>St. Joseph's College of Architecture, Bangalore</li>
+                <li>And other architecture colleges affiliated with VTU and other universities in Karnataka.</li>
+            </ul>
+        
+            <h3>Additional Points to Note</h3>
+            <ul>
+                <li><strong>NATA Score:</strong> Some colleges in Karnataka also accept the National Aptitude Test in Architecture (NATA) score for B.Arch admissions.</li>
+                <li><strong>Counseling Process:</strong> After the KCET results are declared, KEA conducts a counseling process for seat allotment in participating colleges.</li>
+                <li><strong>Reservation:</strong> Seats are reserved for various categories as per government norms.</li>
+            </ul>
+        
+            <h3>Key Takeaways</h3>
+            <ul>
+                <li>KCET B.Arch is a crucial exam for B.Arch aspirants in Karnataka.</li>
+                <li>Strong preparation in Mathematics and Drawing is essential for success.</li>
+                <li>Candidates should be aware of the eligibility criteria and exam pattern.</li>
+                <li>The choice of college depends on the candidate's merit, preferences, and availability of seats.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>By following this comprehensive guide and putting in dedicated effort, you can increase your chances of securing admission in your desired architecture college through KCET B.Arch. Stay focused, practice consistently, and keep yourself updated on the latest exam notifications to achieve your dream of becoming an architect.</p>
+        </div>
+
+        <div id="wbjee" class="exam-content">
+            <h2>WBJEE B.Arch (West Bengal) Exam: Your Gateway to Architectural Studies</h2>
+        
+            <h3>Introduction</h3>
+            <p>The West Bengal Joint Entrance Examinations Board (WBJEEB) conducts the WBJEE B.Arch entrance exam annually, serving as the gateway for aspiring architects to secure admission into undergraduate architecture programs across various esteemed colleges and universities in West Bengal.</p>
+        
+            <h3>Exam Structure & Syllabus</h3>
+            <p>The WBJEE B.Arch exam is designed to assess candidates' aptitude in Mathematics and Drawing, crucial skills for a successful architectural career. The exam comprises two papers:</p>
+        
+            <h4>Paper 1: Mathematics (100 Marks)</h4>
+            <p>This paper consists of 50 multiple-choice questions (MCQs) covering topics from the 10+2 Mathematics syllabus. Key areas include:</p>
+            <ul>
+                <li>Algebra</li>
+                <li>Trigonometry</li>
+                <li>Coordinate Geometry</li>
+                <li>Calculus</li>
+                <li>Vector Algebra</li>
+            </ul>
+        
+            <h4>Paper 2: Drawing Aptitude Test (100 Marks)</h4>
+            <p>This paper evaluates candidates' drawing and visualization skills through subjective questions. It typically involves tasks like:</p>
+            <ul>
+                <li>Freehand sketching of objects and scenes</li>
+                <li>Geometrical drawing</li>
+                <li>2D and 3D composition</li>
+                <li>Understanding of scale and proportion</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Educational Qualification:</strong> Candidates must have passed the 10+2 (or equivalent) examination from a recognized board with Physics, Chemistry, and Mathematics as compulsory subjects.</li>
+                <li><strong>Minimum Marks:</strong> A minimum of 50% marks in aggregate in the qualifying examination.</li>
+            </ul>
+        
+            <h3>Important Dates & Application Process</h3>
+            <ul>
+                <li><strong>Exam Date:</strong> The WBJEE B.Arch exam is usually held in April or May.</li>
+                <li><strong>Application Form:</strong> The application form is typically released in January or February on the WBJEEB website. Candidates can apply online within the specified timeframe.</li>
+                <li><strong>Admit Card:</strong> The admit card is issued a few days before the exam and can be downloaded from the WBJEEB website.</li>
+                <li><strong>Results:</strong> The results are usually declared in June or July.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <h4>Mathematics:</h4>
+            <ul>
+                <li>Thoroughly revise the 10+2 Mathematics syllabus, focusing on key concepts and problem-solving techniques.</li>
+                <li>Practice with previous years' question papers and mock tests.</li>
+            </ul>
+        
+            <h4>Drawing Aptitude:</h4>
+            <ul>
+                <li>Develop your drawing and visualization skills through regular practice.</li>
+                <li>Familiarize yourself with different drawing techniques and perspectives.</li>
+                <li>Refer to books and online resources on architectural drawing.</li>
+            </ul>
+        
+            <h4>Time Management:</h4>
+            <ul>
+                <li>Practice solving questions within the allotted time to improve your speed and accuracy.</li>
+            </ul>
+        
+            <h3>List of Colleges Accepting WBJEE B.Arch Scores</h3>
+            <p>Several reputed colleges in West Bengal offer B.Arch programs based on WBJEE B.Arch scores. Some of the prominent ones include:</p>
+            <ul>
+                <li>Jadavpur University, Kolkata</li>
+                <li>Bengal Engineering and Science University, Shibpur</li>
+                <li>West Bengal University of Technology, Kolkata</li>
+                <li>Maulana Abul Kalam Azad University of Technology, West Bengal</li>
+                <li>University of Kalyani, Kalyani</li>
+                <li>Burdwan University, Burdwan</li>
+                <li>North Bengal University, Darjeeling</li>
+                <li>Vidyasagar University, Midnapore</li>
+                <li>Cooch Behar Panchanan Barma University, Cooch Behar</li>
+                <li>University of Gour Banga, Malda</li>
+                <li>Brainware University, Kolkata</li>
+                <li>Indian Institute of Engineering Science and Technology, Kalyani</li>
+            </ul>
+            <p><strong>Note:</strong> Candidates should check the specific admission criteria and cutoff ranks of each college before applying.</p>
+        
+            <h3>Additional Tips</h3>
+            <ul>
+                <li>Stay updated with the latest notifications and announcements on the WBJEEB website.</li>
+                <li>Reach out to architecture coaching centers or online platforms for guidance and resources.</li>
+                <li>Believe in yourself and stay focused on your goal.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>By following these tips and diligently preparing for the WBJEE B.Arch exam, you can pave your way to a fulfilling career in architecture. Stay dedicated, practice regularly, and make the most of the available resources to excel in the exam and secure admission into your dream college.</p>
+        </div>
+
+        <div id="keam" class="exam-content">
+            <h2>KEAM B.Arch (Kerala) Exam: An In-Depth Exploration</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Commissioner of Entrance Examinations (CEE), Kerala, conducts the Kerala Engineering Architecture Medical Entrance Examination (KEAM), a state-level entrance examination. This exam serves as a crucial gateway for students aspiring to pursue undergraduate courses in engineering, architecture, and medical disciplines within the state of Kerala.</p>
+        
+            <h3>Exam Structure and Syllabus</h3>
+            <p>The KEAM B.Arch exam comprises two papers:</p>
+        
+            <h4>Paper 1: Mathematics (120 Minutes, 120 Marks)</h4>
+            <p>The Mathematics paper covers topics from the Higher Secondary level, including:</p>
+            <ul>
+                <li>Algebra</li>
+                <li>Trigonometry</li>
+                <li>Calculus</li>
+                <li>Geometry</li>
+                <li>Coordinate Geometry</li>
+            </ul>
+        
+            <h4>Paper 2: Drawing Aptitude Test (180 Minutes, 180 Marks)</h4>
+            <p>This paper evaluates the candidate's drawing and visualization skills. It includes questions on:</p>
+            <ul>
+                <li>Geometric shapes</li>
+                <li>Perspective drawing</li>
+                <li>3D visualization</li>
+            </ul>
+        
+            <h3>Maximum Marks and Eligibility</h3>
+            <ul>
+                <li><strong>Total Marks:</strong> 300</li>
+                <li><strong>Nationality:</strong> Indian nationals or Non-Resident Indians (NRIs)</li>
+                <li><strong>Age:</strong> Minimum 17 years old as of December 31 of the admission year</li>
+                <li><strong>Educational Qualification:</strong> Passed the Higher Secondary Examination (HSE) or its equivalent, with Mathematics, Physics, and Chemistry as mandatory subjects</li>
+            </ul>
+        
+            <h4>Minimum Marks Requirement</h4>
+            <ul>
+                <li><strong>General Category:</strong> 50% aggregate in Mathematics, Physics, and Chemistry</li>
+                <li><strong>SC/ST Category:</strong> 40% aggregate in Mathematics, Physics, and Chemistry</li>
+            </ul>
+        
+            <h3>Comprehensive List of Colleges Accepting KEAM B.Arch Scores</h3>
+            <p>The following colleges in Kerala offer B.Arch programs and accept KEAM B.Arch scores for admission:</p>
+            <ul>
+                <li>College of Engineering, Trivandrum</li>
+                <li>Government Engineering College, Thrissur</li>
+                <li>Government Engineering College, Kozhikode</li>
+                <li>Government Engineering College, Kannur</li>
+                <li>Government Engineering College, Palakkad</li>
+                <li>Government Engineering College, Idukki</li>
+                <li>Government Engineering College, Kasaragod</li>
+                <li>Government Engineering College, Wayanad</li>
+                <li>Government Engineering College, Kollam</li>
+                <li>Government Engineering College, Alappuzha</li>
+                <li>Government Engineering College, Pathanamthitta</li>
+                <li>Government Engineering College, Kottayam</li>
+                <li>Government Engineering College, Ernakulam</li>
+                <li>Government Engineering College, Malappuram</li>
+                <li>TKM College of Engineering, Kollam</li>
+                <li>NSS College of Engineering, Palakkad</li>
+                <li>Federal Institute of Science and Technology (FISAT), Angamaly</li>
+                <li>Saintgits College of Engineering, Kottayam</li>
+                <li>Mar Baselios College of Architecture and Design, Kothamangalam</li>
+                <li>Rajiv Gandhi Institute of Technology, Kottayam</li>
+            </ul>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Application Process:</strong> The application process for KEAM is usually conducted online. Candidates need to fill out the application form, upload the required documents, and pay the application fee.</li>
+                <li><strong>Admit Card:</strong> After the application process, eligible candidates receive their admit cards online. The admit card is a mandatory document for appearing in the exam.</li>
+                <li><strong>Exam Centers:</strong> The exam is conducted at various centers across Kerala. Candidates can choose their preferred exam center while filling out the application form.</li>
+                <li><strong>Result:</strong> The KEAM results are usually declared a few weeks after the exam. Candidates can check their results online on the official website of CEE Kerala.</li>
+                <li><strong>Counseling:</strong> Based on the KEAM results, CEE Kerala conducts counseling for admission to various B.Arch programs. Candidates need to participate in the counseling process to secure their admission.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Understand the Syllabus:</strong> Familiarize yourself with the syllabus for both papers and create a study plan accordingly.</li>
+                <li><strong>Practice Previous Year Papers:</strong> Solve previous year's question papers and sample papers to understand the exam pattern and difficulty level.</li>
+                <li><strong>Time Management:</strong> Practice time management during your preparation to ensure you can complete the exam within the given time.</li>
+                <li><strong>Drawing Practice:</strong> For the Drawing Aptitude Test, practice drawing various geometric shapes, perspectives, and 3D objects.</li>
+                <li><strong>Stay Calm and Confident:</strong> On the day of the exam, stay calm and confident. Believe in your preparation and give your best.</li>
+            </ul>
+        
+            <h3>Note</h3>
+            <p>This information is based on the current understanding of the KEAM B.Arch exam. It is advisable to check the official website of CEE Kerala for the latest updates and notifications.</p>
+        
+            <h3>Conclusion</h3>
+            <p>The KEAM B.Arch exam is a vital step for aspiring architects in Kerala. By preparing strategically, focusing on both Mathematics and Drawing Aptitude, and staying updated with official notifications, candidates can successfully secure admission to top architecture colleges in the state. Stay dedicated, practice consistently, and work towards your goal of becoming an architect.</p>
+        </div>
+
+        <div id="eamcet" class="exam-content">
+            <h2>AP EAMCET & TS EAMCET: Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Andhra Pradesh Engineering, Agriculture and Medical Common Entrance Test (AP EAMCET) and the Telangana State Engineering, Agriculture and Medical Common Entrance Test (TS EAMCET) are pivotal state-level entrance examinations. They serve as gateways for students aspiring to pursue undergraduate courses in Engineering, Agriculture, and Medical fields in the respective states of Andhra Pradesh and Telangana.</p>
+            <p>These exams are conducted annually by the Jawaharlal Nehru Technological University, Kakinada (JNTUK) under the auspices of the Andhra Pradesh State Council of Higher Education (APSCHE) and the Telangana State Council of Higher Education (TSCHE).</p>
+        
+            <h3>Exam Structure and Syllabus</h3>
+            <p>Both exams assess students' knowledge in core subjects, but their structures differ slightly:</p>
+        
+            <h4>AP EAMCET</h4>
+            <ul>
+                <li><strong>Paper 1:</strong> Mathematics, Physics, and Chemistry (160 marks)</li>
+                <li><strong>Paper 2:</strong> Biology and Biotechnology (160 marks)</li>
+            </ul>
+        
+            <h4>TS EAMCET</h4>
+            <ul>
+                <li><strong>Paper 1:</strong> Mathematics (160 marks)</li>
+                <li><strong>Paper 2:</strong> Physics and Chemistry (160 marks)</li>
+                <li><strong>Paper 3:</strong> Biology (160 marks)</li>
+            </ul>
+        
+            <p>The syllabus for both exams is based on the Intermediate (10+2) curriculum of the respective state boards. It covers topics in Mathematics, Physics, Chemistry, and Biology (for relevant papers).</p>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Nationality:</strong> Indian citizens and Persons of Indian Origin (PIO) are eligible.</li>
+                <li><strong>Domicile:</strong> Candidates must satisfy the local/non-local status requirements as per the respective state's regulations.</li>
+                <li><strong>Educational Qualification:</strong></li>
+                <ul>
+                    <li>Passed or appeared for the Intermediate (10+2) examination or its equivalent from a recognized board.</li>
+                    <li>Studied Mathematics, Physics, and Chemistry as compulsory subjects.</li>
+                    <li>Secured a minimum aggregate of 45% (40% for SC/ST candidates) in the qualifying examination.</li>
+                </ul>
+                <li><strong>Age Limit:</strong> No specific age limit for AP EAMCET. TS EAMCET has a minimum age requirement of 16 years.</li>
+            </ul>
+        
+            <h3>Admission Process</h3>
+            <ul>
+                <li><strong>Application:</strong> Online application process on the official websites.</li>
+                <li><strong>Admit Card:</strong> Download admit card after successful application.</li>
+                <li><strong>Exam:</strong> Computer-based test at designated centers.</li>
+                <li><strong>Results:</strong> Declaration of results online.</li>
+                <li><strong>Counseling:</strong> Qualified candidates participate in online counseling for seat allotment based on rank and preferences.</li>
+            </ul>
+        
+            <h3>List of Colleges Accepting AP EAMCET & TS EAMCET Scores</h3>
+        
+            <h4>Andhra Pradesh:</h4>
+            <ul>
+                <li>Andhra University, Visakhapatnam</li>
+                <li>Jawaharlal Nehru Technological University, Kakinada</li>
+                <li>Sri Venkateswara University, Tirupati</li>
+                <li>Yogi Vemana University, Kadapa</li>
+                <li>And many other engineering, agriculture, and pharmacy colleges.</li>
+            </ul>
+        
+            <h4>Telangana:</h4>
+            <ul>
+                <li>Jawaharlal Nehru Technological University, Hyderabad</li>
+                <li>Osmania University, Hyderabad</li>
+                <li>Kakatiya University, Warangal</li>
+                <li>Mahatma Gandhi University, Nalgonda</li>
+                <li>And numerous other engineering, agriculture, medical, and pharmacy colleges.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Understand the Syllabus:</strong> Thoroughly familiarize yourself with the syllabus and exam pattern.</li>
+                <li><strong>Practice Previous Papers:</strong> Solve previous years' question papers to get accustomed to the exam format and difficulty level.</li>
+                <li><strong>Time Management:</strong> Practice time management during mock tests to ensure you can complete the exam within the allotted time.</li>
+                <li><strong>Conceptual Clarity:</strong> Focus on building a strong conceptual foundation in all subjects.</li>
+                <li><strong>Stay Updated:</strong> Keep yourself updated with current affairs and relevant news related to your chosen field.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>AP EAMCET and TS EAMCET are crucial stepping stones for students aspiring to pursue higher education in Andhra Pradesh and Telangana. With dedicated preparation, a strong grasp of concepts, and effective time management, you can achieve success in these exams and secure admission to your desired course and college.</p>
+        </div>
+
+        <div id="ipuCET" class="exam-content">
+            <h2>IPU CET B.Arch (Indraprastha University Common Entrance Test for Bachelor of Architecture): Your Comprehensive Guide</h2>
+        
+            <h3>Exam Structure and Syllabus</h3>
+            <p>The IPU CET B.Arch exam is divided into two key sections:</p>
+        
+            <h4>Part 1: Aptitude Test (150 Marks)</h4>
+            <p>This section evaluates a candidate's aptitude in areas crucial for architectural studies. It typically covers:</p>
+            <ul>
+                <li><strong>Mathematics:</strong> Questions related to algebra, geometry, trigonometry, and mensuration.</li>
+                <li><strong>General Awareness:</strong> Questions about current affairs, general knowledge, and architectural awareness.</li>
+                <li><strong>Logical Reasoning:</strong> Questions that test a candidate's ability to think logically and solve problems.</li>
+                <li><strong>Mental Ability:</strong> Questions that assess spatial reasoning, visual perception, and analytical skills.</li>
+            </ul>
+        
+            <h4>Part 2: Drawing Test (100 Marks)</h4>
+            <p>This section assesses a candidate's drawing and creative skills. It may include tasks such as:</p>
+            <ul>
+                <li><strong>Geometric Drawing:</strong> Drawing shapes, patterns, and objects with precision.</li>
+                <li><strong>Freehand Drawing:</strong> Sketching objects or scenes without the use of tools.</li>
+                <li><strong>3D Visualization:</strong> Representing three-dimensional objects on a two-dimensional surface.</li>
+                <li><strong>Perspective Drawing:</strong> Drawing objects as they appear from a particular viewpoint.</li>
+                <li><strong>Theme-based Drawing:</strong> Creating a drawing based on a given theme or situation.</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Educational Qualification:</strong> Candidates must have passed the 10+2 or equivalent examination with Physics, Chemistry, and Mathematics as compulsory subjects.</li>
+                <li><strong>Minimum Marks:</strong> Candidates must have secured at least 50% marks in aggregate (45% for SC/ST/PwD candidates) in the qualifying examination.</li>
+            </ul>
+        
+            <h3>List of Accepting Colleges</h3>
+            <p>The IPU CET B.Arch score is accepted by several prestigious architecture colleges in Delhi and other parts of India, including:</p>
+            <ul>
+                <li><strong>Delhi-NCR Region:</strong> Indraprastha University, Delhi</li>
+            </ul>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Exam Frequency:</strong> The IPU CET B.Arch exam is conducted once a year, typically in April or May.</li>
+                <li><strong>Exam Mode:</strong> The exam is held in offline mode (pen-and-paper based).</li>
+                <li><strong>Exam Duration:</strong> The total duration of the exam is 3 hours.</li>
+                <li><strong>Exam Language:</strong> The exam is conducted in English.</li>
+                <li><strong>Drawing Materials:</strong> Candidates are allowed to use drawing instruments and materials (such as pencils, erasers, rulers, and drawing sheets) during the Drawing Test.</li>
+                <li><strong>Result Declaration:</strong> The results of the IPU CET B.Arch exam are usually declared within 15 days of the exam date.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Understand the Syllabus:</strong> Familiarize yourself with the syllabus for both the Aptitude Test and the Drawing Test.</li>
+                <li><strong>Practice Regularly:</strong> Solve practice papers and previous years' question papers to get a feel for the exam pattern and difficulty level.</li>
+                <li><strong>Improve Drawing Skills:</strong> Practice different types of drawing, including geometric drawing, freehand drawing, 3D visualization, and perspective drawing.</li>
+                <li><strong>Time Management:</strong> Learn to manage your time effectively during the exam.</li>
+                <li><strong>Stay Calm and Confident:</strong> Believe in your abilities and stay calm during the exam.</li>
+            </ul>
+        
+            <h3>Key Points to Remember</h3>
+            <ul>
+                <li><strong>Focus on Fundamentals:</strong> Build a strong foundation in mathematics, logical reasoning, and general awareness.</li>
+                <li><strong>Develop Drawing Skills:</strong> Enhance your drawing skills through regular practice and observation.</li>
+                <li><strong>Stay Updated:</strong> Keep yourself updated on current affairs and architectural trends.</li>
+                <li><strong>Manage Time Effectively:</strong> Allocate sufficient time for both the Aptitude Test and the Drawing Test.</li>
+                <li><strong>Practice Makes Perfect:</strong> The more you practice, the better prepared you will be for the exam.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>Success in the IPU CET B.Arch exam requires a combination of aptitude, drawing skills, and dedicated preparation. By following these tips and staying focused on your goals, you can achieve your dream of becoming an architect.</p>
+        </div>
+
+        <div id="srmBArch" class="exam-content">
+            <h2>SRM B.Arch Exam: A Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>The SRM Joint Entrance Examination for Architecture (SRMJEEE B.Arch) is a national-level entrance examination conducted by SRM Institute of Science and Technology (SRMIST), Chennai, for admission to its undergraduate B.Arch program. This highly competitive exam serves as a gateway for aspiring architects to secure a seat in one of the reputed architecture schools under the SRM umbrella.</p>
+        
+            <h3>Exam Structure and Syllabus</h3>
+            <p>The SRMJEEE B.Arch exam is a computer-based test (CBT) that assesses candidates' aptitude in three key areas:</p>
+        
+            <h4>Part I: Aptitude Test (60 Minutes)</h4>
+            <p>This section evaluates the candidate's general aptitude, logical reasoning, spatial reasoning, and visual awareness. It typically includes questions on topics like:</p>
+            <ul>
+                <li>Analogies</li>
+                <li>Series Completion</li>
+                <li>Visual Reasoning</li>
+                <li>Spatial Orientation</li>
+            </ul>
+        
+            <h4>Part II: Mathematics (90 Minutes)</h4>
+            <p>This section tests the candidate's mathematical skills and knowledge, covering topics from the 10+2 level Mathematics syllabus, including:</p>
+            <ul>
+                <li>Algebra</li>
+                <li>Trigonometry</li>
+                <li>Geometry</li>
+                <li>Calculus</li>
+                <li>Statistics</li>
+            </ul>
+        
+            <h4>Part III: Architectural Aptitude (90 Minutes)</h4>
+            <p>This section gauges the candidate's inherent aptitude for architecture and design. It includes questions on:</p>
+            <ul>
+                <li>Architectural Awareness</li>
+                <li>Design Sensitivity</li>
+                <li>Drawing Skills</li>
+                <li>Aesthetic Judgment</li>
+                <li>Freehand Drawing and 3D Visualization Exercises</li>
+            </ul>
+        
+            <h3>Maximum Marks and Eligibility</h3>
+            <ul>
+                <li><strong>Total Marks:</strong> 360 (Each section carries 120 marks)</li>
+                <li><strong>Educational Qualification:</strong> Candidates must have passed 10+2 or equivalent from a recognized board with a minimum of 50% marks in aggregate.</li>
+                <li><strong>Mandatory Subjects:</strong> Candidates must have studied Mathematics, Physics, and Chemistry in 10+2.</li>
+            </ul>
+        
+            <h3>Exam Pattern and Preparation Tips</h3>
+            <p>The SRMJEEE B.Arch exam is typically conducted in a single session. The questions are objective type, with multiple-choice answers. Candidates need to mark their answers on the computer screen. <strong>Negative marking may be applicable</strong> for incorrect answers.</p>
+        
+            <h4>Preparation Tips:</h4>
+            <ul>
+                <li>Thoroughly revise the 10+2 level Mathematics syllabus.</li>
+                <li>Practice solving aptitude and reasoning questions regularly.</li>
+                <li>Enhance your spatial reasoning and visualization skills.</li>
+                <li>Develop your freehand drawing and sketching abilities.</li>
+                <li>Familiarize yourself with architectural concepts, styles, and terminology.</li>
+                <li>Take mock tests and solve previous years' question papers to get acquainted with the exam pattern and difficulty level.</li>
+            </ul>
+        
+            <h3>Colleges Accepting SRMJEEE B.Arch Scores</h3>
+            <p>The following SRM Group institutions accept SRMJEEE B.Arch scores for admission to their B.Arch program:</p>
+            <ul>
+                <li>SRM Institute of Science and Technology, Kattankulathur, Chennai</li>
+                <li>SRM Institute of Science and Technology, NCR Campus, Ghaziabad</li>
+                <li>SRM Institute of Science and Technology, Ramapuram Campus, Chennai</li>
+                <li>SRM Institute of Science and Technology, Vadapalani Campus, Chennai</li>
+                <li>SRM University, Sikkim</li>
+                <li>SRM University, Delhi-NCR, Sonepat, Haryana</li>
+                <li>SRM University, Andhra Pradesh</li>
+                <li>SRM Institute of Science and Technology, Amaravati Campus, Andhra Pradesh</li>
+            </ul>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Exam Mode:</strong> The SRMJEEE B.Arch exam is conducted in English only.</li>
+                <li><strong>Application Process:</strong> The application process is usually online. Candidates need to fill out the application form and pay the application fee within the specified deadline.</li>
+                <li><strong>Admit Card:</strong> The admit card is released online a few days before the exam date.</li>
+                <li><strong>Exam Day Requirements:</strong> Candidates must carry their admit card, a valid photo ID, and a passport-size photograph to the exam center.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>The SRMJEEE B.Arch exam is a crucial step for students aspiring to pursue a career in architecture. With thorough preparation, dedication, and a strong aptitude for design, candidates can crack this exam and secure admission to a prestigious architecture program at SRMIST.</p>
+        </div>
+
+        <div id="manipalBArch" class="exam-content">
+            <h2>Manipal B.Arch (Manipal Academy of Higher Education) Entrance Exam: A Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Manipal B.Arch entrance exam, conducted by the Manipal Academy of Higher Education (MAHE), is a gateway for aspiring architects to pursue their undergraduate studies in architecture. This comprehensive guide will delve into the exam structure, eligibility criteria, and other essential details, providing a roadmap for prospective students.</p>
+        
+            <h3>Exam Structure</h3>
+            <p>The Manipal B.Arch entrance exam comprises two distinct parts, each designed to assess different skill sets crucial for an architect:</p>
+        
+            <h4>Part I: Online Multiple-Choice Questions (MCQs)</h4>
+            <ul>
+                <li><strong>Subjects:</strong> Physics, Chemistry, and Mathematics</li>
+                <li><strong>Duration:</strong> 2 Hours</li>
+                <li><strong>Total Marks:</strong> 120</li>
+                <li><strong>Question Type:</strong> Objective, with four options per question</li>
+                <li><strong>Syllabus:</strong> Based on the 10+2 curriculum of CBSE/State Boards</li>
+            </ul>
+        
+            <h4>Part II: Drawing Aptitude Test (DAT)</h4>
+            <ul>
+                <li><strong>Duration:</strong> 3 Hours</li>
+                <li><strong>Total Marks:</strong> 80</li>
+                <li><strong>Focus:</strong> Drawing skills, spatial visualization, and aesthetic sensitivity</li>
+                <li><strong>Tasks:</strong> May include sketching, 2D and 3D composition, and perspective drawing</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Educational Qualification:</strong> Candidates must have passed 10+2 or equivalent examination with Physics, Chemistry, and Mathematics as compulsory subjects.</li>
+                <li><strong>Minimum Marks:</strong> Secured a minimum of 50% aggregate marks in PCM.</li>
+                <li><strong>NATA Score:</strong> Candidates must have appeared for the National Aptitude Test in Architecture (NATA) and secured a valid score.</li>
+                <li><strong>Age Limit:</strong> No specific age limit is mentioned.</li>
+            </ul>
+        
+            <h3>Other Important Information</h3>
+            <ul>
+                <li><strong>Exam Mode:</strong> Online</li>
+                <li><strong>Exam Date:</strong> Typically conducted in April or May</li>
+                <li><strong>Exam Centers:</strong> Spread across various cities in India</li>
+                <li><strong>Admit Card:</strong> Available for download from the official website after registration</li>
+                <li><strong>Result:</strong> Declared online a few weeks after the exam</li>
+                <li><strong>Counseling:</strong> Based on the merit list, candidates are called for counseling to select their preferred college and course.</li>
+            </ul>
+        
+            <h3>Colleges Accepting Manipal B.Arch Score</h3>
+            <p>The Manipal B.Arch score is accepted by several prestigious architecture colleges across India, including:</p>
+            <ul>
+                <li><strong>Manipal School of Architecture & Planning,</strong> Manipal Academy of Higher Education, Manipal</li>
+                <li><strong>Faculty of Architecture and Ekistics</strong></li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+        
+            <h4>Part I (MCQs):</h4>
+            <ul>
+                <li>Thoroughly revise the 10+2 PCM syllabus.</li>
+                <li>Practice solving MCQs from previous years' papers and sample papers.</li>
+                <li>Focus on conceptual understanding and problem-solving skills.</li>
+            </ul>
+        
+            <h4>Part II (DAT):</h4>
+            <ul>
+                <li>Practice sketching various objects and scenes from different perspectives.</li>
+                <li>Work on your 2D and 3D composition skills.</li>
+                <li>Develop your sense of proportion, scale, and perspective.</li>
+                <li>Familiarize yourself with different drawing techniques and mediums.</li>
+            </ul>
+        
+            <h3>Key Points to Remember</h3>
+            <ul>
+                <li>The Manipal B.Arch entrance exam is a competitive exam, so it is essential to start your preparation early.</li>
+                <li>Focus on both theoretical knowledge and practical skills.</li>
+                <li>Manage your time effectively during the exam.</li>
+                <li>Stay calm and confident.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>By following these tips and putting in dedicated effort, you can increase your chances of success in the Manipal B.Arch entrance exam and embark on a fulfilling journey in the field of architecture.</p>
+        </div>
+        
+
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+        <div class="logos">
+            <span>A Physics Wallah Product</span>
+        </div>
+    </footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

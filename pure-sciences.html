@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Medicine</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Medicine Section */
+        .medicine {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .medicine h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .medicine p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Medicine Section -->
+    <section class="medicine">
+        <h1>Pure-Sciences</h1>
+        <p>Explore career opportunities in the Pure-Sciences field. Learn about various entrance exams required for admission into top medical colleges.</p>
+
+        <h2>Select your Entrance Exam</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('cuet')">CUET-UG</button>
+            <button onclick="showExam('icar')">ICAR AIEEA</button>
+            <button onclick="showExam('aiims')">AIIMS B.Sc Nursing</button>
+            <button onclick="showExam('met')">Manipal MET</button>
+        </div>
+
+        <!-- Dynamic Exam Information Section -->
+        <div id="cuet" class="exam-content">
+            <h2>CUET-UG for B.Sc (Various Specializations): A Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Common University Entrance Test Undergraduate (CUET-UG) has emerged as a pivotal gateway for students aspiring to pursue B.Sc programs with diverse specializations across numerous Indian universities. This guide explores the exam structure, eligibility criteria, and the array of colleges accepting CUET scores.</p>
+        
+            <h3>Exam Structure & Syllabus</h3>
+            <ul>
+                <li><strong>Computer-Based Test (CBT):</strong> CUET-UG is conducted online for a standardized testing experience.</li>
+                <li><strong>Three Sections:</strong></li>
+                <ul>
+                    <li><strong>Section I - Language Test:</strong> Assesses proficiency in a chosen language, including reading comprehension, grammar, and reasoning.</li>
+                    <li><strong>Section II - Domain Specific Subjects:</strong> Covers Physics, Chemistry, Biology, Mathematics, and other subjects relevant to B.Sc programs. The syllabus is based on NCERT Class 12.</li>
+                    <li><strong>Section III - General Test:</strong> Evaluates general awareness, quantitative reasoning, logical reasoning, and analytical skills.</li>
+                </ul>
+            </ul>
+        
+            <h3>Maximum Marks & Duration</h3>
+            <ul>
+                <li><strong>Total Marks:</strong> 700</li>
+                <li><strong>Sectional Breakdown:</strong></li>
+                <ul>
+                    <li>Section I (Language): 100 marks</li>
+                    <li>Section II (Domain): 500 marks</li>
+                    <li>Section III (General): 100 marks</li>
+                </ul>
+                <li><strong>Duration:</strong> Varies based on the number of subjects chosen in Section II.</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Class 12 or Equivalent:</strong> Candidates must have completed Class 12 or an equivalent exam from a recognized board.</li>
+                <li><strong>Minimum Aggregate:</strong> Generally 50%, though specific colleges may have higher cutoffs.</li>
+                <li><strong>Relaxation for Reserved Categories:</strong> SC/ST/OBC/EWS candidates may be eligible for a 5% relaxation.</li>
+            </ul>
+        
+            <h3>Extensive List of Participating Colleges & Universities</h3>
+            <ul>
+                <li><strong>Central Universities:</strong> Delhi University, Banaras Hindu University, Aligarh Muslim University, Jamia Millia Islamia, University of Hyderabad, Central University of Punjab, Dr. B.R. Ambedkar University Delhi.</li>
+                <li><strong>State Universities:</strong> Jadavpur University, Assam University, and other state universities across India.</li>
+                <li><strong>Deemed Universities:</strong> Several deemed universities also accept CUET scores for B.Sc admissions.</li>
+            </ul>
+            <p><strong>Note:</strong> The list of participating institutions may change. Refer to the official CUET website and university websites for updates.</p>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Understand the Syllabus:</strong> Be thorough with each chosen subject and the General Test syllabus.</li>
+                <li><strong>NCERT Focus:</strong> Build a strong foundation using NCERT textbooks.</li>
+                <li><strong>Practice & Mock Tests:</strong> Regular practice with mock tests and past papers is crucial for time management.</li>
+                <li><strong>Stay Updated:</strong> Follow CUET notifications and changes in the participating college list.</li>
+            </ul>
+        
+            <h3>Key Takeaways</h3>
+            <ul>
+                <li>CUET-UG provides a single-window admission process for multiple universities.</li>
+                <li>The exam evaluates language proficiency, domain-specific knowledge, and general aptitude.</li>
+                <li>Thorough preparation and staying informed are key to securing admission in a desired B.Sc program.</li>
+            </ul>
+        </div>
+
+        <div id="icar" class="exam-content">
+            <h2>ICAR AIEEA for B.Sc. Agriculture: A Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Indian Council of Agricultural Research (ICAR) All India Entrance Examination for Admission (AIEEA) is the gateway to undergraduate agricultural education in India. This national-level entrance exam paves the way for a rewarding career in agriculture and allied sciences.</p>
+        
+            <h3>Exam Structure and Syllabus</h3>
+            <p>The ICAR AIEEA UG exam is a pen-and-paper based test with a duration of 3 hours. It consists of three sections:</p>
+            <ul>
+                <li><strong>Section A (Physics, Chemistry, and Mathematics):</strong> Carries 120 marks and evaluates knowledge in core science subjects. The syllabus is based on NCERT Class 11 and 12.</li>
+                <li><strong>Section B (Biology):</strong> Carries 180 marks and assesses biological concepts, aligned with the NCERT syllabus.</li>
+                <li><strong>Section C (General Aptitude):</strong> Carries 60 marks and tests reasoning, problem-solving, and analytical skills.</li>
+            </ul>
+        
+            <h3>Maximum Marks and Eligibility</h3>
+            <ul>
+                <li><strong>Total Marks:</strong> 460</li>
+                <li><strong>Eligibility:</strong> Candidates must have passed Class 12 or an equivalent examination from a recognized board.</li>
+                <li><strong>Minimum Aggregate:</strong> 50% marks in Physics, Chemistry, and Biology (PCB) for general category; relaxation available for reserved categories.</li>
+            </ul>
+        
+            <h3>List of Participating Colleges and Universities</h3>
+            <p>ICAR AIEEA scores are accepted by top agricultural universities across India, including:</p>
+            <ul>
+                <li>Indian Agricultural Research Institute (IARI), New Delhi</li>
+                <li>Punjab Agricultural University (PAU), Ludhiana</li>
+                <li>Tamil Nadu Agricultural University (TNAU), Coimbatore</li>
+                <li>Acharya N.G. Ranga Agricultural University (ANGRAU), Hyderabad</li>
+                <li>GB Pant University of Agriculture and Technology (GBPUAT), Pantnagar</li>
+                <li>Chaudhary Charan Singh Haryana Agricultural University (CCS HAU), Hisar</li>
+                <li>Mahatma Phule Krishi Vidyapeeth (MPKV), Rahuri</li>
+                <li>Banaras Hindu University (BHU), Varanasi</li>
+                <li>Dr. Yashwant Singh Parmar University of Horticulture and Forestry (YSP UHF), Solan</li>
+                <li>University of Agricultural Sciences (UAS), Dharwad</li>
+            </ul>
+        
+            <h3>Application Process and Exam Schedule</h3>
+            <ul>
+                <li><strong>Exam Frequency:</strong> Conducted once a year, typically in April or May.</li>
+                <li><strong>Application Window:</strong> Generally starts in January or February.</li>
+                <li><strong>Application Mode:</strong> Candidates must apply online via the official ICAR website.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Thorough Understanding of NCERT Books:</strong> The syllabus is primarily based on NCERT Class 11 and 12 textbooks.</li>
+                <li><strong>Practice Previous Year Papers:</strong> Helps familiarize with the exam pattern and identify strengths and weaknesses.</li>
+                <li><strong>Time Management:</strong> Practice solving questions within the stipulated time.</li>
+                <li><strong>Mock Tests:</strong> Taking mock tests will simulate the exam environment and improve performance.</li>
+            </ul>
+        
+            <h3>Career Opportunities</h3>
+            <p>A B.Sc. Agriculture degree opens doors to diverse career paths, including:</p>
+            <ul>
+                <li><strong>Government Sector:</strong> Agricultural research institutes, extension services.</li>
+                <li><strong>Private Sector:</strong> Agri-business firms, food processing industries.</li>
+                <li><strong>NGOs & International Organizations:</strong> Engaged in agricultural development.</li>
+                <li><strong>Entrepreneurship:</strong> Start your own agri-business venture.</li>
+                <li><strong>Academia & Research:</strong> Opportunities in teaching and scientific research.</li>
+            </ul>
+        
+            <h3>Additional Tips</h3>
+            <ul>
+                <li>Stay updated with the latest developments in the agriculture sector.</li>
+                <li>Develop strong communication and interpersonal skills.</li>
+                <li>Maintain a passion for agriculture and environmental sustainability.</li>
+            </ul>
+        
+            <h3>Final Thoughts</h3>
+            <p>Success in the ICAR AIEEA exam requires dedication, hard work, and a strategic approach. With the right preparation and guidance, you can achieve your dream of pursuing a B.Sc. Agriculture degree and contributing to the growth of India's agricultural sector.</p>
+        </div>
+
+        <div id="aiims" class="exam-content">
+            <h2>AIIMS B.Sc Nursing Exam: Your Gateway to a Rewarding Nursing Career</h2>
+        
+            <h3>Introduction</h3>
+            <p>The All India Institute of Medical Sciences (AIIMS), a premier medical institution in India, conducts the AIIMS B.Sc Nursing entrance exam annually. This highly competitive exam serves as the gateway for aspiring nurses to secure admission into the prestigious B.Sc Nursing program offered by AIIMS and its affiliated institutions.</p>
+        
+            <h3>Exam Structure and Syllabus</h3>
+            <p>The AIIMS B.Sc Nursing exam typically comprises two papers:</p>
+            <ul>
+                <li><strong>Paper 1:</strong> Focuses on science subjects, including Physics, Chemistry, and Biology, along with General Knowledge. The syllabus aligns with the 10+2 curriculum.</li>
+                <li><strong>Paper 2:</strong> Assesses English language comprehension and aptitude for the nursing profession, covering vocabulary, grammar, reading comprehension, and basic nursing knowledge.</li>
+            </ul>
+            <p>Each paper is usually three hours long and carries 100 marks, making the total exam duration six hours and the maximum marks 200. The exam is conducted in English and follows an objective (multiple-choice questions) format.</p>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Educational Qualification:</strong> Candidates must have passed the 10+2 (or equivalent) examination from a recognized board with Physics, Chemistry, and Biology (PCB) as compulsory subjects.</li>
+                <li><strong>Minimum Marks:</strong> A minimum aggregate of 50% marks in PCB is generally required.</li>
+                <li><strong>Age Limit:</strong> Candidates must be between 17 and 25 years of age as of December 31st of the admission year.</li>
+            </ul>
+        
+            <h3>AIIMS B.Sc Nursing Participating Institutes</h3>
+            <p>The AIIMS B.Sc Nursing entrance exam score is accepted by the following AIIMS institutions:</p>
+            <ul>
+                <li>AIIMS New Delhi</li>
+                <li>AIIMS Bhopal</li>
+                <li>AIIMS Bhubaneswar</li>
+                <li>AIIMS Jodhpur</li>
+                <li>AIIMS Patna</li>
+                <li>AIIMS Raipur</li>
+                <li>AIIMS Rishikesh</li>
+                <li>AIIMS Mangalagiri</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Thorough Understanding of Syllabus:</strong> Familiarize yourself with both papers and build a strong foundation in core subjects.</li>
+                <li><strong>Practice with Previous Years' Papers:</strong> Solve past question papers to understand the exam pattern, question types, and difficulty level.</li>
+                <li><strong>Mock Tests:</strong> Regular mock tests help assess preparation levels, identify strengths and weaknesses, and improve time management.</li>
+                <li><strong>Stay Updated:</strong> Keep yourself informed about current affairs and developments in the field of nursing.</li>
+                <li><strong>Time Management:</strong> Develop strategies to effectively manage time during the exam and attempt all questions.</li>
+            </ul>
+        
+            <h3>Career Prospects</h3>
+            <p>A B.Sc Nursing degree from AIIMS opens doors to various career opportunities in the healthcare sector, including:</p>
+            <ul>
+                <li>Staff Nurse in hospitals and clinics</li>
+                <li>Nursing Supervisor or Manager</li>
+                <li>Nursing Educator or Researcher</li>
+                <li>Community Health Nurse</li>
+                <li>Military Nurse</li>
+                <li>Home Health Nurse</li>
+            </ul>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Application Process:</strong> Conducted online, requiring candidates to fill the form, upload documents, and pay the application fee.</li>
+                <li><strong>Admit Card:</strong> Issued to eligible candidates; must be carried to the exam center along with a valid photo ID.</li>
+                <li><strong>Result:</strong> Declared a few weeks after the exam.</li>
+                <li><strong>Counseling:</strong> Shortlisted candidates are called for counseling, where they are allotted seats in participating AIIMS institutions.</li>
+            </ul>
+        
+            <h3>Final Thoughts</h3>
+            <p>Dedication, hard work, and a passion for nursing are key to succeeding in the AIIMS B.Sc Nursing exam. With the right preparation and guidance, you can embark on a fulfilling career in the noble profession of nursing.</p>
+        </div>
+
+        <div id="met" class="exam-content">
+            <h2>Manipal MET Exam: Your Gateway to Premier Institutions</h2>
+        
+            <h3>Exam Structure and Format</h3>
+            <p>The Manipal Entrance Test (MET) is a computer-based test designed to assess a student's aptitude in core science and mathematics disciplines. It serves as a crucial stepping stone for those aspiring to join various undergraduate and postgraduate programs within the Manipal Academy of Higher Education (MAHE) and its affiliated institutions.</p>
+            
+            <ul>
+                <li><strong>Subjects and Question Distribution:</strong> The MET consists of Physics, Chemistry, and Mathematics, each comprising 60 multiple-choice questions, totaling 180 questions.</li>
+                <li><strong>Duration:</strong> Candidates are allotted 3 hours to complete the test.</li>
+                <li><strong>Marking Scheme:</strong> Each correct answer is awarded marks, and there is no negative marking for incorrect answers.</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Academic Qualification:</strong> Students who have passed or are appearing for their 12th standard (or equivalent) examination from a recognized board are eligible to appear for MET.</li>
+                <li><strong>Age Limit:</strong> There is no prescribed age limit for MET.</li>
+            </ul>
+        
+            <h3>Key Information and Timeline</h3>
+            <ul>
+                <li><strong>Exam Frequency:</strong> Conducted multiple times a year, typically in phases to accommodate a larger pool of applicants.</li>
+                <li><strong>Application Process:</strong> Applications are accepted online through the official MAHE website.</li>
+                <li><strong>Application Fee:</strong> A nominal fee is charged for the application.</li>
+                <li><strong>Admit Card:</strong> Issued online a few days before the exam date.</li>
+                <li><strong>Results:</strong> Typically declared within a few weeks of the exam.</li>
+            </ul>
+        
+            <h3>Comprehensive List of Accepting Institutions</h3>
+            <p>MET scores are recognized by a wide array of esteemed institutions under the MAHE umbrella and beyond, including:</p>
+            <ul>
+                <li><strong>Manipal Institute of Technology (MIT):</strong> A renowned engineering college offering diverse specializations.</li>
+                <li><strong>Manipal College of Medical Sciences (MCOMS):</strong> A leading medical college with a strong reputation.</li>
+                <li><strong>Manipal College of Dental Sciences (MCODS):</strong> A premier dental college known for its academic excellence.</li>
+                <li><strong>Manipal Institute of Communication (MIC):</strong> A reputed communication school offering media and journalism programs.</li>
+                <li><strong>Manipal School of Architecture and Planning (MSAP):</strong> A sought-after architecture school focusing on innovation and design.</li>
+                <li><strong>Manipal Academy of Higher Education, Dubai (MAHE Dubai):</strong> An international campus offering a global perspective on education.</li>
+                <li><strong>Manipal Academy of Higher Education, Malaysia (MAHE Malaysia):</strong> Another international campus providing diverse educational opportunities.</li>
+                <li><strong>Manipal Academy of Higher Education, Jaipur (MAHE Jaipur):</strong> A newer addition to the MAHE family, offering quality education in various fields.</li>
+                <li><strong>Manipal Academy of Higher Education, Sikkim (MAHE Sikkim):</strong> A campus nestled in the Himalayas, providing a unique learning experience.</li>
+            </ul>
+        
+            <h3>Additional Advantages of MET</h3>
+            <ul>
+                <li><strong>Multiple Attempts:</strong> Students can attempt the MET multiple times to improve their scores.</li>
+                <li><strong>Wide Range of Programs:</strong> Opens doors to undergraduate and postgraduate programs in engineering, medicine, dentistry, communication, architecture, and more.</li>
+                <li><strong>Scholarships and Financial Aid:</strong> MAHE institutions offer scholarships and financial aid to meritorious students based on their MET scores.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Thorough Understanding of Concepts:</strong> A strong foundation in Physics, Chemistry, and Mathematics is essential for success in MET.</li>
+                <li><strong>Practice with Mock Tests:</strong> Solving mock tests and previous years' question papers helps familiarize students with the exam pattern and improve time management skills.</li>
+                <li><strong>Time Management:</strong> Effectively managing time during the exam is crucial to attempting all questions.</li>
+                <li><strong>Stay Calm and Focused:</strong> Maintaining a calm and composed mindset during the exam can enhance performance.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>The Manipal MET exam is a gateway to numerous higher education opportunities. With its comprehensive syllabus, multiple attempts, and recognition by prestigious institutions, MET provides students with a platform to showcase their academic prowess. By following a strategic preparation plan and staying focused, aspirants can crack the MET and embark on a successful academic journey.</p>
+        </div>
+        
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+    </footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

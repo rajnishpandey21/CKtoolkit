@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Different</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Section */
+        .content {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <section class="content">
+        <h1>Psychology</h1>
+        <p>Explore career opportunities and learn about various entrance exams required for different fields of study.</p>
+
+        <h2>Select your Entrance Exam</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('cuet')">CUET (Common University Entrance Test)</button>
+        </div>
+
+        <!-- Dynamic Exam Information Section -->
+        <div id="cuet" class="exam-content">
+            <h2>CUET (Common University Entrance Test)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Common University Entrance Test (CUET) is a standardized exam for admission into various undergraduate programs at central and other participating universities across India.</p>
+        
+            <h3>Exam Structure & Syllabus</h3>
+            <ul>
+                <li><strong>Computer-Based Test (CBT):</strong> Conducted online with multiple-choice questions.</li>
+                <li><strong>Sections:</strong></li>
+                <ul>
+                    <li>Language Test</li>
+                    <li>Domain-Specific Subjects (Physics, Chemistry, Biology, etc.)</li>
+                    <li>General Test (Logical reasoning, analytical skills, and general awareness)</li>
+                </ul>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li>Class 12 or equivalent with at least 50% marks (varies by university).</li>
+                <li>SC/ST/OBC candidates may be eligible for relaxation.</li>
+            </ul>
+
+            <h3>Participating Universities</h3>
+            <ul>
+                <li>Delhi University</li>
+                <li>Banaras Hindu University</li>
+                <li>Aligarh Muslim University</li>
+                <li>University of Hyderabad</li>
+                <li>Many others across India</li>
+            </ul>
+
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li>Thoroughly review NCERT textbooks.</li>
+                <li>Practice previous year question papers.</li>
+                <li>Take mock tests for better time management.</li>
+            </ul>
+        </div>
+
+        <div id="gate" class="exam-content">
+            <h2>GATE (Graduate Aptitude Test in Engineering)</h2>
+            <p>Details about the GATE exam will appear here.</p>
+        </div>
+
+        <div id="cat" class="exam-content">
+            <h2>CAT (Common Admission Test)</h2>
+            <p>Details about the CAT exam will appear here.</p>
+        </div>
+
+        <div id="neet" class="exam-content">
+            <h2>NEET (National Eligibility cum Entrance Test)</h2>
+            <p>Details about the NEET exam will appear here.</p>
+        </div>
+        
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+    </footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

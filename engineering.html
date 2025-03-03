@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Engineering</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .auth-buttons .login {
+            color: #333;
+        }
+
+        .auth-buttons .signup {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Engineering Section */
+        .engineering {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .engineering h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .engineering p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+                /* Footer */
+                .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .logos span {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="login">Log in</a>
+            <a href="#" class="signup">Sign up</a>
+        </div>
+    </nav>
+
+    <!-- Engineering Section -->
+    <section class="engineering">
+        <h1>Engineering</h1>
+        <p>Explore career opportunities in Engineering. Learn about various entrance exams that help you secure admission in top engineering colleges.</p>
+
+        <h2>Select your Entrance</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('jee')">JEE (Mains, Advanced)</button>
+            <button onclick="showExam('bitsat')">BITSAT</button>
+            <button onclick="showExam('viteee')">VITEEE</button>
+            <button onclick="showExam('srmjeee')">SRMJEEE</button>
+            <button onclick="showExam('met')">MET</button>
+            <button onclick="showExam('mhtcet')">MHT CET</button>
+            <button onclick="showExam('kcet')">KCET</button>
+            <button onclick="showExam('tnea')">TNEA</button>
+            <button onclick="showExam('wbjee')">WBJEE</button>
+            <button onclick="showExam('apeamcet')">AP EAMCET</button>
+            <button onclick="showExam('tseamcet')">TS EAMCET</button>
+            <button onclick="showExam('keam')">KEAM</button>
+            <button onclick="showExam('gujcet')">GUJCET</button>
+            <button onclick="showExam('upsee')">UPSEE (UPCET)</button>
+            <button onclick="showExam('lpunest')">LPUNEST</button>
+            <button onclick="showExam('cusatcat')">CUSAT CAT</button>
+            <button onclick="showExam('set')">SET</button>
+            <button onclick="showExam('upeseat')">UPES-EAT</button>
+        </div>
+        
+
+        <!-- Dynamic Exam Information Section -->
+        <div id="jee" class="exam-content">
+            <h2>JEE (Mains, Advanced)</h2>
+            
+            <h3>Introduction</h3>
+            <p>The Joint Entrance Examination (JEE) is a national-level entrance exam conducted by the National Testing Agency (NTA) for admission to various engineering and architecture courses in India. The JEE is conducted in two stages: JEE Main and JEE Advanced.</p>
+        
+            <h3>Format</h3>
+            <ul>
+                <li>JEE Main is a computer-based test (CBT) conducted in two sessions: January and April.</li>
+                <li>JEE Advanced is a paper-based test (PBT) conducted in May.</li>
+                <li>Both JEE Main and JEE Advanced consist of three sections: Physics, Chemistry, and Mathematics.</li>
+            </ul>
+        
+            <h3>Eligibility</h3>
+            <ul>
+                <li>Candidates who have passed Class 12 or an equivalent examination with at least 75% marks in aggregate (65% for SC/ST candidates) in Physics, Chemistry, and Mathematics are eligible to appear for JEE Main.</li>
+                <li>Candidates who have secured a top 2,50,000 rank in JEE Main are eligible to appear for JEE Advanced.</li>
+            </ul>
+        
+            <h3>Scope</h3>
+            <ul>
+                <li>JEE Main scores are accepted by various engineering and architecture colleges across India for admission to undergraduate programs.</li>
+                <li>JEE Advanced scores are accepted by the Indian Institutes of Technology (IITs), the National Institutes of Technology (NITs), and other premier engineering colleges for admission to undergraduate programs.</li>
+            </ul>
+        
+            <h3>Colleges Accepting JEE (Mains, Advanced) Scores</h3>
+            <p>The following are some of the colleges that accept JEE (Mains, Advanced) scores for admission (ranked based on NIRF Rankings):</p>
+        
+            <ul>
+                <li>Indian Institute of Technology Madras (IIT Madras)</li>
+                <li>Indian Institute of Technology Delhi (IIT Delhi)</li>
+                <li>Indian Institute of Technology Bombay (IIT Bombay)</li>
+                <li>Indian Institute of Technology Kanpur (IIT Kanpur)</li>
+                <li>Indian Institute of Technology Kharagpur (IIT Kharagpur)</li>
+                <li>Indian Institute of Technology Roorkee (IIT Roorkee)</li>
+                <li>Indian Institute of Technology Guwahati (IIT Guwahati)</li>
+                <li>Indian Institute of Technology Hyderabad (IIT Hyderabad)</li>
+                <li>National Institute of Technology Tiruchirappalli (NIT Trichy)</li>
+                <li>Indian Institute of Technology (BHU) Varanasi</li>
+                <li>Vellore Institute of Technology (VIT), Vellore</li>
+                <li>Jadavpur University, Kolkata</li>
+                <li>SRM Institute of Science and Technology, Chennai</li>
+                <li>Anna University, Chennai</li>
+                <li>Indian Institute of Technology (Indian School of Mines) Dhanbad</li>
+                <li>Indian Institute of Technology Indore (IIT Indore)</li>
+                <li>National Institute of Technology Karnataka, Surathkal</li>
+                <li>Indian Institute of Technology Gandhinagar (IIT Gandhinagar)</li>
+                <li>National Institute of Technology Rourkela</li>
+                <li>Birla Institute of Technology and Science, Pilani</li>
+                <li>National Institute of Technology Warangal</li>
+                <li>Indian Institute of Technology Ropar (IIT Ropar)</li>
+                <li>Amrita Vishwa Vidyapeetham, Coimbatore</li>
+                <li>Jamia Millia Islamia, New Delhi</li>
+                <li>National Institute of Technology Calicut</li>
+                <li>Siksha 'O' Anusandhan, Bhubaneswar</li>
+                <li>Delhi Technological University, New Delhi</li>
+                <li>Indian Institute of Technology Jodhpur (IIT Jodhpur)</li>
+                <li>Thapar Institute of Engineering and Technology, Patiala</li>
+                <li>Amity University, Noida</li>
+                <li>Indian Institute of Technology Mandi (IIT Mandi)</li>
+                <li>Chandigarh University, Chandigarh</li>
+                <li>Aligarh Muslim University, Aligarh</li>
+                <li>Indian Institute of Technology Patna (IIT Patna)</li>
+                <li>Koneru Lakshmaiah Education Foundation University (K L College of Engineering)</li>
+                <li>Kalasalingam Academy of Research and Education, Tamil Nadu</li>
+                <li>Kalinga Institute of Industrial Technology, Bhubaneswar</li>
+                <li>Shanmugha Arts Science Technology and Research Academy, Thanjavur</li>
+                <li>Visvesvaraya National Institute of Technology Nagpur</li>
+                <li>National Institute of Technology Silchar</li>
+            </ul>
+        </div>
+        
+
+        <div id="bitsat" class="exam-content">
+            <h2>BITSAT (Birla Institute of Technology and Science Admission Test)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Birla Institute of Technology and Science Admission Test (BITSAT) is a national-level entrance examination conducted by BITS Pilani for admissions into its Integrated First-Degree programs, including:</p>
+            <ul>
+                <li>Bachelor of Engineering (B.E.)</li>
+                <li>Bachelor of Pharmacy (B.Pharm.)</li>
+                <li>Master of Science (M.Sc.)</li>
+            </ul>
+            <p>BITS Pilani has campuses in Pilani, Goa, Hyderabad, and Dubai, and BITSAT scores are accepted across all these campuses.</p>
+        
+            <h3>Exam Structure and Pattern</h3>
+            <p>BITSAT is a computer-based test (CBT) with a duration of 3 hours. The question paper comprises multiple-choice questions (MCQs) divided into four parts:</p>
+            <ul>
+                <li><strong>Part I:</strong> Physics – 30 questions</li>
+                <li><strong>Part II:</strong> Chemistry – 30 questions</li>
+                <li><strong>Part III:</strong></li>
+                <ul>
+                    <li>English Proficiency – 10 questions</li>
+                    <li>Logical Reasoning – 20 questions</li>
+                </ul>
+                <li><strong>Part IV:</strong> Mathematics/Biology (depending on the program) – 40 questions</li>
+            </ul>
+            <p>The total number of questions is 130, and the maximum marks are 390. Each correct answer awards 3 marks, while each incorrect answer results in a deduction of 1 mark. Unattempted questions do not affect the score.</p>
+            <p><strong>Additional Question Feature:</strong> If a candidate answers all 130 questions before the allotted time, they have the option to attempt an additional 12 questions (four each from Physics, Chemistry, and Mathematics/Biology), allowing for the possibility of scoring higher.</p>
+        
+            <h3>Eligibility Criteria</h3>
+            <p>To be eligible for BITSAT, candidates must meet the following criteria:</p>
+            <ul>
+                <li><strong>For all programs except B.Pharm.:</strong> Candidates should have passed the 12th examination from a recognized Central or State board or its equivalent with Physics, Chemistry, and Mathematics.</li>
+                <li><strong>For B.Pharm.:</strong> Candidates should have passed the 12th examination with Physics, Chemistry, and Biology. However, candidates with Mathematics are also eligible to apply.</li>
+                <li><strong>Minimum Marks:</strong></li>
+                <ul>
+                    <li>A minimum aggregate of 75% marks in Physics, Chemistry, and Mathematics/Biology in the 12th examination.</li>
+                    <li>At least 60% marks in each of the subjects: Physics, Chemistry, and Mathematics/Biology.</li>
+                </ul>
+                <li><strong>Year of Passing:</strong> Candidates appearing for the 12th examination in the current year or those who have passed in the previous year are eligible to apply.</li>
+                <li><strong>Proficiency in English:</strong> Adequate proficiency in English is required.</li>
+                <li><strong>Direct Admission:</strong> First-rank holders of all central and state boards are offered direct admission to their preferred program, irrespective of their BITSAT score, provided they meet the above eligibility criteria.</li>
+            </ul>
+        
+            <h3>Participating Institutes</h3>
+            <p>BITSAT scores are primarily accepted by the following BITS campuses:</p>
+            <ul>
+                <li><strong>BITS Pilani, Pilani Campus:</strong> The flagship campus known for its legacy and academic excellence.</li>
+                <li><strong>BITS Pilani, K.K. Birla Goa Campus:</strong> Established in 2004, offering a picturesque environment and modern infrastructure.</li>
+                <li><strong>BITS Pilani, Hyderabad Campus:</strong> Inaugurated in 2008, known for its state-of-the-art facilities and research initiatives.</li>
+                <li><strong>BITS Pilani, Dubai Campus:</strong> Catering to international students, offering diverse programs in engineering and sciences.</li>
+                <li><strong>NIIT University, Neemrana:</strong> Accepts BITSAT scores for admission into its B.Tech programs, providing candidates with broader options.</li>
+            </ul>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Application Process:</strong> Candidates can apply for BITSAT online through the official BITS admission website. The application window typically opens in January and closes in April.</li>
+                <li><strong>Exam Sessions:</strong> BITSAT is conducted in multiple sessions, allowing candidates to choose their preferred test date and center based on availability.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li>Familiarize yourself with the exam pattern and syllabus.</li>
+                <li>Practice with previous years' question papers and mock tests.</li>
+                <li>Focus on time management and accuracy.</li>
+                <li>Strengthen fundamental concepts in Physics, Chemistry, Mathematics/Biology, and English Proficiency & Logical Reasoning.</li>
+            </ul>
+        
+            <p>For detailed information, including updates on application dates, exam schedules, and counseling procedures, candidates are advised to regularly visit the official BITS admission website.</p>
+        </div>
+        
+        
+        <div id="viteee" class="exam-content">
+            <h2>VITEEE (VIT Engineering Entrance Examination)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The VIT Engineering Entrance Examination (VITEEE) is a national-level entrance test conducted by the Vellore Institute of Technology (VIT) for admissions into its Bachelor of Technology (B.Tech) programs across various campuses. The exam evaluates candidates' proficiency in subjects like Physics, Chemistry, Mathematics/Biology, Aptitude, and English.</p>
+        
+            <h3>Exam Structure and Pattern</h3>
+            <p>VITEEE is a computer-based test (CBT) with a duration of 2 hours and 30 minutes. The question paper comprises multiple-choice questions (MCQs) divided into the following sections:</p>
+            <ul>
+                <li><strong>Physics:</strong> 35 questions</li>
+                <li><strong>Chemistry:</strong> 35 questions</li>
+                <li><strong>Mathematics/Biology:</strong> 40 questions</li>
+                <li><strong>Aptitude:</strong> 10 questions</li>
+                <li><strong>English:</strong> 5 questions</li>
+            </ul>
+            <p>In total, there are 125 questions, each carrying 1 mark, making the maximum score 125 marks. Notably, there is no negative marking for incorrect answers.</p>
+        
+            <h3>Eligibility Criteria</h3>
+            <p>To be eligible for VITEEE, candidates must meet the following criteria:</p>
+            <ul>
+                <li><strong>Nationality:</strong> Applicants should be residents or non-resident Indians. Persons of Indian Origin (PIO) and Overseas Citizens of India (OCI) are also eligible.</li>
+                <li><strong>Age Limit:</strong> Candidates must be born on or after July 1, 2003.</li>
+                <li><strong>Educational Qualification:</strong></li>
+                <ul>
+                    <li>Must have completed or be appearing for the 10+2 examination from a recognized board with Physics, Chemistry, and Mathematics/Biology as mandatory subjects.</li>
+                    <li>Should secure an aggregate of 60% in Physics, Chemistry, and Mathematics/Biology in the qualifying examination.</li>
+                    <li>For candidates belonging to SC/ST categories, the minimum aggregate marks required is 50% in Physics, Chemistry, and Mathematics/Biology.</li>
+                </ul>
+            </ul>
+        
+            <h3>Participating Institutes</h3>
+            <p>VITEEE scores are primarily accepted by the following VIT campuses:</p>
+            <ul>
+                <li><strong>Vellore Institute of Technology (VIT), Vellore:</strong> The main campus offering a wide range of engineering disciplines.</li>
+                <li><strong>VIT Chennai:</strong> Known for its modern infrastructure and industry collaborations.</li>
+                <li><strong>VIT-AP University, Amaravati:</strong> Offers innovative programs with a focus on research and development.</li>
+                <li><strong>VIT Bhopal University:</strong> Emphasizes a technology-driven curriculum with state-of-the-art facilities.</li>
+            </ul>
+            <p>These campuses offer various B.Tech specializations, including but not limited to Computer Science and Engineering, Electronics and Communication Engineering, Mechanical Engineering, and Civil Engineering.</p>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Application Process:</strong> Candidates can apply for VITEEE online through the official VIT website. The application window typically opens in November and closes in March.</li>
+                <li><strong>Exam Sessions:</strong> VITEEE is conducted in multiple sessions, and candidates can choose their preferred test date and center based on availability.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li>Understand the exam pattern and syllabus thoroughly.</li>
+                <li>Practice with previous years' question papers and take mock tests to assess your preparation.</li>
+                <li>Focus on time management and accuracy during practice sessions.</li>
+                <li>Strengthen your fundamentals in Physics, Chemistry, Mathematics/Biology, and enhance your Aptitude and English skills.</li>
+            </ul>
+        
+            <p>For detailed information, including updates on application dates, exam schedules, and counseling procedures, candidates are advised to regularly visit the official VIT website.</p>
+        </div>
+        
+        
+        <div id="srmjeee" class="exam-content">
+            <h2>SRMJEEE (SRM Joint Engineering Entrance Examination)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The SRM Joint Engineering Entrance Examination (SRMJEEE) is a national-level entrance test conducted by SRM Institute of Science and Technology (SRMIST) for admissions into its Bachelor of Technology (B.Tech) and Integrated M.Tech programs across various campuses. The exam assesses candidates' knowledge in subjects such as Physics, Chemistry, Mathematics/Biology, English, and Aptitude.</p>
+        
+            <h3>Exam Structure and Pattern</h3>
+            <p>SRMJEEE is a computer-based test (CBT) with a duration of 2 hours and 30 minutes. The question paper comprises multiple-choice questions (MCQs) divided into the following sections:</p>
+            <ul>
+                <li><strong>Physics:</strong> 35 questions</li>
+                <li><strong>Chemistry:</strong> 35 questions</li>
+                <li><strong>Mathematics/Biology:</strong> 40 questions</li>
+                <li><strong>English:</strong> 5 questions</li>
+                <li><strong>Aptitude:</strong> 10 questions</li>
+            </ul>
+            <p>In total, there are 125 questions, each carrying 1 mark, making the maximum score 125 marks. Notably, there is no negative marking for incorrect answers.</p>
+        
+            <h3>Eligibility Criteria</h3>
+            <p>To be eligible for SRMJEEE, candidates must meet the following criteria:</p>
+            <ul>
+                <li><strong>Nationality:</strong> Applicants should be residents or non-resident Indians. Persons of Indian Origin (PIO) and Overseas Citizens of India (OCI) are also eligible.</li>
+                <li><strong>Age Limit:</strong> Candidates must be born between July 1, 2003, and July 1, 2008.</li>
+                <li><strong>Educational Qualification:</strong></li>
+                <ul>
+                    <li>Must have completed or be appearing for the 10+2 examination from a recognized board with Physics, Chemistry, and Mathematics/Biology as mandatory subjects.</li>
+                    <li>Should secure a minimum aggregate of 60% in Physics, Chemistry, and Mathematics/Biology in the qualifying examination.</li>
+                </ul>
+                <li><strong>Direct Admission:</strong> SRMIST offers direct admission and scholarships to first-rank holders of all central and state boards in India, top 10,000 IIT JEE rankers, top rankers from each district of Tamil Nadu, and exemplary sportspersons at the national and international levels.</li>
+            </ul>
+        
+            <h3>Participating Institutes</h3>
+            <p>SRMJEEE scores are accepted by the following SRM campuses:</p>
+            <ul>
+                <li><strong>SRM Institute of Science and Technology (SRMIST), Kattankulathur:</strong> The main campus in Tamil Nadu, offering a wide range of engineering disciplines.</li>
+                <li><strong>SRMIST, Ramapuram Campus:</strong> Located in Chennai, known for its modern infrastructure and academic excellence.</li>
+                <li><strong>SRMIST, Vadapalani Campus:</strong> Also in Chennai, focusing on industry-oriented education.</li>
+                <li><strong>SRMIST, Delhi-NCR Campus, Ghaziabad:</strong> Catering to students in the northern region with diverse engineering programs.</li>
+                <li><strong>SRM University, Sonepat (Haryana):</strong> Emphasizes research and innovation in engineering education.</li>
+                <li><strong>SRM University, Andhra Pradesh:</strong> Offers interdisciplinary engineering programs with a global perspective.</li>
+            </ul>
+            <p>These campuses provide a variety of B.Tech specializations, including Computer Science and Engineering, Electronics and Communication Engineering, Mechanical Engineering, Civil Engineering, and more.</p>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Application Process:</strong> Candidates can apply for SRMJEEE online through the official SRMIST website. The application window for Phase I is open from November 12, 2024, to April 16, 2025.</li>
+                <li><strong>Exam Mode:</strong> The examination is conducted in Remote Proctored Online Mode (RPOM), allowing candidates to take the test from their homes while being monitored remotely.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li>Understand the exam pattern and syllabus thoroughly.</li>
+                <li>Practice with previous years' question papers and take mock tests to assess your preparation.</li>
+                <li>Focus on time management and accuracy during practice sessions.</li>
+                <li>Strengthen your fundamentals in Physics, Chemistry, Mathematics/Biology, and enhance your English and Aptitude skills.</li>
+            </ul>
+        
+            <p>For detailed information, including updates on application dates, exam schedules, and counseling procedures, candidates are advised to regularly visit the official SRMIST website.</p>
+        </div>
+        
+        
+        <div id="met" class="exam-content">
+            <h2>MET (Manipal Entrance Test)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Manipal Entrance Test (MET) is a university-level examination conducted by the Manipal Academy of Higher Education (MAHE) for admissions into various undergraduate and postgraduate programs, notably the Bachelor of Technology (B.Tech) courses across its campuses. The exam evaluates candidates' proficiency in subjects such as Physics, Chemistry, Mathematics, English, and Aptitude.</p>
+        
+            <h3>Exam Structure and Pattern</h3>
+            <p>MET is a computer-based test (CBT) with a duration of 2 hours. The question paper comprises multiple-choice questions (MCQs) and numerical answer type (NAT) questions, divided into the following sections:</p>
+            <ul>
+                <li><strong>Physics:</strong> 10 MCQs & 5 NAT</li>
+                <li><strong>Chemistry:</strong> 10 MCQs & 5 NAT</li>
+                <li><strong>Mathematics:</strong> 15 MCQs & 5 NAT</li>
+                <li><strong>English:</strong> 10 MCQs</li>
+            </ul>
+            <p>In total, there are 60 questions, each carrying 4 marks, making the maximum score 240 marks.</p>
+            <p><strong>Marking Scheme:</strong></p>
+            <ul>
+                <li>For MCQs, each correct answer awards 4 marks, while each incorrect answer results in a deduction of 1 mark.</li>
+                <li>For NAT questions, 4 marks are awarded for correct answers, with no negative marking for incorrect responses.</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <p>To be eligible for MET, candidates must meet the following criteria:</p>
+            <ul>
+                <li><strong>Nationality:</strong> Applicants should be Indian citizens.</li>
+                <li><strong>Educational Qualification:</strong></li>
+                <ul>
+                    <li>Must have completed or be appearing for the 10+2 examination from a recognized board with Physics, Mathematics, and English as compulsory subjects, along with Chemistry/Biotechnology/Biology/any technical vocational subject as optional.</li>
+                    <li>Should secure a minimum aggregate of 50% marks in Physics, Mathematics, and any one of the optional subjects.</li>
+                </ul>
+                <li><strong>Age Limit:</strong> There is no age limit specified for the examination.</li>
+            </ul>
+        
+            <h3>Participating Institutes</h3>
+            <p>MET scores are accepted by the following MAHE constituent institutions:</p>
+            <ul>
+                <li><strong>Manipal Institute of Technology (MIT), Manipal:</strong> The main campus offering a wide range of engineering disciplines.</li>
+                <li><strong>Manipal University Jaipur (MUJ):</strong> Known for its modern infrastructure and academic excellence.</li>
+                <li><strong>Sikkim Manipal Institute of Technology (SMIT), Sikkim:</strong> Catering to students in the northeastern region with diverse engineering programs.</li>
+                <li><strong>MIT Bengaluru:</strong> A newly established campus focusing on innovative engineering education.</li>
+            </ul>
+            <p>These campuses collectively offer various B.Tech specializations, including Computer Science and Engineering, Electronics and Communication Engineering, Mechanical Engineering, Civil Engineering, and more.</p>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Application Process:</strong> Candidates can apply for MET online through the official MAHE website. The application process for Phase 1 is ongoing, with the last date to apply being March 15, 2025.</li>
+                <li><strong>Slot Booking:</strong> Registered candidates must complete the slot booking process to select their preferred exam date and time. Slots are allocated on a first-come, first-served basis, subject to availability.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li>Understand the exam pattern and syllabus thoroughly.</li>
+                <li>Practice with previous years' question papers and take mock tests to assess your preparation.</li>
+                <li>Focus on time management and accuracy during practice sessions.</li>
+                <li>Strengthen your fundamentals in Physics, Chemistry, Mathematics, and enhance your English and Aptitude skills.</li>
+            </ul>
+        
+            <p>For detailed information, including updates on application dates, exam schedules, and counseling procedures, candidates are advised to regularly visit the official MAHE website.</p>
+        </div>
+        
+        
+        <div id="mhtcet" class="exam-content">
+            <h2>MHT CET (Maharashtra Common Entrance Test)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Maharashtra Common Entrance Test (MHT CET) is a state-level examination conducted by the State Common Entrance Test Cell, Maharashtra, for admissions into undergraduate programs in engineering, pharmacy, and agriculture within the state. The exam is divided into two groups based on the subjects chosen by the candidates:</p>
+            <ul>
+                <li><strong>PCM:</strong> Physics, Chemistry, and Mathematics</li>
+                <li><strong>PCB:</strong> Physics, Chemistry, and Biology</li>
+            </ul>
+        
+            <h3>Exam Structure and Pattern</h3>
+            <p>MHT CET is a computer-based test (CBT) with a total duration of 180 minutes (3 hours). The exam is divided into two sections, each lasting 90 minutes:</p>
+            <ul>
+                <li><strong>Section I:</strong> Physics and Chemistry</li>
+                <li><strong>Section II:</strong> Mathematics (for PCM group) or Biology (for PCB group)</li>
+            </ul>
+        
+            <h4>Detailed Exam Pattern</h4>
+            <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                    <th>Group</th>
+                    <th>Subject</th>
+                    <th>Number of Questions</th>
+                    <th>Marks per Question</th>
+                    <th>Total Marks</th>
+                </tr>
+                <tr>
+                    <td rowspan="3">PCM</td>
+                    <td>Physics</td>
+                    <td>50</td>
+                    <td>1</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td>50</td>
+                    <td>1</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Mathematics</td>
+                    <td>50</td>
+                    <td>2</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">PCB</td>
+                    <td>Physics</td>
+                    <td>50</td>
+                    <td>1</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td>50</td>
+                    <td>1</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Biology</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>100</td>
+                </tr>
+            </table>
+            <p>In the PCM group, the total number of questions is 150, with a maximum score of 200 marks. In the PCB group, there are 200 questions, also totaling 200 marks. Notably, there is no negative marking for incorrect answers.</p>
+        
+            <h3>Syllabus Distribution</h3>
+            <p>The MHT CET syllabus is based on the Maharashtra State Board of Secondary and Higher Secondary Education curriculum. The distribution of questions is as follows:</p>
+            <ul>
+                <li><strong>Class 11 Syllabus:</strong> Approximately 20% of the questions</li>
+                <li><strong>Class 12 Syllabus:</strong> Approximately 80% of the questions</li>
+            </ul>
+            <p>This distribution applies to all subjects in both PCM and PCB groups.</p>
+        
+            <h3>Eligibility Criteria</h3>
+            <p>To be eligible for MHT CET, candidates must meet the following criteria:</p>
+            <ul>
+                <li><strong>Nationality:</strong> Indian citizens</li>
+                <li><strong>Educational Qualification:</strong></li>
+                <ul>
+                    <li><strong>For Engineering and Technology Programs (PCM Group):</strong></li>
+                    <ul>
+                        <li>Must have passed or be appearing for the 10+2 examination with Physics, Mathematics, and Chemistry/Biotechnology/Biology/Technical/Vocational subjects.</li>
+                        <li>Should have secured a minimum of 50% aggregate marks (45% for reserved category candidates) in the above subjects taken together.</li>
+                    </ul>
+                    <li><strong>For Pharmacy Programs (PCB Group):</strong></li>
+                    <ul>
+                        <li>Must have passed or be appearing for the 10+2 examination with Physics, Chemistry, and Biology/Mathematics.</li>
+                        <li>Should have secured a minimum of 50% aggregate marks (45% for reserved category candidates) in the above subjects taken together.</li>
+                    </ul>
+                </ul>
+            </ul>
+        
+            <h3>Participating Institutes</h3>
+            <p>MHT CET scores are accepted by various institutions across Maharashtra, including:</p>
+            <ul>
+                <li>College of Engineering, Pune (COEP)</li>
+                <li>Veermata Jijabai Technological Institute (VJTI), Mumbai</li>
+                <li>Sardar Patel College of Engineering, Mumbai</li>
+                <li>Shri Ramdeobaba College of Engineering and Management, Nagpur</li>
+                <li>Walchand College of Engineering, Sangli</li>
+                <li>Institute of Chemical Technology (ICT), Mumbai</li>
+                <li>Dwarkadas J. Sanghvi College of Engineering, Mumbai</li>
+                <li>Vishwakarma Institute of Technology, Pune</li>
+                <li>Pune Institute of Computer Technology (PICT), Pune</li>
+                <li>Sardar Patel Institute of Technology (SPIT), Mumbai</li>
+                <li>MIT World Peace University, Pune</li>
+                <li>Fr. Conceicao Rodrigues College of Engineering (CRCE), Mumbai</li>
+                <li>K. J. Somaiya College of Engineering, Mumbai</li>
+                <li>Sinhgad College of Engineering, Pune</li>
+            </ul>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Application Process:</strong> Candidates can apply for MHT CET online through the official website. The application window typically opens in December and closes in February.</li>
+                <li><strong>Exam Phases:</strong> MHT CET is conducted in multiple phases, with separate schedules for PCM and PCB groups:</li>
+                <ul>
+                    <li><strong>PCB Group:</strong> April 9 to 17, 2025</li>
+                    <li><strong>PCM Group:</strong> April 19 to 27, 2025</li>
+                </ul>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li>Understand the exam pattern and syllabus thoroughly.</li>
+                <li>Focus on Class 12 topics, as they constitute 80% of the questions.</li>
+                <li>Practice with previous years' question papers and take mock tests to assess your preparation.</li>
+                <li>Manage your time effectively during the exam, allocating appropriate time to each section.</li>
+            </ul>
+        
+            <p>For detailed information, including updates on application dates, exam schedules, and counseling procedures, candidates are advised to regularly visit the official MHT CET website.</p>
+        </div>
+        
+        
+        <div id="kcet" class="exam-content">
+            <h2>KCET (Karnataka Common Entrance Test)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Karnataka Common Entrance Test (KCET) is a state-level examination conducted by the Karnataka Examinations Authority (KEA) for admissions into various undergraduate programs, including Engineering, Pharmacy, Agriculture, and Veterinary courses within Karnataka. The exam evaluates candidates' proficiency in subjects such as Physics, Chemistry, Mathematics, and Biology.</p>
+        
+            <h3>Exam Structure and Pattern</h3>
+            <p>KCET is an offline, pen-and-paper-based test comprising multiple-choice questions (MCQs). The examination is divided into four sessions, each lasting 1 hour and 20 minutes, conducted over two days. The subject-wise distribution is as follows:</p>
+            
+            <h4>Day 1:</h4>
+            <ul>
+                <li><strong>Biology:</strong> 60 questions</li>
+                <li><strong>Mathematics:</strong> 60 questions</li>
+            </ul>
+        
+            <h4>Day 2:</h4>
+            <ul>
+                <li><strong>Physics:</strong> 60 questions</li>
+                <li><strong>Chemistry:</strong> 60 questions</li>
+            </ul>
+        
+            <p>Each correct answer awards 1 mark, and there is no negative marking for incorrect responses. The total number of questions is 240, with a maximum score of 240 marks.</p>
+        
+            <h3>Eligibility Criteria</h3>
+            <p>To be eligible for KCET, candidates must meet the following criteria:</p>
+            <ul>
+                <li><strong>Nationality:</strong> Applicants should be Indian citizens.</li>
+                <li><strong>Educational Qualification:</strong></li>
+                <ul>
+                    <li><strong>For Engineering Courses:</strong></li>
+                    <ul>
+                        <li>Must have passed or be appearing for the 10+2 examination with Physics and Mathematics as compulsory subjects, along with Chemistry/Biotechnology/Biology/Electronics/Computer Science as optional subjects.</li>
+                        <li>Should have secured a minimum of 45% aggregate marks (40% for reserved categories) in the above subjects.</li>
+                    </ul>
+                    <li><strong>For Pharmacy Courses:</strong></li>
+                    <ul>
+                        <li>Must have passed or be appearing for the 10+2 examination with Physics, Chemistry, and Biology/Mathematics.</li>
+                        <li>Should have secured a minimum of 45% aggregate marks (40% for reserved categories) in the above subjects.</li>
+                    </ul>
+                </ul>
+                <li>There is no specified age limit for KCET applicants.</li>
+            </ul>
+        
+            <h3>Participating Institutes</h3>
+            <p>KCET scores are accepted by numerous institutions across Karnataka. As of 2025, there are 252 engineering colleges, 39 agriculture and farm science colleges, and 47 colleges offering Indian Systems of Medicine and Homeopathy courses participating in KCET. Some of the prominent engineering colleges include:</p>
+            
+            <ul>
+                <li>S K S J T Institute of Engineering, Bangalore</li>
+                <li>Dr. Ambedkar Institute of Technology, Bangalore</li>
+                <li>P E S University (Formerly PESIT), Bangalore</li>
+                <li>Sir M. Visvesvaraya Institute of Technology, Bangalore</li>
+                <li>Siddaganga Institute of Technology, Tumkur</li>
+                <li>Sri Siddhartha Institute of Technology, Tumkur</li>
+                <li>Kalpataru Institute of Technology, Tiptur</li>
+                <li>Sri Jayachamarajendra College of Engineering, Mysore</li>
+                <li>The National Institute of Engineering, Mysore</li>
+                <li>P E S College of Engineering, Mandya</li>
+                <li>KLE Technological University (Formerly BVBCET), Hubli</li>
+                <li>Basaveshwara Engineering College, Bagalkot</li>
+                <li>Rural Engineering College, Hulkoti</li>
+                <li>Sri Taralabalu Jagadguru Institute of Technology, Ranebennur</li>
+                <li>Sri Dharmasthala Manjunatheshwara College of Engineering and Technology, Dharwad</li>
+                <li>Anjuman Engineering College, Bhatkal</li>
+                <li>KLE Dr. M.S. Sheshgiri College of Engineering and Technology, Belgaum</li>
+            </ul>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Application Process:</strong> The KCET 2025 application form is available online from January 23, 2025, to February 18, 2025. Candidates must fill out the form and pay the requisite fee within this period.</li>
+                <li><strong>Exam Dates:</strong> KCET 2025 is scheduled to be conducted on April 16 and 17, 2025, with the Kannada language test for Horanadu and Gadinadu Kannadiga candidates on April 18, 2025.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li>Familiarize yourself with the exam pattern and syllabus thoroughly.</li>
+                <li>Practice with previous years' question papers and take mock tests to assess your preparation.</li>
+                <li>Focus on time management and accuracy during practice sessions.</li>
+                <li>Strengthen your fundamentals in Physics, Chemistry, Mathematics, and Biology as per your chosen stream.</li>
+            </ul>
+        
+            <p>For detailed information, including updates on application dates, exam schedules, and counseling procedures, candidates are advised to regularly visit the official KEA website.</p>
+        </div>
+        
+        
+        <div id="tnea" class="exam-content">
+            <h2>TNEA (Tamil Nadu Engineering Admissions)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Tamil Nadu Engineering Admissions (TNEA) is a centralized counseling process conducted by the Directorate of Technical Education (DoTE), Tamil Nadu, for admission into undergraduate engineering programs across various colleges in the state. Unlike traditional entrance examinations, TNEA does not involve a separate exam; instead, admissions are based on the marks obtained in the Higher Secondary Certificate (HSC) examinations.</p>
+        
+            <h3>Eligibility Criteria</h3>
+            <p>To participate in TNEA, candidates must meet the following eligibility requirements:</p>
+            <ul>
+                <li><strong>Nativity:</strong> Candidates should be natives of Tamil Nadu. Those who have completed their 8th to 12th grades in Tamil Nadu are eligible. Children of All India Service Tamil Nadu cadre officers are also eligible.</li>
+                <li><strong>Educational Qualification:</strong> Candidates must have passed the HSC (10+2) or an equivalent examination with Physics, Chemistry, and Mathematics as compulsory subjects.</li>
+                <li><strong>Minimum Marks Requirement:</strong></li>
+                <ul>
+                    <li><strong>General Category:</strong> A minimum average of 45% in Physics, Chemistry, and Mathematics.</li>
+                    <li><strong>Backward Classes including Backward Class Muslim:</strong> A minimum average of 40%.</li>
+                    <li><strong>MBC & DNC:</strong> A minimum average of 40%.</li>
+                    <li><strong>SC/SCA/ST:</strong> A minimum average of 40%.</li>
+                </ul>
+                <li><strong>Age Limit:</strong> There is no specific age limit for most engineering courses. However, for Marine Engineering, candidates should not be older than 25 years.</li>
+            </ul>
+        
+            <h3>Admission Process</h3>
+            <ul>
+                <li><strong>Application:</strong> Candidates must register online through the official TNEA portal during the application window.</li>
+                <li><strong>Random Number Assignment:</strong> After successful registration, a unique random number is assigned to each candidate, which is used to break ties during the ranking process.</li>
+                <li><strong>Rank List Publication:</strong> A merit list is prepared based on the normalized marks of candidates in Physics, Chemistry, and Mathematics.</li>
+                <li><strong>Counseling:</strong> Candidates are called for counseling based on their ranks, where they can choose their preferred courses and colleges.</li>
+            </ul>
+        
+            <h3>Participating Colleges</h3>
+            <p>TNEA facilitates admissions to numerous engineering colleges across Tamil Nadu. Some of the prominent institutions accepting TNEA admissions include:</p>
+            <ul>
+                <li><strong>College of Engineering, Anna University, Chennai:</strong> One of the oldest and most prestigious engineering institutions in India, offering a wide range of undergraduate and postgraduate programs.</li>
+                <li><strong>PSG College of Technology, Coimbatore:</strong> Known for its strong industry connections and emphasis on research and development.</li>
+                <li><strong>Coimbatore Institute of Technology, Coimbatore:</strong> Offers quality education with a focus on practical skills and innovation.</li>
+                <li><strong>SSN College of Engineering, Chennai:</strong> A premier institution with state-of-the-art facilities and a strong emphasis on research.</li>
+                <li><strong>Thiagarajar College of Engineering, Madurai:</strong> Renowned for its academic excellence and vibrant campus life.</li>
+                <li><strong>Kumaraguru College of Technology, Coimbatore:</strong> Offers diverse engineering programs with a focus on holistic development.</li>
+                <li><strong>Kongu Engineering College, Erode:</strong> Known for its excellent infrastructure and placement opportunities.</li>
+                <li><strong>Bannari Amman Institute of Technology, Sathyamangalam:</strong> Provides a conducive learning environment with modern amenities.</li>
+                <li><strong>Velammal Engineering College, Chennai:</strong> Emphasizes discipline and quality education with good placement records.</li>
+                <li><strong>St. Josephs College of Engineering, Chennai:</strong> Offers a range of engineering courses with a focus on research and development.</li>
+            </ul>
+            <p>For a comprehensive list of participating colleges, candidates are advised to refer to the official TNEA website or the latest counseling brochure.</p>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Reservation Policy:</strong> TNEA follows the Tamil Nadu government's reservation policy, allocating seats for various categories such as OBC, SC, ST, and others.</li>
+                <li><strong>Counseling Fees:</strong> Candidates are required to pay a counseling fee, which varies based on the category and the number of choices filled.</li>
+                <li><strong>Document Verification:</strong> During counseling, candidates must produce original documents for verification, including mark sheets, community certificates, and nativity certificates, if applicable.</li>
+            </ul>
+        
+            <p>For further details, including updates on the application process, counseling schedule, and seat allotment, candidates should regularly visit the official TNEA website.</p>
+        </div>
+        
+        
+        <div id="wbjee" class="exam-content">
+            <h2>WBJEE (West Bengal Joint Entrance Examination)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The West Bengal Joint Entrance Examination (WBJEE) is a state-level entrance test conducted by the West Bengal Joint Entrance Examinations Board (WBJEEB) for admission into undergraduate courses in engineering, technology, architecture, and pharmacy across various institutions in West Bengal.</p>
+        
+            <h3>Exam Structure</h3>
+            <p>The WBJEE comprises two papers:</p>
+            <ul>
+                <li><strong>Paper I:</strong> Mathematics</li>
+                <li><strong>Paper II:</strong> Physics and Chemistry (combined)</li>
+            </ul>
+        
+            <h4>Question Types</h4>
+            <p>Both papers feature multiple-choice questions (MCQs) divided into three categories:</p>
+            <ul>
+                <li><strong>Category 1:</strong> Single correct answer; each question carries 1 mark with a penalty of 0.25 marks for incorrect answers.</li>
+                <li><strong>Category 2:</strong> Single correct answer; each question carries 2 marks with a penalty of 0.5 marks for incorrect answers.</li>
+                <li><strong>Category 3:</strong> One or more correct answers; each question carries 2 marks. For partially correct responses, marks are awarded based on the number of correct options chosen divided by the total number of correct options. There is no negative marking in this category.</li>
+            </ul>
+        
+            <h4>Exam Pattern</h4>
+            <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                    <th>Subject</th>
+                    <th>Category 1 Questions</th>
+                    <th>Category 2 Questions</th>
+                    <th>Category 3 Questions</th>
+                    <th>Total Questions</th>
+                    <th>Total Marks</th>
+                </tr>
+                <tr>
+                    <td>Mathematics</td>
+                    <td>50</td>
+                    <td>15</td>
+                    <td>10</td>
+                    <td>75</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td>30</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>40</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td>30</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>40</td>
+                    <td>50</td>
+                </tr>
+            </table>
+        
+            <h3>Maximum Marks</h3>
+            <p>The total marks for the WBJEE are 200, distributed as follows:</p>
+            <ul>
+                <li><strong>Mathematics:</strong> 100 marks</li>
+                <li><strong>Physics:</strong> 50 marks</li>
+                <li><strong>Chemistry:</strong> 50 marks</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <p>To be eligible for WBJEE, candidates must meet the following criteria:</p>
+            <ul>
+                <li><strong>Nationality:</strong> Candidates must be Indian citizens.</li>
+                <li><strong>Age Limit:</strong> Applicants should be at least 17 years old as of December 31 of the examination year. There is no upper age limit, except for the Marine Engineering course, which has an upper age limit of 25 years.</li>
+                <li><strong>Educational Qualification:</strong> Candidates must have passed the 10+2 examination with Physics and Mathematics as compulsory subjects, along with Chemistry/Biotechnology/Biology/Computer Science/Computer Application as the third subject.</li>
+                <li><strong>Minimum Marks Requirement:</strong></li>
+                <ul>
+                    <li><strong>General Category:</strong> A minimum aggregate of 45% in the three subjects mentioned above.</li>
+                    <li><strong>Reserved Categories (SC/ST/OBC-A/OBC-B/PwD):</strong> A minimum aggregate of 40%.</li>
+                </ul>
+                <li><strong>English Proficiency:</strong> Candidates must have secured at least 30% marks in English in their 10+2 examination.</li>
+            </ul>
+        
+            <h3>Participating Colleges</h3>
+            <p>WBJEE scores are accepted by numerous government and private institutions in West Bengal. Some of the prominent colleges include:</p>
+            <ul>
+                <li><strong>Jadavpur University, Kolkata:</strong> Renowned for its engineering programs and consistently ranked among the top engineering institutions in India.</li>
+                <li><strong>Maulana Abul Kalam Azad University of Technology (MAKAUT), Kolkata:</strong> Offers a variety of undergraduate and postgraduate engineering courses.</li>
+                <li><strong>Institute of Engineering and Management (IEM), Kolkata:</strong> A leading private engineering college known for its excellent placement records.</li>
+                <li><strong>Heritage Institute of Technology, Kolkata:</strong> Offers diverse engineering disciplines with modern infrastructure and facilities.</li>
+                <li><strong>Haldia Institute of Technology, Haldia:</strong> Known for its quality education and industry-oriented programs.</li>
+                <li><strong>Techno India University, Kolkata:</strong> Provides a range of engineering courses with a focus on research and innovation.</li>
+                <li><strong>Kalyani Government Engineering College, Kalyani:</strong> A government institution offering quality engineering education at an affordable cost.</li>
+                <li><strong>Jalpaiguri Government Engineering College, Jalpaiguri:</strong> One of the oldest engineering colleges in the state, known for its experienced faculty and strong alumni network.</li>
+                <li><strong>Netaji Subhash Engineering College, Kolkata:</strong> Offers various engineering programs with a focus on practical learning.</li>
+                <li><strong>Bengal Institute of Technology, Kolkata:</strong> Known for its dedicated faculty and good placement opportunities.</li>
+            </ul>
+            <p>For a comprehensive list of participating colleges and detailed information about their courses and seat intake, candidates are advised to refer to the official WBJEEB website or the latest information brochure.</p>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Domicile Requirement:</strong> For admission to government engineering and technology colleges, candidates must fulfill the domicile requirements of West Bengal. However, for private and self-financed institutions, domicile status may not be mandatory.</li>
+                <li><strong>Reservation Policy:</strong> WBJEEB follows the reservation policies as per the norms of the Government of West Bengal, which include reservations for SC, ST, OBC-A, OBC-B, and PwD categories.</li>
+                <li><strong>Application Process:</strong> Candidates need to apply online through the official WBJEEB portal during the specified application window. The application involves filling out personal and academic details, uploading necessary documents, and paying the requisite fee.</li>
+                <li><strong>Counseling and Seat Allotment:</strong> Based on the WBJEE ranks, candidates are called for counseling sessions where they can select their preferred courses and institutions. Seat allotment is done based on rank, preference, and availability.</li>
+            </ul>
+        
+            <p>For the most accurate and updated information, candidates should regularly visit the official WBJEEB website and refer to the latest notifications and information brochures.</p>
+        </div>
+        
+        
+        <div id="apeamcet" class="exam-content">
+            <h2>AP EAPCET (Andhra Pradesh Engineering, Agriculture & Pharmacy Common Entrance Test)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Andhra Pradesh Engineering, Agriculture & Medical Common Entrance Test (AP EAMCET), now known as the Andhra Pradesh Engineering, Agriculture, and Pharmacy Common Entrance Test (AP EAPCET), is a state-level examination conducted by Jawaharlal Nehru Technological University (JNTU) Kakinada on behalf of the Andhra Pradesh State Council of Higher Education (APSCHE). This exam facilitates admissions into various undergraduate programs in engineering, agriculture, and pharmacy across numerous institutions in Andhra Pradesh.</p>
+        
+            <h3>Exam Structure</h3>
+            <p>AP EAPCET is a computer-based test comprising multiple-choice questions (MCQs). The examination is divided into two primary streams:</p>
+        
+            <h4>Engineering Stream</h4>
+            <ul>
+                <li><strong>Subjects:</strong> Physics, Chemistry, and Mathematics</li>
+                <li><strong>Number of Questions:</strong> 160 (80 Mathematics, 40 Physics, 40 Chemistry)</li>
+                <li><strong>Duration:</strong> 3 hours</li>
+                <li><strong>Marking Scheme:</strong> Each correct answer awards 1 mark; there is no negative marking.</li>
+            </ul>
+        
+            <h4>Agriculture and Pharmacy Stream</h4>
+            <ul>
+                <li><strong>Subjects:</strong> Botany, Zoology, Chemistry, and Physics</li>
+                <li><strong>Number of Questions:</strong> 160 (40 Botany, 40 Zoology, 40 Chemistry, 40 Physics)</li>
+                <li><strong>Duration:</strong> 3 hours</li>
+                <li><strong>Marking Scheme:</strong> Each correct answer awards 1 mark; there is no negative marking.</li>
+            </ul>
+        
+            <h3>Maximum Marks</h3>
+            <p>The total marks for the AP EAPCET are 160.</p>
+        
+            <h3>Eligibility Criteria</h3>
+            <p>To be eligible for AP EAPCET, candidates must meet the following criteria:</p>
+            <ul>
+                <li><strong>Nationality:</strong> Candidates must be Indian citizens or Persons of Indian Origin (PIO)/Overseas Citizen of India (OCI) cardholders. They should belong to the state of Andhra Pradesh or Telangana and satisfy local/non-local status requirements as per state regulations.</li>
+                <li><strong>Educational Qualification:</strong></li>
+                <ul>
+                    <li><strong>Engineering and Pharmacy Courses:</strong></li>
+                    <ul>
+                        <li>Candidates should have passed or appeared for the final year of the Intermediate Examination (10+2) with Mathematics, Physics, and Chemistry as optional subjects, conducted by the Board of Intermediate Education, Andhra Pradesh/Telangana.</li>
+                        <li>Alternatively, candidates who have completed or are appearing in the final year of a Diploma in Engineering conducted by the State Board of Technical Education and Training, Andhra Pradesh/Telangana, are also eligible.</li>
+                    </ul>
+                    <li><strong>Agriculture Courses:</strong></li>
+                    <ul>
+                        <li><strong>B.Sc. (Ag.) & B.Sc. (Hort):</strong> Physical Sciences, Biological or Natural Sciences, Agriculture, Vocational Course in Agriculture.</li>
+                        <li><strong>B.V.Sc. & A.H.:</strong> Physical Sciences, Biological or Natural Sciences, Vocational Courses in Veterinary Sciences.</li>
+                        <li><strong>B.F.Sc.:</strong> Physical Sciences, Biological or Natural Sciences, Vocational Courses in Fishery Sciences.</li>
+                        <li><strong>B.Tech. (FS&T), B.Pharmacy, and Pharm.D:</strong> Mathematics, Physical Sciences or Physical Sciences, Biological or Natural Sciences.</li>
+                    </ul>
+                </ul>
+                <li><strong>Age Limit:</strong></li>
+                <ul>
+                    <li><strong>Engineering and Pharmacy Courses:</strong> Candidates should have completed 16 years of age as of December 31 of the admission year. There is no upper age limit.</li>
+                    <li><strong>B.Tech. (Dairy Technology), B.Tech. (Ag. Engineering), B.Tech. (Food Science and Technology), and B.Sc. (Agriculture Engineering):</strong> Candidates should have completed 17 years of age as of December 31 of the admission year and should not exceed 22 years (25 years for SC/ST candidates).</li>
+                </ul>
+                <li><strong>Minimum Marks Requirement:</strong></li>
+                <ul>
+                    <li><strong>General Category:</strong> A minimum of 45% aggregate marks in the specified subjects in the qualifying examination.</li>
+                    <li><strong>Reserved Categories (SC/ST):</strong> A minimum of 40% aggregate marks.</li>
+                </ul>
+            </ul>
+        
+            <h3>Participating Colleges</h3>
+            <p>AP EAPCET scores are accepted by numerous government and private institutions across Andhra Pradesh. Some of the prominent colleges include:</p>
+            <ul>
+                <li><strong>Jawaharlal Nehru Technological University (JNTU), Kakinada:</strong> A premier institution offering a range of engineering and technology programs.</li>
+                <li><strong>Andhra University College of Engineering, Visakhapatnam:</strong> Known for its robust engineering curriculum and research facilities.</li>
+                <li><strong>Sri Venkateswara University College of Engineering, Tirupati:</strong> Offers diverse engineering disciplines with a focus on research and development.</li>
+                <li><strong>Gayatri Vidya Parishad College of Engineering, Visakhapatnam:</strong> Recognized for its quality education and infrastructure.</li>
+                <li><strong>RVR & JC College of Engineering, Guntur:</strong> Offers various engineering programs with a strong emphasis on practical learning.</li>
+                <li><strong>Velagapudi Ramakrishna Siddhartha Engineering College, Vijayawada:</strong> Known for its academic excellence and industry collaborations.</li>
+                <li><strong>GMR Institute of Technology, Rajam:</strong> Provides quality engineering education with modern facilities.</li>
+                <li><strong>Anil Neerukonda Institute of Technology and Sciences, Visakhapatnam:</strong> Offers a range of engineering courses with a focus on innovation.</li>
+                <li><strong>Sree Vidyanikethan Engineering College, Tirupati:</strong> Known for its state-of-the-art infrastructure and academic programs.</li>
+                <li><strong>Vasireddy Venkatadri Institute of Technology, Guntur:</strong> Emphasizes holistic education and skill development in engineering.</li>
+            </ul>
+            <p>For a comprehensive list of participating colleges and detailed information about their courses and seat intake, candidates are advised to refer to the official AP EAPCET website or the latest information brochure.</p>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Reservation Policy:</strong> AP EAPCET follows the reservation policies as per the norms of the Government of Andhra Pradesh, which include reservations for SC, ST, OBC, and PwD candidates.</li>
+            </ul>
+        
+            <p>For further details, including updates on application dates, counseling schedules, and seat allotments, candidates should regularly visit the official AP EAPCET website.</p>
+        </div>
+        
+        
+        <div id="tseamcet" class="exam-content">
+            <h2>TS EAMCET (Telangana State Engineering, Agriculture & Medical Common Entrance Test)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Telangana State Engineering, Agriculture & Medical Common Entrance Test (TS EAMCET) is a state-level examination conducted by Jawaharlal Nehru Technological University (JNTU), Hyderabad, on behalf of the Telangana State Council of Higher Education (TSCHE). This exam facilitates admissions into various undergraduate programs in engineering, agriculture, and pharmacy across institutions in Telangana.</p>
+        
+            <h3>Exam Structure</h3>
+            <p>TS EAMCET is a computer-based test comprising multiple-choice questions (MCQs). The examination is divided into two primary streams:</p>
+        
+            <h4>Engineering Stream</h4>
+            <ul>
+                <li><strong>Subjects:</strong> Physics, Chemistry, and Mathematics</li>
+                <li><strong>Number of Questions:</strong> 160 (80 Mathematics, 40 Physics, 40 Chemistry)</li>
+                <li><strong>Duration:</strong> 3 hours</li>
+                <li><strong>Marking Scheme:</strong> Each correct answer awards 1 mark; there is no negative marking.</li>
+            </ul>
+        
+            <h4>Agriculture and Medical Stream</h4>
+            <ul>
+                <li><strong>Subjects:</strong> Botany, Zoology, Chemistry, and Physics</li>
+                <li><strong>Number of Questions:</strong> 160 (40 Botany, 40 Zoology, 40 Chemistry, 40 Physics)</li>
+                <li><strong>Duration:</strong> 3 hours</li>
+                <li><strong>Marking Scheme:</strong> Each correct answer awards 1 mark; there is no negative marking.</li>
+            </ul>
+        
+            <h3>Maximum Marks</h3>
+            <p>The total marks for the TS EAMCET are 160.</p>
+        
+            <h3>Eligibility Criteria</h3>
+            <p>To be eligible for TS EAMCET, candidates must meet the following criteria:</p>
+            <ul>
+                <li><strong>Nationality:</strong> Candidates must be Indian citizens or Persons of Indian Origin (PIO)/Overseas Citizen of India (OCI) cardholders. They should belong to the state of Telangana or Andhra Pradesh and satisfy local/non-local status requirements as per state regulations.</li>
+                <li><strong>Educational Qualification:</strong></li>
+                <ul>
+                    <li><strong>Engineering Courses:</strong></li>
+                    <ul>
+                        <li>Candidates should have passed or appeared for the final year of the Intermediate Examination (10+2) with Mathematics, Physics, and Chemistry as optional subjects, conducted by the Board of Intermediate Education, Telangana/Andhra Pradesh.</li>
+                        <li>Alternatively, candidates who have completed or are appearing in the final year of a Diploma in Engineering conducted by the State Board of Technical Education and Training, Telangana/Andhra Pradesh, are also eligible.</li>
+                    </ul>
+                    <li><strong>Agriculture and Medical Courses:</strong></li>
+                    <ul>
+                        <li><strong>B.Sc. (Ag.) & B.Sc. (Hort):</strong> Physical Sciences, Biological or Natural Sciences, Agriculture, Vocational Course in Agriculture.</li>
+                        <li><strong>B.V.Sc. & A.H.:</strong> Physical Sciences, Biological or Natural Sciences, Vocational Courses in Veterinary Sciences.</li>
+                        <li><strong>B.F.Sc.:</strong> Physical Sciences, Biological or Natural Sciences, Vocational Courses in Fishery Sciences.</li>
+                        <li><strong>B.Tech. (FS&T), B.Pharmacy, and Pharm.D:</strong> Mathematics, Physical Sciences or Physical Sciences, Biological or Natural Sciences.</li>
+                    </ul>
+                </ul>
+                <li><strong>Age Limit:</strong></li>
+                <ul>
+                    <li><strong>Engineering and Pharmacy Courses:</strong> Candidates should have completed 16 years of age as of December 31 of the admission year. There is no upper age limit.</li>
+                    <li><strong>B.Tech. (Dairy Technology), B.Tech. (Ag. Engineering), B.Tech. (Food Technology), and B.Sc. (Agriculture Engineering):</strong> Candidates should have completed 17 years of age as of December 31 of the admission year and should not exceed 22 years (25 years for SC/ST candidates).</li>
+                </ul>
+                <li><strong>Minimum Marks Requirement:</strong></li>
+                <ul>
+                    <li><strong>General Category:</strong> A minimum of 45% aggregate marks in the specified subjects in the qualifying examination.</li>
+                    <li><strong>Reserved Categories (SC/ST):</strong> A minimum of 40% aggregate marks.</li>
+                </ul>
+            </ul>
+        
+            <h3>Participating Colleges</h3>
+            <p>TS EAMCET scores are accepted by numerous government and private institutions across Telangana. Some of the prominent colleges include:</p>
+            <ul>
+                <li><strong>University College of Engineering, Osmania University, Hyderabad:</strong> A premier institution offering a range of engineering and technology programs.</li>
+                <li><strong>JNTUH College of Engineering, Hyderabad:</strong> Known for its robust engineering curriculum and research facilities.</li>
+                <li><strong>Chaitanya Bharathi Institute of Technology, Hyderabad:</strong> Offers diverse engineering disciplines with a focus on research and development.</li>
+                <li><strong>CVR College of Engineering, Hyderabad:</strong> Recognized for its quality education and infrastructure.</li>
+                <li><strong>Mahatma Gandhi Institute of Technology, Hyderabad:</strong> Offers various engineering programs with a strong emphasis on practical learning.</li>
+                <li><strong>VNR Vignana Jyothi Institute of Engineering and Technology, Hyderabad:</strong> Known for its academic excellence and industry collaborations.</li>
+                <li><strong>Vasavi College of Engineering, Hyderabad:</strong> Provides quality engineering education with modern facilities.</li>
+                <li><strong>Gokaraju Rangaraju Institute of Engineering and Technology, Hyderabad:</strong> Offers a range of engineering courses with a focus on innovation.</li>
+                <li><strong>Kakatiya Institute of Technology and Science, Warangal:</strong> Known for its state-of-the-art infrastructure and academic programs.</li>
+                <li><strong>Malla Reddy Engineering College for Women, Secunderabad:</strong> Emphasizes holistic education and skill development in engineering.</li>
+            </ul>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Reservation Policy:</strong> TS EAMCET follows the reservation policies as per the norms of the Government of Telangana, which include reservations for SC, ST, OBC, and PwD categories.</li>
+                <li><strong>Application Process:</strong> Candidates need to apply online through the official TS EAMCET portal during the specified application window. The application involves filling out personal and academic details, uploading necessary documents, and paying the requisite fee.</li>
+            </ul>
+        
+            <p>For further details, including updates on application dates, counseling schedules, and seat allotments, candidates should regularly visit the official TS EAMCET website.</p>
+        </div>
+        
+        
+        <div id="upsee" class="exam-content">
+            <h2>UPSEE (UPCET) - Uttar Pradesh State Entrance Examination</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Uttar Pradesh State Entrance Examination (UPSEE), now known as the Uttar Pradesh Common Entrance Test (UPCET), is a state-level entrance examination conducted by Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow. It serves as the gateway for admission to various undergraduate and postgraduate courses in engineering, pharmacy, architecture, and other technical disciplines offered by numerous colleges and universities across Uttar Pradesh.</p>
+        
+            <h3>Exam Structure</h3>
+            <p>The UPCET is typically conducted in an online mode and comprises two papers:</p>
+            <ul>
+                <li><strong>Paper 1:</strong> This paper is mandatory for all candidates and covers Physics, Chemistry, and Mathematics. It is designed to assess a candidate's fundamental knowledge and aptitude in these core subjects.</li>
+                <li><strong>Paper 2:</strong> This paper is optional and caters to specific disciplines. Candidates can choose to appear for Paper 2 based on the course they wish to pursue. It may include subjects like Biology (for Pharmacy courses) or Aptitude (for Architecture courses).</li>
+            </ul>
+        
+            <h3>Exam Pattern</h3>
+            <ul>
+                <li><strong>Mode of Examination:</strong> Computer-Based Test (CBT)</li>
+                <li><strong>Duration:</strong> Each paper usually has a duration of 3 hours.</li>
+                <li><strong>Type of Questions:</strong> Multiple Choice Questions (MCQs)</li>
+                <li><strong>Marking Scheme:</strong> Typically, there is a positive marking for correct answers and a negative marking for incorrect answers.</li>
+                <li><strong>Syllabus:</strong> The syllabus for the UPCET is generally based on the 10+2 curriculum of recognized boards.</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Educational Qualification:</strong> Candidates must have passed the 12th standard or equivalent examination from a recognized board with the required subjects.</li>
+                <ul>
+                    <li><strong>For Engineering:</strong> Physics, Chemistry, and Mathematics are compulsory.</li>
+                    <li><strong>For Pharmacy:</strong> Physics, Chemistry, and Biology are required.</li>
+                </ul>
+                <li><strong>Minimum Marks Requirement:</strong> Candidates usually need to have secured a minimum aggregate percentage in their qualifying examination (e.g., 50%).</li>
+                <li><strong>Age Limit:</strong> There is generally no upper age limit for appearing in the UPCET.</li>
+            </ul>
+        
+            <h3>Application Process</h3>
+            <p>The application process for the UPCET is typically conducted online. Candidates need to register on the official website of AKTU, fill out the application form, upload the necessary documents, and pay the application fee.</p>
+        
+            <h3>Key Dates</h3>
+            <p>The UPCET is usually conducted once a year. The important dates, including the application start and end dates, exam date, and result declaration date, are announced on the official website.</p>
+        
+            <h3>List of Participating Institutes</h3>
+            <p>Numerous prestigious colleges and universities in Uttar Pradesh accept UPCET scores for admission to their undergraduate and postgraduate programs. Some of the prominent institutions include:</p>
+            <ul>
+                <li><strong>Dr. A.P.J. Abdul Kalam Technical University, Lucknow</strong></li>
+                <li><strong>Harcourt Butler Technical University, Kanpur</strong></li>
+                <li><strong>Madan Mohan Malaviya University of Technology, Gorakhpur</strong></li>
+                <li><strong>Uttar Pradesh Technical University, Lucknow</strong></li>
+                <li><strong>Bundelkhand University, Jhansi</strong></li>
+                <li><strong>Chhatrapati Shahu Ji Maharaj University, Kanpur</strong></li>
+                <li><strong>Gautam Buddha University, Greater Noida</strong></li>
+                <li><strong>Indian Institute of Information Technology, Allahabad</strong></li>
+                <li><strong>Motilal Nehru National Institute of Technology, Allahabad</strong></li>
+            </ul>
+            <p>For a complete list of participating colleges, candidates should visit the official UPCET website.</p>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Understand the Syllabus:</strong> Familiarize yourself with the syllabus for the UPCET and focus on the key topics.</li>
+                <li><strong>Practice Previous Year Papers:</strong> Solve previous year question papers and sample papers to get an idea of the exam pattern and difficulty level.</li>
+                <li><strong>Time Management:</strong> Practice time management during your preparation and mock tests to ensure you can complete the exam within the allotted time.</li>
+                <li><strong>Stay Calm and Confident:</strong> Maintain a positive attitude and stay confident throughout your preparation and during the exam.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>The UPCET is a crucial stepping stone for aspiring engineers, pharmacists, and architects in Uttar Pradesh. By understanding the exam pattern, eligibility criteria, and preparation strategies, you can increase your chances of securing admission to your desired course and institution. Remember to stay focused, dedicated, and consistent in your efforts, and success will surely follow.</p>
+        </div>
+        
+        
+        
+        <div id="keam" class="exam-content">
+            <h2>KEAM (Kerala Engineering Architecture Medical Entrance Exam)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Kerala Engineering Architecture Medical (KEAM) Entrance Exam is a state-level examination conducted by the Commissioner of Entrance Examinations (CEE), Kerala. It facilitates admissions into various undergraduate programs in engineering, architecture, and medical (specifically pharmacy) courses across institutions in Kerala.</p>
+        
+            <h3>Exam Structure</h3>
+            <p>KEAM is traditionally conducted in an offline (pen-and-paper) mode, comprising multiple-choice questions (MCQs). The examination is divided into two papers:</p>
+            <ul>
+                <li><strong>Paper I:</strong> Physics and Chemistry</li>
+                <li><strong>Paper II:</strong> Mathematics</li>
+            </ul>
+            <p>Each paper consists of 120 questions, with a total duration of 2 hours and 30 minutes per paper. The marking scheme awards 4 marks for each correct answer, while 1 mark is deducted for each incorrect response.</p>
+        
+            <h3>Maximum Marks</h3>
+            <p>Each paper is scored out of 480 marks, making the combined total for both papers 960 marks.</p>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Nationality:</strong> Candidates must be Indian citizens. Persons of Indian Origin (PIO)/Overseas Citizen of India (OCI) cardholders are also eligible.</li>
+                <li><strong>Age Limit:</strong> Applicants should have completed 17 years of age as of December 31 of the admission year. There is no upper age limit for engineering and architecture courses.</li>
+                <li><strong>Educational Qualification:</strong></li>
+                <ul>
+                    <li><strong>Engineering Courses:</strong></li>
+                    <ul>
+                        <li>Candidates should have passed the Higher Secondary Examination (10+2) or its equivalent with Physics and Mathematics as compulsory subjects, along with Chemistry as an optional subject.</li>
+                        <li>A minimum of 50% marks in Mathematics separately and an aggregate of 50% in Physics, Chemistry, and Mathematics combined is required.</li>
+                    </ul>
+                    <li><strong>Architecture Courses:</strong></li>
+                    <ul>
+                        <li>Candidates must have passed the 10+2 examination with Mathematics as a compulsory subject, securing at least 50% marks in aggregate.</li>
+                        <li>Additionally, candidates should have a valid score in the National Aptitude Test in Architecture (NATA) conducted by the Council of Architecture.</li>
+                    </ul>
+                    <li><strong>Medical and Allied Courses:</strong></li>
+                    <ul>
+                        <li>For courses like B.Pharm, candidates should have passed the 10+2 examination with Physics, Chemistry, and Biology/Mathematics.</li>
+                        <li>A minimum of 50% marks in Biology/Mathematics separately and 50% marks in Physics, Chemistry, and Biology/Mathematics combined is required.</li>
+                    </ul>
+                </ul>
+            </ul>
+        
+            <h3>Participating Colleges</h3>
+            <p>KEAM scores are accepted by numerous government and private institutions across Kerala. Some of the prominent colleges include:</p>
+            <ul>
+                <li><strong>College of Engineering, Trivandrum:</strong> One of the oldest engineering colleges in Kerala, offering a range of undergraduate and postgraduate programs.</li>
+                <li><strong>Government Engineering College, Thrissur:</strong> Known for its strong academic curriculum and research facilities.</li>
+                <li><strong>Rajiv Gandhi Institute of Technology, Kottayam:</strong> Offers diverse engineering disciplines with a focus on innovation and development.</li>
+                <li><strong>Government College of Engineering, Kannur:</strong> Recognized for its quality education and infrastructure.</li>
+                <li><strong>TKM College of Engineering, Kollam:</strong> Offers various engineering programs with a strong emphasis on practical learning.</li>
+                <li><strong>NSS College of Engineering, Palakkad:</strong> Known for its academic excellence and industry collaborations.</li>
+                <li><strong>Government Engineering College, Barton Hill, Thiruvananthapuram:</strong> Provides quality engineering education with modern facilities.</li>
+                <li><strong>Mar Athanasius College of Engineering, Kothamangalam:</strong> Offers a range of engineering courses with a focus on innovation.</li>
+                <li><strong>Government Engineering College, Kozhikode:</strong> Known for its state-of-the-art infrastructure and academic programs.</li>
+                <li><strong>Government Engineering College, Sreekrishnapuram, Palakkad:</strong> Emphasizes holistic education and skill development in engineering.</li>
+            </ul>
+            <p>For a comprehensive list of participating colleges and detailed information about their courses and seat intake, candidates are advised to refer to the official KEAM website or the latest information brochure.</p>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li><strong>Reservation Policy:</strong> KEAM follows the reservation policies as per the norms of the Government of Kerala, which include reservations for SC, ST, OBC, and other categories.</li>
+                <li><strong>Application Process:</strong> Candidates need to apply online through the official KEAM portal during the specified application window. The application involves filling out personal and academic details, uploading necessary documents, and paying the requisite fee.</li>
+                <li><strong>Counseling and Seat Allotment:</strong> Based on the KEAM ranks, candidates are called for counseling sessions where they can select their preferred courses and institutions. Seat allotment is done based on rank, preference, and availability.</li>
+            </ul>
+        
+            <p>For the most accurate and updated information, candidates should regularly visit the official KEAM website and refer to the latest notifications and information brochures.</p>
+        </div>
+        
+        
+        <div id="lpunest" class="exam-content">
+            <h2>LPUNEST (Lovely Professional University National Eligibility and Scholarship Test)</h2>
+        
+            <h3>Introduction</h3>
+            <p>LPUNEST, or the Lovely Professional University National Eligibility and Scholarship Test, is an entrance exam conducted by Lovely Professional University (LPU) for admission to various undergraduate and postgraduate programs. It also serves as a scholarship test, where meritorious students can avail substantial scholarships based on their performance.</p>
+        
+            <h3>Exam Structure</h3>
+            <p>The LPUNEST exam is divided into two parts:</p>
+        
+            <h4>Part A:</h4>
+            <p>This section comprises objective-type questions designed to assess the candidate's aptitude in the following areas:</p>
+            <ul>
+                <li><strong>English Language:</strong> Evaluates grammar, vocabulary, comprehension, and overall language proficiency.</li>
+                <li><strong>Reasoning Ability:</strong> Tests logical reasoning, analytical skills, and problem-solving abilities.</li>
+                <li><strong>Quantitative Aptitude:</strong> Measures mathematical skills, numerical ability, and data interpretation.</li>
+                <li><strong>General Awareness:</strong> Assesses knowledge of current affairs, general knowledge, and awareness of the world.</li>
+            </ul>
+        
+            <h4>Part B:</h4>
+            <p>This section consists of subjective-type questions that are specific to the candidate's chosen stream of study. It aims to gauge the candidate's knowledge and understanding of their selected field.</p>
+        
+            <h3>Maximum Marks and Exam Duration</h3>
+            <ul>
+                <li><strong>Maximum Marks:</strong> The LPUNEST exam carries a maximum of 400 marks.</li>
+                <li><strong>Exam Duration:</strong> The duration varies depending on the program applied for, but it generally ranges from 2 to 3 hours.</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <p>To be eligible for the LPUNEST exam, candidates must fulfill the following requirements:</p>
+        
+            <h4>Undergraduate Programs:</h4>
+            <ul>
+                <li>Must have passed 10+2 or equivalent examination from a recognized board.</li>
+                <li>Must have secured a minimum of 50% marks in the qualifying examination.</li>
+                <li>Specific programs may have additional eligibility criteria related to subjects studied in 10+2.</li>
+            </ul>
+        
+            <h4>Postgraduate Programs:</h4>
+            <ul>
+                <li>Must have a bachelor's degree or equivalent from a recognized university.</li>
+                <li>Must have secured a minimum percentage in the qualifying examination as specified by the program.</li>
+                <li>Specific programs may have additional eligibility criteria related to the undergraduate degree.</li>
+            </ul>
+        
+            <h3>List of Programs Accepting LPUNEST Scores</h3>
+            <p>LPUNEST scores are accepted for admission to a wide range of undergraduate and postgraduate programs offered by LPU across various disciplines, including:</p>
+            <ul>
+                <li>Engineering</li>
+                <li>Management</li>
+                <li>Computer Applications</li>
+                <li>Law</li>
+                <li>Agriculture</li>
+                <li>Design</li>
+                <li>Hotel Management</li>
+                <li>Pharmacy</li>
+                <li>Physiotherapy</li>
+                <li>Journalism and Mass Communication</li>
+                <li>And many more</li>
+            </ul>
+        
+            <h3>Benefits of LPUNEST</h3>
+            <ul>
+                <li><strong>Admission to LPU:</strong> LPUNEST scores are the primary criteria for admission to various programs at LPU.</li>
+                <li><strong>Scholarships:</strong> Based on their LPUNEST performance, students can avail of generous scholarships, which can significantly reduce the financial burden of higher education.</li>
+                <li><strong>National Recognition:</strong> LPU is a nationally recognized university with a strong reputation for academic excellence and industry interface.</li>
+                <li><strong>Holistic Development:</strong> LPU provides a conducive environment for holistic development, with a focus on both academic and extracurricular activities.</li>
+            </ul>
+        
+            <h3>How to Prepare for LPUNEST</h3>
+            <ul>
+                <li><strong>Understand the Exam Pattern:</strong> Familiarize yourself with the exam pattern, syllabus, and marking scheme.</li>
+                <li><strong>Practice Previous Year Papers:</strong> Solve previous year question papers and mock tests to get an idea of the type of questions asked and to improve your time management skills.</li>
+                <li><strong>Focus on Fundamentals:</strong> Build a strong foundation in the core subjects of your chosen stream.</li>
+                <li><strong>Stay Updated:</strong> Keep yourself updated on current affairs and general knowledge.</li>
+                <li><strong>Time Management:</strong> Practice time management to ensure that you can attempt all the questions within the given time frame.</li>
+            </ul>
+        
+            <h3>Key Points to Remember</h3>
+            <ul>
+                <li><strong>Registration:</strong> The application process for LPUNEST is usually online. Check the LPU website for the latest information on registration dates and procedures.</li>
+                <li><strong>Admit Card:</strong> Download your admit card from the LPU website once it is available.</li>
+                <li><strong>Exam Day:</strong> Carry your admit card and a valid photo ID proof to the exam center.</li>
+                <li><strong>Result:</strong> The LPUNEST results are usually declared within a few weeks of the exam.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>LPUNEST is your gateway to a world of opportunities at Lovely Professional University. By preparing well and performing your best in the exam, you can secure admission to your desired program and avail of scholarships to support your higher education journey.</p>
+        </div>
+        
+        
+        <div id="cusatcat" class="exam-content">
+            <h2>CUSAT CAT (Cochin University of Science and Technology Common Admission Test)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The CUSAT (Cochin University of Science and Technology) exam is a national-level entrance examination that serves as the gateway to a multitude of undergraduate and postgraduate programs offered by CUSAT and its affiliated institutions. The exam is meticulously designed to assess candidates' aptitude and subject-specific knowledge.</p>
+        
+            <h3>Exam Structure</h3>
+            <p>The CUSAT CAT exam is bifurcated into two distinct parts:</p>
+        
+            <h4>Part I: Aptitude Test</h4>
+            <p>This section is designed to evaluate the candidate's logical reasoning, quantitative aptitude, and verbal ability. It is a common test for all courses and serves as a measure of the candidate's overall intellectual capabilities.</p>
+        
+            <h4>Part II: Subject-Specific Test</h4>
+            <p>This section delves into the candidate's knowledge of specific subjects relevant to the chosen course. The syllabus and difficulty level of this section vary depending on the course applied for.</p>
+        
+            <h3>Scoring and Eligibility</h3>
+            <ul>
+                <li><strong>Maximum Marks:</strong> The maximum marks for Part I are 100, while for Part II, they vary based on the course.</li>
+                <li><strong>Eligibility Criteria:</strong> Candidates must have successfully completed their 10+2 examination from a recognized board with the requisite subjects.</li>
+                <li><strong>Course-Specific Requirements:</strong> The specific eligibility criteria may differ for different courses. Candidates are advised to refer to the official CUSAT website for detailed information.</li>
+            </ul>
+        
+            <h3>Exam Day Essentials</h3>
+            <ul>
+                <li><strong>Mode of Examination:</strong> The exam is conducted in offline mode at designated centers across the country.</li>
+                <li><strong>Duration:</strong> The duration of the exam is 3 hours.</li>
+                <li><strong>Language:</strong> The question paper is available in both English and Malayalam, catering to a diverse pool of candidates.</li>
+            </ul>
+        
+            <h3>Beyond CUSAT: A Multitude of Opportunities</h3>
+            <p>While CUSAT itself offers a plethora of courses, the CUSAT exam scores are also recognized by numerous other prestigious institutions across India, opening doors to a wide array of academic pursuits. Some of these institutions include:</p>
+            <ul>
+                <li><strong>Cochin University of Science and Technology, Kochi:</strong> Offers a wide range of undergraduate and postgraduate programs in engineering, science, humanities, and law.</li>
+                <li><strong>Amrita Vishwa Vidyapeetham, Coimbatore:</strong> A multi-disciplinary university with a strong focus on research and innovation.</li>
+                <li><strong>Anna University, Chennai:</strong> A renowned technical university offering undergraduate and postgraduate programs in engineering and technology.</li>
+                <li><strong>Birla Institute of Technology and Science, Pilani:</strong> A deemed university known for its strong academic programs and research facilities.</li>
+                <li><strong>Delhi Technological University, Delhi:</strong> A leading technical university with a focus on engineering and technology.</li>
+                <li><strong>Indian Institutes of Technology (IITs):</strong> Premier institutions known for their rigorous academic programs and world-class research facilities.</li>
+                <li><strong>International Institute of Information Technology, Hyderabad:</strong> A research-oriented university with a focus on information technology and computer science.</li>
+                <li><strong>Jawaharlal Nehru University, Delhi:</strong> A multi-disciplinary university offering a wide range of undergraduate and postgraduate programs.</li>
+                <li><strong>National Institutes of Technology (NITs):</strong> Institutions of national importance known for their quality education and research.</li>
+                <li><strong>SASTRA Deemed University, Thanjavur:</strong> A deemed university offering undergraduate and postgraduate programs in engineering, science, and management.</li>
+                <li><strong>SRM Institute of Science and Technology, Chennai:</strong> A multi-disciplinary university with a strong focus on engineering and technology.</li>
+                <li><strong>Vellore Institute of Technology, Vellore:</strong> A deemed university known for its strong academic programs and research facilities.</li>
+                <li><strong>Visvesvaraya National Institute of Technology, Nagpur:</strong> An institute of national importance with a focus on engineering and technology.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Understand the Syllabus:</strong> Familiarize yourself with the syllabus for the CUSAT exam and focus on the key topics.</li>
+                <li><strong>Practice Previous Year Papers:</strong> Solve previous year question papers and sample papers to get an idea of the exam pattern and difficulty level.</li>
+                <li><strong>Mock Tests:</strong> Take mock tests regularly to assess your preparation level and improve time management skills.</li>
+                <li><strong>Conceptual Clarity:</strong> Focus on building a strong conceptual understanding of the subjects covered in the exam.</li>
+                <li><strong>Time Management:</strong> Practice effective time management strategies to ensure that you complete the exam within the allotted time.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>The CUSAT exam is not just an entrance test; it is a stepping stone to a bright and promising future. With dedication, hard work, and the right guidance, you can ace the exam and secure admission to your dream course and institution.</p>
+        </div>
+        
+        
+        <div id="set" class="exam-content">
+            <h2>SET (Symbiosis Entrance Test)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Symbiosis Entrance Test (SET) is a gateway to a multitude of undergraduate and postgraduate programs offered by the prestigious Symbiosis International (Deemed University). This national-level entrance exam is your stepping stone to a world-class education and a promising career.</p>
+        
+            <h3>Exam Structure & Syllabus</h3>
+            <p>SET is a computer-based test (CBT) designed to assess your aptitude and knowledge in key areas. The 150-minute exam is divided into four sections:</p>
+        
+            <h4>Quantitative Aptitude</h4>
+            <p>This section evaluates your mathematical skills and problem-solving abilities. Expect questions on topics like:</p>
+            <ul>
+                <li>Arithmetic</li>
+                <li>Algebra</li>
+                <li>Geometry</li>
+                <li>Data Interpretation</li>
+            </ul>
+        
+            <h4>Verbal Ability & Reading Comprehension</h4>
+            <p>This section tests your English language proficiency, including grammar, vocabulary, and comprehension skills. You'll encounter:</p>
+            <ul>
+                <li>Passages followed by questions</li>
+                <li>Sentence correction</li>
+                <li>Vocabulary-based questions</li>
+            </ul>
+        
+            <h4>Logical Reasoning & Analytical Ability</h4>
+            <p>This section gauges your ability to think logically and analyze information. You'll face questions on topics like:</p>
+            <ul>
+                <li>Puzzles</li>
+                <li>Seating Arrangements</li>
+                <li>Blood Relations</li>
+                <li>Syllogisms</li>
+            </ul>
+        
+            <h4>General Awareness</h4>
+            <p>This section assesses your knowledge of current affairs, history, geography, science, and other general topics. Stay updated on current events and brush up on your general knowledge.</p>
+        
+            <h3>Scoring & Eligibility</h3>
+            <ul>
+                <li><strong>Scoring:</strong> Each section carries 30 questions, and the total marks for the SET exam are 150.</li>
+                <li><strong>Negative Marking:</strong> There is no negative marking, so answer all questions to maximize your score.</li>
+                <li><strong>Eligibility Criteria:</strong> Candidates must have passed or be appearing for the 12th standard examination from a recognized board. Specific eligibility criteria may vary depending on the program applied for.</li>
+            </ul>
+        
+            <h3>SET Accepting Colleges & Programs</h3>
+            <p>SET scores are accepted by a wide range of Symbiosis constituent institutes, offering diverse programs in fields like management, computer science, law, media, and more. Some of the prominent colleges include:</p>
+            <ul>
+                <li><strong>Symbiosis Institute of Business Management (SIBM), Pune:</strong> Offers MBA and Executive MBA programs.</li>
+                <li><strong>Symbiosis Institute of Computer Studies and Research (SICSR), Pune:</strong> Offers BCA, BBA(IT), and MCA programs.</li>
+                <li><strong>Symbiosis Law School (SLS), Pune:</strong> Offers BA LLB, BBA LLB, and LLM programs.</li>
+                <li><strong>Symbiosis Centre for Media and Communication (SCMC), Pune:</strong> Offers BA (MC) and MA (MC) programs.</li>
+                <li><strong>Symbiosis School of Banking and Finance (SSBF), Pune:</strong> Offers BBA and MBA (BF) programs.</li>
+            </ul>
+            <p>For a comprehensive list of programs and colleges accepting SET scores, visit the official Symbiosis International (Deemed University) website.</p>
+        
+            <h3>Application Process & Exam Dates</h3>
+            <ul>
+                <li><strong>Exam Frequency:</strong> The SET is typically conducted twice a year, in January and May.</li>
+                <li><strong>Application Process:</strong> The application process usually begins in November. Candidates must register online, fill out the application form, upload necessary documents, and pay the application fee.</li>
+                <li><strong>Admit Card:</strong> The admit card is released a week before the exam.</li>
+                <li><strong>Result Declaration:</strong> Results are generally declared within a month after the exam.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Understand the Syllabus:</strong> Familiarize yourself with the syllabus for each section and focus on your strengths and weaknesses.</li>
+                <li><strong>Practice Regularly:</strong> Solve previous years' question papers and take mock tests to get accustomed to the exam pattern and time constraints.</li>
+                <li><strong>Time Management:</strong> Learn to manage your time effectively during the exam.</li>
+                <li><strong>Stay Calm and Confident:</strong> Believe in yourself and stay positive throughout the preparation process and on exam day.</li>
+            </ul>
+        
+            <h3>Key Takeaways</h3>
+            <p>The Symbiosis Entrance Test (SET) is your gateway to a world of opportunities at Symbiosis International (Deemed University). With thorough preparation, a strategic approach, and a confident mindset, you can crack the SET and embark on a successful academic and professional journey. Remember, success favors the prepared!</p>
+        </div>
+        
+        
+        <div id="upeseat" class="exam-content">
+            <h2>UPES-EAT (University of Petroleum and Energy Studies Engineering Aptitude Test)</h2>
+        
+            <h3>Introduction</h3>
+            <p>The University of Petroleum and Energy Studies Engineering Aptitude Test (UPES-EAT) is a pivotal national-level entrance exam for aspiring engineers and technologists. Conducted by the University of Petroleum and Energy Studies (UPES), Dehradun, this exam serves as the entry point for a wide array of undergraduate and postgraduate programs in the fields of engineering and technology.</p>
+        
+            <h3>Exam Structure and Syllabus</h3>
+            <p>The UPES-EAT exam is designed to assess a candidate's proficiency in core subjects essential for engineering and technology studies. It comprises three sections:</p>
+        
+            <h4>Section 1: Mathematics</h4>
+            <ul>
+                <li><strong>Algebra:</strong> Quadratic equations, complex numbers, permutations and combinations, binomial theorem, matrices and determinants</li>
+                <li><strong>Calculus:</strong> Limits, continuity, differentiation, integration, differential equations</li>
+                <li><strong>Coordinate Geometry:</strong> Straight lines, circles, conic sections, 3D geometry, vectors</li>
+            </ul>
+        
+            <h4>Section 2: Physics</h4>
+            <ul>
+                <li><strong>Mechanics:</strong> Kinematics, laws of motion, work, energy, power, rotational motion, gravitation</li>
+                <li><strong>Electromagnetism:</strong> Electrostatics, current electricity, magnetic effects of current, electromagnetic induction</li>
+                <li><strong>Optics:</strong> Ray optics, wave optics, modern physics</li>
+            </ul>
+        
+            <h4>Section 3: Chemistry</h4>
+            <ul>
+                <li><strong>Physical Chemistry:</strong> Atomic structure, chemical bonding, thermodynamics, equilibrium, chemical kinetics, electrochemistry</li>
+                <li><strong>Inorganic Chemistry:</strong> Periodic table, chemical bonding, s-block, p-block, d-block, and f-block elements, coordination compounds</li>
+                <li><strong>Organic Chemistry:</strong> Basic principles, hydrocarbons, alcohols, phenols, ethers, aldehydes, ketones, carboxylic acids, amines, polymers</li>
+            </ul>
+        
+            <h3>Exam Pattern and Scoring</h3>
+            <ul>
+                <li><strong>Mode of Examination:</strong> Online (Computer-Based Test)</li>
+                <li><strong>Duration:</strong> 3 hours</li>
+                <li><strong>Total Marks:</strong> 300 marks (100 marks per section)</li>
+                <li><strong>Marking Scheme:</strong> No negative marking for incorrect answers</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <p>To be eligible for the UPES-EAT exam, candidates must fulfill the following requirements:</p>
+            <ul>
+                <li>Must have passed 10+2 or equivalent from a recognized board with a minimum aggregate of 60% marks.</li>
+                <li>Must have studied Physics, Chemistry, and Mathematics as compulsory subjects in 10+2.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li><strong>Thorough Understanding of Syllabus:</strong> Familiarize yourself with the syllabus and exam pattern.</li>
+                <li><strong>Practice with Sample Papers:</strong> Solve previous years' question papers and sample papers to get accustomed to the exam format and difficulty level.</li>
+                <li><strong>Time Management:</strong> Practice time management during your preparation to ensure you can complete the exam within the given time frame.</li>
+                <li><strong>Conceptual Clarity:</strong> Focus on building a strong foundation in the core concepts of Physics, Chemistry, and Mathematics.</li>
+                <li><strong>Stay Calm and Confident:</strong> Maintain a positive attitude and believe in your abilities.</li>
+            </ul>
+        
+            <h3>List of UPES Schools Accepting UPES-EAT Scores</h3>
+            <p>UPES offers a diverse range of programs across various schools, and the UPES-EAT exam scores are accepted for admission to the following schools:</p>
+            <ul>
+                <li><strong>School of Engineering</strong></li>
+                <li><strong>School of Computer Science</strong></li>
+                <li><strong>School of Design</strong></li>
+                <li><strong>School of Law</strong></li>
+                <li><strong>School of Business</strong></li>
+                <li><strong>School of Health Sciences</strong></li>
+                <li><strong>School of Smart Agriculture</strong></li>
+            </ul>
+        
+            <h3>Key Points to Remember</h3>
+            <ul>
+                <li>The UPES-EAT exam is your gateway to a world-class education in engineering and technology at UPES.</li>
+                <li>Prepare diligently, stay focused, and give your best shot.</li>
+                <li>With dedication and hard work, you can achieve your dream of studying at UPES.</li>
+            </ul>
+        
+            <h3>Final Thoughts</h3>
+            <p>Success in the UPES-EAT exam is not just about memorizing facts and formulas; it's about understanding the concepts, applying them to solve problems, and managing your time effectively. With the right preparation strategy, you can secure admission to one of the top engineering and technology programs at UPES. Good luck with your preparation!</p>
+        </div>
+        
+        
+    </section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+    <div class="logos">
+        <span>A Physics Wallah Product</span>
+    </div>
+</footer>
+
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

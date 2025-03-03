@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Pharmacy</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .auth-buttons .login {
+            color: #333;
+        }
+
+        .auth-buttons .signup {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Pharmacy Section */
+        .pharmacy {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .pharmacy h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .pharmacy p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .logos span {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="login">Log in</a>
+            <a href="#" class="signup">Sign up</a>
+        </div>
+    </nav>
+
+    <!-- Pharmacy Section -->
+    <section class="pharmacy">
+        <h1>Pharmacy</h1>
+        <p>Explore career opportunities in pharmacy. Learn about various entrance exams that help you secure admission in top pharmacy colleges.</p>
+
+        <h2>Select your Entrance</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('bpharmaNEET')">B-Pharma (NEET)</button>
+        </div>
+
+        <!-- Dynamic Exam Information Section -->
+<!-- Dynamic Exam Information Section for B-Pharma NEET -->
+<div id="bpharmaNEET" class="exam-content">
+    <h2>NEET UG for B. Pharma Admissions: A Comprehensive Guide</h2>
+
+    <p>The National Eligibility cum Entrance Test (NEET) Undergraduate, commonly referred to as NEET UG, serves as the gateway for admission to various undergraduate medical and allied health science courses across India. While primarily known for MBBS and BDS admissions, NEET UG scores are also accepted by several institutions for B.Pharma (Bachelor of Pharmacy) programs.</p>
+
+    <h3>Exam Structure and Format</h3>
+    <ul>
+        <li><strong>Mode:</strong> NEET UG is a pen-and-paper based (offline) examination.</li>
+        <li><strong>Duration:</strong> The exam spans 3 hours and 20 minutes.</li>
+        <li><strong>Sections:</strong> It comprises three sections - Physics, Chemistry, and Biology (Botany and Zoology).</li>
+        <li><strong>Questions and Marks:</strong> Each section contains 50 questions, with a total of 180 questions and a maximum of 720 marks.</li>
+        <li><strong>Marking Scheme:</strong> Correct answers are awarded 4 marks, while incorrect answers incur a penalty of 1 mark. Unattempted questions carry no marks.</li>
+    </ul>
+
+    <h3>Eligibility Criteria</h3>
+    <ul>
+        <li><strong>Educational Qualification:</strong> Candidates must have passed the 10+2 or equivalent examination with Physics, Chemistry, Biology/Biotechnology, and English as core subjects.</li>
+        <li><strong>Minimum Age:</strong> The minimum age requirement is 17 years at the time of admission.</li>
+        <li><strong>Marks Requirement:</strong></li>
+        <ul>
+            <li><strong>General category:</strong> Minimum 50% aggregate in Physics, Chemistry, and Biology/Biotechnology.</li>
+            <li><strong>SC/ST/PwD categories:</strong> Minimum 40% aggregate in Physics, Chemistry, and Biology/Biotechnology.</li>
+        </ul>
+        <li><strong>Nationality:</strong> Indian Nationals, Non-Resident Indians (NRIs), Overseas Citizens of India (OCIs), Persons of Indian Origin (PIOs), and Foreign Nationals are eligible.</li>
+    </ul>
+
+    <h3>Key Information</h3>
+    <ul>
+        <li><strong>Application Process:</strong> NEET UG applications are submitted online through the official NTA website.</li>
+        <li><strong>Application Fee:</strong> The fee varies based on category and can be paid online.</li>
+        <li><strong>Exam Centers:</strong> The exam is conducted in numerous centers across India.</li>
+        <li><strong>Admit Card:</strong> Admit cards are issued online a few weeks before the exam.</li>
+        <li><strong>Result:</strong> Results are declared online, and a scorecard is provided to candidates.</li>
+        <li><strong>Counseling:</strong> Admission to B.Pharma courses is conducted through state-level or institutional counseling based on NEET UG scores.</li>
+    </ul>
+
+    <h3>List of Colleges Accepting NEET UG for B.Pharma</h3>
+    <p>While the list of colleges accepting NEET UG scores for B.Pharma admissions varies each year, here are some prominent institutions that have done so in the past:</p>
+    <ul>
+        <li>Jamia Hamdard University, New Delhi</li>
+        <li>JSS Academy of Higher Education & Research, Mysore</li>
+        <li>Manipal College of Pharmaceutical Sciences, Manipal</li>
+        <li>BITS Pilani - Birla Institute of Technology and Science, Pilani</li>
+        <li>SRM Institute of Science and Technology, Chennai</li>
+        <li>Amity University, Noida</li>
+        <li>Chandigarh University, Chandigarh</li>
+        <li>KLE University's College of Pharmacy, Belagavi</li>
+        <li>PES University, Bangalore</li>
+        <li>M.S. Ramaiah University of Applied Sciences, Bangalore</li>
+        <li>Krupanidhi College of Pharmacy, Bangalore</li>
+    </ul>
+
+    <h3>Additional Points to Consider</h3>
+    <ul>
+        <li><strong>State-wise Variations:</strong> Eligibility criteria and admission processes for B.Pharma through NEET UG may differ from state to state.</li>
+        <li><strong>Cut-off Scores:</strong> Each college or university sets its own cut-off scores for B.Pharma admissions based on NEET UG results.</li>
+        <li><strong>Reservation Policies:</strong> Reservation policies for different categories apply as per government regulations.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>NEET UG has emerged as a crucial pathway for B.Pharma aspirants, offering a standardized platform for admission to reputable institutions. By understanding the exam structure, eligibility criteria, and admission procedures, candidates can effectively navigate the B.Pharma admission landscape through NEET UG.</p>
+</div>
+
+        
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+        <div class="logos">
+            <span>A Physics Wallah Product</span>
+        </div>
+    </footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

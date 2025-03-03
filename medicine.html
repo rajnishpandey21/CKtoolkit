@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Medicine</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+    background: linear-gradient(135deg, #ff8902, #ffc170);
+    color: #222;
+    padding: 20px;
+}
+
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .auth-buttons .login {
+            color: #333;
+        }
+
+        .auth-buttons .signup {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Medicine Section */
+        .medicine {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .medicine h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .medicine p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .logos span {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="login">Log in</a>
+            <a href="#" class="signup">Sign up</a>
+        </div>
+    </nav>
+
+    <!-- Medicine Section -->
+    <section class="medicine">
+        <h1>Medicine</h1>
+        <p>Explore career opportunities in Medicine. Learn about various entrance exams that help you secure admission in top medical colleges.</p>
+
+        <h2>Select your Entrance Exam</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('neet')">NEET UG - MBBS</button>
+        </div>
+
+        <!-- Dynamic Exam Information Section -->
+<!-- NEET UG - MBBS Exam Section -->
+<div id="neet" class="exam-content">
+    <h2>NEET UG Exam for MBBS: A Comprehensive and In-Depth Guide</h2>
+
+    <h3>Introduction</h3>
+    <p>The National Eligibility cum Entrance Test Undergraduate (NEET UG) is the primary gateway for undergraduate medical education (MBBS) in India. Conducted by the National Testing Agency (NTA), this highly competitive exam attracts lakhs of aspirants each year, competing for limited seats in government and private medical colleges across the country.</p>
+
+    <h3>Exam Structure and Format</h3>
+    <p>NEET UG is a pen-and-paper-based exam comprising **180 multiple-choice questions (MCQs)** divided into three sections:</p>
+    <ul>
+        <li><strong>Physics</strong> - 45 questions</li>
+        <li><strong>Chemistry</strong> - 45 questions</li>
+        <li><strong>Biology (Botany & Zoology)</strong> - 90 questions</li>
+    </ul>
+    <p>Each correct answer is awarded **4 marks**, while each incorrect answer results in a **negative mark of -1**. The total duration of the exam is **3 hours (180 minutes)**, and it is available in multiple languages including English, Hindi, and regional languages.</p>
+
+    <h3>Syllabus and Marking Scheme</h3>
+    <p>The NEET UG syllabus is based on the **NCERT curriculum** for **Physics, Chemistry, and Biology** of **Classes 11 and 12**. The marking scheme is as follows:</p>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Section</th>
+            <th>Number of Questions</th>
+            <th>Marks per Correct Answer</th>
+            <th>Marks per Incorrect Answer</th>
+            <th>Total Marks</th>
+        </tr>
+        <tr>
+            <td>Physics</td>
+            <td>45</td>
+            <td>4</td>
+            <td>-1</td>
+            <td>180</td>
+        </tr>
+        <tr>
+            <td>Chemistry</td>
+            <td>45</td>
+            <td>4</td>
+            <td>-1</td>
+            <td>180</td>
+        </tr>
+        <tr>
+            <td>Biology (Botany & Zoology)</td>
+            <td>90</td>
+            <td>4</td>
+            <td>-1</td>
+            <td>360</td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <th>180</th>
+            <th colspan="3">720</th>
+        </tr>
+    </table>
+
+    <h3>Eligibility Criteria</h3>
+    <ul>
+        <li><strong>Nationality:</strong> Indian citizens, Non-Resident Indians (NRIs), Overseas Citizens of India (OCIs), Persons of Indian Origin (PIOs), and Foreign Nationals are eligible.</li>
+        <li><strong>Age:</strong> Minimum age is **17 years** as of **December 31** of the admission year. No upper age limit as per the latest Supreme Court ruling.</li>
+        <li><strong>Educational Qualification:</strong> Candidates must have passed **10+2 or equivalent** with Physics, Chemistry, Biology/Biotechnology, and English as core subjects. The required minimum aggregate marks:
+            <ul>
+                <li>**50% for General category**</li>
+                <li>**40% for SC/ST/OBC category**</li>
+                <li>**45% for PWD category**</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Admission Process and Counseling</h3>
+    <p>NEET UG scores are used for admission to **MBBS, BDS, BAMS, BHMS, BSMS, BUMS, and BVSc&AH** courses across India. Admissions are conducted through two major counseling channels:</p>
+    <ul>
+        <li><strong>All India Quota (AIQ) - 15%:</strong> Seats in government medical colleges, central universities, and deemed universities, managed by the Directorate General of Health Services (DGHS).</li>
+        <li><strong>State Quota - 85%:</strong> Seats in government and private medical colleges managed by respective state authorities.</li>
+    </ul>
+
+    <h3>Preparation Tips and Strategies</h3>
+    <ul>
+        <li><strong>Thorough Understanding of the Syllabus:</strong> NCERT textbooks for **Physics, Chemistry, and Biology** are the key resources.</li>
+        <li><strong>Practice and Revision:</strong> Solve **previous years' papers and mock tests** to improve accuracy and speed.</li>
+        <li><strong>Time Management:</strong> Allocate study time effectively based on strengths and weaknesses.</li>
+        <li><strong>Stay Healthy and Positive:</strong> A balanced diet, regular exercise, and adequate sleep help maintain focus and performance.</li>
+    </ul>
+
+    <h3>Comprehensive List of NEET UG Accepting Colleges</h3>
+    <p>Some of the top institutions that accept NEET UG scores for MBBS admissions include:</p>
+    <ul>
+        <li><strong>All AIIMS institutions</strong> (e.g., AIIMS Delhi, AIIMS Bhopal, AIIMS Jodhpur, etc.)</li>
+        <li><strong>JIPMER</strong>, Puducherry</li>
+        <li>All Government Medical Colleges</li>
+        <li>Most Private Medical Colleges</li>
+        <li>Deemed Universities</li>
+        <li>ESIC Medical Colleges</li>
+        <li>AFMC, Pune</li>
+        <li>CMC, Vellore & Ludhiana</li>
+        <li>SGPGIMS, Lucknow</li>
+        <li>KGMU, Lucknow</li>
+        <li>BHU, Varanasi</li>
+        <li>AMU, Aligarh</li>
+        <li>Tata Institute of Social Sciences (TISS), Mumbai</li>
+        <li>National Institute of Mental Health and Neurosciences (NIMHANS), Bengaluru</li>
+        <li>Sree Chitra Tirunal Institute for Medical Sciences and Technology (SCTIMST), Trivandrum</li>
+    </ul>
+
+    <h3>Additional Information</h3>
+    <ul>
+        <li><strong>NEET UG Application Process:</strong> The online application process usually begins in December. Candidates must complete the form, upload required documents, and pay the application fee.</li>
+        <li><strong>NEET UG Admit Card:</strong> Released a few weeks before the exam and can be downloaded from the **NTA website**.</li>
+        <li><strong>NEET UG Result:</strong> Declared online a few weeks after the exam on the **NTA website**.</li>
+        <li><strong>NEET UG Cut-off:</strong> Varies yearly based on factors like **exam difficulty level and number of candidates appearing**.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>NEET UG is a challenging but rewarding exam that provides access to a fulfilling career in medicine. With proper preparation and guidance, aspirants can achieve their dream of becoming doctors.</p>
+</div>
+
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+        <div class="logos">
+            <span>A Physics Wallah Product</span>
+        </div>
+    </footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

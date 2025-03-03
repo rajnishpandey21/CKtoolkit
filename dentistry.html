@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Medicine</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+    background: linear-gradient(135deg, #ff8902, #ffc170);
+    color: #222;
+    padding: 20px;
+}
+
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .auth-buttons .login {
+            color: #333;
+        }
+
+        .auth-buttons .signup {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Medicine Section */
+        .medicine {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .medicine h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .medicine p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .logos span {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="login">Log in</a>
+            <a href="#" class="signup">Sign up</a>
+        </div>
+    </nav>
+
+    <!-- Medicine Section -->
+    <section class="medicine">
+        <h1>Dentistry</h1>
+        <p>Explore career opportunities in dentistry. Learn about various entrance exams that help you secure admission in top medical colleges.</p>
+
+        <h2>Select your Entrance</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('neetUG')">NEET UG BDS</button>
+        </div>
+
+        <!-- Dynamic Exam Information Section -->
+        <div id="neetUG" class="exam-content">
+            <h2>NEET UG for BDS Admission: An In-Depth Guide</h2>
+        
+            <h3>Exam Structure and Content</h3>
+            <p>The NEET UG (National Eligibility cum Entrance Test-Undergraduate) exam serves as the gateway to BDS (Bachelor of Dental Surgery) programs across India. It is a single-day, pen-and-paper-based test administered by the National Testing Agency (NTA). The exam consists of four sections:</p>
+        
+            <ul>
+                <li><strong>Physics:</strong> 45 questions covering topics from the 11th and 12th standard syllabus.</li>
+                <li><strong>Chemistry:</strong> 45 questions based on the 11th and 12th standard Chemistry curriculum.</li>
+                <li><strong>Biology (Botany and Zoology):</strong> 90 questions (45 each for Botany and Zoology) from the 11th and 12th standard syllabus.</li>
+                <li><strong>General Knowledge and Aptitude:</strong> 10 questions assessing general awareness and aptitude.</li>
+            </ul>
+        
+            <p><strong>Duration:</strong> 3 hours</p>
+            <p><strong>Skills Required:</strong> Efficient time management and focused problem-solving abilities.</p>
+        
+            <h3>Scoring and Marking Scheme</h3>
+            <ul>
+                <li><strong>Total Marks:</strong> 720</li>
+                <li><strong>Correct Answer:</strong> +4 marks</li>
+                <li><strong>Incorrect Answer:</strong> -1 mark (negative marking)</li>
+                <li><strong>Unanswered Questions:</strong> No marks awarded or deducted</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Educational Qualification:</strong> 12th standard or equivalent with Physics, Chemistry, Biology, and English as compulsory subjects.</li>
+                <li><strong>Minimum Marks:</strong> 50% aggregate in PCB (40% for SC/ST/OBC candidates).</li>
+                <li><strong>Age Limit:</strong> Minimum 17 years old as of December 31st of the year of admission.</li>
+            </ul>
+        
+            <h3>Comprehensive List of Dental Colleges Accepting NEET UG Scores</h3>
+        
+            <h4>Government Dental Colleges</h4>
+            <ul>
+                <li>All India Institute of Medical Sciences (AIIMS), New Delhi</li>
+                <li>Armed Forces Medical College (AFMC), Pune</li>
+                <li>Maulana Azad Medical College (MAMC), New Delhi</li>
+                <li>Lady Hardinge Medical College (LHMC), New Delhi</li>
+                <li>Government Dental College and Hospital, Mumbai</li>
+                <li>Government Dental College and Hospital, Nagpur</li>
+                <li>Government Dental College and Hospital, Ahmedabad</li>
+                <li>Government Dental College and Hospital, Bangalore</li>
+                <li>Government Dental College and Hospital, Chennai</li>
+                <li>Government Dental College and Hospital, Hyderabad</li>
+                <li>Government Dental College and Hospital, Kolkata</li>
+                <li>Government Dental College and Hospital, Lucknow</li>
+                <li>Government Dental College and Hospital, Patna</li>
+                <li>Government Dental College and Hospital, Thiruvananthapuram</li>
+            </ul>
+        
+            <h4>Private Dental Colleges</h4>
+            <ul>
+                <li>Christian Medical College (CMC), Vellore</li>
+                <li>St. John's Medical College (SJMC), Bengaluru</li>
+                <li>Kasturba Medical College (KMC), Manipal</li>
+                <li>Manipal College of Dental Sciences (MCODS), Manipal</li>
+                <li>Saveetha Dental College, Chennai</li>
+                <li>SRM Dental College, Chennai</li>
+                <li>Apollo Dental College, Chennai</li>
+                <li>Meenakshi Ammal Dental College, Chennai</li>
+                <li>Sri Ramachandra Institute of Higher Education and Research (SRIHER), Chennai</li>
+                <li>SRM University, Chennai</li>
+                <li>Kalinga Institute of Medical Sciences (KIMS), Bhubaneswar</li>
+                <li>Institute of Dental Studies and Technologies (IDST), Modinagar</li>
+                <li>ITS Dental College, Greater Noida</li>
+                <li>Sharda University, Greater Noida</li>
+                <li>Galgotias University, Greater Noida</li>
+                <li>Amity University, Noida</li>
+                <li>Jamia Millia Islamia, New Delhi</li>
+                <li>Aligarh Muslim University, Aligarh</li>
+                <li>Banaras Hindu University, Varanasi</li>
+            </ul>
+        
+            <h4>Deemed Universities</h4>
+            <ul>
+                <li>MAHE, Manipal</li>
+                <li>Sathyabama University, Chennai</li>
+                <li>Sri Ramachandra University, Chennai</li>
+            </ul>
+        
+            <h4>State Universities</h4>
+            <ul>
+                <li>Maharashtra University of Health Sciences, Nashik</li>
+                <li>Rajiv Gandhi University of Health Sciences, Bengaluru</li>
+                <li>Dr. NTR University of Health Sciences, Vijayawada</li>
+                <li>Kerala University of Health Sciences, Thiruvananthapuram</li>
+                <li>Tamil Nadu Dr. M.G.R. Medical University, Chennai</li>
+            </ul>
+        
+            <h3>Additional Information</h3>
+            <ul>
+                <li>The admission process for BDS programs through NEET UG varies across colleges and states.</li>
+                <li>Candidates should thoroughly research the specific admission criteria and procedures of their desired colleges.</li>
+                <li>Stay updated on NEET UG notifications and announcements from the NTA and respective state authorities.</li>
+            </ul>
+        
+            <h3>Conclusion</h3>
+            <p>Securing admission into a BDS program requires dedicated preparation, consistent effort, and strategic planning. By understanding the exam structure, eligibility criteria, and the list of colleges accepting NEET UG scores, aspirants can pave their way toward a successful career in dentistry.</p>
+        </div>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+        <div class="logos">
+            <span>A Physics Wallah Product</span>
+        </div>
+    </footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Kaptain - Education</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff8902, #ffc170);
+            color: #222;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Education Section */
+        .education {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .education h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .education p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Entrance Exam Buttons */
+        .exam-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .exam-buttons button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        .exam-buttons button:hover {
+            background: #0056b3;
+        }
+
+        /* Dynamic Content Section */
+        .exam-content {
+            display: none;
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-content h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .exam-content h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .exam-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Career Kaptain</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Career Directory</a></li>
+            <li><a href="eligibility.html">Student Eligibility Checker</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Education Section -->
+    <section class="education">
+        <h1>Education Careers</h1>
+        <p>Explore career opportunities in the field of education. Learn about various entrance exams required for B.El.Ed. and Integrated B.Ed. programs.</p>
+
+        <h2>Select your Entrance Exam</h2><br>
+
+        <div class="exam-buttons">
+            <button onclick="showExam('beled')">B.El.Ed. (Bachelor of Elementary Education)</button>
+            <button onclick="showExam('integrated-bed')">Integrated B.A.-B.Ed./B.Sc.-B.Ed./B.Com.-B.Ed.</button>
+        </div>
+
+        <!-- Dynamic Exam Information Section -->
+        <div id="beled" class="exam-content">
+            <h2>DU B.El.Ed. Entrance Exam (via CUET): Your Comprehensive Guide to a Fulfilling Teaching Career</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Bachelor of Elementary Education (B.El.Ed.) program at Delhi University (DU) is a highly sought-after pathway for aspiring educators. The gateway to this prestigious program is the DU B.El.Ed. Entrance Exam, now seamlessly integrated into the Common University Entrance Test (CUET). This guide provides knowledge, strategies, and insights to excel in this pivotal exam and embark on a rewarding teaching journey.</p>
+        
+            <h3>Exam Structure and Pattern: Decoding the Blueprint</h3>
+            <p>The exam assesses candidates based on four core sections:</p>
+        
+            <h3>1. Language Comprehension and Verbal Ability</h3>
+            <ul>
+                <li><strong>Reading Comprehension:</strong> Passages from various genres with comprehension, inference, and analysis questions.</li>
+                <li><strong>Vocabulary and Grammar:</strong> Word meanings, synonyms, antonyms, sentence correction, and error spotting.</li>
+                <li><strong>Verbal Reasoning:</strong> Analogy, sentence completion, para-jumbles, and logical reasoning.</li>
+            </ul>
+        
+            <h3>2. Quantitative Ability</h3>
+            <ul>
+                <li><strong>Arithmetic:</strong> Fractions, decimals, percentages, ratios, time and work, time and distance.</li>
+                <li><strong>Algebra:</strong> Linear equations, quadratic equations, inequalities, and expressions.</li>
+                <li><strong>Geometry:</strong> Shapes, areas, perimeters, mensuration, and coordinate geometry.</li>
+                <li><strong>Data Interpretation:</strong> Analyzing data from tables, graphs, and charts.</li>
+            </ul>
+        
+            <h3>3. General Knowledge</h3>
+            <ul>
+                <li><strong>Current Affairs:</strong> National and international news, important personalities, awards.</li>
+                <li><strong>History & Geography:</strong> Indian and world history, physical and human geography.</li>
+                <li><strong>Science & Polity:</strong> Scientific discoveries, Indian constitution, governance.</li>
+                <li><strong>Economics:</strong> Basic economic concepts, inflation, GDP, fiscal policy.</li>
+            </ul>
+        
+            <h3>4. Teaching Aptitude</h3>
+            <ul>
+                <li><strong>Child Psychology:</strong> Learning styles, cognitive and social development.</li>
+                <li><strong>Pedagogical Principles:</strong> Teaching methods, instructional strategies, assessment techniques.</li>
+                <li><strong>Classroom Management:</strong> Discipline techniques, student behavior, conflict resolution.</li>
+                <li><strong>Leadership & Communication:</strong> Interpersonal skills, teamwork, communication with students and parents.</li>
+            </ul>
+        
+            <h3>Marking Scheme and Syllabus</h3>
+            <ul>
+                <li><strong>Marking Scheme:</strong> 4 marks per correct answer. No negative marking.</li>
+                <li><strong>Syllabus:</strong> Based on NCERT curriculum for classes 11 and 12.</li>
+                <li><strong>Subjects:</strong> English, Hindi, Mathematics, Science, Social Science, General Knowledge.</li>
+            </ul>
+        
+            <h3>List of Esteemed Colleges Accepting DU B.El.Ed. Entrance Exam</h3>
+            <ul>
+                <li>Department of Elementary Education, University of Delhi</li>
+                <li>Institute of Home Economics, University of Delhi</li>
+                <li>Zakir Husain Delhi College</li>
+                <li>SGTB Khalsa College</li>
+                <li>Aryabhatta College</li>
+                <li>Lady Shri Ram College for Women</li>
+                <li>Miranda House</li>
+                <li>Hindu College</li>
+                <li>St. Stephen's College</li>
+                <li>Gargi College</li>
+                <li>Jesus and Mary College</li>
+                <li>Kamala Nehru College</li>
+                <li>Maitreyi College</li>
+            </ul>
+        
+            <h3>Admission Process and Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Eligibility:</strong> 12th standard pass with a minimum of 50% aggregate marks.</li>
+                <li><strong>Application Process:</strong> Online registration via CUET website, document upload, and fee payment.</li>
+                <li><strong>Admit Card:</strong> Download from CUET website, mandatory for exam day.</li>
+                <li><strong>Exam Day Instructions:</strong> Arrive early, carry admit card and valid ID, follow invigilator instructions.</li>
+                <li><strong>Result & Counseling:</strong> Results on CUET website; seat allocation based on merit.</li>
+            </ul>
+        
+            <h3>Preparation Tips: Paving the Way to Success</h3>
+            <ul>
+                <li>Understand the exam pattern and marking scheme.</li>
+                <li>Create a structured study plan.</li>
+                <li>Practice regularly with sample papers and mock tests.</li>
+                <li>Focus on conceptual clarity rather than rote learning.</li>
+                <li>Stay updated on current affairs and general knowledge.</li>
+                <li>Manage time effectively during the exam.</li>
+                <li>Seek guidance from mentors or coaching centers.</li>
+                <li>Utilize online resources for practice tests and study materials.</li>
+                <li>Join study groups for discussion and knowledge sharing.</li>
+                <li>Maintain a healthy lifestyle, including sleep, diet, and exercise.</li>
+                <li>Stay positive and confident throughout the preparation.</li>
+            </ul>
+        
+            <p><strong>Final Thought:</strong> The DU B.El.Ed. Entrance Exam is not just a test of knowledge but an assessment of passion and aptitude for teaching. With focused preparation and the right strategy, you can maximize your chances of success and embark on a fulfilling career in education.</p>
+        </div>
+
+        <div id="integrated-bed" class="exam-content">
+            <h2>CUET (Common University Entrance Test) for Integrated B.A.-B.Ed./B.Sc.-B.Ed./B.Com.-B.Ed. Programs: A Comprehensive Guide</h2>
+        
+            <h3>Introduction</h3>
+            <p>The Common University Entrance Test (CUET), administered by the National Testing Agency (NTA), has streamlined undergraduate admissions in India. It serves as a single entrance exam for students aspiring to pursue integrated teacher education programs, including B.A.-B.Ed., B.Sc.-B.Ed., and B.Com.-B.Ed. These programs combine a bachelor's degree with a bachelor's degree in education, equipping students with the necessary skills for a teaching career.</p>
+        
+            <h3>Exam Structure</h3>
+            <p>The CUET for integrated teacher education programs consists of three main sections:</p>
+        
+            <h3>1. Section I: Language Test</h3>
+            <ul>
+                <li>Candidates can choose one language from a list of 13 options.</li>
+                <li>Assesses reading comprehension and language proficiency.</li>
+            </ul>
+        
+            <h3>2. Section II: Domain-Specific Subjects</h3>
+            <ul>
+                <li>Candidates must select three subjects from a list of 27 domain-specific options.</li>
+                <li>Subject selection should align with the intended specialization in the integrated program (e.g., humanities, science, or commerce).</li>
+            </ul>
+        
+            <h3>3. Section III: General Test</h3>
+            <ul>
+                <li>Evaluates general knowledge, current affairs, quantitative aptitude, and logical reasoning.</li>
+                <li>Assesses the candidate's overall awareness and analytical skills.</li>
+            </ul>
+        
+            <h3>Exam Pattern and Marking Scheme</h3>
+            <ul>
+                <li><strong>Section I (Language Test):</strong> 40 multiple-choice questions (MCQs), 60 minutes duration.</li>
+                <li><strong>Section II (Domain-Specific Subjects):</strong> 50 MCQs per subject, 60 minutes duration per subject.</li>
+                <li><strong>Section III (General Test):</strong> 75 MCQs, 60 minutes duration.</li>
+                <li><strong>Marking Scheme:</strong> Each correct answer carries 4 marks. No negative marking.</li>
+            </ul>
+        
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Educational Qualification:</strong> Candidates must have passed the 10+2 or equivalent examination from a recognized board.</li>
+                <li><strong>Age Limit:</strong> There is usually no upper age limit for CUET.</li>
+            </ul>
+        
+            <h3>Advantages of CUET for Integrated Teacher Education Programs</h3>
+            <ul>
+                <li><strong>Standardized Admission Process:</strong> Ensures a fair and transparent admission process across participating universities.</li>
+                <li><strong>Reduced Exam Burden:</strong> Eliminates the need to appear for multiple entrance exams.</li>
+                <li><strong>Wider Choice of Universities:</strong> Provides access to a variety of institutions offering integrated teacher education programs.</li>
+                <li><strong>Focus on Core Competencies:</strong> Assesses language proficiency, subject knowledge, and general aptitude, all essential for aspiring teachers.</li>
+            </ul>
+        
+            <h3>Preparation Tips</h3>
+            <ul>
+                <li>Understand the syllabus for each section and subject.</li>
+                <li>Practice with previous years' question papers and mock tests.</li>
+                <li>Focus on conceptual clarity in core subjects.</li>
+                <li>Stay updated with current affairs and general knowledge.</li>
+            </ul>
+        
+            <h3>Key Points to Remember</h3>
+            <ul>
+                <li>The CUET exam is computer-based.</li>
+                <li>Candidates must carry a valid photo ID and admit card to the exam center.</li>
+                <li>The exam is conducted in English and Hindi (except for language-specific tests).</li>
+                <li>The CUET score is valid for one academic year.</li>
+            </ul>
+        
+            <h3>List of Universities Accepting CUET Scores for Integrated Teacher Education Programs</h3>
+            <ul>
+                <li><strong>Central Universities</strong></li>
+                <li><strong>State Universities</strong></li>
+                <li><strong>Deemed Universities</strong></li>
+                <li><strong>Private Universities</strong></li>
+            </ul>
+            <p><strong>Note:</strong> The list of participating universities may change each year. Candidates should check the official CUET website for the latest updates.</p>
+        
+            <h3>Conclusion</h3>
+            <p>The CUET exam has simplified the admission process for integrated teacher education programs, making it more accessible for aspiring educators. Understanding the exam pattern, preparing strategically, and staying informed will help candidates secure admission to their desired university and program.</p>
+        </div>
+        
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Designed by Rajnish Pandey with 🧡 for Career Kaptain</p>
+    </footer>
+
+    <script>
+        function showExam(examId) {
+            document.querySelectorAll('.exam-content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(examId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
